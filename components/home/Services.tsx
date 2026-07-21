@@ -33,15 +33,21 @@ export function Services() {
         },
       });
 
+      // Cleaner hand-off: the outgoing panel leaves first (down + shrink), the
+      // incoming arrives a beat later (up + settle) — so they never sit at 50%
+      // opacity together and ghost.
       panels.forEach((panel, i) => {
         if (i === 0) return;
-        tl.to(panels[i - 1], { autoAlpha: 0, yPercent: -6, ease: 'power2.inOut', duration: 1 }, i)
-          .fromTo(
-            panel,
-            { autoAlpha: 0, yPercent: 6 },
-            { autoAlpha: 1, yPercent: 0, ease: 'power2.inOut', duration: 1 },
-            i,
-          );
+        tl.to(
+          panels[i - 1],
+          { autoAlpha: 0, yPercent: -8, scale: 0.97, ease: 'power2.in', duration: 0.5 },
+          i,
+        ).fromTo(
+          panel,
+          { autoAlpha: 0, yPercent: 12, scale: 1.03 },
+          { autoAlpha: 1, yPercent: 0, scale: 1, ease: 'power3.out', duration: 0.6 },
+          i + 0.4,
+        );
       });
 
       // progress bar tracks the whole pinned journey

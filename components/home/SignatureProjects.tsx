@@ -3,7 +3,7 @@
 import { useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { gsap, useGSAP } from '@/lib/gsap';
-import { Link } from '@/i18n/navigation';
+import { Button } from '@/components/ui/Button';
 import { Frame } from '@/components/ui/Frame';
 
 type Project = { name: string; place: string; year: string };
@@ -86,17 +86,11 @@ export function SignatureProjects() {
 
           {/* closing CTA panel */}
           <div className="flex h-full w-[min(70vw,22rem)] shrink-0 flex-col justify-center">
-            <Link
-              href="/projects"
-              className="group inline-flex items-center gap-4 self-start rounded-full border border-canvas/25 py-3 pl-6 pr-3 text-canvas transition-colors duration-500 hover:border-canvas/50"
-            >
-              <span>{t('cta')}</span>
-              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-canvas text-ink transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
-                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
-                  <path d="M4 11L11 4M11 4H5M11 4V10" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </span>
-            </Link>
+            <div className="self-start">
+              <Button variant="secondary" tone="light" href="/projects">
+                {t('cta')}
+              </Button>
+            </div>
           </div>
         </div>
       </div>

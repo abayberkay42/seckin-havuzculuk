@@ -8,6 +8,9 @@
     "about": "About",
     "construction": "Pool Construction",
     "maintenance": "Pool Maintenance",
+    "services": "Services",
+    "constructionDesc": "Bespoke design and build",
+    "maintenanceDesc": "Constant care and clarity",
     "products": "Products",
     "projects": "Projects",
     "blog": "Blog",
@@ -151,5 +154,26 @@
     "typeCompleted": "Completed",
     "typeOngoing": "Ongoing",
     "typeBeforeAfter": "Transformation"
+  },
+  "catalogue": {
+    "eyebrow": "Products",
+    "title": "With your pool, for its whole life.",
+    "intro": "From chemicals to equipment, lighting to automation. Presentation only — sales through our showroom and contact.",
+    "filterAll": "All",
+    "viewProduct": "View",
+    "backToProducts": "All products",
+    "notForSale": "Not sold online",
+    "descriptionLabel": "Description",
+    "specs": "Technical specifications",
+    "features": "Highlights",
+    "usage": "Usage area",
+    "gallery": "Gallery",
+    "downloadPdf": "Technical sheet",
+    "pdfNote": "PDF",
+    "related": "Related products",
+    "requestQuote": "Request a quote",
+    "whatsapp": "Ask on WhatsApp",
+    "whatsappText": "Hello, I'd like information about {product}.",
+    "productCount": "{count} products"
   }
 }

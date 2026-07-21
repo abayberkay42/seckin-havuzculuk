@@ -3,7 +3,8 @@
 import { useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { gsap, useGSAP } from '@/lib/gsap';
-import { Link } from '@/i18n/navigation';
+import { Button } from '@/components/ui/Button';
+import { SplitReveal } from '@/components/ui/SplitReveal';
 
 /**
  * The catalogue, presented as a museum vitrine rather than a shop. Category names
@@ -56,24 +57,17 @@ export function Products() {
           <span className="h-px w-10 bg-bronze/60" />
           {t('eyebrow')}
         </span>
-        <h2 data-fade className="mb-6 max-w-[40rem] font-display text-title text-ink">
+        <SplitReveal as="h2" className="mb-6 max-w-[40rem] font-display text-title text-ink">
           {t('title')}
-        </h2>
+        </SplitReveal>
         <p data-fade className="mb-10 max-w-[34rem] text-lead font-light text-ink/65">
           {t('desc')}
         </p>
-        <Link
-          data-fade
-          href="/products"
-          className="group inline-flex items-center gap-4 rounded-full bg-ink py-2 pl-7 pr-2 text-canvas transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.98]"
-        >
-          <span className="text-[0.95rem]">{t('cta')}</span>
-          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-canvas text-ink transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
-            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
-              <path d="M4 11L11 4M11 4H5M11 4V10" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </span>
-        </Link>
+        <span data-fade className="inline-block">
+          <Button variant="primary" tone="dark" href="/products">
+            {t('cta')}
+          </Button>
+        </span>
       </div>
 
       {/* marquee */}

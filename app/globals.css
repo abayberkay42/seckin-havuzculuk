@@ -118,6 +118,42 @@
   background-size: 240px 240px;
 }
 
+/* ==========================================================================
+   Typography polish — balanced heading line breaks, no orphans.
+   ========================================================================== */
+h1, h2, h3 {
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
+}
+
+/* SplitText line masks clip the reveal cleanly */
+.split-mask {
+  overflow: hidden;
+  display: block;
+}
+
+/* Tactile click — a soft water ripple from the point of contact */
+.btn-ripple {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  margin: -5px 0 0 -5px;
+  border-radius: 9999px;
+  background: currentColor;
+  opacity: 0.2;
+  transform: scale(0);
+  pointer-events: none;
+  animation: btn-ripple 0.66s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes btn-ripple {
+  to {
+    transform: scale(26);
+    opacity: 0;
+  }
+}
+
 /* An Awwwards site that ignores this is just a site that makes people sick. */
 @media (prefers-reduced-motion: reduce) {
   *,

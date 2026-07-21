@@ -3,6 +3,7 @@
 import { useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { gsap, useGSAP } from '@/lib/gsap';
+import { SplitReveal } from '@/components/ui/SplitReveal';
 
 type Step = { no: string; name: string; desc: string };
 
@@ -59,12 +60,17 @@ export function Process() {
       data-nav-theme="light"
       className="bg-surface px-[clamp(1.5rem,6vw,8rem)] py-[clamp(7rem,14vh,12rem)]"
     >
-      <div data-head className="mb-[clamp(4rem,8vh,7rem)] max-w-[46rem]">
-        <span className="mb-8 flex items-center gap-4 font-mono text-label uppercase text-ink/50">
+      <div className="mb-[clamp(4rem,8vh,7rem)] max-w-[46rem]">
+        <span
+          data-head
+          className="mb-8 flex items-center gap-4 font-mono text-label uppercase text-ink/50"
+        >
           <span className="h-px w-10 bg-bronze/60" />
           {t('eyebrow')}
         </span>
-        <h2 className="font-display text-title text-ink">{t('title')}</h2>
+        <SplitReveal as="h2" className="font-display text-title text-ink">
+          {t('title')}
+        </SplitReveal>
       </div>
 
       <div data-steps className="relative">

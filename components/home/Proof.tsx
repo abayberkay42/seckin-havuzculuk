@@ -3,6 +3,7 @@
 import { useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { gsap, useGSAP } from '@/lib/gsap';
+import { SplitReveal } from '@/components/ui/SplitReveal';
 
 type Stat = { value: string; suffix?: string; label: string };
 
@@ -33,12 +34,12 @@ function StatBlock({ value, suffix, label }: Stat) {
     <div className="border-t border-canvas/15 pt-6">
       <span
         ref={numRef}
-        className="block font-display text-[clamp(3rem,6vw,5rem)] leading-none text-canvas"
+        className="block font-display text-[clamp(3.5rem,7vw,6.25rem)] leading-[0.88] tabular-nums text-canvas"
       >
         {value}
         {suffix ?? ''}
       </span>
-      <span className="mt-4 block font-mono text-label uppercase text-canvas/50">
+      <span className="mt-5 block font-mono text-label uppercase text-canvas/45">
         {label}
       </span>
     </div>
@@ -77,12 +78,12 @@ export function Proof() {
         <span className="h-px w-10 bg-steel/60" />
         {t('eyebrow')}
       </span>
-      <p
-        data-fade
+      <SplitReveal
+        as="p"
         className="mb-[clamp(4rem,8vh,7rem)] max-w-[50rem] font-display text-title text-canvas"
       >
         {t('statement')}
-      </p>
+      </SplitReveal>
 
       <div className="grid grid-cols-2 gap-x-8 gap-y-12 md:grid-cols-4">
         {stats.map((stat) => (

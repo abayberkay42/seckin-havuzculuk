@@ -2,7 +2,7 @@
 
 import { useRef } from 'react';
 import { gsap, ScrollTrigger, useGSAP } from '@/lib/gsap';
-import { Link } from '@/i18n/navigation';
+import { Button } from '@/components/ui/Button';
 
 type HeroProps = {
   eyebrow: string;
@@ -168,42 +168,13 @@ export function Hero({
             {supporting}
           </p>
 
-          <div data-reveal className="mt-11 flex flex-wrap items-center gap-6">
-            {/* primary — button-in-button, magnetic on hover */}
-            <Link
-              href="/contact"
-              className="group inline-flex items-center gap-4 rounded-full bg-canvas py-2 pl-7 pr-2 text-ink transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.98]"
-            >
-              <span className="text-[0.95rem]">{ctaPrimary}</span>
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-ink text-canvas transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
-                <svg
-                  width="15"
-                  height="15"
-                  viewBox="0 0 15 15"
-                  fill="none"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M4 11L11 4M11 4H5M11 4V10"
-                    stroke="currentColor"
-                    strokeWidth="1.25"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </span>
-            </Link>
-
-            {/* ghost — underline draws in */}
-            <Link
-              href="/projects"
-              className="group inline-flex items-center text-[0.95rem] text-canvas/85"
-            >
-              <span className="relative">
-                {ctaSecondary}
-                <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-canvas/60 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-x-100" />
-              </span>
-            </Link>
+          <div data-reveal className="mt-11 flex flex-wrap items-center gap-5">
+            <Button variant="primary" tone="light" href="/contact">
+              {ctaPrimary}
+            </Button>
+            <Button variant="secondary" tone="light" href="/projects">
+              {ctaSecondary}
+            </Button>
           </div>
         </div>
       </div>

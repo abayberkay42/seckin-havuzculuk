@@ -5,7 +5,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { isAppLocale, locales } from '@/i18n/routing';
 import { SmoothScroll } from '@/components/providers/SmoothScroll';
-import { Nav, type NavItem } from '@/components/layout/Nav';
+import { Nav, type NavNode } from '@/components/layout/Nav';
 import { Footer } from '@/components/layout/Footer';
 import { Grain } from '@/components/atmosphere/Grain';
 import '../globals.css';
@@ -55,12 +55,16 @@ export default async function LocaleLayout({
   const messages = await getMessages();
   const tNav = await getTranslations('nav');
 
-  // Client's order, not alphabetical.
-  const navItems: NavItem[] = [
-    { href: '/', label: tNav('home') },
+  // Client's order. Services opens a floating architectural panel.
+  const nav: NavNode[] = [
     { href: '/about', label: tNav('about') },
-    { href: '/construction', label: tNav('construction') },
-    { href: '/maintenance', label: tNav('maintenance') },
+    {
+      label: tNav('services'),
+      panel: [
+        { href: '/construction', label: tNav('construction'), desc: tNav('constructionDesc') },
+        { href: '/maintenance', label: tNav('maintenance'), desc: tNav('maintenanceDesc') },
+      ],
+    },
     { href: '/products', label: tNav('products') },
     { href: '/projects', label: tNav('projects') },
     { href: '/blog', label: tNav('blog') },
@@ -75,12 +79,7 @@ export default async function LocaleLayout({
       <body className="min-h-dvh bg-canvas text-ink">
         <Grain />
         <NextIntlClientProvider messages={messages}>
-          <Nav
-            items={navItems}
-            locale={locale}
-            switchLabel={tNav('switchLanguage')}
-            menuLabel={tNav('menu')}
-          />
+          <Nav nav={nav} locale={locale} menuLabel={tNav('menu')} />
           <SmoothScroll>
             {children}
             <Footer />

@@ -7,7 +7,7 @@ import {
   localize,
   localizeProject,
 } from '@/content/projects';
-import { Link } from '@/i18n/navigation';
+import { Button } from '@/components/ui/Button';
 import { ProjectHero } from '@/components/projects/ProjectHero';
 import { ProjectStory } from '@/components/projects/ProjectStory';
 import { ProjectGallery } from '@/components/projects/ProjectGallery';
@@ -80,17 +80,9 @@ export default async function ProjectDetailPage({
         <h2 className="mx-auto mb-10 max-w-[20ch] font-display text-display text-canvas">
           {t('ctaTitle')}
         </h2>
-        <Link
-          href="/contact"
-          className="group inline-flex items-center gap-4 rounded-full bg-canvas py-2.5 pl-8 pr-2.5 text-ink transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.98]"
-        >
-          <span>{t('ctaButton')}</span>
-          <span className="flex h-11 w-11 items-center justify-center rounded-full bg-ink text-canvas transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
-            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
-              <path d="M4 11L11 4M11 4H5M11 4V10" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </span>
-        </Link>
+        <Button variant="primary" tone="light" href="/contact">
+          {t('ctaButton')}
+        </Button>
       </section>
     </main>
   );

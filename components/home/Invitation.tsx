@@ -4,7 +4,8 @@ import { useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import dynamic from 'next/dynamic';
 import { gsap, useGSAP } from '@/lib/gsap';
-import { Link } from '@/i18n/navigation';
+import { Button } from '@/components/ui/Button';
+import { SplitReveal } from '@/components/ui/SplitReveal';
 
 // three.js only loads here, client-side, and only for the home page's closing.
 const WaterSurface = dynamic(
@@ -63,12 +64,12 @@ export function Invitation() {
         >
           {t('eyebrow')}
         </span>
-        <h2
-          data-fade
+        <SplitReveal
+          as="h2"
           className="mb-8 max-w-[24ch] font-display text-display text-canvas"
         >
           {t('title')}
-        </h2>
+        </SplitReveal>
         <p
           data-fade
           className="mb-12 max-w-[38rem] text-lead font-light text-canvas/70"
@@ -76,18 +77,11 @@ export function Invitation() {
           {t('desc')}
         </p>
 
-        <Link
-          data-fade
-          href="/contact"
-          className="group inline-flex items-center gap-4 rounded-full bg-canvas py-2.5 pl-8 pr-2.5 text-ink transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.98]"
-        >
-          <span>{t('cta')}</span>
-          <span className="flex h-11 w-11 items-center justify-center rounded-full bg-ink text-canvas transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
-            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
-              <path d="M4 11L11 4M11 4H5M11 4V10" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </span>
-        </Link>
+        <span data-fade className="inline-block">
+          <Button variant="primary" tone="light" href="/contact">
+            {t('cta')}
+          </Button>
+        </span>
       </div>
     </section>
   );

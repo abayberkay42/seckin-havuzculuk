@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { isAppLocale } from '@/i18n/routing';
 import { ProjectsHub } from '@/components/projects/ProjectsHub';
+import { SplitReveal } from '@/components/ui/SplitReveal';
 
 export async function generateMetadata({
   params,
@@ -33,9 +34,9 @@ export default async function ProjectsPage({
           <span className="h-px w-10 bg-bronze/60" />
           {t('eyebrow')}
         </span>
-        <h1 className="mb-9 max-w-[18ch] font-display text-display text-ink">
+        <SplitReveal as="h1" className="mb-9 max-w-[18ch] font-display text-display text-ink">
           {t('title')}
-        </h1>
+        </SplitReveal>
         <p className="max-w-[42rem] text-lead font-light text-ink/65">
           {t('intro')}
         </p>

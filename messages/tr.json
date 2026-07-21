@@ -8,6 +8,9 @@
     "about": "Hakkımızda",
     "construction": "Havuz İnşaatı",
     "maintenance": "Havuz Bakımı",
+    "services": "Hizmetler",
+    "constructionDesc": "Sıfırdan tasarım ve inşa",
+    "maintenanceDesc": "Sürekli özen ve berraklık",
     "products": "Ürünler",
     "projects": "Projeler",
     "blog": "Blog",
@@ -151,5 +154,26 @@
     "typeCompleted": "Tamamlandı",
     "typeOngoing": "Devam ediyor",
     "typeBeforeAfter": "Dönüşüm"
+  },
+  "catalogue": {
+    "eyebrow": "Ürünler",
+    "title": "Havuzunuzun ömür boyu yoldaşı.",
+    "intro": "Kimyasaldan ekipmana, aydınlatmadan otomasyona. Burada yalnızca tanıtım — satış showroom ve iletişim üzerinden.",
+    "filterAll": "Tümü",
+    "viewProduct": "İncele",
+    "backToProducts": "Tüm ürünler",
+    "notForSale": "Online satış yok",
+    "descriptionLabel": "Açıklama",
+    "specs": "Teknik Özellikler",
+    "features": "Öne Çıkanlar",
+    "usage": "Kullanım Alanı",
+    "gallery": "Galeri",
+    "downloadPdf": "Teknik döküman",
+    "pdfNote": "PDF",
+    "related": "İlgili Ürünler",
+    "requestQuote": "Teklif iste",
+    "whatsapp": "WhatsApp'tan sor",
+    "whatsappText": "Merhaba, {product} hakkında bilgi almak istiyorum.",
+    "productCount": "{count} ürün"
   }
 }
