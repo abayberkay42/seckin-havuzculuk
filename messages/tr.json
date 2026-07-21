@@ -27,5 +27,129 @@
   "manifesto": {
     "eyebrow": "Felsefe",
     "body": "Biz havuz yapmıyoruz. Bir villanın nefesini, ışığın suda kırılışını, sabahın sessizliğini tasarlıyoruz. Seçkin, suyu mimariye dönüştürür."
+  },
+  "services": {
+    "eyebrow": "Ne yapıyoruz",
+    "title": "Üç uzmanlık, tek standart.",
+    "items": [
+      {
+        "no": "01",
+        "name": "Havuz İnşaatı",
+        "desc": "Araziyi, mimariyi ve ışığı okuyarak sıfırdan tasarım ve inşa. Beton, seramik, sonsuzluk kenarı."
+      },
+      {
+        "no": "02",
+        "name": "Renovasyon",
+        "desc": "Yorulmuş havuzlara ikinci bir hayat. Yenileme, izolasyon ve modern sistemlere geçiş."
+      },
+      {
+        "no": "03",
+        "name": "Bakım",
+        "desc": "Suyun berraklığını koruyan sürekli özen. Temizlik, kimyasal denge ve mevsimsel bakım."
+      }
+    ]
+  },
+  "projects": {
+    "eyebrow": "Seçili işler",
+    "title": "Suyla yazılmış mimari.",
+    "cta": "Tüm projeler",
+    "items": [
+      { "name": "Ege Kıyısı Villası", "place": "Çeşme", "year": "2024" },
+      { "name": "Zeytinlik Rezidans", "place": "Bodrum", "year": "2023" },
+      { "name": "Tepe Malikâne", "place": "Yalıkavak", "year": "2024" },
+      { "name": "Deniz Terası", "place": "Kalkan", "year": "2023" }
+    ]
+  },
+  "process": {
+    "eyebrow": "Süreç",
+    "title": "Bir fikirden, durgun suya.",
+    "steps": [
+      {
+        "no": "01",
+        "name": "Tasarım",
+        "desc": "Arazi etüdü, 3B tasarım ve mühendislik. Havuz, mimariyle tek bir bütün olur."
+      },
+      {
+        "no": "02",
+        "name": "İnşa",
+        "desc": "Ustalıkla yürüyen şantiye. Her aşama şeffaf, her detay kayıt altında."
+      },
+      {
+        "no": "03",
+        "name": "Teslim",
+        "desc": "Devreye alma ve teslim. Ardından ömür boyu süren bakım güvencesi."
+      }
+    ]
+  },
+  "products": {
+    "eyebrow": "Ürünler",
+    "title": "Havuzunuzun ömrü boyunca yanında.",
+    "desc": "Kimyasaldan ekipmana, aydınlatmadan otomasyona — 60'tan fazla ürün, tek çatı altında.",
+    "cta": "Ürünleri keşfet",
+    "categories": [
+      "Kimyasallar",
+      "Filtrasyon",
+      "Pompalar",
+      "Aydınlatma",
+      "Otomasyon",
+      "Aksesuarlar",
+      "Temizlik",
+      "Isıtma"
+    ]
+  },
+  "proof": {
+    "eyebrow": "Neden Seçkin",
+    "statement": "Rakamlar değil, suyun durgunluğu konuşur.",
+    "stats": [
+      { "value": "2017", "label": "Kuruluş" },
+      { "value": "120", "suffix": "+", "label": "Tamamlanan proje" },
+      { "value": "8", "label": "İl" },
+      { "value": "100", "suffix": "%", "label": "Teslim güvencesi" }
+    ]
+  },
+  "invitation": {
+    "eyebrow": "İletişim",
+    "title": "Havuzunuzu birlikte tasarlayalım.",
+    "desc": "Bir fikir, bir arazi ya da yalnızca bir hayal. Gerisini biz getiririz.",
+    "cta": "Projenizi başlatın"
+  },
+  "footer": {
+    "tagline": "Suyu mimariye dönüştüren havuz ustalığı.",
+    "rights": "Tüm hakları saklıdır.",
+    "navLabel": "Site haritası"
+  },
+  "projectsPage": {
+    "eyebrow": "Projeler",
+    "title": "Her proje, suyla yazılmış bir hikâye.",
+    "intro": "Bir portföy değil — mimari vaka çalışmaları. Tasarımdan durgun suya, her aşamayı görün.",
+    "filterAll": "Tümü",
+    "filterCompleted": "Tamamlanan",
+    "filterOngoing": "Devam Eden",
+    "filterBeforeAfter": "Öncesi & Sonrası",
+    "viewProject": "Projeyi incele",
+    "backToProjects": "Tüm projeler",
+    "overview": "Genel Bakış",
+    "location": "Konum",
+    "type": "Proje Tipi",
+    "duration": "Süre",
+    "area": "Alan",
+    "year": "Yıl",
+    "timeline": "Zaman Çizelgesi",
+    "gallery": "Galeri",
+    "drone": "Kuşbakışı",
+    "stages": "İnşa Aşamaları",
+    "materials": "Kullanılan Malzemeler",
+    "highlights": "Teknik Özellikler",
+    "beforeAfter": "Öncesi & Sonrası",
+    "beforeLabel": "Öncesi",
+    "afterLabel": "Sonrası",
+    "dragHint": "Sürükleyin",
+    "touchHint": "Suya dokunun",
+    "related": "İlgili Projeler",
+    "ctaTitle": "Sıradaki proje sizinki olsun.",
+    "ctaButton": "Projenizi başlatın",
+    "typeCompleted": "Tamamlandı",
+    "typeOngoing": "Devam ediyor",
+    "typeBeforeAfter": "Dönüşüm"
   }
 }

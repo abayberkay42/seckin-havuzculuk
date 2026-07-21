@@ -27,5 +27,129 @@
   "manifesto": {
     "eyebrow": "Philosophy",
     "body": "We don't build pools. We shape the breath of a villa, the way light breaks on still water, the silence of morning. Seçkin turns water into architecture."
+  },
+  "services": {
+    "eyebrow": "What we do",
+    "title": "Three disciplines, one standard.",
+    "items": [
+      {
+        "no": "01",
+        "name": "Construction",
+        "desc": "Bespoke design and build, reading the site, the architecture and the light. Concrete, ceramic, infinity edge."
+      },
+      {
+        "no": "02",
+        "name": "Renovation",
+        "desc": "A second life for tired pools. Refurbishment, waterproofing and a move to modern systems."
+      },
+      {
+        "no": "03",
+        "name": "Maintenance",
+        "desc": "Constant care that keeps the water clear. Cleaning, chemical balance and seasonal upkeep."
+      }
+    ]
+  },
+  "projects": {
+    "eyebrow": "Selected work",
+    "title": "Architecture written in water.",
+    "cta": "All projects",
+    "items": [
+      { "name": "Aegean Coast Villa", "place": "Çeşme", "year": "2024" },
+      { "name": "Olive Grove Residence", "place": "Bodrum", "year": "2023" },
+      { "name": "Hilltop Estate", "place": "Yalıkavak", "year": "2024" },
+      { "name": "Sea Terrace", "place": "Kalkan", "year": "2023" }
+    ]
+  },
+  "process": {
+    "eyebrow": "Process",
+    "title": "From an idea to still water.",
+    "steps": [
+      {
+        "no": "01",
+        "name": "Design",
+        "desc": "Site survey, 3D design and engineering. The pool becomes one with the architecture."
+      },
+      {
+        "no": "02",
+        "name": "Build",
+        "desc": "A site run with craft. Every stage transparent, every detail on record."
+      },
+      {
+        "no": "03",
+        "name": "Handover",
+        "desc": "Commissioning and delivery — followed by a lifetime of maintenance assurance."
+      }
+    ]
+  },
+  "products": {
+    "eyebrow": "Products",
+    "title": "With your pool for its whole life.",
+    "desc": "From chemicals to equipment, lighting to automation — over 60 products under one roof.",
+    "cta": "Explore products",
+    "categories": [
+      "Chemicals",
+      "Filtration",
+      "Pumps",
+      "Lighting",
+      "Automation",
+      "Accessories",
+      "Cleaning",
+      "Heating"
+    ]
+  },
+  "proof": {
+    "eyebrow": "Why Seçkin",
+    "statement": "Not the numbers — the stillness of the water speaks.",
+    "stats": [
+      { "value": "2017", "label": "Founded" },
+      { "value": "120", "suffix": "+", "label": "Projects delivered" },
+      { "value": "8", "label": "Provinces" },
+      { "value": "100", "suffix": "%", "label": "Delivery assurance" }
+    ]
+  },
+  "invitation": {
+    "eyebrow": "Get in touch",
+    "title": "Let's design your pool together.",
+    "desc": "An idea, a plot of land, or just a dream. We'll take it from there.",
+    "cta": "Start your project"
+  },
+  "footer": {
+    "tagline": "Pool craft that turns water into architecture.",
+    "rights": "All rights reserved.",
+    "navLabel": "Sitemap"
+  },
+  "projectsPage": {
+    "eyebrow": "Projects",
+    "title": "Every project, a story written in water.",
+    "intro": "Not a portfolio — architectural case studies. From design to still water, see every stage.",
+    "filterAll": "All",
+    "filterCompleted": "Completed",
+    "filterOngoing": "Ongoing",
+    "filterBeforeAfter": "Before & After",
+    "viewProject": "View project",
+    "backToProjects": "All projects",
+    "overview": "Overview",
+    "location": "Location",
+    "type": "Project type",
+    "duration": "Duration",
+    "area": "Area",
+    "year": "Year",
+    "timeline": "Timeline",
+    "gallery": "Gallery",
+    "drone": "Aerial",
+    "stages": "Construction stages",
+    "materials": "Materials used",
+    "highlights": "Technical highlights",
+    "beforeAfter": "Before & After",
+    "beforeLabel": "Before",
+    "afterLabel": "After",
+    "dragHint": "Drag",
+    "touchHint": "Touch the water",
+    "related": "Related projects",
+    "ctaTitle": "Let the next one be yours.",
+    "ctaButton": "Start your project",
+    "typeCompleted": "Completed",
+    "typeOngoing": "Ongoing",
+    "typeBeforeAfter": "Transformation"
   }
 }

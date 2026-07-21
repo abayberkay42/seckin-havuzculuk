@@ -6,6 +6,7 @@ import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server
 import { isAppLocale, locales } from '@/i18n/routing';
 import { SmoothScroll } from '@/components/providers/SmoothScroll';
 import { Nav, type NavItem } from '@/components/layout/Nav';
+import { Footer } from '@/components/layout/Footer';
 import { Grain } from '@/components/atmosphere/Grain';
 import '../globals.css';
 
@@ -80,7 +81,10 @@ export default async function LocaleLayout({
             switchLabel={tNav('switchLanguage')}
             menuLabel={tNav('menu')}
           />
-          <SmoothScroll>{children}</SmoothScroll>
+          <SmoothScroll>
+            {children}
+            <Footer />
+          </SmoothScroll>
         </NextIntlClientProvider>
       </body>
     </html>

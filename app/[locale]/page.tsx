@@ -3,6 +3,12 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { isAppLocale } from '@/i18n/routing';
 import { Hero } from '@/components/hero/Hero';
 import { Manifesto } from '@/components/home/Manifesto';
+import { Services } from '@/components/home/Services';
+import { SignatureProjects } from '@/components/home/SignatureProjects';
+import { Process } from '@/components/home/Process';
+import { Products } from '@/components/home/Products';
+import { Proof } from '@/components/home/Proof';
+import { Invitation } from '@/components/home/Invitation';
 
 export default async function HomePage({
   params,
@@ -14,7 +20,6 @@ export default async function HomePage({
   setRequestLocale(locale);
 
   const t = await getTranslations('hero');
-  const tm = await getTranslations('manifesto');
 
   return (
     <main>
@@ -27,7 +32,13 @@ export default async function HomePage({
         ctaSecondary={t('ctaSecondary')}
         scroll={t('scroll')}
       />
-      <Manifesto eyebrow={tm('eyebrow')} body={tm('body')} />
+      <Manifesto />
+      <Services />
+      <SignatureProjects />
+      <Process />
+      <Products />
+      <Proof />
+      <Invitation />
     </main>
   );
 }
