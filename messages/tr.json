@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "title": "Seçkin Havuzculuk — Lüks Havuz Tasarımı & İnşaatı",
+    "description": "Villalar için sıfırdan lüks havuz tasarımı, inşaatı ve bakımı. Suyu mimariye dönüştürüyoruz."
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımızda",
+    "construction": "Havuz İnşaatı",
+    "maintenance": "Havuz Bakımı",
+    "products": "Ürünler",
+    "projects": "Projeler",
+    "blog": "Blog",
+    "contact": "İletişim",
+    "menu": "Menü",
+    "switchLanguage": "EN"
+  },
+  "hero": {
+    "eyebrow": "Seçkin Havuzculuk — 2017'den beri",
+    "headlineLine1": "Su durulunca,",
+    "headlineLine2": "ustalık görünür.",
+    "supporting": "Suyu mimariye dönüştüren lüks havuz tasarımı ve inşaatı.",
+    "ctaPrimary": "Projenizi konuşalım",
+    "ctaSecondary": "Projeleri izleyin",
+    "scroll": "Kaydırın"
+  },
+  "manifesto": {
+    "eyebrow": "Felsefe",
+    "body": "Biz havuz yapmıyoruz. Bir villanın nefesini, ışığın suda kırılışını, sabahın sessizliğini tasarlıyoruz. Seçkin, suyu mimariye dönüştürür."
+  }
+}

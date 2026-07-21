@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "title": "Seçkin Pools — Luxury Pool Design & Construction",
+    "description": "Bespoke luxury pool design, construction and maintenance for villas. We turn water into architecture."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "construction": "Pool Construction",
+    "maintenance": "Pool Maintenance",
+    "products": "Products",
+    "projects": "Projects",
+    "blog": "Blog",
+    "contact": "Contact",
+    "menu": "Menu",
+    "switchLanguage": "TR"
+  },
+  "hero": {
+    "eyebrow": "Seçkin Pools — Since 2017",
+    "headlineLine1": "When water stills,",
+    "headlineLine2": "craft appears.",
+    "supporting": "Luxury pool design and construction that turns water into architecture.",
+    "ctaPrimary": "Start your project",
+    "ctaSecondary": "Watch our work",
+    "scroll": "Scroll"
+  },
+  "manifesto": {
+    "eyebrow": "Philosophy",
+    "body": "We don't build pools. We shape the breath of a villa, the way light breaks on still water, the silence of morning. Seçkin turns water into architecture."
+  }
+}
