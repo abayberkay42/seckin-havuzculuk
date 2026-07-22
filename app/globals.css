@@ -149,9 +149,17 @@
   background-size: 240px 240px;
 }
 
+/* The WebGL water sheet is a passive visual overlay — it must never intercept
+   clicks. R3F sets pointer-events:auto inline on its own container, which would
+   defeat the wrapper's pointer-events-none, so force the whole subtree through. */
+.water-layer,
+.water-layer * {
+  pointer-events: none !important;
+}
+
 /* Click/tap water ring — one expanding, fading ring per press. Transform +
    opacity only, so it lives on the compositor and costs nothing between clicks.
-   Replaces the old fullscreen WebGL water sheet that crawled in Chrome. */
+   Used in Chrome (where the fullscreen WebGL water crawls) and on touch. */
 .ripple-drop {
   position: absolute;
   width: 18px;

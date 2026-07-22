@@ -8,7 +8,7 @@ import { SmoothScroll } from '@/components/providers/SmoothScroll';
 import { Nav, type NavNode } from '@/components/layout/Nav';
 import { Footer } from '@/components/layout/Footer';
 import { Grain } from '@/components/atmosphere/Grain';
-import { Ripple } from '@/components/atmosphere/Ripple';
+import { CursorFx } from '@/components/atmosphere/CursorFx';
 import { WhatsAppButton } from '@/components/site/WhatsAppButton';
 import '../globals.css';
 
@@ -75,7 +75,7 @@ export default async function LocaleLayout({
     <html lang={locale} className={`${syne.variable} ${dmSans.variable}`}>
       <body className="min-h-dvh bg-canvas text-ink">
         <Grain />
-        <Ripple />
+        <CursorFx />
         <NextIntlClientProvider messages={messages}>
           <Nav nav={nav} locale={locale} menuLabel={tNav('menu')} />
           <SmoothScroll>
