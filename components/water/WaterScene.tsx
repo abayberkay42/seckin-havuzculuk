@@ -115,7 +115,7 @@ function Field({ onSlow }: { onSlow?: () => void }) {
   const lastT = useRef(0);
   const slow = useRef(0);
   const wake = () => {
-    activeUntil.current = performance.now() + 1900; // ~ripple settle time
+    activeUntil.current = performance.now() + 2400; // ripple play + tail fade-out
     invalidate();
   };
 
@@ -240,6 +240,13 @@ function Field({ onSlow }: { onSlow?: () => void }) {
     }
     // keep the on-demand loop running until the ripples have settled
     if (now < activeUntil.current) invalidate();
+
+    // Fade the sheet out over the last stretch of the active window, so when the
+    // on-demand loop stops the canvas is already invisible — otherwise it holds
+    // its last framebuffer and a half-formed ripple "freezes" on screen. A fresh
+    // move/tap pushes activeUntil forward, snapping opacity straight back to 1.
+    const remaining = activeUntil.current - now;
+    display.mat.uniforms.uOpacity.value = Math.max(0, Math.min(1, remaining / 650));
 
     // throttle the simulation: hold most frames so the ripple plays out slowly
     frame.current += 1;
