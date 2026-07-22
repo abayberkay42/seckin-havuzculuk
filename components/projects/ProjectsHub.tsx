@@ -6,6 +6,8 @@ import { AnimatePresence, motion, useScroll, useTransform } from 'motion/react';
 import { Link } from '@/i18n/navigation';
 import { projects, localize, type ProjectType } from '@/content/projects';
 import { Sheen } from '@/components/ui/Sheen';
+import { TextLink } from '@/components/ui/TextLink';
+import { EASE_WATER, layoutTransition } from '@/lib/motion';
 
 type FilterKey = 'all' | ProjectType;
 
@@ -40,7 +42,7 @@ export function ProjectsHub() {
   return (
     <section
       data-nav-theme="light"
-      className="bg-canvas px-[clamp(1.5rem,6vw,8rem)] pb-[clamp(7rem,14vh,12rem)]"
+      className="bg-canvas px-[clamp(1.5rem,6vw,8rem)] pb-[clamp(7rem,14vh,12rem)] pt-[clamp(3rem,7vh,6rem)]"
     >
       <div className="mb-[clamp(3.5rem,8vh,7rem)] flex flex-wrap gap-x-9 gap-y-3 border-t border-ink/10 pt-8">
         {filters.map((f) => (
@@ -62,7 +64,11 @@ export function ProjectsHub() {
         ))}
       </div>
 
-      <motion.div layout className="flex flex-col gap-[clamp(5rem,12vh,11rem)]">
+      <motion.div
+        layout
+        transition={layoutTransition}
+        className="flex flex-col gap-[clamp(5rem,12vh,11rem)]"
+      >
         <AnimatePresence mode="popLayout">
           {list.map((p, i) => (
             <ProjectRow
@@ -123,7 +129,7 @@ function ProjectRow({
       whileInView={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0 }}
       viewport={{ once: true, margin: '-12%' }}
-      transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: 1, ease: EASE_WATER }}
       className="grid items-center gap-[clamp(2rem,5vw,5rem)] md:grid-cols-12"
     >
       <Link
@@ -141,7 +147,7 @@ function ProjectRow({
           }`}
         >
           {water && (
-            <div className="animate-water-drift absolute -right-1/4 -top-1/4 h-[70%] w-[70%] rounded-full bg-[radial-gradient(closest-side,rgba(169,203,227,0.22),transparent_72%)]" />
+            <div className="absolute -right-1/4 -top-1/4 h-[70%] w-[70%] rounded-full bg-[radial-gradient(closest-side,rgba(169,203,227,0.20),transparent_72%)]" />
           )}
         </motion.div>
         <Sheen tint={water ? 'light' : 'steel'} />
@@ -163,18 +169,14 @@ function ProjectRow({
         <p className="mb-7 max-w-[30rem] text-[1.0625rem] leading-relaxed text-ink/65">
           {overview}
         </p>
-        <Link
+        <TextLink
           href={href}
-          className="group inline-flex items-center gap-2 font-mono text-label uppercase text-ink"
+          arrow
+          accent
+          className="font-mono text-label uppercase text-ink"
         >
-          <span className="relative">
-            {viewLabel}
-            <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-bronze transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-x-100" />
-          </span>
-          <span className="transition-transform duration-500 group-hover:translate-x-1">
-            →
-          </span>
-        </Link>
+          {viewLabel}
+        </TextLink>
       </div>
     </motion.article>
   );

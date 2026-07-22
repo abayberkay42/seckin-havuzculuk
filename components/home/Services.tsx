@@ -1,9 +1,11 @@
 'use client';
 
+import Image from 'next/image';
 import { useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { gsap, useGSAP } from '@/lib/gsap';
 import { Frame } from '@/components/ui/Frame';
+import { Eyebrow } from '@/components/ui/Eyebrow';
 
 type Item = { no: string; name: string; desc: string };
 
@@ -72,12 +74,20 @@ export function Services() {
   return (
     <section data-nav-theme="dark" className="bg-navy">
       <div ref={root} className="relative h-[100dvh] overflow-hidden">
+        {/* section background — a photo held behind the panels, darkened so the
+            navy stays and the content reads. */}
+        <Image
+          src="/services-bg.webp"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(100deg,rgba(28,38,52,0.92)_0%,rgba(28,38,52,0.74)_52%,rgba(28,38,52,0.6)_100%)]" />
+
         {/* persistent header */}
         <div className="absolute inset-x-0 top-0 z-10 flex items-center justify-between px-[clamp(1.5rem,6vw,8rem)] pt-[clamp(5.5rem,11vh,8rem)]">
-          <span className="flex items-center gap-4 font-mono text-label uppercase text-canvas/50">
-            <span className="h-px w-10 bg-steel/60" />
-            {t('eyebrow')}
-          </span>
+          <Eyebrow index="II" tone="light">{t('eyebrow')}</Eyebrow>
           <span className="hidden max-w-[16rem] text-right font-display text-[1.25rem] text-canvas/70 md:block">
             {t('title')}
           </span>
@@ -90,22 +100,26 @@ export function Services() {
             data-panel
             className="absolute inset-0 flex items-center px-[clamp(1.5rem,6vw,8rem)]"
           >
-            <div className="grid w-full items-center gap-[clamp(2rem,5vw,5rem)] md:grid-cols-2">
-              <div>
+            <div className="mx-auto grid w-full max-w-[62rem] items-center gap-[clamp(1.5rem,3vw,3rem)] md:grid-cols-2">
+              <div className="text-center">
                 <span className="mb-6 block font-mono text-label uppercase text-steel">
                   {item.no}
                 </span>
                 <h3 className="mb-7 font-display text-display text-canvas">
                   {item.name}
                 </h3>
-                <p className="max-w-[30rem] text-lead font-light text-canvas/70">
+                <p className="mx-auto max-w-[30rem] text-lead font-light text-canvas/70">
                   {item.desc}
                 </p>
               </div>
               <Frame
                 variant={i === 1 ? 'stone' : 'water'}
+                src={
+                  ['/havuz-insaati-v2.webp', '/renovasyon-v2.webp', '/havuz-bakimi.webp'][i]
+                }
                 label={item.name}
-                className="aspect-[4/5] w-full max-w-[30rem] justify-self-end md:aspect-[3/4]"
+                alt={item.name}
+                className="aspect-[4/5] w-full max-w-[30rem] justify-self-center shadow-[0_48px_90px_-28px_rgba(0,0,0,0.75)] md:aspect-[3/4]"
               />
             </div>
           </div>

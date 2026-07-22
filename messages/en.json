@@ -29,7 +29,7 @@
   },
   "manifesto": {
     "eyebrow": "Philosophy",
-    "body": "We don't build pools. We shape the breath of a villa, the way light breaks on still water, the silence of morning. Seçkin turns water into architecture."
+    "body": "We don't design pools, we design stillness."
   },
   "services": {
     "eyebrow": "What we do",
@@ -171,9 +171,112 @@
     "downloadPdf": "Technical sheet",
     "pdfNote": "PDF",
     "related": "Related products",
-    "requestQuote": "Request a quote",
+    "requestQuote": "Get a price",
     "whatsapp": "Ask on WhatsApp",
     "whatsappText": "Hello, I'd like information about {product}.",
     "productCount": "{count} products"
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "A studio devoted to water.",
+    "intro": "Since 2017, Seçkin Havuzculuk has treated the pool not as a product but as an architectural moment — where light, stone and still water meet.",
+    "storyEyebrow": "Story",
+    "storyTitle": "Water as a craft.",
+    "storyBody1": "We begin with a question: what does this house, this land, this light ask for? Every pool is born as an extension of the architecture it belongs to — never chosen from a catalogue, always drawn for its place.",
+    "storyBody2": "As a small, select team we take on few projects with great care. From site to handover, every stage is transparent and documented — because trust is as fragile as clear water.",
+    "principlesEyebrow": "Principles",
+    "principlesTitle": "The three things that guide us.",
+    "principles": [
+      { "no": "01", "name": "Stillness", "desc": "Not spectacle, but calm. The best pool is the one that sits so naturally it goes unnoticed." },
+      { "no": "02", "name": "Craft", "desc": "An obsession with detail. The line of an infinity edge, the seam of a mosaic, the sound of the water — all designed." },
+      { "no": "03", "name": "Continuity", "desc": "Handover is a beginning, not an end. Years of care keep the water as clear as day one." }
+    ],
+    "figuresEyebrow": "In brief",
+    "figures": [
+      { "value": "2017", "label": "Founded" },
+      { "value": "120", "suffix": "+", "label": "Completed projects" },
+      { "value": "8", "label": "Provinces" }
+    ],
+    "ctaTitle": "Let the next water be yours.",
+    "ctaButton": "Talk to us"
+  },
+  "construction": {
+    "eyebrow": "Pool Construction",
+    "title": "From scratch, one with the architecture.",
+    "intro": "Pools designed by reading the land, the house and the light — built on a concrete or gunite shell to last a lifetime.",
+    "capabilitiesEyebrow": "What we build",
+    "capabilitiesTitle": "Every form, one standard.",
+    "capabilities": [
+      { "no": "01", "name": "Infinity edge", "desc": "Overflow details where the water meets the horizon and draws in the view." },
+      { "no": "02", "name": "Gunite & concrete", "desc": "A strong, long-lasting sprayed-concrete shell that takes any form." },
+      { "no": "03", "name": "Ceramic & glass mosaic", "desc": "Hand-laid finishes that decide the colour of the water." },
+      { "no": "04", "name": "Smart systems", "desc": "Filtration, heating, lighting and automation, invisibly integrated." }
+    ],
+    "processEyebrow": "How we work",
+    "processTitle": "From an idea to still water.",
+    "steps": [
+      { "no": "01", "name": "Design", "desc": "Site survey, 3D design and engineering. The pool becomes one with the architecture." },
+      { "no": "02", "name": "Build", "desc": "A site run with mastery; every stage transparent, every detail recorded." },
+      { "no": "03", "name": "Handover", "desc": "Commissioning, handover, and then a lifetime maintenance guarantee." }
+    ],
+    "ctaTitle": "Let's draw your pool together.",
+    "ctaButton": "Start your project"
+  },
+  "maintenance": {
+    "eyebrow": "Pool Maintenance",
+    "title": "Clarity of water, uninterrupted.",
+    "intro": "A pool succeeds not on the day it is finished, but if it is still as clear as day one years later. Maintenance is the quiet guarantee of that clarity.",
+    "includedEyebrow": "What's included",
+    "includedTitle": "Constant care for the water.",
+    "included": [
+      { "no": "01", "name": "Chemical balance", "desc": "Regular measurement and adjustment of pH, chlorine and mineral balance." },
+      { "no": "02", "name": "Filtration service", "desc": "Filter cleaning, pump checks and system efficiency." },
+      { "no": "03", "name": "Surface cleaning", "desc": "Floor, wall and waterline cleaning by robot and by hand." },
+      { "no": "04", "name": "Seasonal service", "desc": "Full care for winterising and opening the season." }
+    ],
+    "rhythmEyebrow": "Rhythm",
+    "rhythmTitle": "Care by the season.",
+    "rhythmBody": "From weekly checks to seasonal deep service — a maintenance calendar built around your pool's size and use. You enjoy the water; we take on the rest.",
+    "ctaTitle": "A maintenance plan for your pool.",
+    "ctaButton": "Write for maintenance"
+  },
+  "journal": {
+    "eyebrow": "Journal",
+    "title": "Notes on water, light and craft.",
+    "intro": "Design decisions, material stories and what we learn on site. The journal is coming here soon.",
+    "stateLabel": "In preparation",
+    "upcomingEyebrow": "Coming soon",
+    "upcoming": [
+      { "tag": "Design", "title": "Anatomy of an infinity edge", "teaser": "How is that line where water meets the horizon calculated?" },
+      { "tag": "Material", "title": "Why glass mosaic is different", "teaser": "The millimetric choices that decide the water's colour." },
+      { "tag": "Care", "title": "The chemistry of clear water", "teaser": "Season changes without upsetting the balance." }
+    ],
+    "ctaTitle": "Have a question?",
+    "ctaButton": "Write to us"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's begin with an idea.",
+    "intro": "A plot, a plan, or just a dream. Let's talk the shortest way — and shape your project together.",
+    "channelsEyebrow": "Reach us directly",
+    "whatsappLabel": "WhatsApp",
+    "whatsappValue": "Instant reply",
+    "whatsappText": "Hello, I'd like to talk about a pool project.",
+    "phoneLabel": "Phone",
+    "callLabel": "Call Us",
+    "emailLabel": "Email",
+    "studioEyebrow": "Studio",
+    "addressLabel": "Address",
+    "address": "STC Royal Inc. · Türkiye",
+    "hoursLabel": "Working hours",
+    "hours": "Mon–Sat · 09:00–18:00",
+    "formEyebrow": "Leave a message",
+    "formTitle": "Tell us about your project.",
+    "formName": "Your name",
+    "formEmail": "Email",
+    "formMessage": "About your project",
+    "formSend": "Send",
+    "formNote": "Pressing Send opens your email app.",
+    "formSubject": "Website — Project enquiry"
   }
 }

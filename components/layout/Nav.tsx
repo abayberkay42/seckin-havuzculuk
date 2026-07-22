@@ -1,18 +1,21 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useParams } from 'next/navigation';
+import Image from 'next/image';
 import { AnimatePresence, motion } from 'motion/react';
 import { Link, usePathname, useRouter } from '@/i18n/navigation';
 import type { AppPathname } from '@/i18n/routing';
-import { Magnetic } from '@/components/ui/Magnetic';
 
-export type NavLeaf = { href: AppPathname; label: string; desc?: string };
+/** Nav only ever links to static routes — never a parameterised [slug] page. */
+type StaticPathname = Exclude<AppPathname, '/products/[slug]' | '/projects/[slug]'>;
+
+export type NavLeaf = { href: StaticPathname; label: string; desc?: string };
 export type NavGroup = { label: string; panel: NavLeaf[] };
 export type NavNode = NavLeaf | NavGroup;
 
 const isGroup = (n: NavNode): n is NavGroup => 'panel' in n;
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
-const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
 
 export function Nav({
   nav,
@@ -27,65 +30,61 @@ export function Nav({
   const [open, setOpen] = useState(false);
   const [openPanel, setOpenPanel] = useState<number | null>(null);
   const pathname = usePathname();
+  const params = useParams();
   const router = useRouter();
-  const barRef = useRef<HTMLElement>(null);
-  const solidity = useRef(0);
-  const themeMix = useRef(1); // 1 = dark, 0 = light (eased)
-  const themeTarget = useRef(1);
+  const [solid, setSolid] = useState(false);
 
   const dark = theme === 'dark';
   const leaves = nav.flatMap((n) => (isGroup(n) ? n.panel : [n]));
   const linkClass = dark
     ? 'text-canvas/70 hover:text-canvas'
     : 'text-ink/60 hover:text-ink';
-  const logoClass = dark ? 'text-canvas' : 'text-ink';
 
-  // Which section is under the bar decides its colour.
+  // The glass, computed from theme + scroll depth. Deterministic (React state),
+  // eased by a CSS transition on the bar — no rAF loop, nothing to freeze.
+  const barStyle = {
+    backgroundColor: dark
+      ? `rgba(18, 40, 51, ${solid ? 0.5 : 0.16})`
+      : `rgba(247, 243, 236, ${solid ? 0.9 : 0.55})`,
+    borderColor: dark
+      ? `rgba(245, 240, 232, ${solid ? 0.16 : 0.1})`
+      : `rgba(26, 23, 18, ${solid ? 0.14 : 0.08})`,
+    backdropFilter: `blur(${solid ? 22 : 14}px) saturate(140%)`,
+    WebkitBackdropFilter: `blur(${solid ? 22 : 14}px) saturate(140%)`,
+  };
+
+  // Which section sits under the bar decides the theme. A geometric probe on
+  // scroll (the point just below the bar) — exact at the top of the page, and
+  // it re-reads live positions. setState only re-renders when the value truly
+  // changes, so hovering within one section costs nothing.
   useEffect(() => {
-    const sections = Array.from(
-      document.querySelectorAll<HTMLElement>('[data-nav-theme]'),
-    );
-    if (!sections.length) return;
-    const io = new IntersectionObserver(
-      (entries) =>
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            const next = e.target.getAttribute('data-nav-theme');
-            if (next === 'dark' || next === 'light') setTheme(next);
-          }
-        }),
-      { rootMargin: '-72px 0px -99% 0px' },
-    );
-    sections.forEach((s) => io.observe(s));
-    return () => io.disconnect();
+    const PROBE = 90; // px below the viewport top — just under the bar
+    const pick = () => {
+      let current: HTMLElement | null = null;
+      for (const s of Array.from(
+        document.querySelectorAll<HTMLElement>('[data-nav-theme]'),
+      )) {
+        const r = s.getBoundingClientRect();
+        if (r.top <= PROBE && r.bottom > PROBE) current = s;
+      }
+      const next = current?.getAttribute('data-nav-theme');
+      if (next === 'dark' || next === 'light') setTheme(next);
+    };
+    pick();
+    window.addEventListener('scroll', pick, { passive: true });
+    const t = window.setTimeout(pick, 200); // after layout settles
+    return () => {
+      window.removeEventListener('scroll', pick);
+      window.clearTimeout(t);
+    };
   }, [pathname]);
 
+  // Solidify the glass a touch once you've scrolled past the fold.
   useEffect(() => {
-    themeTarget.current = dark ? 1 : 0;
-  }, [dark]);
-
-  // One frame loop eases BOTH scroll-solidity and theme — nothing ever jumps.
-  useEffect(() => {
-    let raf = 0;
-    const loop = () => {
-      solidity.current += (Math.min(window.scrollY / 220, 1) - solidity.current) * 0.08;
-      themeMix.current += (themeTarget.current - themeMix.current) * 0.1;
-      const el = barRef.current;
-      if (el) {
-        const s = solidity.current;
-        const m = themeMix.current;
-        const bg = `rgba(${lerp(247, 18, m).toFixed(0)}, ${lerp(243, 40, m).toFixed(0)}, ${lerp(236, 51, m).toFixed(0)}, ${lerp(0.5 + s * 0.38, 0.14 + s * 0.36, m).toFixed(3)})`;
-        const bd = `rgba(${lerp(26, 245, m).toFixed(0)}, ${lerp(23, 240, m).toFixed(0)}, ${lerp(18, 232, m).toFixed(0)}, ${lerp(0.08 + s * 0.07, 0.12 + s * 0.06, m).toFixed(3)})`;
-        const blur = `blur(${(13 + s * 10).toFixed(1)}px) saturate(140%)`;
-        el.style.backgroundColor = bg;
-        el.style.borderColor = bd;
-        el.style.backdropFilter = blur;
-        el.style.setProperty('-webkit-backdrop-filter', blur);
-      }
-      raf = requestAnimationFrame(loop);
-    };
-    loop();
-    return () => cancelAnimationFrame(raf);
+    const onScroll = () => setSolid(window.scrollY > 120);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   useEffect(() => {
@@ -96,26 +95,43 @@ export function Nav({
   }, [open]);
 
   const switchLocale = (next: string) => {
-    if (next !== locale) router.replace(pathname, { locale: next });
+    if (next === locale) return;
+    // Carry the current route + its params so locale switching also works on
+    // dynamic [slug] pages. The typed pathname union includes [slug] templates
+    // that TS can't correlate with the generic useParams() shape, so the call
+    // is cast to the router's own first-argument type.
+    router.replace(
+      { pathname, params } as Parameters<typeof router.replace>[0],
+      { locale: next },
+    );
   };
 
   return (
     <header className="pointer-events-none fixed inset-x-0 top-0 z-50 flex justify-center px-[clamp(1rem,4vw,2.5rem)]">
       <nav
-        ref={barRef}
-        className="pointer-events-auto relative mt-[clamp(1rem,2.5vh,1.75rem)] flex w-full max-w-[1600px] items-center justify-between rounded-full border py-2.5 pl-7 pr-2.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_26px_60px_-30px_rgba(6,18,24,0.5)]"
+        style={barStyle}
+        className="pointer-events-auto relative mt-[clamp(1rem,2.5vh,1.75rem)] flex w-full max-w-[1600px] items-center justify-between rounded-full border py-2.5 pl-7 pr-2.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_26px_60px_-30px_rgba(6,18,24,0.5)] transition-[background-color,border-color,backdrop-filter] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
       >
-        {/* clipped glass — top reflection + pointer-following light */}
+        {/* clipped glass — a single quiet top reflection. Nothing follows the
+            cursor here: the bar is architecture, it holds still. */}
         <span className="pointer-events-none absolute inset-0 overflow-hidden rounded-full">
-          <span className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent" />
-          <PointerSheen tint={dark ? 'light' : 'steel'} />
+          <span className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
         </span>
 
-        <Link
-          href="/"
-          className={`relative z-10 font-display text-[1.35rem] tracking-tight transition-colors duration-700 ${logoClass}`}
-        >
-          Seçkin
+        <Link href="/" aria-label="Seçkin Havuzculuk" className="relative z-10 flex items-center">
+          <span
+            className="block transition-[filter] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
+            style={{ filter: dark ? 'none' : 'invert(1) brightness(0.85)' }}
+          >
+            <Image
+              src="/logo.png"
+              alt="Seçkin Havuzculuk"
+              width={453}
+              height={500}
+              priority
+              className="h-11 w-auto"
+            />
+          </span>
         </Link>
 
         <ul className="relative z-10 hidden items-center gap-9 lg:flex">
@@ -174,18 +190,16 @@ export function Nav({
   );
 }
 
-/* ── desktop leaf: liquid underline + magnetic ─────────────── */
+/* ── desktop leaf: a quiet hairline that draws from the left ─── */
 function LeafLink({ node, linkClass }: { node: NavLeaf; linkClass: string }) {
   return (
-    <Magnetic strength={0.4}>
-      <Link
-        href={node.href}
-        className={`group relative block px-0.5 py-1 text-[0.82rem] transition-colors duration-300 ${linkClass}`}
-      >
-        <span className="relative z-10">{node.label}</span>
-        <span className="pointer-events-none absolute -bottom-0.5 left-1/2 h-px w-0 -translate-x-1/2 rounded-full bg-steel shadow-[0_0_10px_rgba(130,175,216,0.7)] transition-[width] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:w-full" />
-      </Link>
-    </Magnetic>
+    <Link
+      href={node.href}
+      className={`group relative block px-0.5 py-1 text-[0.82rem] transition-colors duration-300 ${linkClass}`}
+    >
+      <span className="relative z-10">{node.label}</span>
+      <span className="pointer-events-none absolute -bottom-0.5 left-0 h-px w-full origin-left scale-x-0 bg-steel/70 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-x-100" />
+    </Link>
   );
 }
 
@@ -217,8 +231,8 @@ function GroupItem({
           ↓
         </span>
         <span
-          className={`pointer-events-none absolute -bottom-0.5 left-1/2 h-px -translate-x-1/2 rounded-full bg-steel shadow-[0_0_10px_rgba(130,175,216,0.7)] transition-[width] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-            open ? 'w-full' : 'w-0'
+          className={`pointer-events-none absolute -bottom-0.5 left-0 h-px w-full origin-left bg-steel/70 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+            open ? 'scale-x-100' : 'scale-x-0'
           }`}
         />
       </button>
@@ -230,7 +244,7 @@ function GroupItem({
             animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
             exit={{ opacity: 0, y: 10, filter: 'blur(8px)' }}
             transition={{ duration: 0.5, ease: EASE }}
-            className="absolute left-1/2 top-full z-20 mt-5 w-[min(88vw,30rem)] -translate-x-1/2"
+            className="absolute left-1/2 top-full z-20 w-[min(88vw,30rem)] -translate-x-1/2 pt-5"
           >
             <div className="overflow-hidden rounded-[1.5rem] border border-canvas/15 bg-deep/70 p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.14),0_40px_80px_-40px_rgba(6,18,24,0.85)] backdrop-blur-2xl">
               <span className="mb-1 block px-5 pt-3 font-mono text-label uppercase text-canvas/40">
@@ -310,46 +324,6 @@ function LangToggle({
         );
       })}
     </div>
-  );
-}
-
-/* ── pointer-following light reflection on the glass ───────── */
-function PointerSheen({ tint }: { tint: 'light' | 'steel' }) {
-  const ref = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const el = ref.current;
-    const parent = el?.parentElement?.parentElement; // the <nav>
-    if (!el || !parent) return;
-    if (window.matchMedia('(pointer: coarse)').matches) return;
-    let raf = 0;
-    const move = (e: PointerEvent) => {
-      const r = parent.getBoundingClientRect();
-      const x = ((e.clientX - r.left) / r.width) * 100;
-      cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(() => {
-        el.style.setProperty('--nx', `${x}%`);
-        el.style.setProperty('--no', '1');
-      });
-    };
-    const leave = () => el.style.setProperty('--no', '0');
-    parent.addEventListener('pointermove', move);
-    parent.addEventListener('pointerleave', leave);
-    return () => {
-      parent.removeEventListener('pointermove', move);
-      parent.removeEventListener('pointerleave', leave);
-      cancelAnimationFrame(raf);
-    };
-  }, []);
-  const color = tint === 'steel' ? 'rgba(130,175,216,0.25)' : 'rgba(255,255,255,0.22)';
-  return (
-    <div
-      ref={ref}
-      aria-hidden="true"
-      className="absolute inset-0 opacity-[var(--no,0)] transition-opacity duration-500"
-      style={{
-        background: `radial-gradient(140px 70px at var(--nx,50%) 50%, ${color}, transparent 70%)`,
-      }}
-    />
   );
 }
 

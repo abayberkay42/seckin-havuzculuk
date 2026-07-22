@@ -1,9 +1,9 @@
 /**
- * Contact endpoints — placeholders. Replace with the firm's real details.
- * WHATSAPP_NUMBER is digits only, international format, no + or spaces.
+ * Contact endpoints. WHATSAPP_NUMBER is digits only, international format, no
+ * + or spaces. EMAIL is still a placeholder — replace with the firm's real one.
  */
-export const WHATSAPP_NUMBER = '905000000000';
-export const PHONE_DISPLAY = '+90 500 000 00 00';
+export const WHATSAPP_NUMBER = '905346107986';
+export const PHONE_DISPLAY = '+90 534 610 79 86';
 export const EMAIL = 'info@seckinhavuzculuk.com';
 
 export const whatsappLink = (message: string) =>

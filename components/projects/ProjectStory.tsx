@@ -3,6 +3,7 @@
 import { useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { gsap, useGSAP } from '@/lib/gsap';
+import { Eyebrow } from '@/components/ui/Eyebrow';
 import type { LocalizedProject } from '@/content/projects';
 
 export function ProjectStory({ lp }: { lp: LocalizedProject }) {
@@ -58,14 +59,10 @@ export function ProjectStory({ lp }: { lp: LocalizedProject }) {
       className="bg-canvas px-[clamp(1.5rem,6vw,8rem)] py-[clamp(7rem,14vh,12rem)]"
     >
       <div className="grid gap-x-[clamp(2rem,5vw,6rem)] gap-y-16 md:grid-cols-12">
-        <div className="md:col-span-7">
-          <span
-            data-reveal
-            className="mb-8 flex items-center gap-4 font-mono text-label uppercase text-ink/50"
-          >
-            <span className="h-px w-10 bg-bronze/60" />
+        <div className="text-center md:col-span-7">
+          <Eyebrow data-reveal tone="dark" className="mb-8 justify-center">
             {t('overview')}
-          </span>
+          </Eyebrow>
           <p data-reveal className="font-display text-title text-ink">
             {lp.overview}
           </p>
@@ -91,7 +88,7 @@ export function ProjectStory({ lp }: { lp: LocalizedProject }) {
       <div data-timeline className="relative mt-[clamp(5rem,10vh,9rem)]">
         <span
           data-reveal
-          className="mb-12 block font-mono text-label uppercase text-ink/50"
+          className="mb-12 block text-center font-mono text-label uppercase text-ink/50"
         >
           {t('timeline')}
         </span>
@@ -100,14 +97,14 @@ export function ProjectStory({ lp }: { lp: LocalizedProject }) {
         </div>
         <ol className="grid gap-x-10 gap-y-12 md:grid-cols-3">
           {lp.timeline.map((item) => (
-            <li key={item.title} data-reveal>
+            <li key={item.title} data-reveal className="text-center">
               <span className="mb-4 block font-mono text-label uppercase text-bronze">
                 {item.date}
               </span>
               <h3 className="mb-3 font-display text-[1.6rem] text-ink">
                 {item.title}
               </h3>
-              <p className="max-w-[20rem] text-[1rem] leading-relaxed text-ink/60">
+              <p className="mx-auto max-w-[20rem] text-[1rem] leading-relaxed text-ink/60">
                 {item.desc}
               </p>
             </li>

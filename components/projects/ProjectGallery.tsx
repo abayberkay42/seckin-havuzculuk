@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { gsap, useGSAP } from '@/lib/gsap';
 import { Sheen } from '@/components/ui/Sheen';
+import { Eyebrow } from '@/components/ui/Eyebrow';
 import type { LocalizedProject } from '@/content/projects';
 
 const WATER = 'bg-[radial-gradient(130%_130%_at_28%_18%,#20516a_0%,#16303c_58%,#0d1f29_100%)]';
@@ -25,7 +26,7 @@ function GalleryImage({
         <div
           className={`h-full w-full transition-transform duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.06] ${WATER}`}
         >
-          <div className="animate-water-drift absolute -right-1/4 -top-1/4 h-[70%] w-[70%] rounded-full bg-[radial-gradient(closest-side,rgba(169,203,227,0.2),transparent_72%)]" />
+          <div className="absolute -right-1/4 -top-1/4 h-[70%] w-[70%] rounded-full bg-[radial-gradient(closest-side,rgba(169,203,227,0.18),transparent_72%)]" />
         </div>
       </div>
       <Sheen tint="light" />
@@ -79,10 +80,9 @@ export function ProjectGallery({ lp }: { lp: LocalizedProject }) {
       data-nav-theme="light"
       className="bg-canvas px-[clamp(1.5rem,6vw,8rem)] pb-[clamp(6rem,12vh,10rem)]"
     >
-      <span className="mb-12 flex items-center gap-4 font-mono text-label uppercase text-ink/50">
-        <span className="h-px w-10 bg-bronze/60" />
+      <Eyebrow tone="dark" className="mb-12 justify-center">
         {t('gallery')}
-      </span>
+      </Eyebrow>
 
       <div className="flex flex-col gap-[clamp(1.5rem,3vw,2.5rem)]">
         {/* the drone establishing shot */}

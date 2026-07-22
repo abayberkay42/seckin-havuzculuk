@@ -29,7 +29,7 @@
   },
   "manifesto": {
     "eyebrow": "Felsefe",
-    "body": "Biz havuz yapmıyoruz. Bir villanın nefesini, ışığın suda kırılışını, sabahın sessizliğini tasarlıyoruz. Seçkin, suyu mimariye dönüştürür."
+    "body": "Biz havuz değil, sükûnet tasarlarız."
   },
   "services": {
     "eyebrow": "Ne yapıyoruz",
@@ -171,9 +171,112 @@
     "downloadPdf": "Teknik döküman",
     "pdfNote": "PDF",
     "related": "İlgili Ürünler",
-    "requestQuote": "Teklif iste",
+    "requestQuote": "Fiyat al",
     "whatsapp": "WhatsApp'tan sor",
     "whatsappText": "Merhaba, {product} hakkında bilgi almak istiyorum.",
     "productCount": "{count} ürün"
+  },
+  "about": {
+    "eyebrow": "Hakkımızda",
+    "title": "Suya adanmış bir atölye.",
+    "intro": "2017'den beri Seçkin Havuzculuk, havuzu bir ürün değil bir mimari an olarak görüyor — ışığın, taşın ve durgun suyun buluştuğu yer.",
+    "storyEyebrow": "Hikâye",
+    "storyTitle": "Bir zanaat olarak su.",
+    "storyBody1": "İşe bir soruyla başlarız: bu ev, bu arazi, bu ışık ne ister? Her havuz ait olduğu mimarinin uzantısı olarak doğar; bir katalogdan seçilmez, o yere özel çizilir.",
+    "storyBody2": "Küçük, seçkin bir ekip olarak az sayıda işi büyük bir titizlikle üstleniriz. Şantiyeden teslime, her aşama şeffaf ve kayıt altındadır — çünkü güven de en az berrak su kadar kırılgandır.",
+    "principlesEyebrow": "İlkeler",
+    "principlesTitle": "Bizi yönlendiren üç şey.",
+    "principles": [
+      { "no": "01", "name": "Sükûnet", "desc": "Gösteriş değil, durgunluk. En iyi havuz, fark edilmeyecek kadar doğal duran havuzdur." },
+      { "no": "02", "name": "Ustalık", "desc": "Detay takıntısı. Sonsuzluk kenarının hizası, mozaiğin ek yeri, suyun sesi — hepsi tasarlanır." },
+      { "no": "03", "name": "Süreklilik", "desc": "Teslim bir bitiş değil, başlangıç. Yıllar boyu süren bakımla suyu ilk günkü berraklığında tutarız." }
+    ],
+    "figuresEyebrow": "Kısaca",
+    "figures": [
+      { "value": "2017", "label": "Kuruluş" },
+      { "value": "120", "suffix": "+", "label": "Tamamlanan proje" },
+      { "value": "8", "label": "İl" }
+    ],
+    "ctaTitle": "Bir sonraki su, sizinki olsun.",
+    "ctaButton": "Bizimle konuşun"
+  },
+  "construction": {
+    "eyebrow": "Havuz İnşaatı",
+    "title": "Sıfırdan, mimariyle tek bütün.",
+    "intro": "Araziyi, evi ve ışığı okuyarak tasarlanan; beton veya gunit iskeletle inşa edilen, ömürlük havuzlar.",
+    "capabilitiesEyebrow": "Neler inşa ediyoruz",
+    "capabilitiesTitle": "Her form, tek standart.",
+    "capabilities": [
+      { "no": "01", "name": "Sonsuzluk kenarı", "desc": "Suyun ufukla birleştiği, manzarayı içine alan taşma detayları." },
+      { "no": "02", "name": "Gunit & beton", "desc": "Her forma girebilen, sağlam ve uzun ömürlü püskürtme beton iskelet." },
+      { "no": "03", "name": "Seramik & cam mozaik", "desc": "Suyun rengini belirleyen el işçiliği kaplamalar." },
+      { "no": "04", "name": "Akıllı sistemler", "desc": "Filtrasyon, ısıtma, aydınlatma ve otomasyonun görünmez entegrasyonu." }
+    ],
+    "processEyebrow": "Nasıl çalışırız",
+    "processTitle": "Bir fikirden, durgun suya.",
+    "steps": [
+      { "no": "01", "name": "Tasarım", "desc": "Arazi etüdü, 3B tasarım ve mühendislik. Havuz, mimariyle bütünleşir." },
+      { "no": "02", "name": "İnşa", "desc": "Ustalıkla yürüyen şantiye; her aşama şeffaf, her detay kayıtlı." },
+      { "no": "03", "name": "Teslim", "desc": "Devreye alma, teslim ve ardından ömür boyu bakım güvencesi." }
+    ],
+    "ctaTitle": "Havuzunuzu birlikte çizelim.",
+    "ctaButton": "Projenizi başlatın"
+  },
+  "maintenance": {
+    "eyebrow": "Havuz Bakımı",
+    "title": "Suyun berraklığı, kesintisiz.",
+    "intro": "Bir havuz, tamamlandığı gün değil; yıllar sonra hâlâ ilk günkü berraklığındaysa başarılıdır. Bakım, o berraklığın sessiz güvencesidir.",
+    "includedEyebrow": "Neler dahil",
+    "includedTitle": "Suya sürekli özen.",
+    "included": [
+      { "no": "01", "name": "Kimyasal denge", "desc": "pH, klor ve mineral dengesinin düzenli ölçümü ve ayarı." },
+      { "no": "02", "name": "Filtrasyon bakımı", "desc": "Filtre temizliği, pompa kontrolü ve sistem verimliliği." },
+      { "no": "03", "name": "Yüzey temizliği", "desc": "Robot ve el ile dip, duvar ve su hattı temizliği." },
+      { "no": "04", "name": "Mevsimsel servis", "desc": "Kışa hazırlık ve sezon açılışı için tam bakım." }
+    ],
+    "rhythmEyebrow": "Ritim",
+    "rhythmTitle": "Mevsime göre özen.",
+    "rhythmBody": "Haftalık kontrolden mevsimlik derin bakıma; havuzunuzun boyutuna ve kullanımına göre kurgulanan bir bakım takvimi. Siz suyun tadını çıkarın, gerisini biz üstlenelim.",
+    "ctaTitle": "Havuzunuz için bir bakım planı.",
+    "ctaButton": "Bakım için yazın"
+  },
+  "journal": {
+    "eyebrow": "Günce",
+    "title": "Su, ışık ve zanaat üzerine notlar.",
+    "intro": "Tasarım kararları, malzeme hikâyeleri ve şantiyeden öğrendiklerimiz. Günce yakında burada.",
+    "stateLabel": "Hazırlanıyor",
+    "upcomingEyebrow": "Yakında",
+    "upcoming": [
+      { "tag": "Tasarım", "title": "Sonsuzluk kenarının anatomisi", "teaser": "Suyun ufukla birleştiği o çizgi nasıl hesaplanır?" },
+      { "tag": "Malzeme", "title": "Cam mozaik neden farklıdır", "teaser": "Suyun rengini belirleyen milimetrik seçimler." },
+      { "tag": "Bakım", "title": "Berrak suyun kimyası", "teaser": "Dengeyi bozmadan mevsim geçişleri." }
+    ],
+    "ctaTitle": "Bir sorunuz mu var?",
+    "ctaButton": "Bize yazın"
+  },
+  "contact": {
+    "eyebrow": "İletişim",
+    "title": "Bir fikirle başlayalım.",
+    "intro": "Bir arazi, bir plan ya da yalnızca bir hayal. En kısa yoldan konuşalım — projenizi birlikte şekillendirelim.",
+    "channelsEyebrow": "Doğrudan ulaşın",
+    "whatsappLabel": "WhatsApp",
+    "whatsappValue": "Anında yanıt",
+    "whatsappText": "Merhaba, bir havuz projesi hakkında konuşmak istiyorum.",
+    "phoneLabel": "Telefon",
+    "callLabel": "Bizi Ara",
+    "emailLabel": "E-posta",
+    "studioEyebrow": "Stüdyo",
+    "addressLabel": "Adres",
+    "address": "STC Royal A.Ş. · Türkiye",
+    "hoursLabel": "Çalışma saatleri",
+    "hours": "Pzt–Cmt · 09:00–18:00",
+    "formEyebrow": "Mesaj bırakın",
+    "formTitle": "Projenizi anlatın.",
+    "formName": "Adınız",
+    "formEmail": "E-posta",
+    "formMessage": "Projeniz hakkında",
+    "formSend": "Gönder",
+    "formNote": "Gönder'e bastığınızda e-posta uygulamanız açılır.",
+    "formSubject": "Web sitesi — Proje talebi"
   }
 }

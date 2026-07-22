@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import { gsap, useGSAP } from '@/lib/gsap';
 import { ProductShot } from './ProductShot';
 import { Sheen } from '@/components/ui/Sheen';
+import { Eyebrow } from '@/components/ui/Eyebrow';
 import type { LocalizedProduct } from '@/content/catalogue';
 
 export function ProductBody({ lp }: { lp: LocalizedProduct }) {
@@ -37,13 +38,9 @@ export function ProductBody({ lp }: { lp: LocalizedProduct }) {
       >
         <div className="grid gap-x-[clamp(2rem,5vw,6rem)] gap-y-16 md:grid-cols-12">
           <div className="md:col-span-6">
-            <span
-              data-reveal
-              className="mb-9 flex items-center gap-4 font-mono text-label uppercase text-canvas/50"
-            >
-              <span className="h-px w-10 bg-steel/60" />
+            <Eyebrow data-reveal tone="light" className="mb-9">
               {t('specs')}
-            </span>
+            </Eyebrow>
             <dl>
               {lp.specs.map((s) => (
                 <div
@@ -63,13 +60,9 @@ export function ProductBody({ lp }: { lp: LocalizedProduct }) {
           </div>
 
           <div className="md:col-span-5 md:col-start-8">
-            <span
-              data-reveal
-              className="mb-9 flex items-center gap-4 font-mono text-label uppercase text-canvas/50"
-            >
-              <span className="h-px w-10 bg-steel/60" />
+            <Eyebrow data-reveal tone="light" className="mb-9">
               {t('features')}
-            </span>
+            </Eyebrow>
             <ul className="mb-12 space-y-4">
               {lp.features.map((f) => (
                 <li
@@ -101,13 +94,9 @@ export function ProductBody({ lp }: { lp: LocalizedProduct }) {
         className="bg-canvas px-[clamp(1.5rem,6vw,8rem)] py-[clamp(7rem,14vh,12rem)]"
       >
         <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
-          <span
-            data-reveal
-            className="flex items-center gap-4 font-mono text-label uppercase text-ink/50"
-          >
-            <span className="h-px w-10 bg-bronze/60" />
+          <Eyebrow data-reveal tone="dark">
             {t('gallery')}
-          </span>
+          </Eyebrow>
           <a
             data-reveal
             href={`/docs/${lp.slug}.pdf`}
@@ -132,7 +121,7 @@ export function ProductBody({ lp }: { lp: LocalizedProduct }) {
               className="group relative overflow-hidden rounded-[1.5rem] shadow-[0_26px_60px_-36px_rgba(26,23,18,0.4)] ring-1 ring-ink/5"
             >
               <div className="transition-transform duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.05]">
-                <ProductShot className={i === 0 ? 'aspect-[4/3] md:col-span-2' : 'aspect-square'} />
+                <ProductShot src={lp.photo} alt={lp.name} className={i === 0 ? 'aspect-[4/3] md:col-span-2' : 'aspect-square'} />
               </div>
               <Sheen tint="steel" />
             </figure>

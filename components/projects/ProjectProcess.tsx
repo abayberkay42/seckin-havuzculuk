@@ -3,6 +3,7 @@
 import { useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { gsap, useGSAP } from '@/lib/gsap';
+import { Eyebrow } from '@/components/ui/Eyebrow';
 import type { LocalizedProject } from '@/content/projects';
 
 /**
@@ -34,23 +35,19 @@ export function ProjectProcess({ lp }: { lp: LocalizedProject }) {
       className="bg-navy px-[clamp(1.5rem,6vw,8rem)] py-[clamp(7rem,14vh,12rem)]"
     >
       {/* construction stages */}
-      <span
-        data-reveal
-        className="mb-12 flex items-center gap-4 font-mono text-label uppercase text-canvas/50"
-      >
-        <span className="h-px w-10 bg-steel/60" />
+      <Eyebrow data-reveal tone="light" className="mb-12 justify-center">
         {t('stages')}
-      </span>
+      </Eyebrow>
       <ol className="mb-[clamp(5rem,10vh,9rem)] grid gap-x-10 gap-y-12 md:grid-cols-3">
         {lp.stages.map((stage, i) => (
-          <li key={stage.title} data-reveal className="border-t border-canvas/15 pt-7">
+          <li key={stage.title} data-reveal className="border-t border-canvas/15 pt-7 text-center">
             <span className="mb-5 block font-mono text-label uppercase text-steel">
               {String(i + 1).padStart(2, '0')}
             </span>
             <h3 className="mb-4 font-display text-[1.6rem] text-canvas">
               {stage.title}
             </h3>
-            <p className="max-w-[22rem] text-[1rem] leading-relaxed text-canvas/60">
+            <p className="mx-auto max-w-[22rem] text-[1rem] leading-relaxed text-canvas/60">
               {stage.desc}
             </p>
           </li>

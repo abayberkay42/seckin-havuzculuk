@@ -3,11 +3,13 @@
 import { useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { gsap, useGSAP } from '@/lib/gsap';
+import { Eyebrow } from '@/components/ui/Eyebrow';
 
 /**
- * The documentary's thesis. As you scroll through, the words lift from a faint
- * ghost to full ink — the statement "writes itself". No pin; the reveal is
- * simply tied to scroll progress.
+ * The thesis. A short statement, held large and centred while the section pins;
+ * as you scroll, the words ink in one by one — from faint ghost to full weight —
+ * so the sentence writes itself. Pinned, scrubbed, deliberate. Reduced-motion
+ * (and touch, where pinning is awkward) simply shows it fully lit.
  */
 export function Manifesto() {
   const t = useTranslations('manifesto');
@@ -16,23 +18,34 @@ export function Manifesto() {
 
   useGSAP(
     () => {
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const coarse = window.matchMedia('(pointer: coarse)').matches;
+      if (reduce || coarse) {
+        gsap.set('[data-word]', { opacity: 1 });
+        return;
+      }
+
       gsap.from('[data-eyebrow]', {
         opacity: 0,
-        x: -24,
-        duration: 0.9,
+        y: 14,
+        duration: 0.8,
         ease: 'power3.out',
-        scrollTrigger: { trigger: root.current, start: 'top 80%' },
+        scrollTrigger: { trigger: root.current, start: 'top 60%' },
       });
 
+      // The section holds while the statement writes itself: each word is fully
+      // invisible until the pinned scroll brings it in — no ghost beforehand.
+      gsap.set('[data-word]', { opacity: 0 });
       gsap.to('[data-word]', {
         opacity: 1,
         ease: 'none',
-        stagger: 0.4,
+        stagger: 1,
         scrollTrigger: {
           trigger: root.current,
-          start: 'top 68%',
-          end: 'bottom 78%',
-          scrub: true,
+          start: 'top top',
+          end: '+=90%',
+          pin: true,
+          scrub: 1,
         },
       });
     },
@@ -40,24 +53,18 @@ export function Manifesto() {
   );
 
   return (
-    <section
-      ref={root}
-      data-nav-theme="light"
-      className="bg-canvas px-[clamp(1.5rem,6vw,8rem)] py-[clamp(8rem,18vh,16rem)]"
-    >
-      <div className="max-w-[66rem]">
-        <span
-          data-eyebrow
-          className="mb-10 flex items-center gap-4 font-mono text-label uppercase text-ink/50"
-        >
-          <span className="h-px w-10 bg-bronze/60" />
+    <section ref={root} data-nav-theme="light" className="bg-canvas">
+      <div className="flex min-h-[100dvh] flex-col items-center justify-center px-[clamp(1.5rem,6vw,8rem)] py-[clamp(6rem,12vh,10rem)] text-center">
+        <Eyebrow data-eyebrow index="I" tone="dark" className="mb-[clamp(2rem,5vh,3.5rem)] justify-center">
           {t('eyebrow')}
-        </span>
+        </Eyebrow>
 
-        <p className="font-display text-display text-ink">
+        <p className="mx-auto max-w-[16ch] font-display text-[clamp(2.75rem,7.5vw,6.5rem)] font-[380] leading-[1.02] tracking-[-0.02em] text-ink">
           {words.map((word, i) => (
-            <span key={i} data-word className="opacity-[0.14]">
-              {word}
+            <span key={i}>
+              <span data-word className="inline-block opacity-0">
+                {word}
+              </span>
               {i < words.length - 1 ? ' ' : ''}
             </span>
           ))}

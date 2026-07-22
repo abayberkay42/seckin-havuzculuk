@@ -1,13 +1,16 @@
 import { getTranslations } from 'next-intl/server';
-import { Link } from '@/i18n/navigation';
+import { TextLink } from '@/components/ui/TextLink';
 import type { AppPathname } from '@/i18n/routing';
+
+/** Static (non-parameterised) routes — the footer never links to [slug] pages. */
+type StaticPathname = Exclude<AppPathname, '/products/[slug]' | '/projects/[slug]'>;
 
 /** Quiet close. Dark to continue from the invitation; no motion, just anchor. */
 export async function Footer() {
   const t = await getTranslations('footer');
   const tNav = await getTranslations('nav');
 
-  const links: { href: AppPathname; label: string }[] = [
+  const links: { href: StaticPathname; label: string }[] = [
     { href: '/about', label: tNav('about') },
     { href: '/construction', label: tNav('construction') },
     { href: '/maintenance', label: tNav('maintenance') },
@@ -34,12 +37,12 @@ export async function Footer() {
           <ul className="grid grid-cols-2 gap-x-14 gap-y-3 sm:grid-cols-3">
             {links.map((link) => (
               <li key={link.href}>
-                <Link
+                <TextLink
                   href={link.href}
-                  className="text-[0.9rem] text-canvas/70 transition-colors duration-300 hover:text-canvas"
+                  className="text-[0.9rem] text-canvas/70 transition-colors duration-[var(--dur-quick)] hover:text-canvas"
                 >
                   {link.label}
-                </Link>
+                </TextLink>
               </li>
             ))}
           </ul>

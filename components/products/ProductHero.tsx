@@ -57,10 +57,10 @@ export function ProductHero({
           data-shot
           className="relative overflow-hidden rounded-[2rem] shadow-[0_40px_90px_-50px_rgba(26,23,18,0.5)] ring-1 ring-ink/5"
         >
-          <ProductShot className="aspect-[4/5]" />
+          <ProductShot src={lp.photo} alt={lp.name} priority className="aspect-[4/5]" />
         </div>
 
-        <div>
+        <div className="flex flex-col items-center text-center">
           <span
             data-reveal
             className="mb-6 block font-mono text-label uppercase text-bronze"
@@ -75,7 +75,7 @@ export function ProductHero({
           </p>
           <p
             data-reveal
-            className="mt-8 max-w-[34rem] text-[1.0625rem] leading-relaxed text-ink/70"
+            className="mx-auto mt-8 max-w-[34rem] text-[1.0625rem] leading-relaxed text-ink/70"
           >
             {lp.description}
           </p>

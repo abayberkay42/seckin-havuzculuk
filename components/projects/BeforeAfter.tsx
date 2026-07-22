@@ -2,6 +2,7 @@
 
 import dynamic from 'next/dynamic';
 import { useTranslations } from 'next-intl';
+import { Eyebrow } from '@/components/ui/Eyebrow';
 
 // three.js loads only for this section, client-side.
 const RippleReveal = dynamic(
@@ -26,10 +27,9 @@ export function BeforeAfter() {
       data-nav-theme="light"
       className="bg-canvas px-[clamp(1.5rem,6vw,8rem)] pb-[clamp(6rem,12vh,10rem)]"
     >
-      <span className="mb-12 flex items-center gap-4 font-mono text-label uppercase text-ink/50">
-        <span className="h-px w-10 bg-bronze/60" />
+      <Eyebrow tone="dark" className="mb-12 justify-center">
         {t('beforeAfter')}
-      </span>
+      </Eyebrow>
 
       <div className="group relative aspect-[16/9] max-h-[82vh] w-full overflow-hidden rounded-[1.75rem]">
         {/* Accessible fallback: old pool, cross-fading to new on hover/tap */}

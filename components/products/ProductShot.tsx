@@ -1,9 +1,37 @@
+import Image from 'next/image';
+
 /**
- * Studio placeholder for product photography — a dark, lit pedestal (B&O / Leica).
- * Dark cards read as distinct premium objects against the cream page. Swap for a
- * real next/image (product on a dark studio background) when photography arrives.
+ * Product image. When a real photo is supplied it fills the card (object-cover
+ * into the 4:5 frame the photos were shot for). Without one, a dark, lit
+ * pedestal placeholder stands in — so products awaiting photography still read
+ * as distinct premium objects.
  */
-export function ProductShot({ className = '' }: { className?: string }) {
+export function ProductShot({
+  className = '',
+  src,
+  alt = '',
+  priority = false,
+}: {
+  className?: string;
+  src?: string;
+  alt?: string;
+  priority?: boolean;
+}) {
+  if (src) {
+    return (
+      <div className={`relative overflow-hidden bg-travertine/40 ${className}`}>
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          priority={priority}
+          sizes="(max-width: 768px) 50vw, (max-width: 1280px) 33vw, 25vw"
+          className="object-cover"
+        />
+      </div>
+    );
+  }
+
   return (
     <div
       className={`relative overflow-hidden bg-gradient-to-b from-[#2c3644] via-[#1d2630] to-[#131a21] ${className}`}

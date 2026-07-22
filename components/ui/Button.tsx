@@ -1,6 +1,6 @@
 'use client';
 
-import { type PointerEvent, type ReactNode } from 'react';
+import { type ReactNode } from 'react';
 import { Link } from '@/i18n/navigation';
 import { Magnetic } from '@/components/ui/Magnetic';
 
@@ -34,12 +34,11 @@ function Arrow({ size = 15 }: { size?: number }) {
 }
 
 /**
- * One button, one motion system. A luxury object, not a UI control:
+ * One button, held with confidence. A luxury object, not a UI control:
  *  - glass top highlight, delicate ambient shadow, architectural padding
- *  - a light reflection that follows the cursor (moving illumination)
- *  - a magnetic pull, a subtle lift, an icon that travels
- *  - a soft water ripple from the exact point of the click (tactile)
- * All transform/opacity — cheap. Primary commands; secondary stays lighter.
+ *  - a gentle magnetic pull, a whisper of lift, an icon that travels
+ * That is all. No cursor-chasing glow, no click ripple — restraint reads as
+ * certainty. Transform/opacity only. Primary commands; secondary stays lighter.
  */
 export function Button({
   children,
@@ -53,26 +52,6 @@ export function Button({
 }: ButtonProps) {
   const primary = variant === 'primary';
   const light = tone === 'light';
-
-  const onMove = (e: PointerEvent<HTMLElement>) => {
-    const el = e.currentTarget;
-    const r = el.getBoundingClientRect();
-    el.style.setProperty('--bx', `${((e.clientX - r.left) / r.width) * 100}%`);
-    el.style.setProperty('--by', `${((e.clientY - r.top) / r.height) * 100}%`);
-    el.style.setProperty('--bo', '1');
-  };
-  const onLeave = (e: PointerEvent<HTMLElement>) =>
-    e.currentTarget.style.setProperty('--bo', '0');
-  const onDown = (e: PointerEvent<HTMLElement>) => {
-    const el = e.currentTarget;
-    const r = el.getBoundingClientRect();
-    const rip = document.createElement('span');
-    rip.className = 'btn-ripple';
-    rip.style.left = `${e.clientX - r.left}px`;
-    rip.style.top = `${e.clientY - r.top}px`;
-    el.appendChild(rip);
-    window.setTimeout(() => rip.remove(), 680);
-  };
 
   const base =
     'group relative inline-flex items-center gap-4 overflow-hidden rounded-full transition-[transform,box-shadow,border-color] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]';
@@ -92,13 +71,6 @@ export function Button({
       {primary && (
         <span className="pointer-events-none absolute inset-x-6 top-0 h-px bg-white/25" />
       )}
-      <span
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-[var(--bo,0)] transition-opacity duration-300"
-        style={{
-          background: `radial-gradient(130px 80px at var(--bx,50%) var(--by,50%), rgba(255,255,255,${light || !primary ? 0.18 : 0.16}), transparent 70%)`,
-        }}
-      />
       <span className="relative z-10 text-[0.95rem]">{children}</span>
       {iconEl !== null &&
         (primary ? (
@@ -118,24 +90,17 @@ export function Button({
   );
 
   const cls = `${base} ${size} ${skin} ${className}`;
-  const fx = { onPointerMove: onMove, onPointerLeave: onLeave, onPointerDown: onDown };
 
   const el = href ? (
-    <Link href={href} className={cls} {...fx}>
+    <Link href={href} className={cls}>
       {content}
     </Link>
   ) : externalHref ? (
-    <a
-      href={externalHref}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={cls}
-      {...fx}
-    >
+    <a href={externalHref} target="_blank" rel="noopener noreferrer" className={cls}>
       {content}
     </a>
   ) : (
-    <button type="button" onClick={onClick} className={cls} {...fx}>
+    <button type="button" onClick={onClick} className={cls}>
       {content}
     </button>
   );

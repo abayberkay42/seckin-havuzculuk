@@ -11,7 +11,6 @@ type HeroProps = {
   supporting: string;
   ctaPrimary: string;
   ctaSecondary: string;
-  scroll: string;
 };
 
 export function Hero({
@@ -21,7 +20,6 @@ export function Hero({
   supporting,
   ctaPrimary,
   ctaSecondary,
-  scroll,
 }: HeroProps) {
   const root = useRef<HTMLElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -142,7 +140,7 @@ export function Hero({
       {/* CONTENT — lower-left, deliberately holds under a third of the frame */}
       <div
         data-hero-content
-        className="relative z-10 flex min-h-[100dvh] flex-col justify-end px-[clamp(1.5rem,6vw,8rem)] pb-[clamp(3.5rem,10vh,7rem)] pt-[clamp(7rem,14vh,10rem)]"
+        className="relative z-10 flex min-h-[100dvh] flex-col items-center justify-center px-[clamp(1.5rem,6vw,8rem)] pb-[clamp(3.5rem,10vh,7rem)] pt-[clamp(7rem,14vh,10rem)] text-center"
       >
         <div className="w-full max-w-[80rem]">
           <span
@@ -163,12 +161,12 @@ export function Hero({
 
           <p
             data-reveal
-            className="mt-8 max-w-[34rem] text-lead font-light text-canvas/75"
+            className="mx-auto mt-8 max-w-[34rem] text-lead font-light text-canvas/75"
           >
             {supporting}
           </p>
 
-          <div data-reveal className="mt-11 flex flex-wrap items-center gap-5">
+          <div data-reveal className="mt-11 flex flex-wrap items-center justify-center gap-5">
             <Button variant="primary" tone="light" href="/contact">
               {ctaPrimary}
             </Button>
@@ -177,19 +175,6 @@ export function Hero({
             </Button>
           </div>
         </div>
-      </div>
-
-      {/* SCROLL CUE — a waterline that drips */}
-      <div
-        data-reveal
-        className="absolute bottom-[clamp(1.5rem,4vh,2.5rem)] right-[clamp(1.5rem,6vw,8rem)] z-10 hidden flex-col items-center gap-3 sm:flex"
-      >
-        <span className="font-mono text-label uppercase text-canvas/55 [writing-mode:vertical-rl]">
-          {scroll}
-        </span>
-        <span className="relative block h-16 w-px overflow-hidden bg-canvas/20">
-          <span className="animate-scroll-drop absolute inset-x-0 top-0 block h-1/2 bg-aqua" />
-        </span>
       </div>
     </section>
   );

@@ -5,14 +5,16 @@ import { useLocale, useTranslations } from 'next-intl';
 import { AnimatePresence, motion } from 'motion/react';
 import { Link } from '@/i18n/navigation';
 import {
-  products,
-  categories,
+  visibleProducts,
+  visibleCategories,
   localize,
+  productPhoto,
   type CategoryKey,
   type Product,
 } from '@/content/catalogue';
 import { ProductShot } from '@/components/products/ProductShot';
 import { Sheen } from '@/components/ui/Sheen';
+import { reveal, layoutTransition } from '@/lib/motion';
 
 type FilterKey = 'all' | CategoryKey;
 
@@ -23,21 +25,21 @@ export function CatalogueHub() {
 
   const chips: { key: FilterKey; label: string }[] = [
     { key: 'all', label: t('filterAll') },
-    ...categories.map((c) => ({ key: c.key, label: localize(c.name, locale) })),
+    ...visibleCategories.map((c) => ({ key: c.key, label: localize(c.name, locale) })),
   ];
   const catName = Object.fromEntries(
-    categories.map((c) => [c.key, localize(c.name, locale)]),
+    visibleCategories.map((c) => [c.key, localize(c.name, locale)]),
   ) as Record<CategoryKey, string>;
 
   const list = useMemo(
-    () => products.filter((p) => filter === 'all' || p.category === filter),
+    () => visibleProducts.filter((p) => filter === 'all' || p.category === filter),
     [filter],
   );
 
   return (
     <section
       data-nav-theme="light"
-      className="bg-canvas px-[clamp(1.5rem,6vw,8rem)] pb-[clamp(7rem,14vh,12rem)]"
+      className="bg-canvas px-[clamp(1.5rem,6vw,8rem)] pb-[clamp(7rem,14vh,12rem)] pt-[clamp(3rem,7vh,6rem)]"
     >
       {/* sticky category filter */}
       <div className="sticky top-[5.25rem] z-30 -mx-[clamp(1.5rem,6vw,8rem)] mb-[clamp(3rem,6vh,5rem)] border-b border-ink/10 bg-canvas/85 px-[clamp(1.5rem,6vw,8rem)] py-4 backdrop-blur-xl">
@@ -94,28 +96,21 @@ function ProductCard({
   category: string;
 }) {
   return (
-    <motion.article
-      layout
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0 }}
-      viewport={{ once: true, margin: '-8%' }}
-      transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-    >
+    <motion.article layout exit={{ opacity: 0 }} {...reveal(40)} transition={layoutTransition}>
       <Link
         href={{ pathname: '/products/[slug]', params: { slug: product.slug } }}
         className="group block"
       >
         <div className="relative overflow-hidden rounded-[1.5rem] shadow-[0_26px_60px_-34px_rgba(26,23,18,0.45)] ring-1 ring-ink/5">
-          <div className="transition-transform duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.05]">
-            <ProductShot className="aspect-[4/5]" />
+          <div className="transition-transform duration-[var(--dur-slow)] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.05]">
+            <ProductShot src={productPhoto(product.slug)} alt={name} className="aspect-[4/5]" />
           </div>
           <Sheen tint="steel" />
         </div>
         <span className="mt-5 block font-mono text-label uppercase text-ink/40">
           {category}
         </span>
-        <h3 className="mt-2 font-display text-[1.4rem] leading-tight text-ink transition-colors duration-300 group-hover:text-bronze">
+        <h3 className="mt-2 font-display text-[1.4rem] leading-tight text-ink transition-colors duration-[var(--dur-quick)] group-hover:text-bronze">
           {name}
         </h3>
         <span className="mt-1 block text-[0.95rem] text-ink/55">{tagline}</span>

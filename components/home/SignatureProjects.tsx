@@ -1,10 +1,12 @@
 'use client';
 
+import Image from 'next/image';
 import { useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { gsap, useGSAP } from '@/lib/gsap';
 import { Button } from '@/components/ui/Button';
 import { Frame } from '@/components/ui/Frame';
+import { Eyebrow } from '@/components/ui/Eyebrow';
 
 type Project = { name: string; place: string; year: string };
 
@@ -45,16 +47,26 @@ export function SignatureProjects() {
   return (
     <section data-nav-theme="dark" className="bg-deep">
       <div ref={root} className="relative h-[100dvh] overflow-hidden">
+        {/* section background — a photo held behind the panning cards, darkened
+            so the deep water stays and the content reads. */}
+        <Image
+          src="/projects-bg.webp"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(100deg,rgba(13,31,41,0.94)_0%,rgba(13,31,41,0.78)_50%,rgba(13,31,41,0.62)_100%)]" />
+
         <div
           ref={track}
           className="flex h-full items-center gap-[clamp(1.5rem,3vw,3rem)] pl-[clamp(1.5rem,6vw,8rem)] pr-[clamp(1.5rem,6vw,8rem)] will-change-transform"
         >
           {/* opening title panel */}
-          <div className="flex h-full w-[min(85vw,34rem)] shrink-0 flex-col justify-center pr-8">
-            <span className="mb-8 flex items-center gap-4 font-mono text-label uppercase text-canvas/50">
-              <span className="h-px w-10 bg-steel/60" />
+          <div className="flex h-full w-[min(85vw,34rem)] shrink-0 flex-col items-center justify-center pr-8 text-center">
+            <Eyebrow index="III" tone="light" className="mb-8 justify-center">
               {t('eyebrow')}
-            </span>
+            </Eyebrow>
             <h2 className="font-display text-display text-canvas">{t('title')}</h2>
           </div>
 
@@ -66,6 +78,8 @@ export function SignatureProjects() {
             >
               <Frame
                 variant={i % 2 === 0 ? 'water' : 'stone'}
+                src={i === 0 ? '/proje-ege-kiyisi.webp' : undefined}
+                alt={project.name}
                 className="h-full w-full"
               />
               <div className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between p-7">

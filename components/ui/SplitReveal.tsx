@@ -1,6 +1,6 @@
 'use client';
 
-import { type ElementType, type ReactNode, useRef } from 'react';
+import { createElement, type ElementType, type ReactNode, useRef } from 'react';
 import { gsap, SplitText, useGSAP } from '@/lib/gsap';
 
 /**
@@ -43,9 +43,7 @@ export function SplitReveal({
     { scope: ref },
   );
 
-  return (
-    <Tag ref={ref as never} className={className}>
-      {children}
-    </Tag>
-  );
+  // `ElementType` is too wide for JSX (it collapses `children` to `never`), so
+  // build the element imperatively — createElement types children loosely.
+  return createElement(Tag, { ref, className }, children);
 }

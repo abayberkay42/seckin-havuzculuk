@@ -5,6 +5,8 @@ import { useTranslations } from 'next-intl';
 import { gsap, useGSAP } from '@/lib/gsap';
 import { Link } from '@/i18n/navigation';
 import { Sheen } from '@/components/ui/Sheen';
+import { Tilt } from '@/components/ui/Tilt';
+import { Eyebrow } from '@/components/ui/Eyebrow';
 import type { ProjectType } from '@/content/projects';
 
 type Item = {
@@ -42,13 +44,9 @@ export function RelatedProjects({ items }: { items: Item[] }) {
       data-nav-theme="light"
       className="bg-surface px-[clamp(1.5rem,6vw,8rem)] py-[clamp(7rem,14vh,12rem)]"
     >
-      <span
-        data-reveal
-        className="mb-12 flex items-center gap-4 font-mono text-label uppercase text-ink/50"
-      >
-        <span className="h-px w-10 bg-bronze/60" />
+      <Eyebrow data-reveal tone="dark" className="mb-12 justify-center">
         {t('related')}
-      </span>
+      </Eyebrow>
 
       <div className="grid gap-[clamp(2rem,3vw,3rem)] md:grid-cols-3">
         {items.map((p) => {
@@ -60,16 +58,16 @@ export function RelatedProjects({ items }: { items: Item[] }) {
               href={{ pathname: '/projects/[slug]', params: { slug: p.slug } }}
               className="group"
             >
-              <div className="relative aspect-[4/3] overflow-hidden rounded-[1.5rem]">
+              <Tilt className="relative aspect-[4/3] overflow-hidden rounded-[1.5rem]">
                 <div
                   className={`h-full w-full transition-transform duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.06] ${water ? WATER : STONE}`}
                 />
                 <Sheen tint={water ? 'light' : 'steel'} />
-              </div>
+              </Tilt>
               <span className="mt-5 block font-mono text-label uppercase text-ink/40">
                 {p.place} · {p.year}
               </span>
-              <h3 className="mt-2 font-display text-[1.5rem] text-ink transition-colors duration-300 group-hover:text-bronze">
+              <h3 className="mt-2 font-display text-[1.5rem] text-ink transition-colors duration-[var(--dur-quick)] group-hover:text-bronze">
                 {p.name}
               </h3>
             </Link>

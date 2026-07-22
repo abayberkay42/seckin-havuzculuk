@@ -2,9 +2,10 @@ import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { isAppLocale, locales } from '@/i18n/routing';
 import {
-  products,
+  visibleProducts,
   categories,
   getProduct,
+  hasPhoto,
   localize,
   localizeProduct,
   productsByCategory,
@@ -17,7 +18,7 @@ import { ProductCTAs } from '@/components/products/ProductCTAs';
 
 export function generateStaticParams() {
   return locales.flatMap((locale) =>
-    products.map((p) => ({ locale, slug: p.slug })),
+    visibleProducts.map((p) => ({ locale, slug: p.slug })),
   );
 }
 
@@ -45,7 +46,7 @@ export default async function ProductDetailPage({
   setRequestLocale(locale);
 
   const product = getProduct(slug);
-  if (!product) notFound();
+  if (!product || !hasPhoto(slug)) notFound();
 
   const lp = localizeProduct(product, locale);
   const t = await getTranslations('catalogue');
@@ -55,7 +56,7 @@ export default async function ProductDetailPage({
   ) as Record<CategoryKey, string>;
 
   const related = productsByCategory(product.category)
-    .filter((p) => p.slug !== slug)
+    .filter((p) => p.slug !== slug && hasPhoto(p.slug))
     .slice(0, 4)
     .map((p) => ({
       slug: p.slug,

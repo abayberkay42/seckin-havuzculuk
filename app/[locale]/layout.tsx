@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Fraunces, Geist, Geist_Mono } from 'next/font/google';
+import { Syne, DM_Sans } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
@@ -8,23 +8,23 @@ import { SmoothScroll } from '@/components/providers/SmoothScroll';
 import { Nav, type NavNode } from '@/components/layout/Nav';
 import { Footer } from '@/components/layout/Footer';
 import { Grain } from '@/components/atmosphere/Grain';
+import { Water } from '@/components/water/Water';
+import { WhatsAppButton } from '@/components/site/WhatsAppButton';
 import '../globals.css';
 
-// Fraunces = editorial display; Geist = UI; Geist Mono = specs/labels. All free.
-const fraunces = Fraunces({
-  subsets: ['latin'],
-  variable: '--font-fraunces',
+// Same pairing as the Doğrular reference: Syne for display headings, DM Sans
+// for body and labels. latin-ext carries the Turkish glyphs (ş ğ ı İ ö ç ü).
+const syne = Syne({
+  subsets: ['latin', 'latin-ext'],
+  variable: '--font-syne',
   display: 'swap',
+  weight: ['400', '500', '600', '700'],
 });
-const geist = Geist({
-  subsets: ['latin'],
-  variable: '--font-geist',
+const dmSans = DM_Sans({
+  subsets: ['latin', 'latin-ext'],
+  variable: '--font-dm-sans',
   display: 'swap',
-});
-const geistMono = Geist_Mono({
-  subsets: ['latin'],
-  variable: '--font-geist-mono',
-  display: 'swap',
+  weight: ['300', '400', '500', '700'],
 });
 
 export function generateStaticParams() {
@@ -72,18 +72,17 @@ export default async function LocaleLayout({
   ];
 
   return (
-    <html
-      lang={locale}
-      className={`${fraunces.variable} ${geist.variable} ${geistMono.variable}`}
-    >
+    <html lang={locale} className={`${syne.variable} ${dmSans.variable}`}>
       <body className="min-h-dvh bg-canvas text-ink">
         <Grain />
+        <Water />
         <NextIntlClientProvider messages={messages}>
           <Nav nav={nav} locale={locale} menuLabel={tNav('menu')} />
           <SmoothScroll>
             {children}
             <Footer />
           </SmoothScroll>
+          <WhatsAppButton />
         </NextIntlClientProvider>
       </body>
     </html>

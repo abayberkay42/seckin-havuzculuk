@@ -1,0 +1,16 @@
+# Netlify build config for the Next.js 16 (App Router + next-intl middleware) app.
+# Netlify builds the project on its own servers — there is no static folder to
+# drag-and-drop, because the site uses middleware (locale routing) and SSG.
+
+[build]
+  command = "npm run build"
+  # The official Next.js runtime plugin reads .next and adapts routes, SSG pages
+  # and the middleware (proxy) into Netlify Functions / Edge Functions.
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[build.environment]
+  # Next.js 16 needs a modern Node. Pin it so the build is reproducible.
+  NODE_VERSION = "22"

@@ -7,8 +7,8 @@ import { Services } from '@/components/home/Services';
 import { SignatureProjects } from '@/components/home/SignatureProjects';
 import { Process } from '@/components/home/Process';
 import { Products } from '@/components/home/Products';
-import { Proof } from '@/components/home/Proof';
 import { Invitation } from '@/components/home/Invitation';
+import { Seam } from '@/components/ui/Seam';
 
 export default async function HomePage({
   params,
@@ -30,14 +30,16 @@ export default async function HomePage({
         supporting={t('supporting')}
         ctaPrimary={t('ctaPrimary')}
         ctaSecondary={t('ctaSecondary')}
-        scroll={t('scroll')}
       />
+      <Seam from="deep" to="canvas" />
       <Manifesto />
+      <Seam from="canvas" to="navy" />
       <Services />
       <SignatureProjects />
+      <Seam from="deep" to="surface" />
       <Process />
       <Products />
-      <Proof />
+      <Seam from="canvas" to="deep" />
       <Invitation />
     </main>
   );

@@ -57,7 +57,7 @@ export function ProjectHero({ lp }: { lp: LocalizedProject }) {
         <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(13,31,41,0.8)_0%,transparent_55%)]" />
       </div>
 
-      <div className="relative z-10 w-full px-[clamp(1.5rem,6vw,8rem)] pb-[clamp(3rem,8vh,6rem)] pt-[clamp(8rem,16vh,10rem)]">
+      <div className="relative z-10 flex w-full flex-col items-center px-[clamp(1.5rem,6vw,8rem)] pb-[clamp(3rem,8vh,6rem)] pt-[clamp(8rem,16vh,10rem)] text-center">
         <Link
           data-reveal
           href="/projects"
@@ -65,7 +65,7 @@ export function ProjectHero({ lp }: { lp: LocalizedProject }) {
         >
           ← {t('backToProjects')}
         </Link>
-        <div data-reveal className="flex items-center gap-4">
+        <div data-reveal className="flex items-center justify-center gap-4">
           <span className="rounded-full border border-canvas/25 px-3 py-1 font-mono text-label uppercase text-canvas/80">
             {typeLabel}
           </span>
@@ -75,7 +75,7 @@ export function ProjectHero({ lp }: { lp: LocalizedProject }) {
         </div>
         <h1
           data-reveal
-          className="mt-7 max-w-[15ch] font-display text-hero text-canvas"
+          className="mx-auto mt-7 max-w-[15ch] font-display text-hero text-canvas"
         >
           {lp.name}
         </h1>

@@ -4,38 +4,19 @@ import { useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { gsap, useGSAP } from '@/lib/gsap';
 import { SplitReveal } from '@/components/ui/SplitReveal';
+import { Eyebrow } from '@/components/ui/Eyebrow';
 
 type Stat = { value: string; suffix?: string; label: string };
 
+/**
+ * The numbers are simply stated, not performed. A count-up animation reads as a
+ * startup metrics slide; a house this assured presents its record plainly and
+ * lets the reader take it in. Confidence over spectacle.
+ */
 function StatBlock({ value, suffix, label }: Stat) {
-  const numRef = useRef<HTMLSpanElement>(null);
-
-  useGSAP(
-    () => {
-      const target = parseInt(value, 10);
-      if (Number.isNaN(target) || !numRef.current) return;
-      const counter = { v: 0 };
-      gsap.to(counter, {
-        v: target,
-        duration: 2,
-        ease: 'power2.out',
-        scrollTrigger: { trigger: numRef.current, start: 'top 88%', once: true },
-        onUpdate: () => {
-          if (numRef.current) {
-            numRef.current.textContent = String(Math.round(counter.v)) + (suffix ?? '');
-          }
-        },
-      });
-    },
-    { scope: numRef },
-  );
-
   return (
-    <div className="border-t border-canvas/15 pt-6">
-      <span
-        ref={numRef}
-        className="block font-display text-[clamp(3.5rem,7vw,6.25rem)] leading-[0.88] tabular-nums text-canvas"
-      >
+    <div className="border-t border-canvas/15 pt-6 text-center">
+      <span className="block font-display text-[clamp(3.5rem,7vw,6.25rem)] leading-[0.88] tabular-nums text-canvas">
         {value}
         {suffix ?? ''}
       </span>
@@ -56,10 +37,10 @@ export function Proof() {
       gsap.from('[data-fade]', {
         opacity: 0,
         y: 40,
-        duration: 1,
+        duration: 1.2,
         ease: 'power3.out',
-        stagger: 0.1,
-        scrollTrigger: { trigger: root.current, start: 'top 72%' },
+        stagger: 0.12,
+        scrollTrigger: { trigger: root.current, start: 'top 82%' },
       });
     },
     { scope: root },
@@ -71,16 +52,12 @@ export function Proof() {
       data-nav-theme="dark"
       className="bg-navy px-[clamp(1.5rem,6vw,8rem)] py-[clamp(7rem,14vh,12rem)]"
     >
-      <span
-        data-fade
-        className="mb-10 flex items-center gap-4 font-mono text-label uppercase text-canvas/50"
-      >
-        <span className="h-px w-10 bg-steel/60" />
+      <Eyebrow data-fade index="VI" tone="light" className="mb-8 justify-center">
         {t('eyebrow')}
-      </span>
+      </Eyebrow>
       <SplitReveal
         as="p"
-        className="mb-[clamp(4rem,8vh,7rem)] max-w-[50rem] font-display text-title text-canvas"
+        className="mx-auto mb-[clamp(4rem,8vh,7rem)] max-w-[50rem] text-center font-display text-title text-canvas"
       >
         {t('statement')}
       </SplitReveal>

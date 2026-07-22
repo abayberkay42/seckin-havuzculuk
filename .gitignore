@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# source design assets — not used by the site (only public/*.webp is). Kept
+# locally, out of the repo so the build stays lean.
+/*.png
+/*.psd
+/1/
+/Ürün Fotoğrafları/
+/Ürünler.md

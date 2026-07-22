@@ -22,30 +22,41 @@
   --color-steel: #82afd8;       /* "Seçkin blue" — signature accent */
   --color-aqua: #a9cbe3;        /* light-on-water glints, caustics */
 
-  /* TYPE — Fraunces (editorial display) + Geist (UI) + Geist Mono (specs) */
-  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
-  --font-sans: var(--font-geist), system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  /* TYPE — Syne (display headings) + DM Sans (body + labels), like the reference. */
+  --font-display: var(--font-syne), system-ui, sans-serif;
+  --font-sans: var(--font-dm-sans), system-ui, sans-serif;
+  --font-mono: var(--font-dm-sans), system-ui, sans-serif;
 
-  /* Oversized editorial scale, tight tracking, restrained weights */
+  /* Oversized editorial scale, tight tracking, restrained weights.
+     Line-heights loosen as headings shrink — large display serif can sit tight
+     on a word or two, but the moment it wraps it must breathe, or it reads
+     cramped. Tracking tightens as size grows: the bigger the type, the closer
+     the letters want to sit. This is the whole luxury-magazine discipline. */
   --text-hero: clamp(3rem, 8vw, 9rem);
-  --text-hero--line-height: 0.95;
-  --text-hero--letter-spacing: -0.025em;
+  --text-hero--line-height: 0.98;
+  --text-hero--letter-spacing: -0.028em;
   --text-hero--font-weight: 380;
 
   --text-display: clamp(2.5rem, 6vw, 6rem);
-  --text-display--line-height: 1;
-  --text-display--letter-spacing: -0.02em;
+  --text-display--line-height: 1.06;
+  --text-display--letter-spacing: -0.021em;
   --text-display--font-weight: 400;
 
   --text-title: clamp(1.875rem, 3.2vw, 3rem);
-  --text-title--line-height: 1.1;
-  --text-title--letter-spacing: -0.01em;
+  --text-title--line-height: 1.14;
+  --text-title--letter-spacing: -0.012em;
   --text-title--font-weight: 400;
 
   --text-lead: clamp(1.25rem, 1.5vw, 1.5rem);
-  --text-lead--line-height: 1.5;
+  --text-lead--line-height: 1.55;
+  --text-lead--letter-spacing: -0.006em;
   --text-lead--font-weight: 300;
+
+  /* Canonical body — one measure, one rhythm. Generous leading so running text
+     feels like an editorial column, not a form field. */
+  --text-body: 1.0625rem;
+  --text-body--line-height: 1.7;
+  --text-body--font-weight: 340;
 
   --text-label: 0.6875rem;
   --text-label--line-height: 1;
@@ -54,6 +65,12 @@
   /* Motion — one calm easing, water finding its level */
   --ease-water: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-micro: cubic-bezier(0.32, 0.72, 0, 1);
+
+  /* Motion durations — the whole site breathes on these three tempos.
+     Named so timing is a system, not scattered magic numbers. */
+  --dur-quick: 0.3s;   /* state acknowledgements — colour, opacity */
+  --dur-base: 0.55s;   /* the default — links, hovers, sheens */
+  --dur-slow: 0.9s;    /* deliberate weight — images, lifts, reveals */
 }
 
 @layer base {
@@ -96,15 +113,26 @@
   50%      { opacity: 0.8; }
 }
 
-@keyframes scroll-drop {
-  0%   { transform: translateY(-100%); opacity: 0; }
-  40%  { opacity: 1; }
-  100% { transform: translateY(120%); opacity: 0; }
-}
-
 .animate-water-drift { animation: water-drift 22s ease-in-out infinite; }
 .animate-glow-breathe { animation: glow-breathe 9s ease-in-out infinite; }
-.animate-scroll-drop { animation: scroll-drop 2.6s ease-in-out infinite; }
+
+/* Neon pulse — the floating contact pills flash like tube signage. Box-shadow
+   only (GPU-friendly), a bright throb over a soft resting glow. */
+@keyframes neon-orange {
+  0%, 100% { box-shadow: 0 0 4px 0 rgba(255,122,26,0.5), 0 0 10px 0 rgba(255,122,26,0.22); }
+  50%      { box-shadow: 0 0 8px 1px rgba(255,122,26,0.85), 0 0 20px 2px rgba(255,122,26,0.4); }
+}
+@keyframes neon-green {
+  0%, 100% { box-shadow: 0 0 4px 0 rgba(37,211,102,0.5), 0 0 10px 0 rgba(37,211,102,0.22); }
+  50%      { box-shadow: 0 0 8px 1px rgba(37,211,102,0.85), 0 0 20px 2px rgba(37,211,102,0.4); }
+}
+.animate-neon-orange { animation: neon-orange 1.4s ease-in-out infinite; }
+.animate-neon-green  { animation: neon-green 1.4s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-neon-orange,
+  .animate-neon-green { animation: none; }
+}
 
 /* Fixed film grain — physical paper/film texture, never on scrolling content */
 .grain {
@@ -116,6 +144,14 @@
   mix-blend-mode: overlay;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   background-size: 240px 240px;
+}
+
+/* The water sheet is a passive visual overlay — it must never intercept clicks.
+   R3F sets pointer-events:auto inline on its own container, which would defeat
+   the wrapper's pointer-events-none, so force the whole subtree transparent. */
+.water-layer,
+.water-layer * {
+  pointer-events: none !important;
 }
 
 /* ==========================================================================
@@ -134,24 +170,35 @@ p {
   display: block;
 }
 
-/* Tactile click — a soft water ripple from the point of contact */
-.btn-ripple {
-  position: absolute;
-  height: 10px;
-  width: 10px;
-  margin: -5px 0 0 -5px;
-  border-radius: 9999px;
-  background: currentColor;
-  opacity: 0.2;
-  transform: scale(0);
-  pointer-events: none;
-  animation: btn-ripple 0.66s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+/* ==========================================================================
+   The link — one treatment across the site. A waterline rises from the left
+   on hover, the way water finds its edge. currentColor, so it inherits the
+   link's own tone (canvas on dark, ink on light). Pure CSS: works in server
+   components, costs nothing, and the reduced-motion block neutralises it.
+   ========================================================================== */
+.link-water {
+  position: relative;
+  display: inline-block;
 }
-@keyframes btn-ripple {
-  to {
-    transform: scale(26);
-    opacity: 0;
-  }
+.link-water::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.15em;
+  height: 1px;
+  width: 100%;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform var(--dur-base) var(--ease-water);
+}
+.link-water:hover::after,
+.link-water:focus-visible::after {
+  transform: scaleX(1);
+}
+/* Bronze accent variant — the waterline catches metal instead of matching text */
+.link-water--bronze::after {
+  background: var(--color-bronze);
 }
 
 /* An Awwwards site that ignores this is just a site that makes people sick. */

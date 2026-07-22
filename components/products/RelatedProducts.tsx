@@ -6,6 +6,8 @@ import { gsap, useGSAP } from '@/lib/gsap';
 import { Link } from '@/i18n/navigation';
 import { ProductShot } from './ProductShot';
 import { Sheen } from '@/components/ui/Sheen';
+import { Eyebrow } from '@/components/ui/Eyebrow';
+import { productPhoto } from '@/content/catalogue';
 
 type Item = { slug: string; name: string; tagline: string; category: string };
 
@@ -35,13 +37,9 @@ export function RelatedProducts({ items }: { items: Item[] }) {
       data-nav-theme="light"
       className="bg-surface px-[clamp(1.5rem,6vw,8rem)] py-[clamp(7rem,14vh,12rem)]"
     >
-      <span
-        data-reveal
-        className="mb-12 flex items-center gap-4 font-mono text-label uppercase text-ink/50"
-      >
-        <span className="h-px w-10 bg-bronze/60" />
+      <Eyebrow data-reveal tone="dark" className="mb-12 justify-center">
         {t('related')}
-      </span>
+      </Eyebrow>
 
       <div className="grid grid-cols-2 gap-[clamp(1rem,2.5vw,2.5rem)] md:grid-cols-4">
         {items.map((p) => (
@@ -52,8 +50,8 @@ export function RelatedProducts({ items }: { items: Item[] }) {
             className="group block"
           >
             <div className="relative overflow-hidden rounded-[1.5rem] shadow-[0_26px_60px_-36px_rgba(26,23,18,0.42)] ring-1 ring-ink/5">
-              <div className="transition-transform duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.05]">
-                <ProductShot className="aspect-[4/5]" />
+              <div className="transition-transform duration-[var(--dur-slow)] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.05]">
+                <ProductShot src={productPhoto(p.slug)} alt={p.name} className="aspect-[4/5]" />
               </div>
               <Sheen tint="steel" />
             </div>
