@@ -188,6 +188,10 @@ function Field({ onSlow }: { onSlow?: () => void }) {
       y: 1 - e.clientY / window.innerHeight,
     });
     const onMove = (e: PointerEvent) => {
+      // Touch "moves" are scroll-drags — following them would spray ripples and
+      // wake the GPU all through a scroll. On touch we only drop on taps
+      // (onDown); the cursor-trail is a fine-pointer (mouse/pen) affordance.
+      if (e.pointerType === 'touch') return;
       const p = toUv(e);
       cursor.current.x = p.x;
       cursor.current.y = p.y;
@@ -195,6 +199,7 @@ function Field({ onSlow }: { onSlow?: () => void }) {
       wake();
     };
     const onDown = (e: PointerEvent) => {
+      // A drop on every press — mouse click or finger tap alike.
       click.current = toUv(e);
       wake();
     };

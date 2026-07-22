@@ -49,8 +49,8 @@ export function Nav({
     borderColor: dark
       ? `rgba(245, 240, 232, ${solid ? 0.16 : 0.1})`
       : `rgba(26, 23, 18, ${solid ? 0.14 : 0.08})`,
-    backdropFilter: `blur(${solid ? 22 : 14}px) saturate(140%)`,
-    WebkitBackdropFilter: `blur(${solid ? 22 : 14}px) saturate(140%)`,
+    backdropFilter: `blur(${solid ? 14 : 10}px) saturate(130%)`,
+    WebkitBackdropFilter: `blur(${solid ? 14 : 10}px) saturate(130%)`,
   };
 
   // Which section sits under the bar decides the theme. A geometric probe on
