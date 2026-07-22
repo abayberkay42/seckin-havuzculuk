@@ -12,7 +12,9 @@ import * as THREE from 'three';
  * normals glint, screen-blended so still water stays invisible.
  */
 
-const RES = 128; // wave field resolution — soft effect; 128 is plenty and 4× cheaper than 256
+const RES = 256; // wave field resolution — 256 keeps the ripples crisp; the real
+// Chrome win came from powerPreference:'default' (no cross-GPU copy), not from
+// shrinking this, so keep the resolution up.
 
 const QUAD_VERT = /* glsl */ `
   varying vec2 vUv;
