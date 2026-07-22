@@ -12,7 +12,7 @@ import * as THREE from 'three';
  * normals glint, screen-blended so still water stays invisible.
  */
 
-const RES = 256; // wave field resolution — soft effect, 256 is plenty and 4× cheaper than 512
+const RES = 128; // wave field resolution — soft effect; 128 is plenty and 4× cheaper than 256
 
 const QUAD_VERT = /* glsl */ `
   varying vec2 vUv;
@@ -113,7 +113,7 @@ function Field({ onSlow }: { onSlow?: () => void }) {
   const lastT = useRef(0);
   const slow = useRef(0);
   const wake = () => {
-    activeUntil.current = performance.now() + 2600; // ~ripple settle time
+    activeUntil.current = performance.now() + 1900; // ~ripple settle time
     invalidate();
   };
 
@@ -307,7 +307,12 @@ export default function WaterScene({
       // On demand: renders only while ripples are alive (see Field). Idle water
       // draws nothing — no fullscreen shader, no screen-blend composite per frame.
       frameloop={paused ? 'never' : 'demand'}
-      gl={{ alpha: true, antialias: false, powerPreference: 'high-performance' }}
+      // 'default' (not 'high-performance'): on hybrid-GPU laptops Chrome renders
+      // a high-performance context on the discrete GPU while compositing on the
+      // integrated one, forcing an expensive cross-GPU copy every frame — the
+      // classic "smooth in Firefox, awful in Chrome" WebGL jank. 'default' keeps
+      // the canvas on the compositor's GPU.
+      gl={{ alpha: true, antialias: false, powerPreference: 'default' }}
     >
       <Field onSlow={onSlow} />
     </Canvas>
