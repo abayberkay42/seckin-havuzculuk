@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { AnimatePresence, motion } from 'motion/react';
 import { Link, usePathname, useRouter } from '@/i18n/navigation';
 import type { AppPathname } from '@/i18n/routing';
+import { useIsChrome } from '@/lib/isChrome';
 
 /** Nav only ever links to static routes — never a parameterised [slug] page. */
 type StaticPathname = Exclude<AppPathname, '/products/[slug]' | '/projects/[slug]'>;
@@ -35,6 +36,7 @@ export function Nav({
   const [solid, setSolid] = useState(false);
 
   const dark = theme === 'dark';
+  const chrome = useIsChrome();
   const leaves = nav.flatMap((n) => (isGroup(n) ? n.panel : [n]));
   const linkClass = dark
     ? 'text-canvas/70 hover:text-canvas'
@@ -42,15 +44,22 @@ export function Nav({
 
   // The glass, computed from theme + scroll depth. Deterministic (React state),
   // eased by a CSS transition on the bar — no rAF loop, nothing to freeze.
+  // In Chrome we drop the backdrop-filter (which re-blurs the backdrop every
+  // scroll frame and stutters) and raise the background opacity so the bar reads
+  // as near-solid instead of see-through. Other browsers keep the real glass.
   const barStyle = {
     backgroundColor: dark
-      ? `rgba(18, 40, 51, ${solid ? 0.5 : 0.16})`
-      : `rgba(247, 243, 236, ${solid ? 0.9 : 0.55})`,
+      ? `rgba(18, 40, 51, ${chrome ? (solid ? 0.94 : 0.82) : solid ? 0.5 : 0.16})`
+      : `rgba(247, 243, 236, ${chrome ? (solid ? 0.97 : 0.9) : solid ? 0.9 : 0.55})`,
     borderColor: dark
       ? `rgba(245, 240, 232, ${solid ? 0.16 : 0.1})`
       : `rgba(26, 23, 18, ${solid ? 0.14 : 0.08})`,
-    backdropFilter: `blur(${solid ? 14 : 10}px) saturate(130%)`,
-    WebkitBackdropFilter: `blur(${solid ? 14 : 10}px) saturate(130%)`,
+    ...(chrome
+      ? {}
+      : {
+          backdropFilter: `blur(${solid ? 14 : 10}px) saturate(130%)`,
+          WebkitBackdropFilter: `blur(${solid ? 14 : 10}px) saturate(130%)`,
+        }),
   };
 
   // Which section sits under the bar decides the theme. A geometric probe on
