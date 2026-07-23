@@ -58,9 +58,9 @@
     "cta": "Tüm projeler",
     "items": [
       { "name": "Ege Kıyısı Villası", "place": "Çeşme", "year": "2024" },
-      { "name": "Zeytinlik Rezidans", "place": "Bodrum", "year": "2023" },
-      { "name": "Tepe Malikâne", "place": "Yalıkavak", "year": "2024" },
-      { "name": "Deniz Terası", "place": "Kalkan", "year": "2023" }
+      { "name": "Zeytinlik Rezidans", "place": "Seferihisar", "year": "2023" },
+      { "name": "Tepe Malikâne", "place": "Urla", "year": "2024" },
+      { "name": "Deniz Terası", "place": "Karaburun", "year": "2023" }
     ]
   },
   "process": {
@@ -106,7 +106,7 @@
     "stats": [
       { "value": "2017", "label": "Kuruluş" },
       { "value": "120", "suffix": "+", "label": "Tamamlanan proje" },
-      { "value": "8", "label": "İl" },
+      { "value": "İzmir", "label": "Hizmet bölgesi" },
       { "value": "100", "suffix": "%", "label": "Teslim güvencesi" }
     ]
   },
@@ -195,7 +195,7 @@
     "figures": [
       { "value": "2017", "label": "Kuruluş" },
       { "value": "120", "suffix": "+", "label": "Tamamlanan proje" },
-      { "value": "8", "label": "İl" }
+      { "value": "İzmir", "label": "Hizmet bölgesi" }
     ],
     "ctaTitle": "Bir sonraki su, sizinki olsun.",
     "ctaButton": "Bizimle konuşun"

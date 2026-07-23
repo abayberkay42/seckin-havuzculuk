@@ -58,9 +58,9 @@
     "cta": "All projects",
     "items": [
       { "name": "Aegean Coast Villa", "place": "Çeşme", "year": "2024" },
-      { "name": "Olive Grove Residence", "place": "Bodrum", "year": "2023" },
-      { "name": "Hilltop Estate", "place": "Yalıkavak", "year": "2024" },
-      { "name": "Sea Terrace", "place": "Kalkan", "year": "2023" }
+      { "name": "Olive Grove Residence", "place": "Seferihisar", "year": "2023" },
+      { "name": "Hilltop Estate", "place": "Urla", "year": "2024" },
+      { "name": "Sea Terrace", "place": "Karaburun", "year": "2023" }
     ]
   },
   "process": {
@@ -106,7 +106,7 @@
     "stats": [
       { "value": "2017", "label": "Founded" },
       { "value": "120", "suffix": "+", "label": "Projects delivered" },
-      { "value": "8", "label": "Provinces" },
+      { "value": "İzmir", "label": "Service area" },
       { "value": "100", "suffix": "%", "label": "Delivery assurance" }
     ]
   },
@@ -195,7 +195,7 @@
     "figures": [
       { "value": "2017", "label": "Founded" },
       { "value": "120", "suffix": "+", "label": "Completed projects" },
-      { "value": "8", "label": "Provinces" }
+      { "value": "İzmir", "label": "Service area" }
     ],
     "ctaTitle": "Let the next water be yours.",
     "ctaButton": "Talk to us"

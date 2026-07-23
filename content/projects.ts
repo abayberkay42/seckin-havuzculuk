@@ -71,7 +71,7 @@ export const projects: Project[] = [
     type: 'completed',
     cover: '/proj-zeytinlik.webp',
     name: { tr: 'Doğal Taşlı Bahçe Havuzu', en: 'Natural-Stone Garden Pool' },
-    place: { tr: 'Bodrum, Muğla', en: 'Bodrum, Muğla' },
+    place: { tr: 'Seferihisar, İzmir', en: 'Seferihisar, İzmir' },
     year: '2023',
     overview: {
       tr: 'Zeytin ağaçlarının arasına yerleşen dingin bir havuz. Toprak tonları ve mat taş, doğayla sessiz bir uyum kuruyor.',
@@ -109,7 +109,7 @@ export const projects: Project[] = [
     type: 'completed',
     cover: '/proj-deniz-terasi.webp',
     name: { tr: 'Cam Korkuluklu Teras Havuzu', en: 'Glass-Railed Terrace Pool' },
-    place: { tr: 'Kalkan, Antalya', en: 'Kalkan, Antalya' },
+    place: { tr: 'Karaburun, İzmir', en: 'Karaburun, İzmir' },
     year: '2023',
     overview: {
       tr: 'Kayalık bir yamaca asılı, denize bakan bir teras havuzu. Cam korkuluklar, suyla ufuk arasındaki sınırı siliyor.',
@@ -147,7 +147,7 @@ export const projects: Project[] = [
     type: 'ongoing',
     cover: '/proj-tepe-malikane.webp',
     name: { tr: 'İki Kademeli Tepe Havuzu', en: 'Two-Tier Hillside Pool' },
-    place: { tr: 'Yalıkavak, Muğla', en: 'Yalıkavak, Muğla' },
+    place: { tr: 'Urla, İzmir', en: 'Urla, İzmir' },
     year: '2025',
     overview: {
       tr: 'Devam eden bir inşaat: tepeye kurulan iki kademeli havuz. Şu an betonarme ve izolasyon aşamasında.',
