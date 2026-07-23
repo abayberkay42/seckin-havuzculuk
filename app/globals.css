@@ -78,7 +78,10 @@
     background-color: var(--color-canvas);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    scroll-behavior: smooth;
+    /* No CSS `scroll-behavior: smooth` — desktop smoothness is Lenis's job, and
+       on mobile it turned every programmatic scroll (our route-change reset,
+       Next's nav scroll) into an interruptible animation that fought each other,
+       so a new page opened at the previous page's depth. Instant is correct. */
   }
 
   body {
