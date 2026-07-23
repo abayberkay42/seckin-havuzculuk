@@ -116,6 +116,7 @@ export function Nav({
   };
 
   return (
+    <>
     <header className="pointer-events-none fixed inset-x-0 top-0 z-50 flex justify-center px-[clamp(1rem,4vw,2.5rem)]">
       <nav
         style={barStyle}
@@ -187,6 +188,7 @@ export function Nav({
           </button>
         </div>
       </nav>
+    </header>
 
       <MobileMenu
         open={open}
@@ -195,7 +197,7 @@ export function Nav({
         onClose={() => setOpen(false)}
         onSwitch={switchLocale}
       />
-    </header>
+    </>
   );
 }
 
