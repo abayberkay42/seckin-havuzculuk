@@ -128,32 +128,7 @@ export default async function MaintenancePage({ params }: { params: Promise<{ lo
         </div>
       </section>
 
-      <Seam from="surface" to="navy" />
-
-      {/* Rhythm */}
-      <section
-        data-nav-theme="dark"
-        className="bg-navy px-[clamp(1.5rem,6vw,8rem)] py-[clamp(7rem,14vh,12rem)]"
-      >
-        <div className="grid items-center gap-[clamp(2.5rem,6vw,6rem)] md:grid-cols-12">
-          <div className="text-center md:col-span-6 md:text-left">
-            <Eyebrow tone="light" className="mb-8 justify-center md:justify-start">
-              {t('rhythmEyebrow')}
-            </Eyebrow>
-            <SplitReveal as="h2" className="mx-auto mb-8 max-w-[16ch] font-display text-title text-canvas md:mx-0">
-              {t('rhythmTitle')}
-            </SplitReveal>
-            <Reveal as="p" className="mx-auto max-w-[34rem] text-lead font-light text-canvas/70 md:mx-0">
-              {t('rhythmBody')}
-            </Reveal>
-          </div>
-          <div className="md:col-span-6">
-            <Frame variant="water" className="aspect-[4/5] w-full" />
-          </div>
-        </div>
-      </section>
-
-      <Seam from="navy" to="deep" />
+      <Seam from="surface" to="deep" />
 
       <CtaBand title={t('ctaTitle')} buttonLabel={t('ctaButton')} />
     </main>

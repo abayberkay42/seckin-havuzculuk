@@ -22,11 +22,11 @@ export function Eyebrow({
 } & ComponentPropsWithoutRef<'span'>) {
   const light = tone === 'light';
   const accent = light ? 'text-steel' : 'text-bronze';
-  const label = light ? 'text-canvas/55' : 'text-ink/45';
+  const label = light ? 'text-canvas/85' : 'text-ink/70';
 
   return (
     <span
-      className={`flex items-center gap-3 font-mono text-label uppercase ${label} ${className}`}
+      className={`flex items-center gap-3 font-mono text-label font-medium uppercase ${label} ${className}`}
       {...rest}
     >
       {index && (
