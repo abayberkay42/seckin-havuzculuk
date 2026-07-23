@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useMemo, useRef, useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { AnimatePresence, motion, useScroll, useTransform } from 'motion/react';
@@ -74,6 +75,7 @@ export function ProjectsHub() {
             <ProjectRow
               key={p.slug}
               slug={p.slug}
+              cover={p.cover}
               name={localize(p.name, locale)}
               place={localize(p.place, locale)}
               year={p.year}
@@ -92,6 +94,7 @@ export function ProjectsHub() {
 
 function ProjectRow({
   slug,
+  cover,
   name,
   place,
   year,
@@ -102,6 +105,7 @@ function ProjectRow({
   index,
 }: {
   slug: string;
+  cover: string;
   name: string;
   place: string;
   year: string;
@@ -138,17 +142,14 @@ function ProjectRow({
           flip ? 'md:order-2 md:col-start-5' : ''
         }`}
       >
-        <motion.div
-          style={{ y }}
-          className={`relative aspect-[16/10] w-full scale-[1.14] ${
-            water
-              ? 'bg-[radial-gradient(130%_130%_at_28%_18%,#20516a_0%,#16303c_58%,#0d1f29_100%)]'
-              : 'bg-[radial-gradient(130%_130%_at_28%_18%,#efe8da_0%,#d8ccb6_62%,#b7a789_100%)]'
-          }`}
-        >
-          {water && (
-            <div className="absolute -right-1/4 -top-1/4 h-[70%] w-[70%] rounded-full bg-[radial-gradient(closest-side,rgba(169,203,227,0.20),transparent_72%)]" />
-          )}
+        <motion.div style={{ y }} className="relative aspect-[16/10] w-full scale-[1.14]">
+          <Image
+            src={cover}
+            alt={name}
+            fill
+            sizes="(max-width: 768px) 92vw, 66vw"
+            className="object-cover"
+          />
         </motion.div>
         <Sheen tint={water ? 'light' : 'steel'} />
         <div className="pointer-events-none absolute inset-0 flex items-end justify-between p-6">

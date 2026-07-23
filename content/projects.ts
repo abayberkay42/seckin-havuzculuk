@@ -11,6 +11,7 @@ type L = { tr: string; en: string };
 export type Project = {
   slug: string;
   type: ProjectType;
+  cover: string;
   name: L;
   place: L;
   year: string;
@@ -29,6 +30,7 @@ export const projects: Project[] = [
   {
     slug: 'ege-kiyisi-villasi',
     type: 'completed',
+    cover: '/proj-ege-kiyisi.webp',
     name: { tr: 'Ege Kıyısı Villası', en: 'Aegean Coast Villa' },
     place: { tr: 'Çeşme, İzmir', en: 'Çeşme, İzmir' },
     year: '2024',
@@ -67,6 +69,7 @@ export const projects: Project[] = [
   {
     slug: 'zeytinlik-rezidans',
     type: 'completed',
+    cover: '/proj-zeytinlik.webp',
     name: { tr: 'Zeytinlik Rezidans', en: 'Olive Grove Residence' },
     place: { tr: 'Bodrum, Muğla', en: 'Bodrum, Muğla' },
     year: '2023',
@@ -104,6 +107,7 @@ export const projects: Project[] = [
   {
     slug: 'deniz-terasi',
     type: 'completed',
+    cover: '/proj-deniz-terasi.webp',
     name: { tr: 'Deniz Terası', en: 'Sea Terrace' },
     place: { tr: 'Kalkan, Antalya', en: 'Kalkan, Antalya' },
     year: '2023',
@@ -141,6 +145,7 @@ export const projects: Project[] = [
   {
     slug: 'tepe-malikane',
     type: 'ongoing',
+    cover: '/proj-tepe-malikane.webp',
     name: { tr: 'Tepe Malikâne', en: 'Hilltop Estate' },
     place: { tr: 'Yalıkavak, Muğla', en: 'Yalıkavak, Muğla' },
     year: '2025',
@@ -178,6 +183,7 @@ export const projects: Project[] = [
   {
     slug: 'bahce-havuzu-yenileme',
     type: 'before-after',
+    cover: '/proj-bahce-yenileme.webp',
     name: { tr: 'Bahçe Havuzu Yenileme', en: 'Garden Pool Renewal' },
     place: { tr: 'Urla, İzmir', en: 'Urla, İzmir' },
     year: '2024',
@@ -226,6 +232,7 @@ export const projectsByType = (type: ProjectType): Project[] =>
 export type LocalizedProject = {
   slug: string;
   type: ProjectType;
+  cover: string;
   year: string;
   area: string;
   galleryCount: number;
@@ -247,6 +254,7 @@ export function localizeProject(p: Project, locale: string): LocalizedProject {
   return {
     slug: p.slug,
     type: p.type,
+    cover: p.cover,
     year: p.year,
     area: p.area,
     galleryCount: p.galleryCount,

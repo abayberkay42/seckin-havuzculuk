@@ -1,18 +1,15 @@
 'use client';
 
+import Image from 'next/image';
 import { useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { gsap, useGSAP } from '@/lib/gsap';
 import { Link } from '@/i18n/navigation';
 import type { LocalizedProject } from '@/content/projects';
 
-const WATER = 'bg-[radial-gradient(130%_130%_at_30%_16%,#20516a_0%,#16303c_58%,#0d1f29_100%)]';
-const STONE = 'bg-[radial-gradient(130%_130%_at_30%_16%,#3a4a56_0%,#243139_60%,#141d24_100%)]';
-
 export function ProjectHero({ lp }: { lp: LocalizedProject }) {
   const t = useTranslations('projectsPage');
   const root = useRef<HTMLElement>(null);
-  const water = lp.type !== 'ongoing';
   const typeLabel =
     lp.type === 'completed'
       ? t('typeCompleted')
@@ -52,9 +49,15 @@ export function ProjectHero({ lp }: { lp: LocalizedProject }) {
       className="relative flex min-h-[92dvh] items-end overflow-hidden bg-deep"
     >
       <div data-bg className="absolute inset-0 will-change-transform">
-        <div className={`absolute inset-0 ${water ? WATER : STONE}`} />
-        <div className="animate-water-drift absolute right-[8%] top-[6%] h-[55vmax] w-[55vmax] rounded-full bg-[radial-gradient(closest-side,rgba(169,203,227,0.2),transparent_72%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(13,31,41,0.8)_0%,transparent_55%)]" />
+        <Image
+          src={lp.cover}
+          alt={lp.name}
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(13,31,41,0.9)_0%,rgba(13,31,41,0.35)_52%,rgba(13,31,41,0.55)_100%)]" />
       </div>
 
       <div className="relative z-10 flex w-full flex-col items-center px-[clamp(1.5rem,6vw,8rem)] pb-[clamp(3rem,8vh,6rem)] pt-[clamp(8rem,16vh,10rem)] text-center">

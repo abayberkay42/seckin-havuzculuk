@@ -1,24 +1,22 @@
 'use client';
 
+import Image from 'next/image';
 import { useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { gsap, useGSAP } from '@/lib/gsap';
 import { Link } from '@/i18n/navigation';
 import { Sheen } from '@/components/ui/Sheen';
-import { Tilt } from '@/components/ui/Tilt';
 import { Eyebrow } from '@/components/ui/Eyebrow';
 import type { ProjectType } from '@/content/projects';
 
 type Item = {
   slug: string;
+  cover: string;
   name: string;
   place: string;
   year: string;
   type: ProjectType;
 };
-
-const WATER = 'bg-[radial-gradient(130%_130%_at_28%_18%,#20516a_0%,#16303c_58%,#0d1f29_100%)]';
-const STONE = 'bg-[radial-gradient(130%_130%_at_28%_18%,#efe8da_0%,#d8ccb6_62%,#b7a789_100%)]';
 
 export function RelatedProjects({ items }: { items: Item[] }) {
   const t = useTranslations('projectsPage');
@@ -58,12 +56,16 @@ export function RelatedProjects({ items }: { items: Item[] }) {
               href={{ pathname: '/projects/[slug]', params: { slug: p.slug } }}
               className="group"
             >
-              <Tilt className="relative aspect-[4/3] overflow-hidden rounded-[1.5rem]">
-                <div
-                  className={`h-full w-full transition-transform duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.06] ${water ? WATER : STONE}`}
+              <div className="relative aspect-[4/3] overflow-hidden rounded-[1.5rem]">
+                <Image
+                  src={p.cover}
+                  alt={p.name}
+                  fill
+                  sizes="(max-width: 768px) 90vw, 30vw"
+                  className="object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.06]"
                 />
                 <Sheen tint={water ? 'light' : 'steel'} />
-              </Tilt>
+              </div>
               <span className="mt-5 block font-mono text-label uppercase text-ink/40">
                 {p.place} · {p.year}
               </span>

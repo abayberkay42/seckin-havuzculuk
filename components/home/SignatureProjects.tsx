@@ -19,6 +19,13 @@ type Project = { name: string; place: string; year: string };
 export function SignatureProjects() {
   const t = useTranslations('projects');
   const items = t.raw('items') as Project[];
+  // covers align to the items order (Ege · Zeytinlik · Tepe Malikâne · Deniz Terası)
+  const covers = [
+    '/proj-ege-kiyisi.webp',
+    '/proj-zeytinlik.webp',
+    '/proj-tepe-malikane.webp',
+    '/proj-deniz-terasi.webp',
+  ];
   const root = useRef<HTMLDivElement>(null);
   const track = useRef<HTMLDivElement>(null);
 
@@ -75,12 +82,13 @@ export function SignatureProjects() {
           {items.map((project, i) => (
             <article
               key={project.name}
-              className="relative h-[68vh] w-[min(80vw,32rem)] shrink-0"
+              className="relative aspect-[1170/780] h-auto w-[min(88vw,1170px)] shrink-0"
             >
               <Frame
                 variant={i % 2 === 0 ? 'water' : 'stone'}
-                src={i === 0 ? '/proje-ege-kiyisi.webp' : undefined}
+                src={covers[i]}
                 alt={project.name}
+                sizes="(max-width: 768px) 88vw, 1170px"
                 className="h-full w-full"
               />
               <div className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between p-7">

@@ -58,6 +58,7 @@ export default async function ProjectDetailPage({
   );
   const related = [...sameType, ...others].slice(0, 3).map((p) => ({
     slug: p.slug,
+    cover: p.cover,
     name: localize(p.name, locale),
     place: localize(p.place, locale),
     year: p.year,
