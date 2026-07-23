@@ -21,59 +21,78 @@ export function Services() {
 
   useGSAP(
     () => {
-      // The Apple-style pinned takeover — on every screen size, mobile included.
-      const panels = gsap.utils.toArray<HTMLElement>('[data-panel]', root.current);
-      gsap.set(panels, { autoAlpha: 0, yPercent: 6 });
-      gsap.set(panels[0], { autoAlpha: 1, yPercent: 0 });
+      const mm = gsap.matchMedia();
 
-      // Shorter pin distance + a small leading dwell, so the first card hands
-      // off to the second after a light scroll instead of a long spin. Both
-      // scrubbed triggers must share this exact distance to stay in lockstep.
-      const PIN = panels.length * 58; // vh of scroll for the whole sequence
+      // The Apple-style pinned takeover — on every screen size. `withScale` adds
+      // the subtle depth push on desktop; phones skip it (scaling a full-bleed
+      // photo every scroll frame forces a costly re-raster and makes the section
+      // stutter). The cross-fade + slide stays identical.
+      const build = (withScale: boolean) => () => {
+        const panels = gsap.utils.toArray<HTMLElement>('[data-panel]', root.current);
+        gsap.set(panels, { autoAlpha: 0, yPercent: 6 });
+        gsap.set(panels[0], { autoAlpha: 1, yPercent: 0 });
 
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: root.current,
-          start: 'top top',
-          end: '+=' + PIN + '%',
-          pin: true,
-          scrub: 1,
-        },
-      });
+        // Shorter pin distance + a small leading dwell, so the first card hands
+        // off to the second after a light scroll. Both scrubbed triggers must
+        // share this exact distance to stay in lockstep.
+        const PIN = panels.length * 58; // vh of scroll for the whole sequence
 
-      // Cleaner hand-off: the outgoing panel leaves first (down + shrink), the
-      // incoming arrives a beat later (up + settle) — so they never sit at 50%
-      // opacity together and ghost. Transitions start early (0.3) so there's
-      // no long dead scroll on the first card.
-      panels.forEach((panel, i) => {
-        if (i === 0) return;
-        const at = (i - 1) * 0.9 + 0.3;
-        tl.to(
-          panels[i - 1],
-          { autoAlpha: 0, yPercent: -8, scale: 0.97, ease: 'power2.in', duration: 0.4 },
-          at,
-        ).fromTo(
-          panel,
-          { autoAlpha: 0, yPercent: 12, scale: 1.03 },
-          { autoAlpha: 1, yPercent: 0, scale: 1, ease: 'power3.out', duration: 0.5 },
-          at + 0.25,
-        );
-      });
-
-      gsap.fromTo(
-        '[data-progress]',
-        { scaleX: 0 },
-        {
-          scaleX: 1,
-          ease: 'none',
+        const tl = gsap.timeline({
           scrollTrigger: {
             trigger: root.current,
             start: 'top top',
             end: '+=' + PIN + '%',
-            scrub: true,
+            pin: true,
+            scrub: 1,
+            anticipatePin: 1, // smoother pin engagement, esp. on touch
           },
-        },
-      );
+        });
+
+        panels.forEach((panel, i) => {
+          if (i === 0) return;
+          const at = (i - 1) * 0.9 + 0.3;
+          tl.to(
+            panels[i - 1],
+            {
+              autoAlpha: 0,
+              yPercent: -8,
+              ...(withScale ? { scale: 0.97 } : {}),
+              ease: 'power2.in',
+              duration: 0.4,
+            },
+            at,
+          ).fromTo(
+            panel,
+            { autoAlpha: 0, yPercent: 12, ...(withScale ? { scale: 1.03 } : {}) },
+            {
+              autoAlpha: 1,
+              yPercent: 0,
+              ...(withScale ? { scale: 1 } : {}),
+              ease: 'power3.out',
+              duration: 0.5,
+            },
+            at + 0.25,
+          );
+        });
+
+        gsap.fromTo(
+          '[data-progress]',
+          { scaleX: 0 },
+          {
+            scaleX: 1,
+            ease: 'none',
+            scrollTrigger: {
+              trigger: root.current,
+              start: 'top top',
+              end: '+=' + PIN + '%',
+              scrub: true,
+            },
+          },
+        );
+      };
+
+      mm.add('(min-width: 901px)', build(true));
+      mm.add('(max-width: 900px)', build(false));
     },
     { scope: root },
   );
@@ -126,7 +145,7 @@ export function Services() {
                 }
                 label={item.name}
                 alt={item.name}
-                className="aspect-[4/5] w-full max-w-[30rem] justify-self-center shadow-[0_48px_90px_-28px_rgba(0,0,0,0.75)] md:aspect-[3/4]"
+                className="aspect-[4/5] w-full max-w-[30rem] justify-self-center shadow-none md:aspect-[3/4] md:shadow-[0_48px_90px_-28px_rgba(0,0,0,0.75)]"
               />
             </div>
           </div>
