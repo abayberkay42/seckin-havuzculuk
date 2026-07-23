@@ -361,7 +361,7 @@ function MobileMenu({
           className="pointer-events-auto fixed inset-0 z-40 flex flex-col justify-between overflow-hidden bg-deep px-8 pb-12 pt-32 lg:hidden"
         >
           <div className="absolute inset-0 bg-[radial-gradient(120%_90%_at_80%_-10%,#1d4658_0%,#16303c_50%,#0d1f29_100%)]" />
-          <nav className="relative flex flex-col gap-1">
+          <nav className="relative flex flex-col gap-1 text-center">
             {leaves.map((leaf, i) => (
               <span key={leaf.href} className="block overflow-hidden">
                 <motion.span
@@ -374,7 +374,7 @@ function MobileMenu({
                   <Link
                     href={leaf.href}
                     onClick={onClose}
-                    className="block py-1 font-display text-[clamp(2.25rem,11vw,3.75rem)] leading-tight text-canvas/90"
+                    className="block py-1 font-display text-[clamp(1.75rem,8vw,2.75rem)] leading-tight text-canvas/90"
                   >
                     {leaf.label}
                   </Link>
