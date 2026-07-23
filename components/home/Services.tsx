@@ -44,7 +44,8 @@ export function Services() {
             end: '+=' + PIN + '%',
             pin: true,
             scrub: 1,
-            anticipatePin: 1, // smoother pin engagement, esp. on touch
+            // no anticipatePin — it pins slightly EARLY based on scroll velocity,
+            // which reads as a magnet yanking the card into place as you approach.
           },
         });
 
