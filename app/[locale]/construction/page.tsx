@@ -36,7 +36,12 @@ export default async function ConstructionPage({ params }: { params: Promise<{ l
         data-nav-theme="light"
         className="bg-surface px-[clamp(1.5rem,6vw,8rem)] py-[clamp(7rem,14vh,12rem)]"
       >
-        <Frame variant="water" className="mb-[clamp(4rem,8vh,7rem)] aspect-[16/8] w-full" />
+        <Frame
+          variant="water"
+          src="/havuz-insaati-hero.webp"
+          alt={t('title')}
+          className="mb-[clamp(4rem,8vh,7rem)] aspect-[16/9] w-full"
+        />
 
         <Eyebrow tone="dark" className="mb-8 justify-center">
           {t('capabilitiesEyebrow')}
