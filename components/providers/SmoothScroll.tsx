@@ -41,17 +41,24 @@ export function SmoothScroll({ children }: { children: ReactNode }) {
     };
   }, []);
 
-  // On every route change, land at the top of the new page. Next resets the
-  // native scroll, but Lenis keeps its own internal target — without this it
-  // would carry the previous page's position and open new pages mid-way down.
+  // On every route change, land at the top of the new page. Desktop Lenis
+  // keeps its own internal target; mobile native scroll can be nudged back by
+  // the closing menu, Next's own restoration, or late layout shifts. So reset
+  // every scroller (Lenis + window + document) and do it again on the next
+  // frame to defeat any late override — then recompute the triggers.
   useEffect(() => {
-    if (lenisRef.current) {
-      lenisRef.current.scrollTo(0, { immediate: true, force: true });
-    } else {
+    const jump = () => {
+      lenisRef.current?.scrollTo(0, { immediate: true, force: true });
       window.scrollTo(0, 0);
-    }
-    // recompute pinned/scrubbed triggers for the freshly mounted page
-    ScrollTrigger.refresh();
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    };
+    jump();
+    const raf = requestAnimationFrame(() => {
+      jump();
+      ScrollTrigger.refresh();
+    });
+    return () => cancelAnimationFrame(raf);
   }, [pathname]);
 
   return <>{children}</>;
