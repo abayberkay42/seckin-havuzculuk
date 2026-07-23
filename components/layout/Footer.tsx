@@ -41,16 +41,20 @@ export async function Footer() {
       <div className="grid gap-x-[clamp(2.5rem,5vw,5rem)] gap-y-14 border-t border-canvas/10 pt-14 md:grid-cols-12">
         {/* Brand + reach */}
         <div className="md:col-span-4">
-          <Link href="/" aria-label="Seçkin Havuzculuk" className="inline-flex">
+          <Link
+            href="/"
+            aria-label="Seçkin Havuzculuk"
+            className="flex justify-center md:justify-start"
+          >
             <Image
               src="/logo.png"
               alt="Seçkin Havuzculuk"
               width={453}
               height={500}
-              className="h-14 w-auto"
+              className="h-20 w-auto"
             />
           </Link>
-          <p className="mt-6 max-w-[24rem] text-[0.95rem] leading-relaxed text-canvas/55">
+          <p className="mt-6 max-w-[24rem] text-center text-[0.95rem] leading-relaxed text-canvas/55 md:text-left">
             {t('tagline')}
           </p>
 
