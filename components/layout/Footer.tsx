@@ -1,4 +1,6 @@
+import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
+import { Link } from '@/i18n/navigation';
 import { TextLink } from '@/components/ui/TextLink';
 import type { AppPathname } from '@/i18n/routing';
 import { PHONE_DISPLAY, EMAIL, whatsappLink } from '@/lib/contact';
@@ -39,8 +41,16 @@ export async function Footer() {
       <div className="grid gap-x-[clamp(2.5rem,5vw,5rem)] gap-y-14 border-t border-canvas/10 pt-14 md:grid-cols-12">
         {/* Brand + reach */}
         <div className="md:col-span-4">
-          <span className="font-display text-[1.6rem] text-canvas">Seçkin</span>
-          <p className="mt-4 max-w-[24rem] text-[0.95rem] leading-relaxed text-canvas/55">
+          <Link href="/" aria-label="Seçkin Havuzculuk" className="inline-flex">
+            <Image
+              src="/logo.png"
+              alt="Seçkin Havuzculuk"
+              width={453}
+              height={500}
+              className="h-14 w-auto"
+            />
+          </Link>
+          <p className="mt-6 max-w-[24rem] text-[0.95rem] leading-relaxed text-canvas/55">
             {t('tagline')}
           </p>
 
