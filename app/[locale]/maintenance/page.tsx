@@ -41,9 +41,9 @@ export default async function MaintenancePage({ params }: { params: Promise<{ lo
       >
         <Frame
           variant="water"
-          src="/havuz-bakimi.webp"
+          src="/havuz-bakimi-servis.webp"
           alt={t('title')}
-          className="mb-[clamp(4rem,8vh,7rem)] aspect-[16/8] w-full"
+          className="mb-[clamp(4rem,8vh,7rem)] aspect-[16/9] w-full"
         />
 
         <Eyebrow tone="dark" className="mb-8 justify-center">
