@@ -251,9 +251,12 @@ export function Hero({
               {eyebrow}
             </span>
 
-            <h1 className="font-display text-hero text-canvas">
-              <span className="block">{line1}</span>
-              <span className="block">{line2}</span>
+            {/* Sized fluidly so the longer line ("Seçkin yaşam alanlarına,")
+                always fits on ONE line — the headline stays exactly two lines,
+                never wrapping to three, from phones up to desktop. */}
+            <h1 className="font-display font-[380] leading-[0.98] tracking-[-0.028em] text-[clamp(1.6rem,7.4vw,9rem)] text-canvas">
+              <span className="block whitespace-nowrap">{line1}</span>
+              <span className="block whitespace-nowrap">{line2}</span>
             </h1>
 
             <p className="mx-auto mt-8 max-w-[34rem] text-lead font-light text-canvas/75">
