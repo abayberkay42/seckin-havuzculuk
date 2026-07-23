@@ -66,6 +66,15 @@ export function Hero({
       // If a real video is present, scrub its playhead with scroll too.
       const video = videoRef.current;
       if (video) {
+        // Fade the video in once it has a frame. Set it imperatively (not just
+        // via the JSX onLoadedData) so a cached/fast-loading video that fired
+        // `loadeddata` before React attached its handler still reveals.
+        const reveal = () => {
+          video.dataset.ready = 'true';
+        };
+        if (video.readyState >= 2) reveal();
+        else video.addEventListener('loadeddata', reveal, { once: true });
+
         const attach = () => {
           if (!video.duration || !isFinite(video.duration)) return;
           ScrollTrigger.create({
