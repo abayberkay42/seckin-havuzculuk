@@ -58,6 +58,8 @@ export function Hero({
       if (canvas && ctx) {
         const frames: HTMLImageElement[] = new Array(set.count);
         let lastDrawn = -1;
+        // the frame the scroll position currently wants (may not be loaded yet)
+        let wanted = 0;
 
         const draw = (img: HTMLImageElement) => {
           const cw = canvas.width;
@@ -76,6 +78,7 @@ export function Hero({
         // fast scrub over not-yet-downloaded frames never stalls or blanks.
         const drawIndex = (index: number) => {
           const i = Math.max(0, Math.min(set.count - 1, index));
+          wanted = i;
           if (frames[i]) {
             draw(frames[i]);
             lastDrawn = i;
@@ -103,13 +106,16 @@ export function Hero({
           img.src = `${set.dir}/frame_${String(i + 1).padStart(4, '0')}.webp`;
           img.onload = () => {
             frames[i] = img;
-            if (i === 0) {
+            if (i === 0 && canvas.dataset.ready !== 'true') {
               draw(img);
               lastDrawn = 0;
               canvas.dataset.ready = 'true';
-            } else if (i === lastDrawn + 1) {
-              drawIndex(i);
             }
+            // Only refresh the frame the scroll position is actually asking for
+            // right now — never walk forward frame-by-frame as they load. That
+            // frame-walk made the film play by itself when a remount (e.g. a
+            // language switch) loaded all frames instantly from cache.
+            if (i === wanted) drawIndex(wanted);
           };
         }
 
