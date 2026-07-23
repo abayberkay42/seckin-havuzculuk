@@ -173,7 +173,11 @@ export function WaterSurface() {
       <Canvas
         dpr={[1, 1.5]}
         frameloop={inView ? 'always' : 'never'}
-        gl={{ antialias: false, powerPreference: 'high-performance' }}
+        // 'default' not 'high-performance': on hybrid-GPU machines the latter
+        // renders on the discrete GPU while the browser composites on the
+        // integrated one, forcing a per-frame cross-GPU copy that stutters (same
+        // fix as the cursor water). Keeps this on the compositor's GPU.
+        gl={{ antialias: false, powerPreference: 'default' }}
       >
         <WaterMesh pointer={pointer} />
       </Canvas>

@@ -210,7 +210,7 @@ export function RippleReveal() {
       <Canvas
         dpr={[1, 1.5]}
         frameloop={inView ? 'always' : 'never'}
-        gl={{ antialias: false, powerPreference: 'high-performance' }}
+        gl={{ antialias: false, powerPreference: 'default' }}
       >
         <RippleMesh pointer={pointer} clicks={clicks} />
       </Canvas>

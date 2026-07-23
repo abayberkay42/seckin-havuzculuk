@@ -168,20 +168,23 @@ export function Nav({
           <button
             onClick={() => setOpen((v) => !v)}
             className={`flex h-10 w-10 items-center justify-center rounded-full transition-colors duration-700 lg:hidden ${
-              dark ? 'bg-canvas/10' : 'bg-ink/5'
+              dark || open ? 'bg-canvas/10' : 'bg-ink/5'
             }`}
             aria-label={menuLabel}
             aria-expanded={open}
           >
             <span className="relative block h-3 w-4">
+              {/* lines go light whenever the menu is OPEN, so the X is always
+                  visible on the dark menu overlay even if the bar was over a
+                  light section when it was tapped. */}
               <span
                 className={`absolute left-0 block h-px w-full transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-                  dark ? 'bg-canvas' : 'bg-ink'
+                  dark || open ? 'bg-canvas' : 'bg-ink'
                 } ${open ? 'top-1/2 rotate-45' : 'top-0'}`}
               />
               <span
                 className={`absolute bottom-0 left-0 block h-px w-full transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-                  dark ? 'bg-canvas' : 'bg-ink'
+                  dark || open ? 'bg-canvas' : 'bg-ink'
                 } ${open ? 'bottom-1/2 -rotate-45' : ''}`}
               />
             </span>

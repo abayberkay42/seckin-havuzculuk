@@ -4,27 +4,24 @@ import { useEffect, type ReactNode } from 'react';
 import Lenis from 'lenis';
 import 'lenis/dist/lenis.css';
 import { gsap, ScrollTrigger } from '@/lib/gsap';
-import { isGoogleChrome } from '@/lib/isChrome';
 
 /**
- * Scroll strategy, tuned per device. Reduced-motion opts out of everything.
+ * One simple, consistent scroll strategy:
  *
- *  • `ignoreMobileResize` (all): stop ScrollTrigger from refreshing (and the
- *    pinned sections from jumping) when the mobile URL bar shows/hides. This is
- *    the SAFE half of the mobile fix — it never touches how scrolling itself
- *    feels, unlike normalizeScroll, which hijacked touch and made iOS almost
- *    impossible to scroll.
- *  • Desktop Google Chrome: native scroll (Lenis stutters in Chrome here).
- *  • Everything else (incl. iOS Safari): Lenis. On touch Lenis leaves the native
- *    momentum scroll alone (it only smooths the wheel), so phones scroll normally.
+ *  • Desktop (fine pointer, every browser): Lenis smooth scroll, driven by GSAP's
+ *    ticker so Lenis and ScrollTrigger share one clock — scrubbed/pinned
+ *    timelines stay glued to the scroll instead of stepping. This is the canonical
+ *    smooth-scroll + ScrollTrigger pairing.
+ *  • Touch (phones/tablets): plain native momentum scrolling. No Lenis, no
+ *    normalizeScroll, no ignoreMobileResize — those all fought the OS and caused
+ *    the jumps/judder. There are no pinned sections on mobile anymore, so native
+ *    scroll is smooth on its own.
+ *  • Reduced-motion: native scrolling, untouched.
  */
 export function SmoothScroll({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-    ScrollTrigger.config({ ignoreMobileResize: true });
-
-    if (isGoogleChrome()) return;
+    if (window.matchMedia('(pointer: coarse)').matches) return;
 
     const lenis = new Lenis({ lerp: 0.09, smoothWheel: true });
     lenis.on('scroll', ScrollTrigger.update);
