@@ -40,6 +40,7 @@ export default async function ConstructionPage({ params }: { params: Promise<{ l
           variant="water"
           src="/havuz-insaati-hero.webp"
           alt={t('title')}
+          sizes="100vw"
           className="mb-[clamp(4rem,8vh,7rem)] aspect-[16/9] w-full"
         />
 

@@ -13,12 +13,19 @@ export function Frame({
   src,
   alt = '',
   className = '',
+  sizes = '(max-width: 768px) 90vw, 40vw',
 }: {
   label?: string;
   variant?: 'water' | 'stone';
   src?: string;
   alt?: string;
   className?: string;
+  /**
+   * next/image `sizes` hint. Defaults to a two-up column width; pass a wider
+   * value (e.g. "100vw") for full-bleed hero frames so a high-res source is
+   * served instead of the small column-sized one (which would look blurry).
+   */
+  sizes?: string;
 }) {
   const water = variant === 'water';
 
@@ -40,7 +47,7 @@ export function Frame({
             src={src}
             alt={alt}
             fill
-            sizes="(max-width: 768px) 90vw, 40vw"
+            sizes={sizes}
             className="object-cover"
           />
         ) : (
