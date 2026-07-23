@@ -26,10 +26,21 @@ export function Hero({
 
   useGSAP(
     () => {
-      // Reveal the video once it has a frame (imperative too, so a cached/fast
-      // video that fired `loadeddata` before React attached still shows).
+      // Pick the source by screen: phones get a lighter 720p cut so the
+      // scroll-scrub (frame-by-frame seeking) stays smooth — 1080p seeking is
+      // what mobile hardware chokes on. On a phone screen 720p is
+      // indistinguishable. Desktop keeps the full 1080p.
       const video = videoRef.current;
       if (video) {
+        const mobile = window.matchMedia('(max-width: 900px)').matches;
+        const nextSrc = mobile ? '/videos/hero-mobile.mp4' : '/videos/hero.mp4';
+        if (!video.currentSrc.endsWith(nextSrc)) {
+          video.src = nextSrc;
+          video.load();
+        }
+
+        // Reveal the video once it has a frame (imperative too, so a cached/fast
+        // video that fired `loadeddata` before React attached still shows).
         const reveal = () => {
           video.dataset.ready = 'true';
         };
@@ -109,9 +120,7 @@ export function Hero({
           onLoadedData={(e) => {
             e.currentTarget.dataset.ready = 'true';
           }}
-        >
-          <source src="/videos/hero.mp4" type="video/mp4" />
-        </video>
+        />
 
         {/* NAVY ATMOSPHERE — hidden until the film finishes, then fades in over
             it (phase 2). The living water gradient the site opens on. */}
