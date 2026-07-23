@@ -131,14 +131,14 @@ export function Services() {
           <div
             key={item.no}
             data-panel
-            className="absolute inset-0 flex items-center px-[clamp(1.5rem,6vw,8rem)]"
+            className="absolute inset-0 flex items-center px-[clamp(1.5rem,6vw,8rem)] pt-[clamp(4.5rem,12vh,6rem)] md:pt-0"
           >
-            <div className="mx-auto grid w-full max-w-[62rem] items-center gap-[clamp(1.5rem,3vw,3rem)] md:grid-cols-2">
+            <div className="mx-auto grid w-full max-w-[62rem] items-center gap-[clamp(1.25rem,3vw,3rem)] md:grid-cols-2">
               <div className="text-center">
-                <span className="mb-6 block font-mono text-label uppercase text-steel">
+                <span className="mb-3 block font-mono text-label uppercase text-steel md:mb-6">
                   {item.no}
                 </span>
-                <h3 className="mb-7 font-display text-display text-canvas">
+                <h3 className="mb-4 font-display text-display text-canvas md:mb-7">
                   {item.name}
                 </h3>
                 <p className="mx-auto max-w-[30rem] text-lead font-light text-canvas/70">
@@ -152,7 +152,7 @@ export function Services() {
                 }
                 label={item.name}
                 alt={item.name}
-                className="aspect-[4/5] w-full max-w-[30rem] justify-self-center shadow-none md:aspect-[3/4] md:shadow-[0_48px_90px_-28px_rgba(0,0,0,0.75)]"
+                className="aspect-[4/5] max-h-[42vh] w-full max-w-[30rem] justify-self-center shadow-none md:aspect-[3/4] md:max-h-none md:shadow-[0_48px_90px_-28px_rgba(0,0,0,0.75)]"
               />
             </div>
           </div>
