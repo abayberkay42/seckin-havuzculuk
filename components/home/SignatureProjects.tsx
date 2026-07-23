@@ -11,11 +11,10 @@ import { Eyebrow } from '@/components/ui/Eyebrow';
 type Project = { name: string; place: string; year: string };
 
 /**
- * The peak. On desktop, vertical scroll drives a horizontal pan across the
- * portfolio — pinned so the viewport holds still while it plays. On phones a
- * pinned horizontal pan fights native scroll (and its pin-spacer destabilises
- * the sections below it), so the cards simply stack and flow, each revealing as
- * it enters. No pin on mobile.
+ * The peak. Vertical scroll drives a horizontal pan across the portfolio — the
+ * camera glides along a wall of finished pools. Pinned (on every screen size)
+ * because the horizontal translation needs the viewport held still while it
+ * plays.
  */
 export function SignatureProjects() {
   const t = useTranslations('projects');
@@ -25,39 +24,22 @@ export function SignatureProjects() {
 
   useGSAP(
     () => {
-      const mm = gsap.matchMedia();
+      const el = track.current;
+      if (!el) return;
 
-      // Desktop: pinned horizontal pan.
-      mm.add('(min-width: 901px)', () => {
-        const el = track.current;
-        if (!el) return;
-        const getDistance = () => el.scrollWidth - window.innerWidth;
-        gsap.to(el, {
-          x: () => -getDistance(),
-          ease: 'none',
-          scrollTrigger: {
-            trigger: root.current,
-            start: 'top top',
-            end: () => '+=' + getDistance(),
-            pin: true,
-            scrub: 1,
-            invalidateOnRefresh: true,
-          },
-        });
-      });
+      const getDistance = () => el.scrollWidth - window.innerWidth;
 
-      // Mobile: no pin. Clear any leftover x-translate and reveal the stacked
-      // cards gently as they scroll in.
-      mm.add('(max-width: 900px)', () => {
-        gsap.set(track.current, { x: 0 });
-        gsap.from('[data-proj]', {
-          opacity: 0,
-          y: 40,
-          duration: 0.9,
-          ease: 'power3.out',
-          stagger: 0.1,
-          scrollTrigger: { trigger: root.current, start: 'top 72%' },
-        });
+      gsap.to(el, {
+        x: () => -getDistance(),
+        ease: 'none',
+        scrollTrigger: {
+          trigger: root.current,
+          start: 'top top',
+          end: () => '+=' + getDistance(),
+          pin: true,
+          scrub: 1,
+          invalidateOnRefresh: true,
+        },
       });
     },
     { scope: root },
@@ -65,12 +47,9 @@ export function SignatureProjects() {
 
   return (
     <section data-nav-theme="dark" className="bg-deep">
-      <div
-        ref={root}
-        className="relative overflow-hidden [touch-action:pan-y] min-[901px]:h-[100dvh]"
-      >
-        {/* section background — a photo held behind the cards, darkened so the
-            deep water stays and the content reads. */}
+      <div ref={root} className="relative h-[100svh] overflow-hidden [touch-action:pan-y]">
+        {/* section background — a photo held behind the panning cards, darkened
+            so the deep water stays and the content reads. */}
         <Image
           src="/projects-bg.webp"
           alt=""
@@ -82,13 +61,10 @@ export function SignatureProjects() {
 
         <div
           ref={track}
-          className="relative flex flex-col gap-[clamp(2.5rem,6vh,4rem)] px-[clamp(1.5rem,6vw,8rem)] py-[clamp(4.5rem,10vh,6rem)] min-[901px]:h-full min-[901px]:flex-row min-[901px]:items-center min-[901px]:gap-[clamp(1.5rem,3vw,3rem)] min-[901px]:py-0 min-[901px]:will-change-transform"
+          className="flex h-full items-center gap-[clamp(1.5rem,3vw,3rem)] pl-[clamp(1.5rem,6vw,8rem)] pr-[clamp(1.5rem,6vw,8rem)] will-change-transform"
         >
           {/* opening title panel */}
-          <div
-            data-proj
-            className="flex w-full shrink-0 flex-col items-center justify-center text-center min-[901px]:h-full min-[901px]:w-[min(85vw,34rem)] min-[901px]:pr-8"
-          >
+          <div className="flex h-full w-[min(85vw,34rem)] shrink-0 flex-col items-center justify-center pr-8 text-center">
             <Eyebrow index="III" tone="light" className="mb-8 justify-center">
               {t('eyebrow')}
             </Eyebrow>
@@ -99,8 +75,7 @@ export function SignatureProjects() {
           {items.map((project, i) => (
             <article
               key={project.name}
-              data-proj
-              className="relative aspect-[4/5] w-full shrink-0 min-[901px]:aspect-auto min-[901px]:h-[68vh] min-[901px]:w-[min(80vw,32rem)]"
+              className="relative h-[68vh] w-[min(80vw,32rem)] shrink-0"
             >
               <Frame
                 variant={i % 2 === 0 ? 'water' : 'stone'}
@@ -125,13 +100,12 @@ export function SignatureProjects() {
           ))}
 
           {/* closing CTA panel */}
-          <div
-            data-proj
-            className="flex w-full shrink-0 flex-col items-center justify-center min-[901px]:h-full min-[901px]:w-[min(70vw,22rem)] min-[901px]:items-start"
-          >
-            <Button variant="secondary" tone="light" href="/projects">
-              {t('cta')}
-            </Button>
+          <div className="flex h-full w-[min(70vw,22rem)] shrink-0 flex-col justify-center">
+            <div className="self-start">
+              <Button variant="secondary" tone="light" href="/projects">
+                {t('cta')}
+              </Button>
+            </div>
           </div>
         </div>
       </div>

@@ -89,7 +89,7 @@ export function Hero({
     <section
       ref={root}
       data-nav-theme="dark"
-      className="relative min-h-[100dvh] w-full overflow-hidden bg-deep"
+      className="relative min-h-[100svh] w-full overflow-hidden bg-deep"
     >
       {/* MEDIA — cinematic background. A living water gradient holds the frame
           until the client's 15–20s video is dropped into /public/videos. */}
@@ -140,7 +140,7 @@ export function Hero({
       {/* CONTENT — lower-left, deliberately holds under a third of the frame */}
       <div
         data-hero-content
-        className="relative z-10 flex min-h-[100dvh] flex-col items-center justify-center px-[clamp(1.5rem,6vw,8rem)] pb-[clamp(3.5rem,10vh,7rem)] pt-[clamp(7rem,14vh,10rem)] text-center"
+        className="relative z-10 flex min-h-[100svh] flex-col items-center justify-center px-[clamp(1.5rem,6vw,8rem)] pb-[clamp(3.5rem,10vh,7rem)] pt-[clamp(7rem,14vh,10rem)] text-center"
       >
         <div className="w-full max-w-[80rem]">
           <span

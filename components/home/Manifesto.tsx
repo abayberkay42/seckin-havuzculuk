@@ -55,7 +55,7 @@ export function Manifesto() {
 
   return (
     <section ref={root} data-nav-theme="light" className="bg-canvas">
-      <div className="flex min-h-[100dvh] flex-col items-center justify-center px-[clamp(1.5rem,6vw,8rem)] py-[clamp(6rem,12vh,10rem)] text-center">
+      <div className="flex min-h-[100svh] flex-col items-center justify-center px-[clamp(1.5rem,6vw,8rem)] py-[clamp(6rem,12vh,10rem)] text-center">
         <Eyebrow data-eyebrow index="I" tone="dark" className="mb-[clamp(2rem,5vh,3.5rem)] justify-center">
           {t('eyebrow')}
         </Eyebrow>

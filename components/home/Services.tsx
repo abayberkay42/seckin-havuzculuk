@@ -96,7 +96,7 @@ export function Services() {
 
   return (
     <section data-nav-theme="dark" className="bg-navy">
-      <div ref={root} className="relative overflow-hidden min-[901px]:h-[100dvh]">
+      <div ref={root} className="relative overflow-hidden min-[901px]:h-[100svh]">
         {/* section background — a photo held behind the panels, darkened so the
             navy stays and the content reads. */}
         <Image
