@@ -133,12 +133,16 @@ export function Services() {
             data-panel
             className="flex items-center px-[clamp(1.5rem,6vw,8rem)] py-[clamp(3.5rem,9vh,5rem)] min-[901px]:absolute min-[901px]:inset-0 min-[901px]:py-0"
           >
-            <div className="mx-auto grid w-full max-w-[62rem] items-center gap-[clamp(1.25rem,3vw,3rem)] md:grid-cols-2">
+            <div className="mx-auto grid w-full max-w-[62rem] items-center gap-[clamp(1.25rem,3vw,3rem)] md:grid-cols-[1.15fr_1fr]">
               <div className="text-center">
                 <span className="mb-3 block font-mono text-label uppercase text-steel md:mb-6">
                   {item.no}
                 </span>
-                <h3 className="mb-4 font-display text-display text-canvas md:mb-7">
+                {/* Sized a notch below text-display and the column widened
+                    (grid below) so long single words — "Construction",
+                    "Maintenance" — always fit their column and never slide
+                    under the card, whatever the display font's real width. */}
+                <h3 className="mb-4 font-display text-[clamp(2rem,4.6vw,4.25rem)] leading-[1.02] tracking-[-0.02em] text-canvas md:mb-7">
                   {item.name}
                 </h3>
                 <p className="mx-auto max-w-[30rem] text-lead font-light text-canvas/70">
