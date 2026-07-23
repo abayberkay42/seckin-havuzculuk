@@ -23,18 +23,21 @@ export function Services() {
     () => {
       const mm = gsap.matchMedia();
 
-      // The Apple-style pinned takeover — on every screen size. `withScale` adds
-      // the subtle depth push on desktop; phones skip it (scaling a full-bleed
-      // photo every scroll frame forces a costly re-raster and makes the section
-      // stutter). The cross-fade + slide stays identical.
-      const build = (withScale: boolean) => () => {
+      // The Apple-style pinned takeover — on every screen size, but tuned per
+      // device. Desktop gets the full effect (scale depth, smoothed scrub, glass
+      // progress bar). Phones get a deliberately lighter version so the pinned
+      // section doesn't stutter:
+      //   • no scale — scaling a full-bleed photo every scroll frame re-rasters it
+      //   • pinType 'transform' — pins via GPU transform, not position:fixed,
+      //     which mobile browsers repaint badly during scroll
+      //   • scrub:true (direct) instead of scrub:1 — ties motion to the finger,
+      //     no extra ~1s of lerp frames after the scroll stops
+      //   • skip the second scrubbed trigger (progress bar) entirely
+      const build = (mobile: boolean) => () => {
         const panels = gsap.utils.toArray<HTMLElement>('[data-panel]', root.current);
         gsap.set(panels, { autoAlpha: 0, yPercent: 6 });
         gsap.set(panels[0], { autoAlpha: 1, yPercent: 0 });
 
-        // Shorter pin distance + a small leading dwell, so the first card hands
-        // off to the second after a light scroll. Both scrubbed triggers must
-        // share this exact distance to stay in lockstep.
         const PIN = panels.length * 58; // vh of scroll for the whole sequence
 
         const tl = gsap.timeline({
@@ -43,8 +46,9 @@ export function Services() {
             start: 'top top',
             end: '+=' + PIN + '%',
             pin: true,
-            scrub: 1,
-            anticipatePin: 1, // smoother pin engagement, esp. on touch
+            scrub: mobile ? true : 1,
+            anticipatePin: 1,
+            ...(mobile ? { pinType: 'transform' as const } : {}),
           },
         });
 
@@ -56,18 +60,18 @@ export function Services() {
             {
               autoAlpha: 0,
               yPercent: -8,
-              ...(withScale ? { scale: 0.97 } : {}),
+              ...(mobile ? {} : { scale: 0.97 }),
               ease: 'power2.in',
               duration: 0.4,
             },
             at,
           ).fromTo(
             panel,
-            { autoAlpha: 0, yPercent: 12, ...(withScale ? { scale: 1.03 } : {}) },
+            { autoAlpha: 0, yPercent: 12, ...(mobile ? {} : { scale: 1.03 }) },
             {
               autoAlpha: 1,
               yPercent: 0,
-              ...(withScale ? { scale: 1 } : {}),
+              ...(mobile ? {} : { scale: 1 }),
               ease: 'power3.out',
               duration: 0.5,
             },
@@ -75,24 +79,26 @@ export function Services() {
           );
         });
 
-        gsap.fromTo(
-          '[data-progress]',
-          { scaleX: 0 },
-          {
-            scaleX: 1,
-            ease: 'none',
-            scrollTrigger: {
-              trigger: root.current,
-              start: 'top top',
-              end: '+=' + PIN + '%',
-              scrub: true,
+        if (!mobile) {
+          gsap.fromTo(
+            '[data-progress]',
+            { scaleX: 0 },
+            {
+              scaleX: 1,
+              ease: 'none',
+              scrollTrigger: {
+                trigger: root.current,
+                start: 'top top',
+                end: '+=' + PIN + '%',
+                scrub: true,
+              },
             },
-          },
-        );
+          );
+        }
       };
 
-      mm.add('(min-width: 901px)', build(true));
-      mm.add('(max-width: 900px)', build(false));
+      mm.add('(min-width: 901px)', build(false));
+      mm.add('(max-width: 900px)', build(true));
     },
     { scope: root },
   );
