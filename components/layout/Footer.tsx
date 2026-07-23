@@ -141,7 +141,6 @@ export async function Footer() {
               title={tContact('mapTitle')}
               src={MAP_SRC}
               className="block h-[clamp(13rem,26vh,17rem)] w-full border-0 [filter:grayscale(0.25)_contrast(1.03)]"
-              loading="lazy"
               allowFullScreen
               referrerPolicy="strict-origin-when-cross-origin"
             />
