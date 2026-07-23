@@ -51,6 +51,19 @@ export function Invitation() {
       {/* legibility scrim so the centred text stays readable over the caustics */}
       <div className="absolute inset-0 z-[1] bg-[radial-gradient(65%_60%_at_50%_50%,rgba(13,31,41,0.5),transparent_75%)]" />
 
+      {/* edge fades — melt the top and bottom into the deep sections around it
+          (the seam above, the footer below) so there is no hard colour line. */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-0 z-[2]"
+        style={{ height: 'clamp(4rem,10vh,8rem)', background: 'linear-gradient(to bottom, var(--color-deep), transparent)' }}
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-[2]"
+        style={{ height: 'clamp(5rem,13vh,10rem)', background: 'linear-gradient(to top, var(--color-deep), transparent)' }}
+      />
+
       <div className="relative z-10 flex flex-col items-center text-center">
         {/* interlocking mark */}
         <span data-fade className="relative mb-12 inline-block h-14 w-14">
