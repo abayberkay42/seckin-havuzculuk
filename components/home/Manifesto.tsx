@@ -32,8 +32,10 @@ export function Manifesto() {
       });
 
       // The whole statement rises up and inks in together — one motion, not word
-      // by word — tied to scroll (scrub), so it reveals as you scroll down into
-      // it rather than playing on its own the moment it enters.
+      // by word — tied to scroll (scrub) on the TEXT itself: it starts hidden as
+      // it peeks in at the bottom and finishes exactly as it reaches the middle
+      // of the screen, so it writes in gradually as you scroll into it instead of
+      // being fully lit before you arrive.
       gsap.fromTo(
         '[data-line]',
         { opacity: 0, y: 60 },
@@ -42,9 +44,9 @@ export function Manifesto() {
           y: 0,
           ease: 'none',
           scrollTrigger: {
-            trigger: root.current,
-            start: 'top 82%',
-            end: 'top 42%',
+            trigger: '[data-line]',
+            start: 'top bottom',
+            end: 'center center',
             scrub: true,
           },
         },
