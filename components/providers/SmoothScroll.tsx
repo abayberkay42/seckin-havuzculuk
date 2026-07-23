@@ -7,30 +7,36 @@ import { gsap, ScrollTrigger } from '@/lib/gsap';
 import { isGoogleChrome } from '@/lib/isChrome';
 
 /**
- * Lenis smooth scroll, driven by GSAP's ticker so Lenis and ScrollTrigger share
- * one clock — the sync that keeps scrubbed timelines from drifting. Disabled for
- * users who ask for reduced motion; native scrolling then remains untouched.
+ * Scroll strategy, tuned per device — one clock shared with ScrollTrigger so
+ * scrubbed timelines never drift. Reduced-motion opts out of everything.
  *
- * Also disabled in Google Chrome: Lenis scrolls by transforming the page every
- * frame, and Chrome's compositor stutters badly on that with this page's layers
- * (fixed nav, full-bleed images, pinned sections) while Firefox/Safari/Edge stay
- * smooth. Chrome's native scroll is buttery, and ScrollTrigger works fine on it,
- * so Chrome just uses native scrolling.
+ *  • Touch (phones/tablets): NO Lenis (it lags on touch). Instead GSAP takes
+ *    over the scroll — `normalizeScroll` + `ignoreMobileResize` are the official
+ *    fix for pinned sections jumping/juddering when the mobile URL bar shows or
+ *    hides, the header flicker, and the momentum "snap to bottom".
+ *  • Desktop Google Chrome: native scroll (Lenis stutters in Chrome with this
+ *    page's fixed/backdrop/pinned layers).
+ *  • Desktop, other engines: Lenis smooth scroll.
  */
 export function SmoothScroll({ children }: { children: ReactNode }) {
   useEffect(() => {
-    const prefersReduced = window.matchMedia(
-      '(prefers-reduced-motion: reduce)',
-    ).matches;
-    if (prefersReduced || isGoogleChrome()) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-    const lenis = new Lenis({
-      lerp: 0.09, // slow, luxurious glide — water, not a scrollbar
-      smoothWheel: true,
-    });
+    const coarse = window.matchMedia('(pointer: coarse)').matches;
 
+    if (coarse) {
+      ScrollTrigger.config({ ignoreMobileResize: true });
+      const normalizer = ScrollTrigger.normalizeScroll(true);
+      return () => {
+        normalizer?.kill();
+        ScrollTrigger.normalizeScroll(false);
+      };
+    }
+
+    if (isGoogleChrome()) return;
+
+    const lenis = new Lenis({ lerp: 0.09, smoothWheel: true });
     lenis.on('scroll', ScrollTrigger.update);
-
     const raf = (time: number) => lenis.raf(time * 1000);
     gsap.ticker.add(raf);
     gsap.ticker.lagSmoothing(0);

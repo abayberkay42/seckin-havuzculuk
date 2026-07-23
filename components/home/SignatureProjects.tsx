@@ -46,7 +46,7 @@ export function SignatureProjects() {
 
   return (
     <section data-nav-theme="dark" className="bg-deep">
-      <div ref={root} className="relative h-[100dvh] overflow-hidden">
+      <div ref={root} className="relative h-[100dvh] overflow-hidden [touch-action:pan-y]">
         {/* section background — a photo held behind the panning cards, darkened
             so the deep water stays and the content reads. */}
         <Image
