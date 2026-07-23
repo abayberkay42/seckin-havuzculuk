@@ -31,7 +31,7 @@ export const projects: Project[] = [
     slug: 'ege-kiyisi-villasi',
     type: 'completed',
     cover: '/proj-ege-kiyisi.webp',
-    name: { tr: 'Ege Kıyısı Villası', en: 'Aegean Coast Villa' },
+    name: { tr: 'Sonsuzluk Kenarlı Deniz Havuzu', en: 'Sea-Facing Infinity Pool' },
     place: { tr: 'Çeşme, İzmir', en: 'Çeşme, İzmir' },
     year: '2024',
     overview: {
@@ -70,7 +70,7 @@ export const projects: Project[] = [
     slug: 'zeytinlik-rezidans',
     type: 'completed',
     cover: '/proj-zeytinlik.webp',
-    name: { tr: 'Zeytinlik Rezidans', en: 'Olive Grove Residence' },
+    name: { tr: 'Doğal Taşlı Bahçe Havuzu', en: 'Natural-Stone Garden Pool' },
     place: { tr: 'Bodrum, Muğla', en: 'Bodrum, Muğla' },
     year: '2023',
     overview: {
@@ -108,7 +108,7 @@ export const projects: Project[] = [
     slug: 'deniz-terasi',
     type: 'completed',
     cover: '/proj-deniz-terasi.webp',
-    name: { tr: 'Deniz Terası', en: 'Sea Terrace' },
+    name: { tr: 'Cam Korkuluklu Teras Havuzu', en: 'Glass-Railed Terrace Pool' },
     place: { tr: 'Kalkan, Antalya', en: 'Kalkan, Antalya' },
     year: '2023',
     overview: {
@@ -146,7 +146,7 @@ export const projects: Project[] = [
     slug: 'tepe-malikane',
     type: 'ongoing',
     cover: '/proj-tepe-malikane.webp',
-    name: { tr: 'Tepe Malikâne', en: 'Hilltop Estate' },
+    name: { tr: 'İki Kademeli Tepe Havuzu', en: 'Two-Tier Hillside Pool' },
     place: { tr: 'Yalıkavak, Muğla', en: 'Yalıkavak, Muğla' },
     year: '2025',
     overview: {
@@ -184,7 +184,7 @@ export const projects: Project[] = [
     slug: 'bahce-havuzu-yenileme',
     type: 'before-after',
     cover: '/proj-bahce-yenileme.webp',
-    name: { tr: 'Bahçe Havuzu Yenileme', en: 'Garden Pool Renewal' },
+    name: { tr: 'Havuz Yenileme & Dönüşüm', en: 'Pool Renovation & Transformation' },
     place: { tr: 'Urla, İzmir', en: 'Urla, İzmir' },
     year: '2024',
     overview: {

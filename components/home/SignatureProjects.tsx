@@ -92,14 +92,9 @@ export function SignatureProjects() {
                 className="h-full w-full"
               />
               <div className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between p-7">
-                <div>
-                  <span className="font-mono text-label uppercase text-canvas/60">
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-                  <h3 className="mt-2 font-display text-[1.9rem] leading-tight text-canvas">
-                    {project.name}
-                  </h3>
-                </div>
+                <span className="font-mono text-label uppercase text-canvas/60">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
                 <span className="font-mono text-label uppercase text-canvas/60">
                   {project.place} · {project.year}
                 </span>
