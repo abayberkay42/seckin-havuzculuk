@@ -38,25 +38,28 @@ export async function Footer() {
       data-nav-theme="dark"
       className="bg-deep px-[clamp(1.5rem,6vw,8rem)] pb-14 pt-[clamp(4rem,8vh,7rem)]"
     >
-      <div className="grid gap-x-[clamp(2.5rem,5vw,5rem)] gap-y-14 border-t border-canvas/10 pt-14 md:grid-cols-12">
-        {/* Brand + reach */}
-        <div className="md:col-span-4">
-          <Link
-            href="/"
-            aria-label="Seçkin Havuzculuk"
-            className="flex justify-center md:justify-start"
-          >
-            <Image
-              src="/logo.png"
-              alt="Seçkin Havuzculuk"
-              width={453}
-              height={500}
-              className="h-20 w-auto"
-            />
-          </Link>
-          <p className="mt-6 max-w-[24rem] text-center text-[0.95rem] leading-relaxed text-canvas/55 md:text-left">
-            {t('tagline')}
-          </p>
+      <div className="border-t border-canvas/10 pt-[clamp(3rem,6vh,4.5rem)]">
+        {/* Brand mark — centred above everything, on every screen */}
+        <Link
+          href="/"
+          aria-label="Seçkin Havuzculuk"
+          className="mx-auto mb-[clamp(3rem,7vh,5rem)] flex w-fit justify-center"
+        >
+          <Image
+            src="/logo.png"
+            alt="Seçkin Havuzculuk"
+            width={453}
+            height={500}
+            className="h-24 w-auto"
+          />
+        </Link>
+
+        <div className="grid gap-x-[clamp(2.5rem,5vw,5rem)] gap-y-14 md:grid-cols-12">
+          {/* Reach */}
+          <div className="md:col-span-4">
+            <p className="max-w-[24rem] text-[0.95rem] leading-relaxed text-canvas/55">
+              {t('tagline')}
+            </p>
 
           <ul className="mt-9 space-y-5">
             <li>
@@ -143,6 +146,7 @@ export async function Footer() {
               referrerPolicy="strict-origin-when-cross-origin"
             />
           </div>
+        </div>
         </div>
       </div>
 
