@@ -1,11 +1,11 @@
 'use client';
 
+import Image from 'next/image';
 import { useRef } from 'react';
 import { gsap, useGSAP } from '@/lib/gsap';
 import { Button } from '@/components/ui/Button';
 
 type HeroProps = {
-  eyebrow: string;
   line1: string;
   line2: string;
   supporting: string;
@@ -29,7 +29,6 @@ const DESKTOP = { dir: '/frames-desktop', count: 72, w: 1912, h: 1080 };
 const MOBILE = { dir: '/frames-mobile', count: 64, w: 608, h: 1080 };
 
 export function Hero({
-  eyebrow,
   line1,
   line2,
   supporting,
@@ -220,9 +219,15 @@ export function Hero({
           className="relative z-10 flex h-full flex-col items-center justify-center px-[clamp(1.5rem,6vw,8rem)] pb-[clamp(3.5rem,10vh,7rem)] pt-[clamp(7rem,14vh,10rem)] text-center"
         >
           <div className="w-full max-w-[80rem]">
-            <span className="mb-7 block font-mono text-label uppercase text-aqua/80">
-              {eyebrow}
-            </span>
+            <Image
+              src="/logo.png"
+              alt="STC Royal A.Ş."
+              width={453}
+              height={500}
+              priority
+              // force the logo art to pure white on the dark hero
+              className="mx-auto mb-9 h-20 w-auto [filter:brightness(0)_invert(1)]"
+            />
 
             {/* Sized fluidly so the longer line ("Seçkin yaşam alanlarına,")
                 always fits on ONE line — the headline stays exactly two lines,

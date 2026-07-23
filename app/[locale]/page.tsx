@@ -25,7 +25,6 @@ export default async function HomePage({
   return (
     <main>
       <Hero
-        eyebrow={t('eyebrow')}
         line1={t('headlineLine1')}
         line2={t('headlineLine2')}
         supporting={t('supporting')}
