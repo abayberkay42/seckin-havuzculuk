@@ -30,6 +30,7 @@ export default async function HomePage({
         supporting={t('supporting')}
         ctaPrimary={t('ctaPrimary')}
         ctaSecondary={t('ctaSecondary')}
+        scrollLabel={t('scroll')}
       />
       <Seam from="deep" to="canvas" />
       <Manifesto />
