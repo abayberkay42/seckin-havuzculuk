@@ -6,22 +6,29 @@ import { Ripple } from '@/components/atmosphere/Ripple';
 import { isGoogleChrome } from '@/lib/isChrome';
 
 /**
- * Picks the cursor water effect per browser. The rich fullscreen WebGL water
- * sheet is beautiful everywhere EXCEPT Google Chrome, where it composites the
- * whole viewport every frame and crawls (a Chrome-specific compositor issue —
- * Firefox/Safari/Edge/Opera all handle it fine). So:
+ * Picks the cursor effect. It's a pointer affordance, so it runs on fine
+ * pointers (mouse/trackpad) only — touch devices get nothing (no cursor, and a
+ * drop on every tap was distracting). Among desktops:
  *
- *   • Google Chrome  → the cheap CSS click-ripple (a ring per tap, no per-frame cost)
+ *   • Google Chrome  → the cheap CSS click-ripple (Chrome crawls on the WebGL one)
  *   • every other browser → the original WebGL water
  */
+type Mode = 'water' | 'ripple' | 'off';
+
 export function CursorFx() {
-  // null until we know the browser (SSR + first paint render nothing).
-  const [chrome, setChrome] = useState<boolean | null>(null);
+  // null until resolved (SSR + first paint render nothing).
+  const [mode, setMode] = useState<Mode | null>(null);
 
   useEffect(() => {
-    setChrome(isGoogleChrome());
+    const coarse = window.matchMedia('(pointer: coarse)').matches;
+    if (coarse) {
+      setMode('off'); // touch device — no cursor effect at all
+      return;
+    }
+    setMode(isGoogleChrome() ? 'ripple' : 'water');
   }, []);
 
-  if (chrome === null) return null;
-  return chrome ? <Ripple /> : <Water />;
+  if (mode === 'ripple') return <Ripple />;
+  if (mode === 'water') return <Water />;
+  return null;
 }

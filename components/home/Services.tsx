@@ -116,8 +116,10 @@ export function Services() {
         />
         <div className="absolute inset-0 bg-[linear-gradient(100deg,rgba(28,38,52,0.92)_0%,rgba(28,38,52,0.74)_52%,rgba(28,38,52,0.6)_100%)]" />
 
-        {/* persistent header */}
-        <div className="absolute inset-x-0 top-0 z-10 flex items-center justify-between px-[clamp(1.5rem,6vw,8rem)] pt-[clamp(5.5rem,11vh,8rem)]">
+        {/* persistent header — desktop only; on a tall phone the vertically
+            centred card content rises into this top row and the two collide, so
+            it's hidden on mobile (each card already carries its own marker). */}
+        <div className="absolute inset-x-0 top-0 z-10 hidden items-center justify-between px-[clamp(1.5rem,6vw,8rem)] pt-[clamp(5.5rem,11vh,8rem)] md:flex">
           <Eyebrow index="II" tone="light">{t('eyebrow')}</Eyebrow>
           <span className="hidden max-w-[16rem] text-right font-display text-[1.25rem] text-canvas/70 md:block">
             {t('title')}
