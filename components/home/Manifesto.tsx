@@ -3,71 +3,116 @@
 import { useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { gsap, useGSAP } from '@/lib/gsap';
-import { Eyebrow } from '@/components/ui/Eyebrow';
 
 /**
- * The thesis. A short statement, held large and centred. As the section enters,
- * the whole sentence rises into place at once — a single, calm fade-up from
- * below. No pinning, no per-word writing; the same on desktop and phone.
- * Reduced-motion simply shows it fully lit.
+ * The thesis, as a cinematic bridge — modelled on Doğrular's manifesto scene.
+ * The section is 2 viewports tall; its inner frame is CSS-`sticky` so it holds
+ * still (smoother than a ScrollTrigger pin, no pin-spacer / URL-bar jump) while a
+ * single scrubbed timeline plays: a hairline opens from the centre, the sentence
+ * lifts in in three beats, it holds, then drifts up and fades as a bronze line
+ * stretches across. Reduced-motion shows it fully lit at once.
  */
 export function Manifesto() {
   const t = useTranslations('manifesto');
-  const root = useRef<HTMLElement>(null);
+
+  // Split the localised statement into three beats: the first clause splits at
+  // its last word, the second clause is the closing line.
+  //   TR: "Biz havuz" · "değil," · "sükûnet tasarlarız."
+  //   EN: "We don't design" · "pools," · "we design stillness."
+  const body = t('body');
+  const [clause1 = body, clause2 = ''] = body.split(', ');
+  const cut = clause1.lastIndexOf(' ');
+  const beat1 = cut > 0 ? clause1.slice(0, cut) : clause1;
+  const beat2 = (cut > 0 ? clause1.slice(cut + 1) : '') + (clause2 ? ',' : '');
+  const line2 = clause2;
+
+  const section = useRef<HTMLElement>(null);
+  const intro = useRef<HTMLDivElement>(null);
+  const text = useRef<HTMLDivElement>(null);
+  const w1 = useRef<HTMLSpanElement>(null);
+  const w2 = useRef<HTMLSpanElement>(null);
+  const l2 = useRef<HTMLDivElement>(null);
+  const gold = useRef<HTMLDivElement>(null);
 
   useGSAP(
     () => {
       const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       if (reduce) {
-        gsap.set('[data-line]', { opacity: 1, y: 0 });
+        gsap.set([w1.current, w2.current, l2.current], { opacity: 1, y: 0 });
+        gsap.set([intro.current, gold.current], { scaleX: 1 });
         return;
       }
 
-      gsap.from('[data-eyebrow]', {
-        opacity: 0,
-        y: 14,
-        duration: 0.8,
-        ease: 'power3.out',
-        scrollTrigger: { trigger: root.current, start: 'top 60%' },
+      gsap.set(intro.current, { scaleX: 0 });
+      gsap.set([w1.current, w2.current], { opacity: 0, y: 20 });
+      gsap.set(l2.current, { opacity: 0, y: 28 });
+      gsap.set(gold.current, { scaleX: 0 });
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: section.current,
+          start: 'top top',
+          end: 'bottom bottom',
+          scrub: 2, // ~2s lag → luxurious, unhurried
+        },
       });
 
-      // The whole statement rises up and inks in together — one motion, not word
-      // by word — tied to scroll (scrub) on the TEXT itself: it starts hidden as
-      // it peeks in at the bottom and finishes exactly as it reaches the middle
-      // of the screen, so it writes in gradually as you scroll into it instead of
-      // being fully lit before you arrive.
-      gsap.fromTo(
-        '[data-line]',
-        { opacity: 0, y: 60 },
-        {
-          opacity: 1,
-          y: 0,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: '[data-line]',
-            start: 'top bottom',
-            end: 'center center',
-            scrub: true,
-          },
-        },
-      );
+      tl.to(intro.current, { scaleX: 1, ease: 'none', duration: 0.18 }, 0)
+        .to(w1.current, { opacity: 1, y: 0, ease: 'none', duration: 0.13 }, 0.18)
+        .to(w2.current, { opacity: 1, y: 0, ease: 'none', duration: 0.13 }, 0.28)
+        .to(l2.current, { opacity: 1, y: 0, ease: 'none', duration: 0.2 }, 0.42)
+        // still moment 0.64 → 0.76, then drift up + fade, ending exactly at 1.0
+        .to(text.current, { y: -52, opacity: 0, ease: 'none', duration: 0.24 }, 0.76)
+        .to(gold.current, { scaleX: 1, ease: 'none', duration: 0.22 }, 0.78);
     },
-    { scope: root },
+    { scope: section },
   );
 
   return (
-    <section ref={root} data-nav-theme="light" className="bg-canvas">
-      <div className="flex min-h-[100svh] flex-col items-center justify-center px-[clamp(1.5rem,6vw,8rem)] py-[clamp(6rem,12vh,10rem)] text-center">
-        <Eyebrow data-eyebrow index="I" tone="dark" className="mb-[clamp(2rem,5vh,3.5rem)] justify-center">
-          {t('eyebrow')}
-        </Eyebrow>
+    <section
+      ref={section}
+      data-nav-theme="light"
+      className="relative h-[200svh] bg-canvas"
+      aria-label={t('eyebrow')}
+    >
+      <div className="sticky top-0 flex h-[100svh] flex-col items-center justify-center overflow-hidden px-[clamp(1.5rem,6vw,8rem)]">
+        {/* intro hairline — opens from centre */}
+        <div
+          ref={intro}
+          aria-hidden="true"
+          className="mb-[clamp(2rem,5vh,4rem)] h-px w-[clamp(60px,8vw,120px)] origin-center bg-ink/25"
+        />
 
-        <p
-          data-line
-          className="mx-auto max-w-[16ch] font-display text-[clamp(2.75rem,7.5vw,6.5rem)] font-[380] leading-[1.02] tracking-[-0.02em] text-ink opacity-0"
-        >
-          {t('body')}
-        </p>
+        {/* the statement */}
+        <div ref={text} className="select-none text-center">
+          <div className="mb-[0.06em] flex items-baseline justify-center">
+            <span
+              ref={w1}
+              className="mr-[0.26em] inline-block font-display text-[clamp(2.75rem,9vw,9rem)] font-normal leading-none tracking-[-0.03em] text-ink"
+            >
+              {beat1}
+            </span>
+            <span
+              ref={w2}
+              className="inline-block font-display text-[clamp(2.75rem,9vw,9rem)] font-normal leading-none tracking-[-0.03em] text-ink"
+            >
+              {beat2}
+            </span>
+          </div>
+          <div
+            ref={l2}
+            className="font-display text-[clamp(2.75rem,9vw,9rem)] font-normal leading-none tracking-[-0.03em] text-ink"
+          >
+            {line2}
+          </div>
+        </div>
+
+        {/* bronze accent line — stretches as the text drifts away */}
+        <div
+          ref={gold}
+          aria-hidden="true"
+          className="mt-[clamp(2rem,5vh,4rem)] h-px w-[clamp(160px,52vw,780px)] origin-left bg-bronze/85"
+        />
       </div>
     </section>
   );
