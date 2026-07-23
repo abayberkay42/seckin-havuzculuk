@@ -31,16 +31,24 @@ export function Manifesto() {
         scrollTrigger: { trigger: root.current, start: 'top 60%' },
       });
 
-      // The whole statement rises up and inks in together — one motion, not
-      // word by word.
-      gsap.set('[data-line]', { opacity: 0, y: 60 });
-      gsap.to('[data-line]', {
-        opacity: 1,
-        y: 0,
-        duration: 1.3,
-        ease: 'power3.out',
-        scrollTrigger: { trigger: root.current, start: 'top 68%' },
-      });
+      // The whole statement rises up and inks in together — one motion, not word
+      // by word — tied to scroll (scrub), so it reveals as you scroll down into
+      // it rather than playing on its own the moment it enters.
+      gsap.fromTo(
+        '[data-line]',
+        { opacity: 0, y: 60 },
+        {
+          opacity: 1,
+          y: 0,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: root.current,
+            start: 'top 82%',
+            end: 'top 42%',
+            scrub: true,
+          },
+        },
+      );
     },
     { scope: root },
   );
