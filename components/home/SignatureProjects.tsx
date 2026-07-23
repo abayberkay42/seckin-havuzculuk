@@ -82,7 +82,7 @@ export function SignatureProjects() {
           {items.map((project, i) => (
             <article
               key={project.name}
-              className="relative aspect-[1170/780] h-auto w-[min(88vw,1170px)] shrink-0"
+              className="relative aspect-[3/2] h-[min(62vh,600px)] w-auto shrink-0"
             >
               <Frame
                 variant={i % 2 === 0 ? 'water' : 'stone'}
