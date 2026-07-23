@@ -229,14 +229,35 @@
     "includedEyebrow": "Neler dahil",
     "includedTitle": "Suya sürekli özen.",
     "included": [
-      { "no": "01", "name": "Kimyasal denge", "desc": "pH, klor ve mineral dengesinin düzenli ölçümü ve ayarı." },
-      { "no": "02", "name": "Filtrasyon bakımı", "desc": "Filtre temizliği, pompa kontrolü ve sistem verimliliği." },
-      { "no": "03", "name": "Yüzey temizliği", "desc": "Robot ve el ile dip, duvar ve su hattı temizliği." },
-      { "no": "04", "name": "Mevsimsel servis", "desc": "Kışa hazırlık ve sezon açılışı için tam bakım." }
+      { "no": "01", "name": "Kimyasal denge", "desc": "pH, serbest klor, alkalinite ve sertlik değerlerini her ziyarette ölçer, suyu dengede tutarız. Cilde ve ekipmana zarar veren dalgalanmalar oluşmadan önlenir." },
+      { "no": "02", "name": "Filtrasyon & sirkülasyon", "desc": "Kum veya kartuş filtrenin temizliği, ters yıkama, pompa ve vana kontrolü. Doğru sirkülasyon, berraklığın görünmeyen motorudur." },
+      { "no": "03", "name": "Yüzey & dip temizliği", "desc": "Robot ve el ile dip süpürme, duvar fırçalama ve su hattındaki yağ bandının temizliği. Yosun ve kireç yüzeye tutunmadan alınır." },
+      { "no": "04", "name": "Skimmer & hat kontrolü", "desc": "Skimmer sepetleri, pompa ön filtresi ve taşma kanallarının temizliği. Yaprak, böcek ve tortunun sisteme ulaşması engellenir." },
+      { "no": "05", "name": "Ekipman & otomasyon", "desc": "Isı pompası, klorlama, dozaj ünitesi ve aydınlatmanın periyodik kontrolü. Arıza büyümeden, sessizce fark edilir." },
+      { "no": "06", "name": "Kışa hazırlık & açılış", "desc": "Sezon sonunda suyun korunması ve hatların boşaltılması, baharda ise tam devreye alma. Havuz kışı hasarsız geçirir." }
+    ],
+    "waterEyebrow": "Su kimyası",
+    "waterTitle": "Berrak suyun ölçülebilir hâli.",
+    "waterIntro": "Gözle temiz görünen su, kimyasal olarak dengede olmayabilir. Her ziyarette bu aralıkları ölçer, kayıt altına alır ve gerekirse ince ayar yaparız — konfor da, ekipman ömrü de bu dengeye bağlıdır.",
+    "waterValues": [
+      { "value": "7.2 – 7.6", "label": "pH", "note": "Cilt ve göz konforu, dengeli dezenfeksiyon" },
+      { "value": "1 – 3 ppm", "label": "Serbest klor", "note": "Güvenli, sürekli dezenfeksiyon" },
+      { "value": "80 – 120 ppm", "label": "Alkalinite", "note": "pH'ı ani sıçramalardan korur" },
+      { "value": "200 – 400 ppm", "label": "Kalsiyum sertliği", "note": "Yüzeyi aşınmadan ve kireçten korur" },
+      { "value": "30 – 50 ppm", "label": "Siyanürik asit", "note": "Kloru güneş ışığından korur" },
+      { "value": "< 1500 ppm", "label": "Çözünmüş katı (TDS)", "note": "Berraklık ve tat dengesi" }
+    ],
+    "plansEyebrow": "Bakım programları",
+    "plansTitle": "Havuzunuza göre bir ritim.",
+    "plansIntro": "Her havuzun ihtiyacı farklıdır. Kullanım yoğunluğu, konum ve mevsime göre üç temel program sunuyoruz.",
+    "plans": [
+      { "no": "01", "name": "Düzenli Bakım", "tag": "Aktif sezon", "desc": "Haftalık veya iki haftalık ziyaretlerle kimyasal denge, temizlik ve ekipman kontrolü. Suyun her gün kullanıma hazır kaldığı standart program." },
+      { "no": "02", "name": "Sezon Açılış & Kapanış", "tag": "Yılda iki kez", "desc": "Baharda tam devreye alma, sonbaharda kışa hazırlık. Su, hatlar ve ekipman doğru korunur; sezon başı sürprizsiz açılır." },
+      { "no": "03", "name": "Acil Müdahale", "tag": "İhtiyaç anında", "desc": "Bulanıklaşan su, ani yosun oluşumu veya ekipman arızasında hızlı teşhis ve düzeltme. Tek seferlik çağrıyla yerinde çözüm." }
     ],
     "rhythmEyebrow": "Ritim",
     "rhythmTitle": "Mevsime göre özen.",
-    "rhythmBody": "Haftalık kontrolden mevsimlik derin bakıma; havuzunuzun boyutuna ve kullanımına göre kurgulanan bir bakım takvimi. Siz suyun tadını çıkarın, gerisini biz üstlenelim.",
+    "rhythmBody": "Haftalık kontrolden mevsimlik derin bakıma; havuzunuzun boyutuna ve kullanımına göre kurgulanan bir bakım takvimi. Her ziyaret raporlanır, ölçümler kayıt altına alınır — siz suyun tadını çıkarın, gerisini biz üstlenelim.",
     "ctaTitle": "Havuzunuz için bir bakım planı.",
     "ctaButton": "Bakım için yazın"
   },

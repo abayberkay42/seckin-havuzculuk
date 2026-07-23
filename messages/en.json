@@ -229,14 +229,35 @@
     "includedEyebrow": "What's included",
     "includedTitle": "Constant care for the water.",
     "included": [
-      { "no": "01", "name": "Chemical balance", "desc": "Regular measurement and adjustment of pH, chlorine and mineral balance." },
-      { "no": "02", "name": "Filtration service", "desc": "Filter cleaning, pump checks and system efficiency." },
-      { "no": "03", "name": "Surface cleaning", "desc": "Floor, wall and waterline cleaning by robot and by hand." },
-      { "no": "04", "name": "Seasonal service", "desc": "Full care for winterising and opening the season." }
+      { "no": "01", "name": "Chemical balance", "desc": "We measure pH, free chlorine, alkalinity and hardness on every visit and hold the water in balance — before any swing can harm skin or equipment." },
+      { "no": "02", "name": "Filtration & circulation", "desc": "Sand or cartridge filter cleaning, backwash, pump and valve checks. Proper circulation is the unseen engine of clarity." },
+      { "no": "03", "name": "Surface & floor cleaning", "desc": "Floor vacuuming by robot and by hand, wall brushing and waterline oil-band cleaning. Algae and scale are removed before they take hold." },
+      { "no": "04", "name": "Skimmer & line checks", "desc": "Cleaning of skimmer baskets, pump pre-filter and overflow channels — so leaves, insects and sediment never reach the system." },
+      { "no": "05", "name": "Equipment & automation", "desc": "Periodic checks of the heat pump, chlorination, dosing unit and lighting. Faults are caught quietly, before they grow." },
+      { "no": "06", "name": "Winterising & opening", "desc": "Protecting the water and draining the lines at season's end, then full recommissioning in spring. The pool passes winter unharmed." }
+    ],
+    "waterEyebrow": "Water chemistry",
+    "waterTitle": "Clarity, in measurable form.",
+    "waterIntro": "Water that looks clean may not be chemically balanced. On every visit we measure these ranges, log them, and fine-tune where needed — both comfort and equipment life depend on this balance.",
+    "waterValues": [
+      { "value": "7.2 – 7.6", "label": "pH", "note": "Skin and eye comfort, balanced disinfection" },
+      { "value": "1 – 3 ppm", "label": "Free chlorine", "note": "Safe, continuous disinfection" },
+      { "value": "80 – 120 ppm", "label": "Alkalinity", "note": "Guards pH against sudden swings" },
+      { "value": "200 – 400 ppm", "label": "Calcium hardness", "note": "Protects the surface from wear and scale" },
+      { "value": "30 – 50 ppm", "label": "Cyanuric acid", "note": "Shields chlorine from sunlight" },
+      { "value": "< 1500 ppm", "label": "Dissolved solids (TDS)", "note": "Clarity and balance of taste" }
+    ],
+    "plansEyebrow": "Maintenance programmes",
+    "plansTitle": "A rhythm to suit your pool.",
+    "plansIntro": "Every pool has different needs. We offer three core programmes, shaped by usage, location and season.",
+    "plans": [
+      { "no": "01", "name": "Regular Maintenance", "tag": "Active season", "desc": "Chemical balance, cleaning and equipment checks on weekly or fortnightly visits. The standard programme that keeps water ready to use every day." },
+      { "no": "02", "name": "Season Opening & Closing", "tag": "Twice a year", "desc": "Full recommissioning in spring and winterising in autumn. Water, lines and equipment are protected; the season opens without surprises." },
+      { "no": "03", "name": "Emergency Response", "tag": "When you need it", "desc": "Rapid diagnosis and correction for cloudy water, sudden algae or equipment failure. An on-site fix on a single call." }
     ],
     "rhythmEyebrow": "Rhythm",
     "rhythmTitle": "Care by the season.",
-    "rhythmBody": "From weekly checks to seasonal deep service — a maintenance calendar built around your pool's size and use. You enjoy the water; we take on the rest.",
+    "rhythmBody": "From weekly checks to seasonal deep service — a maintenance calendar built around your pool's size and use. Every visit is reported and every reading logged. You enjoy the water; we take on the rest.",
     "ctaTitle": "A maintenance plan for your pool.",
     "ctaButton": "Write for maintenance"
   },
