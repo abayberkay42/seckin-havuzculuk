@@ -145,7 +145,7 @@ export function Services() {
               <Frame
                 variant={i === 1 ? 'stone' : 'water'}
                 src={
-                  ['/havuz-insaati-v2.webp', '/renovasyon-v2.webp', '/havuz-bakimi.webp'][i]
+                  ['/havuz-insaati-v2.webp', '/renovasyon-v2.webp', '/havuz-bakimi-v2.webp'][i]
                 }
                 label={item.name}
                 alt={item.name}
