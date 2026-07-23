@@ -7,31 +7,22 @@ import { gsap, ScrollTrigger } from '@/lib/gsap';
 import { isGoogleChrome } from '@/lib/isChrome';
 
 /**
- * Scroll strategy, tuned per device — one clock shared with ScrollTrigger so
- * scrubbed timelines never drift. Reduced-motion opts out of everything.
+ * Scroll strategy, tuned per device. Reduced-motion opts out of everything.
  *
- *  • Touch (phones/tablets): NO Lenis (it lags on touch). Instead GSAP takes
- *    over the scroll — `normalizeScroll` + `ignoreMobileResize` are the official
- *    fix for pinned sections jumping/juddering when the mobile URL bar shows or
- *    hides, the header flicker, and the momentum "snap to bottom".
- *  • Desktop Google Chrome: native scroll (Lenis stutters in Chrome with this
- *    page's fixed/backdrop/pinned layers).
- *  • Desktop, other engines: Lenis smooth scroll.
+ *  • `ignoreMobileResize` (all): stop ScrollTrigger from refreshing (and the
+ *    pinned sections from jumping) when the mobile URL bar shows/hides. This is
+ *    the SAFE half of the mobile fix — it never touches how scrolling itself
+ *    feels, unlike normalizeScroll, which hijacked touch and made iOS almost
+ *    impossible to scroll.
+ *  • Desktop Google Chrome: native scroll (Lenis stutters in Chrome here).
+ *  • Everything else (incl. iOS Safari): Lenis. On touch Lenis leaves the native
+ *    momentum scroll alone (it only smooths the wheel), so phones scroll normally.
  */
 export function SmoothScroll({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-    const coarse = window.matchMedia('(pointer: coarse)').matches;
-
-    if (coarse) {
-      ScrollTrigger.config({ ignoreMobileResize: true });
-      const normalizer = ScrollTrigger.normalizeScroll(true);
-      return () => {
-        normalizer?.kill();
-        ScrollTrigger.normalizeScroll(false);
-      };
-    }
+    ScrollTrigger.config({ ignoreMobileResize: true });
 
     if (isGoogleChrome()) return;
 
