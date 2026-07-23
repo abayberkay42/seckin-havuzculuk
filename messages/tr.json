@@ -65,7 +65,7 @@
   },
   "process": {
     "eyebrow": "Süreç",
-    "title": "Bir fikirden, durgun suya.",
+    "title": "Bir fikirden, yaşamın en değerli alanına.",
     "steps": [
       {
         "no": "01",
@@ -213,7 +213,7 @@
       { "no": "04", "name": "Akıllı sistemler", "desc": "Filtrasyon, ısıtma, aydınlatma ve otomasyonun görünmez entegrasyonu." }
     ],
     "processEyebrow": "Nasıl çalışırız",
-    "processTitle": "Bir fikirden, durgun suya.",
+    "processTitle": "Bir fikirden, yaşamın en değerli alanına.",
     "steps": [
       { "no": "01", "name": "Tasarım", "desc": "Arazi etüdü, 3B tasarım ve mühendislik. Havuz, mimariyle bütünleşir." },
       { "no": "02", "name": "İnşa", "desc": "Ustalıkla yürüyen şantiye; her aşama şeffaf, her detay kayıtlı." },

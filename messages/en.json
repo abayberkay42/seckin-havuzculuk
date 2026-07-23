@@ -65,7 +65,7 @@
   },
   "process": {
     "eyebrow": "Process",
-    "title": "From an idea to still water.",
+    "title": "From an idea to life's most treasured space.",
     "steps": [
       {
         "no": "01",
@@ -213,7 +213,7 @@
       { "no": "04", "name": "Smart systems", "desc": "Filtration, heating, lighting and automation, invisibly integrated." }
     ],
     "processEyebrow": "How we work",
-    "processTitle": "From an idea to still water.",
+    "processTitle": "From an idea to life's most treasured space.",
     "steps": [
       { "no": "01", "name": "Design", "desc": "Site survey, 3D design and engineering. The pool becomes one with the architecture." },
       { "no": "02", "name": "Build", "desc": "A site run with mastery; every stage transparent, every detail recorded." },
