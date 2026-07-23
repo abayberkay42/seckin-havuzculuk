@@ -23,18 +23,13 @@ export function Services() {
     () => {
       const mm = gsap.matchMedia();
 
-      // The Apple-style pinned takeover — on every screen size. `withScale` adds
-      // the subtle depth push on desktop; phones skip it (scaling a full-bleed
-      // photo every scroll frame forces a costly re-raster and makes the section
-      // stutter). The cross-fade + slide stays identical.
-      const build = (withScale: boolean) => () => {
+      // ── Desktop: the Apple-style pinned cross-fade takeover. The frame holds
+      // while the three services fade through it, one owning the screen. ──────
+      mm.add('(min-width: 901px)', () => {
         const panels = gsap.utils.toArray<HTMLElement>('[data-panel]', root.current);
         gsap.set(panels, { autoAlpha: 0, yPercent: 6 });
         gsap.set(panels[0], { autoAlpha: 1, yPercent: 0 });
 
-        // Shorter pin distance + a small leading dwell, so the first card hands
-        // off to the second after a light scroll. Both scrubbed triggers must
-        // share this exact distance to stay in lockstep.
         const PIN = panels.length * 58; // vh of scroll for the whole sequence
 
         const tl = gsap.timeline({
@@ -53,24 +48,12 @@ export function Services() {
           const at = (i - 1) * 0.9 + 0.3;
           tl.to(
             panels[i - 1],
-            {
-              autoAlpha: 0,
-              yPercent: -8,
-              ...(withScale ? { scale: 0.97 } : {}),
-              ease: 'power2.in',
-              duration: 0.4,
-            },
+            { autoAlpha: 0, yPercent: -8, scale: 0.97, ease: 'power2.in', duration: 0.4 },
             at,
           ).fromTo(
             panel,
-            { autoAlpha: 0, yPercent: 12, ...(withScale ? { scale: 1.03 } : {}) },
-            {
-              autoAlpha: 1,
-              yPercent: 0,
-              ...(withScale ? { scale: 1 } : {}),
-              ease: 'power3.out',
-              duration: 0.5,
-            },
+            { autoAlpha: 0, yPercent: 12, scale: 1.03 },
+            { autoAlpha: 1, yPercent: 0, scale: 1, ease: 'power3.out', duration: 0.5 },
             at + 0.25,
           );
         });
@@ -89,17 +72,31 @@ export function Services() {
             },
           },
         );
-      };
+      });
 
-      mm.add('(min-width: 901px)', build(true));
-      mm.add('(max-width: 900px)', build(false));
+      // ── Mobile: NO pin, NO scrub. Pinning + scrubbed cross-fades snap and
+      // stutter on phones. Instead the three cards simply stack and flow, and
+      // each fades gently up as it scrolls into view — buttery on native scroll. ─
+      mm.add('(max-width: 900px)', () => {
+        const panels = gsap.utils.toArray<HTMLElement>('[data-panel]', root.current);
+        gsap.set(panels, { autoAlpha: 1, yPercent: 0, scale: 1 });
+        panels.forEach((panel) => {
+          gsap.from(panel, {
+            opacity: 0,
+            y: 40,
+            duration: 0.9,
+            ease: 'power3.out',
+            scrollTrigger: { trigger: panel, start: 'top 82%' },
+          });
+        });
+      });
     },
     { scope: root },
   );
 
   return (
     <section data-nav-theme="dark" className="bg-navy">
-      <div ref={root} className="relative h-[100dvh] overflow-hidden">
+      <div ref={root} className="relative overflow-hidden min-[901px]:h-[100dvh]">
         {/* section background — a photo held behind the panels, darkened so the
             navy stays and the content reads. */}
         <Image
@@ -112,14 +109,14 @@ export function Services() {
           // the biggest cost and the main source of the phone stutter. On mobile
           // the navy gradient below carries the mood instead; the cards keep their
           // own photos and the animation is unchanged.
-          className="hidden object-cover md:block"
+          className="hidden object-cover min-[901px]:block"
         />
         <div className="absolute inset-0 bg-[linear-gradient(100deg,rgba(28,38,52,0.92)_0%,rgba(28,38,52,0.74)_52%,rgba(28,38,52,0.6)_100%)]" />
 
         {/* persistent header — desktop only; on a tall phone the vertically
             centred card content rises into this top row and the two collide, so
             it's hidden on mobile (each card already carries its own marker). */}
-        <div className="absolute inset-x-0 top-0 z-10 hidden items-center justify-between px-[clamp(1.5rem,6vw,8rem)] pt-[clamp(5.5rem,11vh,8rem)] md:flex">
+        <div className="absolute inset-x-0 top-0 z-10 hidden items-center justify-between px-[clamp(1.5rem,6vw,8rem)] pt-[clamp(5.5rem,11vh,8rem)] min-[901px]:flex">
           <Eyebrow index="II" tone="light">{t('eyebrow')}</Eyebrow>
           <span className="hidden max-w-[16rem] text-right font-display text-[1.25rem] text-canvas/70 md:block">
             {t('title')}
@@ -131,7 +128,7 @@ export function Services() {
           <div
             key={item.no}
             data-panel
-            className="absolute inset-0 flex items-center px-[clamp(1.5rem,6vw,8rem)] pt-[clamp(4.5rem,12vh,6rem)] md:pt-0"
+            className="flex items-center px-[clamp(1.5rem,6vw,8rem)] py-[clamp(3.5rem,9vh,5rem)] min-[901px]:absolute min-[901px]:inset-0 min-[901px]:py-0"
           >
             <div className="mx-auto grid w-full max-w-[62rem] items-center gap-[clamp(1.25rem,3vw,3rem)] md:grid-cols-2">
               <div className="text-center">
@@ -158,8 +155,8 @@ export function Services() {
           </div>
         ))}
 
-        {/* progress bar */}
-        <div className="absolute inset-x-[clamp(1.5rem,6vw,8rem)] bottom-[clamp(2.5rem,6vh,4rem)] h-px bg-canvas/15">
+        {/* progress bar — desktop only (tracks the pinned scrub) */}
+        <div className="absolute inset-x-[clamp(1.5rem,6vw,8rem)] bottom-[clamp(2.5rem,6vh,4rem)] hidden h-px bg-canvas/15 min-[901px]:block">
           <div data-progress className="h-full w-full origin-left scale-x-0 bg-steel" />
         </div>
       </div>
