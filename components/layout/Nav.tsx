@@ -117,7 +117,7 @@ export function Nav({
 
   return (
     <>
-    <header className="pointer-events-none fixed inset-x-0 top-0 z-50 flex justify-center px-[clamp(1rem,4vw,2.5rem)]">
+    <header className="pointer-events-none fixed inset-x-0 top-0 z-[60] flex justify-center px-[clamp(1rem,4vw,2.5rem)]">
       <nav
         style={barStyle}
         className="pointer-events-auto relative mt-[clamp(1rem,2.5vh,1.75rem)] flex w-full max-w-[1600px] transform-gpu items-center justify-between rounded-full border py-2.5 pl-7 pr-2.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_26px_60px_-30px_rgba(6,18,24,0.5)] transition-[background-color,border-color,backdrop-filter] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] [backface-visibility:hidden]"
