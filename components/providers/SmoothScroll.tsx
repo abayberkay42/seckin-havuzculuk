@@ -1,6 +1,7 @@
 'use client';
 
-import { useEffect, type ReactNode } from 'react';
+import { useEffect, useRef, type ReactNode } from 'react';
+import { usePathname } from 'next/navigation';
 import Lenis from 'lenis';
 import 'lenis/dist/lenis.css';
 import { gsap, ScrollTrigger } from '@/lib/gsap';
@@ -19,11 +20,15 @@ import { gsap, ScrollTrigger } from '@/lib/gsap';
  *  • Reduced-motion: native scrolling, untouched.
  */
 export function SmoothScroll({ children }: { children: ReactNode }) {
+  const lenisRef = useRef<Lenis | null>(null);
+  const pathname = usePathname();
+
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     if (window.matchMedia('(pointer: coarse)').matches) return;
 
     const lenis = new Lenis({ lerp: 0.09, smoothWheel: true });
+    lenisRef.current = lenis;
     lenis.on('scroll', ScrollTrigger.update);
     const raf = (time: number) => lenis.raf(time * 1000);
     gsap.ticker.add(raf);
@@ -31,9 +36,23 @@ export function SmoothScroll({ children }: { children: ReactNode }) {
 
     return () => {
       lenis.destroy();
+      lenisRef.current = null;
       gsap.ticker.remove(raf);
     };
   }, []);
+
+  // On every route change, land at the top of the new page. Next resets the
+  // native scroll, but Lenis keeps its own internal target — without this it
+  // would carry the previous page's position and open new pages mid-way down.
+  useEffect(() => {
+    if (lenisRef.current) {
+      lenisRef.current.scrollTo(0, { immediate: true, force: true });
+    } else {
+      window.scrollTo(0, 0);
+    }
+    // recompute pinned/scrubbed triggers for the freshly mounted page
+    ScrollTrigger.refresh();
+  }, [pathname]);
 
   return <>{children}</>;
 }
