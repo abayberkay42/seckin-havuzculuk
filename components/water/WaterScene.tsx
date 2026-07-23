@@ -12,9 +12,10 @@ import * as THREE from 'three';
  * normals glint, screen-blended so still water stays invisible.
  */
 
-const RES = 256; // wave field resolution — 256 keeps the ripples crisp; the real
-// Chrome win came from powerPreference:'default' (no cross-GPU copy), not from
-// shrinking this, so keep the resolution up.
+const RES = 512; // wave field resolution — crisp ripples. This effect only runs
+// in non-Chrome browsers (Chrome uses the cheap CSS ripple), and they handle a
+// 512² damped-wave sim comfortably; the FPS guard still retires it if a device
+// can't keep up.
 
 const QUAD_VERT = /* glsl */ `
   varying vec2 vUv;
