@@ -17,14 +17,20 @@ export function Manifesto() {
 
   // Split the localised statement into three beats: the first clause splits at
   // its last word, the second clause is the closing line.
-  //   TR: "Biz havuz" · "değil," · "sükûnet tasarlarız."
-  //   EN: "We don't design" · "pools," · "we design stillness."
+  //   "Estetik. Teknoloji. Kusursuz işçilik." → "Estetik." · "Teknoloji." · "Kusursuz işçilik."
+  //   "Biz havuz değil, sükûnet tasarlarız."  → "Biz havuz" · "değil," · "sükûnet tasarlarız."
+  // Break the statement into two display lines at the last sentence/clause
+  // boundary (a period+space, else a comma+space) so the trailing phrase drops
+  // to line 2; whatever it is, punctuation is preserved as written. Line 1 then
+  // splits at its last space into two staggered reveal beats.
   const body = t('body');
-  const [clause1 = body, clause2 = ''] = body.split(', ');
-  const cut = clause1.lastIndexOf(' ');
-  const beat1 = cut > 0 ? clause1.slice(0, cut) : clause1;
-  const beat2 = (cut > 0 ? clause1.slice(cut + 1) : '') + (clause2 ? ',' : '');
-  const line2 = clause2;
+  let splitIdx = body.lastIndexOf('. ');
+  if (splitIdx === -1) splitIdx = body.lastIndexOf(', ');
+  const line1 = splitIdx > -1 ? body.slice(0, splitIdx + 1).trim() : body;
+  const line2 = splitIdx > -1 ? body.slice(splitIdx + 2).trim() : '';
+  const cut = line1.lastIndexOf(' ');
+  const beat1 = cut > 0 ? line1.slice(0, cut) : line1;
+  const beat2 = cut > 0 ? line1.slice(cut + 1) : '';
 
   const section = useRef<HTMLElement>(null);
   const intro = useRef<HTMLDivElement>(null);
