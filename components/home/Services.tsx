@@ -27,8 +27,11 @@ export function Services() {
       // while the three services fade through it, one owning the screen. ──────
       mm.add('(min-width: 901px)', () => {
         const panels = gsap.utils.toArray<HTMLElement>('[data-panel]', root.current);
-        gsap.set(panels, { autoAlpha: 0, yPercent: 6 });
-        gsap.set(panels[0], { autoAlpha: 1, yPercent: 0 });
+        // Cross-fade in place: every panel sits at the exact same spot (no
+        // vertical drift), so the cards never appear scattered or overlapping —
+        // only opacity and a whisper of scale change between them.
+        gsap.set(panels, { autoAlpha: 0, scale: 1.02 });
+        gsap.set(panels[0], { autoAlpha: 1, scale: 1 });
 
         const PIN = panels.length * 58; // vh of scroll for the whole sequence
 
@@ -48,13 +51,13 @@ export function Services() {
           const at = (i - 1) * 0.9 + 0.3;
           tl.to(
             panels[i - 1],
-            { autoAlpha: 0, yPercent: -8, scale: 0.97, ease: 'power2.in', duration: 0.4 },
+            { autoAlpha: 0, scale: 0.99, ease: 'power2.in', duration: 0.35 },
             at,
           ).fromTo(
             panel,
-            { autoAlpha: 0, yPercent: 12, scale: 1.03 },
-            { autoAlpha: 1, yPercent: 0, scale: 1, ease: 'power3.out', duration: 0.5 },
-            at + 0.25,
+            { autoAlpha: 0, scale: 1.02 },
+            { autoAlpha: 1, scale: 1, ease: 'power2.out', duration: 0.45 },
+            at + 0.3,
           );
         });
 
