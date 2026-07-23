@@ -11,7 +11,6 @@ type HeroProps = {
   supporting: string;
   ctaPrimary: string;
   ctaSecondary: string;
-  scrollLabel: string;
 };
 
 // The hero film is scrubbed by scroll as a pre-decoded WebP frame sequence
@@ -36,7 +35,6 @@ export function Hero({
   supporting,
   ctaPrimary,
   ctaSecondary,
-  scrollLabel,
 }: HeroProps) {
   const root = useRef<HTMLElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -123,14 +121,12 @@ export function Hero({
       if (reduce) {
         gsap.set('[data-hero-navy]', { opacity: 1 });
         gsap.set('[data-hero-content]', { autoAlpha: 1, yPercent: 0 });
-        gsap.set('[data-hero-scroll]', { autoAlpha: 0 });
         scrub(1);
         return cleanup;
       }
 
       gsap.set('[data-hero-navy]', { opacity: 0 });
       gsap.set('[data-hero-content]', { autoAlpha: 0, yPercent: 6 });
-      gsap.set('[data-hero-scroll]', { autoAlpha: 1 });
 
       // The section is 2 viewports tall; its inner frame is CSS-sticky, so it
       // holds still while a single scrubbed timeline plays:
@@ -153,8 +149,6 @@ export function Hero({
         { t: 1, ease: 'none', duration: 0.7, onUpdate: () => scrub(vp.t) },
         0,
       );
-      // the cue disappears as soon as the visitor starts scrubbing
-      tl.to('[data-hero-scroll]', { autoAlpha: 0, ease: 'none', duration: 0.06 }, 0);
       tl.to('[data-hero-navy]', { opacity: 1, ease: 'power2.out', duration: 0.3 }, 0.7);
       tl.to(
         '[data-hero-content]',
@@ -189,24 +183,6 @@ export function Hero({
           aria-hidden="true"
           className="absolute inset-0 block h-full w-full opacity-0 transition-opacity duration-700 data-[ready=true]:opacity-100"
         />
-
-        {/* SCROLL CUE — over the film at the very top (phase 1), telling the
-            visitor the film advances as they scroll. Fades out the moment they
-            start scrubbing. */}
-        <div
-          data-hero-scroll
-          className="pointer-events-none absolute inset-x-0 bottom-[clamp(1.75rem,5vh,3.25rem)] z-[3] flex flex-col items-center gap-3"
-        >
-          <span className="animate-scroll-cue font-mono text-[0.72rem] font-medium uppercase tracking-[0.32em] text-canvas [text-shadow:0_1px_14px_rgba(0,0,0,0.55)]">
-            {scrollLabel}
-          </span>
-          <span
-            aria-hidden="true"
-            className="relative flex h-11 w-6 items-start justify-center rounded-full border border-canvas/60 pt-2 [box-shadow:0_1px_14px_rgba(0,0,0,0.4)]"
-          >
-            <span className="animate-scroll-cue-dot block h-2 w-1 rounded-full bg-aqua" />
-          </span>
-        </div>
 
         {/* NAVY ATMOSPHERE — hidden until the film finishes, then fades in over
             it (phase 2). The living water gradient the site opens on. */}

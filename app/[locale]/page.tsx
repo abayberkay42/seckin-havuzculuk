@@ -8,6 +8,7 @@ import { SignatureProjects } from '@/components/home/SignatureProjects';
 import { Process } from '@/components/home/Process';
 import { Products } from '@/components/home/Products';
 import { Invitation } from '@/components/home/Invitation';
+import { ScrollCue } from '@/components/home/ScrollCue';
 import { Seam } from '@/components/ui/Seam';
 
 export default async function HomePage({
@@ -30,7 +31,6 @@ export default async function HomePage({
         supporting={t('supporting')}
         ctaPrimary={t('ctaPrimary')}
         ctaSecondary={t('ctaSecondary')}
-        scrollLabel={t('scroll')}
       />
       <Seam from="deep" to="canvas" />
       <Manifesto />
@@ -42,6 +42,9 @@ export default async function HomePage({
       <Products />
       <Seam from="canvas" to="deep" />
       <Invitation />
+
+      {/* whole-page scroll nudge: hides while scrolling, returns when paused */}
+      <ScrollCue label={t('scroll')} />
     </main>
   );
 }
