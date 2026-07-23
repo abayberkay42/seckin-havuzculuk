@@ -107,7 +107,12 @@ export function Services() {
           alt=""
           fill
           sizes="100vw"
-          className="object-cover"
+          // Desktop only: while this section is pinned, mobile browsers re-raster
+          // the whole fixed layer every scroll frame — a full-bleed photo in it is
+          // the biggest cost and the main source of the phone stutter. On mobile
+          // the navy gradient below carries the mood instead; the cards keep their
+          // own photos and the animation is unchanged.
+          className="hidden object-cover md:block"
         />
         <div className="absolute inset-0 bg-[linear-gradient(100deg,rgba(28,38,52,0.92)_0%,rgba(28,38,52,0.74)_52%,rgba(28,38,52,0.6)_100%)]" />
 
