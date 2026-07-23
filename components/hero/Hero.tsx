@@ -25,7 +25,7 @@ type HeroProps = {
 //
 // Only the engine for the current screen loads its assets — desktop never
 // fetches the frames, mobile never fetches the video.
-const MOBILE = { dir: '/frames-mobile', count: 64, w: 828, h: 468 };
+const MOBILE = { dir: '/frames-mobile', count: 64, w: 608, h: 1080 };
 
 export function Hero({
   eyebrow,
@@ -85,7 +85,10 @@ export function Hero({
           };
 
           const resize = () => {
-            const dpr = Math.min(window.devicePixelRatio || 1, 2);
+            // Back the canvas at the device's true pixel density (capped at 3)
+            // so retina phones draw the frame at full resolution — a dpr-2 cap
+            // would downscale it and undo the sharpness we just added.
+            const dpr = Math.min(window.devicePixelRatio || 1, 3);
             canvas.width = Math.round(window.innerWidth * dpr);
             canvas.height = Math.round(window.innerHeight * dpr);
             if (lastDrawn >= 0 && frames[lastDrawn]) draw(frames[lastDrawn]);
