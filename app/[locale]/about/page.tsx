@@ -70,7 +70,13 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             </Reveal>
           </div>
           <div className="md:col-span-6">
-            <Frame variant="water" className="aspect-[4/5] w-full" />
+            <Frame
+              variant="water"
+              src="/about-story.webp"
+              alt={t('storyTitle')}
+              sizes="(max-width: 768px) 90vw, 45vw"
+              className="aspect-[4/5] w-full"
+            />
           </div>
         </div>
       </section>
