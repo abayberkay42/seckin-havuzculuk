@@ -18,9 +18,11 @@ export function Manifesto() {
 
   useGSAP(
     () => {
+      // The pinned word-by-word reveal runs on touch too — it's text-only
+      // (opacity, no images), so it stays light on phones. Only reduced-motion
+      // skips it and shows the statement fully lit at once.
       const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const coarse = window.matchMedia('(pointer: coarse)').matches;
-      if (reduce || coarse) {
+      if (reduce) {
         gsap.set('[data-word]', { opacity: 1 });
         return;
       }
