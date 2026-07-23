@@ -12,11 +12,14 @@ export function PageHero({
   title,
   intro,
   aside,
+  mark,
 }: {
   eyebrow: string;
   title: string;
   intro?: string;
   aside?: ReactNode;
+  /** Optional emblem shown right below the eyebrow (e.g. the brand logo). */
+  mark?: ReactNode;
 }) {
   return (
     <section
@@ -27,6 +30,7 @@ export function PageHero({
         <Eyebrow tone="dark" className="mb-8 justify-center">
           {eyebrow}
         </Eyebrow>
+        {mark && <div className="mb-9">{mark}</div>}
         <SplitReveal as="h1" className="mx-auto max-w-[20ch] font-display text-display text-ink">
           {title}
         </SplitReveal>

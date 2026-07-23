@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { isAppLocale } from '@/i18n/routing';
@@ -32,6 +33,17 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
         eyebrow={t('eyebrow')}
         title={t('title')}
         intro={t('intro')}
+        mark={
+          <Image
+            src="/logo.png"
+            alt="Seçkin Havuzculuk"
+            width={453}
+            height={500}
+            priority
+            // the logo art is light; invert it so it reads on the cream page
+            className="h-32 w-auto [filter:invert(1)_brightness(0.82)]"
+          />
+        }
         aside={
           <dl className="flex flex-wrap justify-center gap-x-10 gap-y-6 sm:flex-row sm:gap-y-7">
             {figures.map((f) => (
