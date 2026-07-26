@@ -21,10 +21,10 @@ export function SignatureProjects() {
   const items = t.raw('items') as Project[];
   // covers align to the items order (Ege · Zeytinlik · Tepe Malikâne · Deniz Terası)
   const covers = [
-    '/proj-ege-kiyisi.webp',
-    '/proj-zeytinlik.webp',
-    '/proj-tepe-malikane.webp',
+    '/proj-antrasit-renovasyon.webp',
+    '/proj-bahce-yenileme.webp',
     '/proj-deniz-terasi.webp',
+    '/proj-zeytinlik.webp',
   ];
   const root = useRef<HTMLDivElement>(null);
   const track = useRef<HTMLDivElement>(null);

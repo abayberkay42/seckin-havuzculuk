@@ -30,7 +30,7 @@ export const projects: Project[] = [
   {
     slug: 'antrasit-aydinlatmali-renovasyon',
     type: 'before-after',
-    cover: '/proj-ege-kiyisi.webp',
+    cover: '/proj-antrasit-renovasyon.webp',
     name: { tr: 'Antrasit Aydınlatmalı Renovasyon', en: 'Anthracite-Lit Renovation' },
     place: { tr: 'Çeşme, İzmir', en: 'Çeşme, İzmir' },
     year: '2024',
@@ -68,7 +68,7 @@ export const projects: Project[] = [
   {
     slug: 'jakuzili-havuz-renovasyonu',
     type: 'before-after',
-    cover: '/proj-zeytinlik.webp',
+    cover: '/proj-bahce-yenileme.webp',
     name: { tr: 'Jakuzili Havuz Renovasyonu', en: 'Jacuzzi Pool Renovation' },
     place: { tr: 'Alaçatı, İzmir', en: 'Alaçatı, İzmir' },
     year: '2024',
@@ -182,7 +182,7 @@ export const projects: Project[] = [
   {
     slug: 'plazma-tasmali-villa-havuzu',
     type: 'completed',
-    cover: '/proj-bahce-yenileme.webp',
+    cover: '/proj-zeytinlik.webp',
     name: { tr: 'Plazma Taşmalı Villa Havuzu', en: 'Deck-Level Villa Pool' },
     place: { tr: 'Alaçatı, İzmir', en: 'Alaçatı, İzmir' },
     year: '2024',
