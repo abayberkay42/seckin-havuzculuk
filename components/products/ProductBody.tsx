@@ -97,20 +97,24 @@ export function ProductBody({ lp }: { lp: LocalizedProduct }) {
           <Eyebrow data-reveal tone="dark">
             {t('gallery')}
           </Eyebrow>
-          <a
-            data-reveal
-            href={`/docs/${lp.slug}.pdf`}
-            download
-            className="group inline-flex items-center gap-3 rounded-full border border-ink/20 px-6 py-3 text-[0.95rem] text-ink transition-colors duration-300 hover:border-ink/50"
-          >
-            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
-              <path d="M7.5 2v8m0 0L4 6.5M7.5 10 11 6.5M3 12.5h9" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-            {t('downloadPdf')}
-            <span className="font-mono text-label uppercase text-ink/40">
-              {t('pdfNote')}
-            </span>
-          </a>
+          {/* Only render when a real spec sheet exists — otherwise this points
+              at a non-existent /docs/<slug>.pdf and 404s. */}
+          {lp.pdf && (
+            <a
+              data-reveal
+              href={lp.pdf}
+              download
+              className="group inline-flex items-center gap-3 rounded-full border border-ink/20 px-6 py-3 text-[0.95rem] text-ink transition-colors duration-300 hover:border-ink/50"
+            >
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+                <path d="M7.5 2v8m0 0L4 6.5M7.5 10 11 6.5M3 12.5h9" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              {t('downloadPdf')}
+              <span className="font-mono text-label uppercase text-ink/40">
+                {t('pdfNote')}
+              </span>
+            </a>
+          )}
         </div>
 
         <div className="grid grid-cols-2 gap-[clamp(1rem,2.5vw,2.5rem)] md:grid-cols-3">

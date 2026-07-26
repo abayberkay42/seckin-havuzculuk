@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Seçkin Havuzculuk — Lüks Havuz Tasarımı & İnşaatı",
-    "description": "Villalar için sıfırdan lüks havuz tasarımı, inşaatı ve bakımı. Suyu mimariye dönüştürüyoruz."
+    "title": "Seçkin Havuzculuk — Çeşme & İzmir Lüks Havuz İnşaatı ve Bakımı",
+    "description": "Çeşme, Alaçatı ve İzmir'de villalar için lüks havuz tasarımı, inşaatı, renovasyonu ve bakımı. 2017'den beri sonsuzluk havuzları ve premium havuz çözümleri."
   },
   "nav": {
     "home": "Ana Sayfa",
@@ -154,7 +154,7 @@
   "projectsPage": {
     "eyebrow": "Projeler",
     "title": "Her proje, suyla yazılmış bir hikâye.",
-    "intro": "Bir portföy değil — mimari vaka çalışmaları. Tasarımdan durgun suya, her aşamayı görün.",
+    "intro": "Bir portföy değil — mimari vaka çalışmaları. Tamamladığımız yüzlerce havuzdan seçili bir seçki; tasarımdan durgun suya, her aşamayı görün.",
     "filterAll": "Tümü",
     "filterCompleted": "Tamamlanan",
     "filterOngoing": "Devam Eden",
@@ -183,7 +183,9 @@
     "ctaButton": "Projenizi başlatın",
     "typeCompleted": "Tamamlandı",
     "typeOngoing": "Devam ediyor",
-    "typeBeforeAfter": "Dönüşüm"
+    "typeBeforeAfter": "Dönüşüm",
+    "seoTitle": "Havuz Projeleri · Çeşme & Alaçatı",
+    "seoDescription": "Çeşme, Alaçatı ve Ilıca'da tamamlanan lüks havuz projeleri ile öncesi/sonrası renovasyon çalışmaları. Seçkin Havuzculuk vaka çalışmaları."
   },
   "catalogue": {
     "eyebrow": "Ürünler",
@@ -204,7 +206,9 @@
     "requestQuote": "Fiyat al",
     "whatsapp": "WhatsApp'tan sor",
     "whatsappText": "Merhaba, {product} hakkında bilgi almak istiyorum.",
-    "productCount": "{count} ürün"
+    "productCount": "{count} ürün",
+    "seoTitle": "Havuz Ürünleri & Kimyasalları",
+    "seoDescription": "Havuz kimyasalları, filtrasyon, aydınlatma, otomasyon ve temizlik ekipmanları — 60'tan fazla ürün. Çeşme ve İzmir'de Seçkin Havuzculuk."
   },
   "about": {
     "eyebrow": "Hakkımızda",
@@ -250,12 +254,14 @@
       }
     ],
     "ctaTitle": "Bir sonraki su, sizinki olsun.",
-    "ctaButton": "Bizimle konuşun"
+    "ctaButton": "Bizimle konuşun",
+    "seoTitle": "Hakkımızda — İzmir Havuz Firması",
+    "seoDescription": "2017'den beri Çeşme ve İzmir'de lüks havuz tasarımı, inşaatı ve bakımı yapan kurumsal ekip. Suyu mimariye dönüştüren Seçkin Havuzculuk."
   },
   "construction": {
     "eyebrow": "Havuz İnşaatı",
     "title": "Sıfırdan, mimariyle tek bütün.",
-    "intro": "Çeşme, Alaçatı ve İzmir genelinde villalar için; araziyi, evi ve ışığı okuyarak tasarlanan, beton veya gunit iskeletle inşa edilen ömürlük havuzlar — sonsuzluk havuzlarından klasik formlara.",
+    "intro": "Çeşme, Alaçatı, Ilıca, Seferihisar, Karaburun ve Urla dahil İzmir genelinde villalar için; araziyi, evi ve ışığı okuyarak tasarlanan, beton veya gunit iskeletle inşa edilen ömürlük havuzlar — sonsuzluk havuzlarından klasik formlara.",
     "capabilitiesEyebrow": "Neler inşa ediyoruz",
     "capabilitiesTitle": "Her form, tek standart.",
     "capabilities": [
@@ -328,12 +334,14 @@
         "q": "Eğimli veya manzaralı arazilere havuz yapılabilir mi?",
         "a": "Evet. Eğimli araziler, sonsuzluk kenarı ve kademeli teras havuzları için çoğu zaman en güçlü sonuçları verir. Zemin etüdü, istinat ve mühendislik çözümleriyle eğimi bir dezavantaj değil, tasarımın avantajına çeviriyoruz."
       }
-    ]
+    ],
+    "seoTitle": "Havuz İnşaatı Çeşme & Alaçatı",
+    "seoDescription": "Çeşme, Alaçatı ve İzmir'de villalar için sıfırdan lüks havuz inşaatı: sonsuzluk havuzu, gunit/beton, seramik kaplama ve akıllı sistemler. Ücretsiz keşif."
   },
   "maintenance": {
     "eyebrow": "Havuz Bakımı",
     "title": "Suyun berraklığı, kesintisiz.",
-    "intro": "Çeşme, Alaçatı ve İzmir çevresindeki villalar için düzenli havuz bakımı. Bir havuz, tamamlandığı gün değil; yıllar sonra hâlâ ilk günkü berraklığındaysa başarılıdır. Bakım, o berraklığın sessiz güvencesidir.",
+    "intro": "Çeşme, Alaçatı, Ilıca, Seferihisar, Karaburun ve Urla dahil İzmir çevresindeki villalar için düzenli havuz bakımı. Bir havuz, tamamlandığı gün değil; yıllar sonra hâlâ ilk günkü berraklığındaysa başarılıdır.",
     "includedEyebrow": "Neler dahil",
     "includedTitle": "Suya sürekli özen.",
     "included": [
@@ -458,7 +466,9 @@
         "q": "Havuz suyunun tamamı ne sıklıkla değiştirilmeli?",
         "a": "Doğru bakılan bir havuzda suyun tamamen değiştirilmesi nadiren gerekir; genellikle birkaç yılda bir ya da değerler kimyasalla düzeltilemeyecek kadar bozulduğunda yapılır. Düzenli bakım, su tüketimini ve maliyeti belirgin biçimde azaltır."
       }
-    ]
+    ],
+    "seoTitle": "Havuz Bakımı Çeşme, Alaçatı & İzmir",
+    "seoDescription": "Çeşme, Alaçatı ve İzmir'deki villalar için düzenli havuz bakımı: su kimyası dengesi, temizlik, kışa hazırlık ve sezonluk bakım anlaşmaları."
   },
   "journal": {
     "eyebrow": "Günce",
@@ -511,6 +521,8 @@
     "formMessage": "Projeniz hakkında",
     "formSend": "Gönder",
     "formNote": "Gönder'e bastığınızda e-posta uygulamanız açılır.",
-    "formSubject": "Web sitesi — Proje talebi"
+    "formSubject": "Web sitesi — Proje talebi",
+    "seoTitle": "İletişim — Çeşme / İzmir",
+    "seoDescription": "Çeşme, Alaçatı ve İzmir havuz projeleriniz için bize ulaşın: telefon, WhatsApp, e-posta ve Alaçatı ofis konumu. Seçkin Havuzculuk."
   }
 }

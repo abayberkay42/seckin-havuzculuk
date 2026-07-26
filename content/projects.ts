@@ -70,7 +70,7 @@ export const projects: Project[] = [
     type: 'before-after',
     cover: '/proj-bahce-yenileme.webp',
     name: { tr: 'Şelaleli Bahçe Havuzu', en: 'Waterfall Garden Pool' },
-    place: { tr: 'Alaçatı, İzmir', en: 'Alaçatı, İzmir' },
+    place: { tr: 'Alaçatı, Çeşme, İzmir', en: 'Alaçatı, Çeşme, İzmir' },
     year: '2024',
     overview: {
       tr: '3×6×1.50 m havuz — hem renovasyon hem inşaat. Gizli savak ve şelale ile ıslak zeminli, ferah bir alan; bej traverten kenar mermerleri ve havuz başında betona şekil verilerek oluşturulan saksılarla bütünlük sağlandı.',
@@ -108,7 +108,7 @@ export const projects: Project[] = [
     type: 'before-after',
     cover: '/proj-deniz-terasi.webp',
     name: { tr: 'Gizli Savaklı Renovasyon', en: 'Hidden-Weir Renovation' },
-    place: { tr: 'Ilıca, Çeşme', en: 'Ilıca, Çeşme' },
+    place: { tr: 'Ilıca, Çeşme, İzmir', en: 'Ilıca, Çeşme, İzmir' },
     year: '2024',
     overview: {
       tr: '4×8×1.60 m havuzun renovasyonu. Bursa siyah mermer kaymaz hâle getirildi ve gizli savak uygulandı; iç kaplama ile güneşlenme alanı 33×66 verde lamarca porselenle bütünleştirilerek tek bir yüzeye dönüştü.',
@@ -146,7 +146,7 @@ export const projects: Project[] = [
     type: 'completed',
     cover: '/proj-zeytinlik.webp',
     name: { tr: 'Plazma Taşmalı Villa Havuzu', en: 'Deck-Level Villa Pool' },
-    place: { tr: 'Alaçatı, İzmir', en: 'Alaçatı, İzmir' },
+    place: { tr: 'Alaçatı, Çeşme, İzmir', en: 'Alaçatı, Çeşme, İzmir' },
     year: '2024',
     overview: {
       tr: '4×8×1.50 m plazma taşma modeli bir villa havuzu. Sade çizgiler ve dengeli oranlarla, bulunduğu mekâna modern ve zamansız bir karakter kazandırıyor. Bej traverten kenar ve 33×66 seramik ile ıslak zeminli, ferah bir yüzme alanı.',
@@ -222,7 +222,7 @@ export const projects: Project[] = [
     type: 'completed',
     cover: '/proj-ates-cukuru.webp',
     name: { tr: 'Ateş Çukurlu Villa Havuzu', en: 'Fire-Pit Villa Pool' },
-    place: { tr: 'Alaçatı, İzmir', en: 'Alaçatı, İzmir' },
+    place: { tr: 'Alaçatı, Çeşme, İzmir', en: 'Alaçatı, Çeşme, İzmir' },
     year: '2024',
     overview: {
       tr: '17×5×1.50 m ölçülerinde bir villa havuzu. Jakuzi, ıslak zemin, yerden ısıtma ve ateş çukuruyla dört mevsim kullanılabilen bir yaşam alanı; plazma taşma modeli, tundra gri kenar mermerleri ve havuz içinde 60×1.20 seramikle tamamlandı.',

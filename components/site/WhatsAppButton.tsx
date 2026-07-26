@@ -1,6 +1,5 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { whatsappLink, PHONE_DISPLAY } from '@/lib/contact';
 
@@ -15,22 +14,17 @@ const TEL_HREF = `tel:${PHONE_DISPLAY.replace(/[^\d+]/g, '')}`;
  */
 export function WhatsAppButton() {
   const t = useTranslations('contact');
-  const [shown, setShown] = useState(false);
 
-  useEffect(() => {
-    const id = window.setTimeout(() => setShown(true), 700);
-    return () => window.clearTimeout(id);
-  }, []);
-
+  // Entrance lives in pure CSS on the wrapper (contact-rise), so the buttons are
+  // present in the SSR HTML and never depend on JS hydration to become visible —
+  // the two most important conversion affordances can't silently stay hidden.
   return (
-    <div className="fixed bottom-[clamp(1.25rem,3vh,2rem)] right-[clamp(1.25rem,4vw,2rem)] z-40 flex flex-col items-end gap-3">
+    <div className="fixed bottom-[clamp(1.25rem,3vh,2rem)] right-[clamp(1.25rem,4vw,2rem)] z-40 flex animate-[contact-rise_0.6s_cubic-bezier(0.16,1,0.3,1)_both] flex-col items-end gap-3">
       {/* Call — the same number, one tap away */}
       <a
         href={TEL_HREF}
         aria-label={t('callLabel')}
-        className={`group animate-neon-orange flex items-center rounded-full bg-[#ff7a1a] p-2 text-white transition-[transform,opacity] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-0.5 active:scale-[0.97] ${
-          shown ? 'translate-y-0 opacity-100' : 'translate-y-3 opacity-0'
-        }`}
+        className="group animate-neon-orange flex items-center rounded-full bg-[#ff7a1a] p-2 text-white transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-0.5 active:scale-[0.97]"
       >
         <span className="max-w-0 overflow-hidden whitespace-nowrap font-sans text-[0.95rem] font-medium opacity-0 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:max-w-[13rem] group-hover:pl-4 group-hover:pr-1.5 group-hover:opacity-100">
           {t('callLabel')}
@@ -48,9 +42,7 @@ export function WhatsAppButton() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label={t('whatsappLabel')}
-        className={`group animate-neon-green flex items-center rounded-full bg-[#25D366] p-2 text-white transition-[transform,opacity] delay-100 duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-0.5 active:scale-[0.97] ${
-          shown ? 'translate-y-0 opacity-100' : 'translate-y-3 opacity-0'
-        }`}
+        className="group animate-neon-green flex items-center rounded-full bg-[#25D366] p-2 text-white transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-0.5 active:scale-[0.97]"
       >
         <span className="max-w-0 overflow-hidden whitespace-nowrap font-sans text-[0.95rem] font-medium opacity-0 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:max-w-[13rem] group-hover:pl-4 group-hover:pr-1.5 group-hover:opacity-100">
           {t('whatsappLabel')}

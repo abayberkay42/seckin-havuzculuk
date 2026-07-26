@@ -61,6 +61,18 @@ type PageMetaInput = {
  * without them. `title` is the short, page-specific part — the locale layout's
  * template appends the brand.
  */
+/**
+ * Keep meta descriptions under the ~160-char SERP truncation point. Cuts on a
+ * word boundary and appends an ellipsis so authored copy stays readable even
+ * when a source string (e.g. a long project overview) overflows.
+ */
+function clampDescription(text: string, max = 158): string {
+  if (text.length <= max) return text;
+  const cut = text.slice(0, max);
+  const lastSpace = cut.lastIndexOf(' ');
+  return (lastSpace > 60 ? cut.slice(0, lastSpace) : cut).replace(/[\s.,;:—-]+$/, '') + '…';
+}
+
 export function pageMetadata({
   locale,
   href,
@@ -72,6 +84,7 @@ export function pageMetadata({
   const alternates = buildAlternates(href, locale);
   const canonical = typeof alternates?.canonical === 'string' ? alternates.canonical : SITE_URL;
   const img = image ?? DEFAULT_OG_IMAGE;
+  description = clampDescription(description);
 
   return {
     title,

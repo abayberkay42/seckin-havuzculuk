@@ -17,8 +17,8 @@ export async function generateMetadata({
   return pageMetadata({
     locale: locale as AppLocale,
     href: '/projects',
-    title: t('eyebrow'),
-    description: t('intro'),
+    title: t('seoTitle'),
+    description: t('seoDescription'),
   });
 }
 

@@ -23,8 +23,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return pageMetadata({
     locale: locale as AppLocale,
     href: '/maintenance',
-    title: t('eyebrow'),
-    description: t('intro'),
+    title: t('seoTitle'),
+    description: t('seoDescription'),
   });
 }
 

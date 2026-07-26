@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Seçkin Pools — Luxury Pool Design & Construction",
-    "description": "Bespoke luxury pool design, construction and maintenance for villas. We turn water into architecture."
+    "title": "Seçkin Havuzculuk — Luxury Pool Construction & Care in Çeşme, İzmir",
+    "description": "Luxury pool design, construction, renovation and maintenance for villas in Çeşme, Alaçatı and İzmir. Infinity pools and premium pool solutions since 2017."
   },
   "nav": {
     "home": "Home",
@@ -154,7 +154,7 @@
   "projectsPage": {
     "eyebrow": "Projects",
     "title": "Every project, a story written in water.",
-    "intro": "Not a portfolio — architectural case studies. From design to still water, see every stage.",
+    "intro": "Not a portfolio — architectural case studies. A selection from the hundreds of pools we've completed; from design to still water, see every stage.",
     "filterAll": "All",
     "filterCompleted": "Completed",
     "filterOngoing": "Ongoing",
@@ -183,7 +183,9 @@
     "ctaButton": "Start your project",
     "typeCompleted": "Completed",
     "typeOngoing": "Ongoing",
-    "typeBeforeAfter": "Transformation"
+    "typeBeforeAfter": "Transformation",
+    "seoTitle": "Pool Projects in Çeşme & Alaçatı",
+    "seoDescription": "Completed luxury pool projects and before/after renovations in Çeşme, Alaçatı and Ilıca. Case studies by Seçkin Havuzculuk."
   },
   "catalogue": {
     "eyebrow": "Products",
@@ -204,7 +206,9 @@
     "requestQuote": "Get a price",
     "whatsapp": "Ask on WhatsApp",
     "whatsappText": "Hello, I'd like information about {product}.",
-    "productCount": "{count} products"
+    "productCount": "{count} products",
+    "seoTitle": "Pool Products & Chemicals",
+    "seoDescription": "Pool chemicals, filtration, lighting, automation and cleaning equipment — over 60 products. Çeşme and İzmir, by Seçkin Havuzculuk."
   },
   "about": {
     "eyebrow": "About",
@@ -250,12 +254,14 @@
       }
     ],
     "ctaTitle": "Let the next water be yours.",
-    "ctaButton": "Talk to us"
+    "ctaButton": "Talk to us",
+    "seoTitle": "About — İzmir Pool Company",
+    "seoDescription": "A corporate team designing, building and maintaining luxury pools in Çeşme and İzmir since 2017. Seçkin Havuzculuk turns water into architecture."
   },
   "construction": {
     "eyebrow": "Pool Construction",
     "title": "From scratch, one with the architecture.",
-    "intro": "Across Çeşme, Alaçatı and İzmir — pools for villas, designed by reading the land, the house and the light and built on a concrete or gunite shell to last a lifetime, from infinity pools to classic forms.",
+    "intro": "For villas across İzmir — including Çeşme, Alaçatı, Ilıca, Seferihisar, Karaburun and Urla — pools designed by reading the land, the house and the light and built on a concrete or gunite shell to last a lifetime, from infinity pools to classic forms.",
     "capabilitiesEyebrow": "What we build",
     "capabilitiesTitle": "Every form, one standard.",
     "capabilities": [
@@ -328,12 +334,14 @@
         "q": "Can a pool be built on a sloped or view site?",
         "a": "Yes. Sloped sites often give the strongest results for infinity edges and terraced pools. With soil surveys, retaining and engineering solutions we turn the slope into an advantage rather than a constraint."
       }
-    ]
+    ],
+    "seoTitle": "Pool Construction in Çeşme & Alaçatı",
+    "seoDescription": "Luxury pool construction for villas in Çeşme, Alaçatı and İzmir: infinity pools, gunite/concrete shells, ceramic finishes and smart systems. Free site survey."
   },
   "maintenance": {
     "eyebrow": "Pool Maintenance",
     "title": "Clarity of water, uninterrupted.",
-    "intro": "Regular pool maintenance for villas across Çeşme, Alaçatı and İzmir. A pool succeeds not on the day it is finished, but if it is still as clear as day one years later. Maintenance is the quiet guarantee of that clarity.",
+    "intro": "Regular pool maintenance for villas across İzmir — including Çeşme, Alaçatı, Ilıca, Seferihisar, Karaburun and Urla. A pool succeeds not on the day it is finished, but if it is still as clear as day one years later.",
     "includedEyebrow": "What's included",
     "includedTitle": "Constant care for the water.",
     "included": [
@@ -458,7 +466,9 @@
         "q": "How often should all the water be replaced?",
         "a": "In a well-maintained pool a full water change is rarely needed — usually once every few years, or when the values can no longer be corrected chemically. Regular maintenance markedly reduces water use and cost."
       }
-    ]
+    ],
+    "seoTitle": "Pool Maintenance in Çeşme & İzmir",
+    "seoDescription": "Regular pool maintenance for villas in Çeşme, Alaçatı and İzmir: water chemistry balancing, cleaning, winterizing and seasonal service contracts."
   },
   "journal": {
     "eyebrow": "Journal",
@@ -511,6 +521,8 @@
     "formMessage": "About your project",
     "formSend": "Send",
     "formNote": "Pressing Send opens your email app.",
-    "formSubject": "Website — Project enquiry"
+    "formSubject": "Website — Project enquiry",
+    "seoTitle": "Contact — Çeşme / İzmir",
+    "seoDescription": "Get in touch for your pool project in Çeşme, Alaçatı and İzmir: phone, WhatsApp, email and our Alaçatı office. Seçkin Havuzculuk."
   }
 }

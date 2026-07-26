@@ -146,6 +146,12 @@
 .animate-neon-orange { animation: neon-orange 1.4s ease-in-out infinite; }
 .animate-neon-green  { animation: neon-green 1.4s ease-in-out infinite; }
 
+/* Floating contact stack entrance — CSS-only so it never depends on JS. */
+@keyframes contact-rise {
+  from { opacity: 0; transform: translateY(0.75rem); }
+  to   { opacity: 1; transform: none; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-neon-orange,
   .animate-neon-green { animation: none; }

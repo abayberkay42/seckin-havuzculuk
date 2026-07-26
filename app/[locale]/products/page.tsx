@@ -18,8 +18,8 @@ export async function generateMetadata({
   return pageMetadata({
     locale: locale as AppLocale,
     href: '/products',
-    title: t('eyebrow'),
-    description: t('intro'),
+    title: t('seoTitle'),
+    description: t('seoDescription'),
   });
 }
 

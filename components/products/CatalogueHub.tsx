@@ -64,6 +64,9 @@ export function CatalogueHub() {
         </div>
       </div>
 
+      {/* Groups the h3 product cards under an h2 so the heading outline doesn't
+          jump h1 -> h3. Visually hidden — the page title already reads. */}
+      <h2 className="sr-only">{t('eyebrow')}</h2>
       <motion.div
         layout
         className="grid grid-cols-2 gap-x-[clamp(1rem,2.5vw,2.5rem)] gap-y-[clamp(2.5rem,5vh,4.5rem)] md:grid-cols-3 xl:grid-cols-4"
