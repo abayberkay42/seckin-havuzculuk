@@ -34,7 +34,7 @@ export const projects: Project[] = [
     slug: 'antrasit-aydinlatmali-renovasyon',
     type: 'before-after',
     cover: '/proj-antrasit-renovasyon.webp',
-    name: { tr: 'Antrasit Aydınlatmalı Renovasyon', en: 'Anthracite-Lit Renovation' },
+    name: { tr: 'Havuz Renovasyonu', en: 'Pool Renovation' },
     place: { tr: 'Çeşme, İzmir', en: 'Çeşme, İzmir' },
     year: '2024',
     overview: {
@@ -73,7 +73,7 @@ export const projects: Project[] = [
     slug: 'selaleli-bahce-havuzu',
     type: 'before-after',
     cover: '/proj-bahce-yenileme.webp',
-    name: { tr: 'Şelaleli Bahçe Havuzu', en: 'Waterfall Garden Pool' },
+    name: { tr: 'Renovasyon & İnşaat', en: 'Renovation & Build' },
     place: { tr: 'Alaçatı, Çeşme, İzmir', en: 'Alaçatı, Çeşme, İzmir' },
     year: '2024',
     overview: {
@@ -112,7 +112,7 @@ export const projects: Project[] = [
     slug: 'gizli-savakli-renovasyon',
     type: 'before-after',
     cover: '/proj-gizli-savakli-cover.webp',
-    name: { tr: 'Gizli Savaklı Renovasyon', en: 'Hidden-Weir Renovation' },
+    name: { tr: 'Havuz Renovasyonu', en: 'Pool Renovation' },
     place: { tr: 'Ilıca, Çeşme, İzmir', en: 'Ilıca, Çeşme, İzmir' },
     year: '2024',
     overview: {
@@ -151,7 +151,7 @@ export const projects: Project[] = [
     slug: 'plazma-tasmali-villa-havuzu',
     type: 'completed',
     cover: '/proj-zeytinlik.webp',
-    name: { tr: 'Plazma Taşmalı Villa Havuzu', en: 'Deck-Level Villa Pool' },
+    name: { tr: 'Sıfırdan Havuz Yapımı', en: 'Built From Scratch' },
     place: { tr: 'Alaçatı, Çeşme, İzmir', en: 'Alaçatı, Çeşme, İzmir' },
     year: '2024',
     overview: {
@@ -190,7 +190,7 @@ export const projects: Project[] = [
     slug: 'tundra-gri-renovasyon',
     type: 'before-after',
     cover: '/proj-tundra-gri-cover.webp',
-    name: { tr: 'Tundra Gri Renovasyon', en: 'Tundra Grey Renovation' },
+    name: { tr: 'Havuz Renovasyonu', en: 'Pool Renovation' },
     place: { tr: 'Çeşme, İzmir', en: 'Çeşme, İzmir' },
     year: '2024',
     overview: {
@@ -229,7 +229,7 @@ export const projects: Project[] = [
     slug: 'ates-cukurlu-villa-havuzu',
     type: 'completed',
     cover: '/proj-ates-cukuru.webp',
-    name: { tr: 'Ateş Çukurlu Villa Havuzu', en: 'Fire-Pit Villa Pool' },
+    name: { tr: 'Sıfırdan Havuz Yapımı', en: 'Built From Scratch' },
     place: { tr: 'Alaçatı, Çeşme, İzmir', en: 'Alaçatı, Çeşme, İzmir' },
     year: '2024',
     overview: {
