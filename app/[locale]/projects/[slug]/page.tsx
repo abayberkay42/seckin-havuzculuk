@@ -16,7 +16,6 @@ import { ProjectHero } from '@/components/projects/ProjectHero';
 import { ProjectStory } from '@/components/projects/ProjectStory';
 import { ProjectGallery } from '@/components/projects/ProjectGallery';
 import { ProjectProcess } from '@/components/projects/ProjectProcess';
-import { BeforeAfter } from '@/components/projects/BeforeAfter';
 import { RelatedProjects } from '@/components/projects/RelatedProjects';
 
 export function generateStaticParams() {
@@ -106,7 +105,6 @@ export default async function ProjectDetailPage({
 
       <ProjectGallery lp={lp} />
       <ProjectProcess lp={lp} />
-      {lp.hasBeforeAfter && <BeforeAfter />}
       <RelatedProjects items={related} />
 
       <section
