@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { isAppLocale, locales, type AppLocale } from '@/i18n/routing';
@@ -86,6 +87,23 @@ export default async function ProjectDetailPage({
       <JsonLd data={crumbs} />
       <ProjectHero lp={lp} />
       <ProjectStory lp={lp} />
+
+      {/* Project cover — medium, between the story timeline and the gallery */}
+      <section
+        data-nav-theme="light"
+        className="bg-canvas px-[clamp(1.5rem,6vw,8rem)] pb-[clamp(4rem,9vh,7rem)]"
+      >
+        <div className="relative mx-auto aspect-[16/9] w-full max-w-[64rem] overflow-hidden rounded-[1.75rem] ring-1 ring-ink/8 shadow-[0_40px_90px_-55px_rgba(9,22,30,0.55)]">
+          <Image
+            src={lp.cover}
+            alt={lp.name}
+            fill
+            sizes="(max-width: 768px) 92vw, 64rem"
+            className="object-cover"
+          />
+        </div>
+      </section>
+
       <ProjectGallery lp={lp} />
       <ProjectProcess lp={lp} />
       {lp.hasBeforeAfter && <BeforeAfter />}

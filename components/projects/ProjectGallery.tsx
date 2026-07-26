@@ -13,11 +13,11 @@ const WATER =
   'bg-[radial-gradient(130%_130%_at_28%_18%,#20516a_0%,#16303c_58%,#0d1f29_100%)]';
 
 /**
- * Draggable gallery carousel — a row of small cards the visitor grabs and flings
- * left/right (pointer or touch), with momentum. Replaces the old big stacked
- * cards. Renders real photos from lp.gallery when present; until the client
- * sends them, it falls back to galleryCount placeholder cards so the carousel
- * is populated and interactive.
+ * Draggable gallery carousel — a centred row of small cards the visitor grabs
+ * and flings left/right (pointer or touch). When the cards fit the viewport
+ * they sit centred and static; when they overflow, the track becomes draggable
+ * and left-aligned so all of it is reachable. Labelled as the project's
+ * construction-stage / before state.
  */
 export function ProjectGallery({ lp }: { lp: LocalizedProject }) {
   const t = useTranslations('projectsPage');
@@ -40,31 +40,42 @@ export function ProjectGallery({ lp }: { lp: LocalizedProject }) {
     return () => window.removeEventListener('resize', measure);
   }, [shots.length]);
 
+  const fits = maxDrag <= 0;
+
   return (
     <section
       data-nav-theme="light"
       className="overflow-hidden bg-canvas pb-[clamp(6rem,12vh,10rem)]"
     >
-      <div className="px-[clamp(1.5rem,6vw,8rem)]">
-        <div className="mb-[clamp(2.5rem,5vh,4rem)] flex items-end justify-between gap-6">
-          <Eyebrow tone="dark">{t('gallery')}</Eyebrow>
-          <span className="hidden select-none items-center gap-2 font-mono text-label uppercase text-ink/40 sm:inline-flex">
+      <div className="mb-[clamp(2.5rem,5vh,4rem)] flex flex-col items-center gap-2.5 px-[clamp(1.5rem,6vw,8rem)] text-center">
+        <Eyebrow tone="dark" className="justify-center">
+          {t('gallery')}
+        </Eyebrow>
+        <span className="font-mono text-label uppercase tracking-[0.14em] text-ink/45">
+          {t('galleryState')}
+        </span>
+        {!fits && (
+          <span className="mt-1 inline-flex select-none items-center gap-2 font-mono text-label uppercase text-ink/35">
             {t('dragHint')} <span aria-hidden>↔</span>
           </span>
-        </div>
+        )}
       </div>
 
       <div
         ref={viewport}
-        className="cursor-grab overflow-hidden active:cursor-grabbing"
+        className={`overflow-hidden ${fits ? '' : 'cursor-grab active:cursor-grabbing'}`}
       >
         <motion.div
           ref={track}
-          drag="x"
+          drag={fits ? false : 'x'}
           dragConstraints={{ left: -maxDrag, right: 0 }}
           dragElastic={0.08}
           dragTransition={{ power: 0.3, timeConstant: 200 }}
-          className="flex w-max gap-[clamp(0.9rem,1.8vw,1.6rem)] px-[clamp(1.5rem,6vw,8rem)]"
+          className={`flex w-max gap-[clamp(0.9rem,1.8vw,1.6rem)] ${
+            fits
+              ? 'mx-auto px-[clamp(1.5rem,4vw,3rem)]'
+              : 'px-[clamp(1.5rem,6vw,8rem)]'
+          }`}
         >
           {shots.map((src, i) => (
             <motion.figure
