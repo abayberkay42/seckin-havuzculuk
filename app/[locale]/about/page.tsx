@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { isAppLocale } from '@/i18n/routing';
+import { isAppLocale, type AppLocale } from '@/i18n/routing';
+import { pageMetadata } from '@/lib/seo';
 import { PageHero } from '@/components/site/PageHero';
 import { CtaBand } from '@/components/site/CtaBand';
 import { Seam } from '@/components/ui/Seam';
@@ -16,7 +17,12 @@ type Figure = { value: string; suffix?: string; label: string };
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'about' });
-  return { title: `${t('eyebrow')} — Seçkin`, description: t('intro') };
+  return pageMetadata({
+    locale: locale as AppLocale,
+    href: '/about',
+    title: t('eyebrow'),
+    description: t('intro'),
+  });
 }
 
 export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {

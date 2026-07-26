@@ -1,6 +1,9 @@
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { isAppLocale, locales } from '@/i18n/routing';
+import { isAppLocale, locales, type AppLocale } from '@/i18n/routing';
+import { pageMetadata, absoluteUrl } from '@/lib/seo';
+import { breadcrumbSchema } from '@/lib/schema';
+import { JsonLd } from '@/components/seo/JsonLd';
 import {
   projects,
   getProject,
@@ -29,10 +32,14 @@ export async function generateMetadata({
   const { locale, slug } = await params;
   const p = getProject(slug);
   if (!p) return {};
-  return {
-    title: `${localize(p.name, locale)} — Seçkin`,
+  return pageMetadata({
+    locale: locale as AppLocale,
+    href: { pathname: '/projects/[slug]', params: { slug } },
+    title: localize(p.name, locale),
     description: localize(p.overview, locale),
-  };
+    image: p.cover,
+    ogType: 'article',
+  });
 }
 
 export default async function ProjectDetailPage({
@@ -65,8 +72,18 @@ export default async function ProjectDetailPage({
     type: p.type,
   }));
 
+  const crumbs = breadcrumbSchema([
+    { name: locale === 'tr' ? 'Ana Sayfa' : 'Home', url: absoluteUrl('/', locale) },
+    { name: t('eyebrow'), url: absoluteUrl('/projects', locale) },
+    {
+      name: lp.name,
+      url: absoluteUrl({ pathname: '/projects/[slug]', params: { slug } }, locale),
+    },
+  ]);
+
   return (
     <main>
+      <JsonLd data={crumbs} />
       <ProjectHero lp={lp} />
       <ProjectStory lp={lp} />
       <ProjectGallery lp={lp} />

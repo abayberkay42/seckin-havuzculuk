@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { isAppLocale } from '@/i18n/routing';
+import { isAppLocale, type AppLocale } from '@/i18n/routing';
+import { pageMetadata } from '@/lib/seo';
 import { visibleProducts } from '@/content/catalogue';
 import { CatalogueHub } from '@/components/products/CatalogueHub';
 import { SplitReveal } from '@/components/ui/SplitReveal';
@@ -14,7 +15,12 @@ export async function generateMetadata({
 }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'catalogue' });
-  return { title: `${t('eyebrow')} — Seçkin`, description: t('intro') };
+  return pageMetadata({
+    locale: locale as AppLocale,
+    href: '/products',
+    title: t('eyebrow'),
+    description: t('intro'),
+  });
 }
 
 export default async function ProductsPage({

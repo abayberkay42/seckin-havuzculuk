@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { isAppLocale } from '@/i18n/routing';
+import { isAppLocale, type AppLocale } from '@/i18n/routing';
+import { pageMetadata } from '@/lib/seo';
 import { PageHero } from '@/components/site/PageHero';
 import { ContactForm } from '@/components/site/ContactForm';
 import { Seam } from '@/components/ui/Seam';
@@ -11,7 +12,12 @@ import { PHONE_DISPLAY, EMAIL, whatsappLink } from '@/lib/contact';
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'contact' });
-  return { title: `${t('eyebrow')} — Seçkin`, description: t('intro') };
+  return pageMetadata({
+    locale: locale as AppLocale,
+    href: '/contact',
+    title: t('eyebrow'),
+    description: t('intro'),
+  });
 }
 
 export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {

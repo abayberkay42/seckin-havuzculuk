@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { isAppLocale } from '@/i18n/routing';
+import { isAppLocale, type AppLocale } from '@/i18n/routing';
+import { pageMetadata } from '@/lib/seo';
 import { PageHero } from '@/components/site/PageHero';
 import { CtaBand } from '@/components/site/CtaBand';
 import { Seam } from '@/components/ui/Seam';
@@ -12,7 +13,18 @@ type Entry = { tag: string; title: string; teaser: string };
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'journal' });
-  return { title: `${t('eyebrow')} — Seçkin`, description: t('intro') };
+  // Blog is a "coming soon" placeholder with no published articles yet. Keeping
+  // it indexable would ship a thin/empty page as a site-wide quality signal, so
+  // noindex until real posts exist (still crawlable so links are followed).
+  return {
+    ...pageMetadata({
+      locale: locale as AppLocale,
+      href: '/blog',
+      title: t('eyebrow'),
+      description: t('intro'),
+    }),
+    robots: { index: false, follow: true },
+  };
 }
 
 export default async function JournalPage({ params }: { params: Promise<{ locale: string }> }) {

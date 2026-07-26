@@ -3,7 +3,10 @@ import { Syne, DM_Sans } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
-import { isAppLocale, locales } from '@/i18n/routing';
+import { isAppLocale, locales, type AppLocale } from '@/i18n/routing';
+import { SITE_NAME, DEFAULT_OG_IMAGE, absoluteUrl, buildAlternates } from '@/lib/seo';
+import { localBusinessSchema, websiteSchema } from '@/lib/schema';
+import { JsonLd } from '@/components/seo/JsonLd';
 import { SmoothScroll } from '@/components/providers/SmoothScroll';
 import { Nav, type NavNode } from '@/components/layout/Nav';
 import { Footer } from '@/components/layout/Footer';
@@ -38,7 +41,44 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'meta' });
-  return { title: t('title'), description: t('description') };
+  const loc = locale as AppLocale;
+  return {
+    // metadataBase resolves every relative URL (OG images, canonicals) against
+    // the production origin — set once here, inherited everywhere.
+    metadataBase: new URL('https://seckinhavuzculuk.com'),
+    applicationName: SITE_NAME,
+    title: { default: t('title'), template: `%s · ${SITE_NAME}` },
+    description: t('description'),
+    // Home canonical + hreflang. Inner pages override with their own route.
+    alternates: buildAlternates('/', loc),
+    openGraph: {
+      type: 'website',
+      siteName: SITE_NAME,
+      locale: loc === 'tr' ? 'tr_TR' : 'en_US',
+      url: absoluteUrl('/', loc),
+      title: t('title'),
+      description: t('description'),
+      images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: SITE_NAME }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('title'),
+      description: t('description'),
+      images: [DEFAULT_OG_IMAGE],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+        'max-video-preview': -1,
+      },
+    },
+    icons: { icon: '/icon.png' },
+  };
 }
 
 export default async function LocaleLayout({
@@ -74,6 +114,9 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={`${syne.variable} ${dmSans.variable}`}>
       <body className="min-h-dvh bg-canvas text-ink">
+        {/* Site-wide identity graph — the business + website nodes every page
+            references. Ships in the initial HTML for crawlers. */}
+        <JsonLd data={[localBusinessSchema(), websiteSchema()]} />
         <Grain />
         <CursorFx />
         <NextIntlClientProvider messages={messages}>

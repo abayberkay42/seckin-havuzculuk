@@ -1,6 +1,10 @@
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { isAppLocale } from '@/i18n/routing';
+import { isAppLocale, type AppLocale } from '@/i18n/routing';
+import { pageMetadata, absoluteUrl } from '@/lib/seo';
+import { serviceSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
+import { JsonLd } from '@/components/seo/JsonLd';
+import { Faq } from '@/components/site/Faq';
 import { PageHero } from '@/components/site/PageHero';
 import { CtaBand } from '@/components/site/CtaBand';
 import { Seam } from '@/components/ui/Seam';
@@ -16,7 +20,12 @@ type Plan = { no: string; name: string; tag: string; desc: string };
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'maintenance' });
-  return { title: `${t('eyebrow')} — Seçkin`, description: t('intro') };
+  return pageMetadata({
+    locale: locale as AppLocale,
+    href: '/maintenance',
+    title: t('eyebrow'),
+    description: t('intro'),
+  });
 }
 
 export default async function MaintenancePage({ params }: { params: Promise<{ locale: string }> }) {
@@ -24,12 +33,28 @@ export default async function MaintenancePage({ params }: { params: Promise<{ lo
   if (!isAppLocale(locale)) notFound();
   setRequestLocale(locale);
   const t = await getTranslations('maintenance');
+  const url = absoluteUrl('/maintenance', locale);
+  const faq = t.raw('faq') as { q: string; a: string }[];
+  const ld = [
+    serviceSchema({
+      name: t('title'),
+      description: t('intro'),
+      url,
+      serviceType: t('eyebrow'),
+    }),
+    breadcrumbSchema([
+      { name: locale === 'tr' ? 'Ana Sayfa' : 'Home', url: absoluteUrl('/', locale) },
+      { name: t('eyebrow'), url },
+    ]),
+    faqSchema(faq),
+  ];
   const included = t.raw('included') as Item[];
   const waterValues = t.raw('waterValues') as WaterValue[];
   const plans = t.raw('plans') as Plan[];
 
   return (
     <main>
+      <JsonLd data={ld} />
       <PageHero eyebrow={t('eyebrow')} title={t('title')} intro={t('intro')} />
 
       <Seam from="canvas" to="surface" />
@@ -128,7 +153,11 @@ export default async function MaintenancePage({ params }: { params: Promise<{ lo
         </div>
       </section>
 
-      <Seam from="surface" to="deep" />
+      <Seam from="surface" to="canvas" />
+
+      <Faq eyebrow={t('faqEyebrow')} title={t('faqTitle')} items={faq} />
+
+      <Seam from="canvas" to="deep" />
 
       <CtaBand title={t('ctaTitle')} buttonLabel={t('ctaButton')} />
     </main>

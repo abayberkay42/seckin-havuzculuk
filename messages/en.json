@@ -57,10 +57,26 @@
     "title": "Architecture written in water.",
     "cta": "All projects",
     "items": [
-      { "name": "Anthracite-Lit Renovation", "place": "Çeşme", "year": "2024" },
-      { "name": "Waterfall Garden Pool", "place": "Alaçatı", "year": "2024" },
-      { "name": "Hidden-Weir Renovation", "place": "Ilıca", "year": "2024" },
-      { "name": "Deck-Level Villa Pool", "place": "Alaçatı", "year": "2024" }
+      {
+        "name": "Anthracite-Lit Renovation",
+        "place": "Çeşme",
+        "year": "2024"
+      },
+      {
+        "name": "Waterfall Garden Pool",
+        "place": "Alaçatı",
+        "year": "2024"
+      },
+      {
+        "name": "Hidden-Weir Renovation",
+        "place": "Ilıca",
+        "year": "2024"
+      },
+      {
+        "name": "Deck-Level Villa Pool",
+        "place": "Alaçatı",
+        "year": "2024"
+      }
     ]
   },
   "process": {
@@ -104,10 +120,24 @@
     "eyebrow": "Why Seçkin",
     "statement": "Not the numbers — the stillness of the water speaks.",
     "stats": [
-      { "value": "2017", "label": "Founded" },
-      { "value": "120", "suffix": "+", "label": "Projects delivered" },
-      { "value": "İzmir", "label": "Service area" },
-      { "value": "100", "suffix": "%", "label": "Delivery assurance" }
+      {
+        "value": "2017",
+        "label": "Founded"
+      },
+      {
+        "value": "120",
+        "suffix": "+",
+        "label": "Projects delivered"
+      },
+      {
+        "value": "İzmir",
+        "label": "Service area"
+      },
+      {
+        "value": "100",
+        "suffix": "%",
+        "label": "Delivery assurance"
+      }
     ]
   },
   "invitation": {
@@ -187,15 +217,37 @@
     "principlesEyebrow": "Principles",
     "principlesTitle": "The three things that guide us.",
     "principles": [
-      { "no": "01", "name": "Stillness", "desc": "Not spectacle, but calm. The best pool is the one that sits so naturally it goes unnoticed." },
-      { "no": "02", "name": "Craft", "desc": "An obsession with detail. The line of an infinity edge, the seam of a mosaic, the sound of the water — all designed." },
-      { "no": "03", "name": "Continuity", "desc": "Handover is a beginning, not an end. Years of care keep the water as clear as day one." }
+      {
+        "no": "01",
+        "name": "Stillness",
+        "desc": "Not spectacle, but calm. The best pool is the one that sits so naturally it goes unnoticed."
+      },
+      {
+        "no": "02",
+        "name": "Craft",
+        "desc": "An obsession with detail. The line of an infinity edge, the seam of a mosaic, the sound of the water — all designed."
+      },
+      {
+        "no": "03",
+        "name": "Continuity",
+        "desc": "Handover is a beginning, not an end. Years of care keep the water as clear as day one."
+      }
     ],
     "figuresEyebrow": "In brief",
     "figures": [
-      { "value": "2017", "label": "Founded" },
-      { "value": "120", "suffix": "+", "label": "Completed projects" },
-      { "value": "İzmir", "label": "Service area" }
+      {
+        "value": "2017",
+        "label": "Founded"
+      },
+      {
+        "value": "120",
+        "suffix": "+",
+        "label": "Completed projects"
+      },
+      {
+        "value": "İzmir",
+        "label": "Service area"
+      }
     ],
     "ctaTitle": "Let the next water be yours.",
     "ctaButton": "Talk to us"
@@ -203,63 +255,210 @@
   "construction": {
     "eyebrow": "Pool Construction",
     "title": "From scratch, one with the architecture.",
-    "intro": "Pools designed by reading the land, the house and the light — built on a concrete or gunite shell to last a lifetime.",
+    "intro": "Across Çeşme, Alaçatı and İzmir — pools for villas, designed by reading the land, the house and the light and built on a concrete or gunite shell to last a lifetime, from infinity pools to classic forms.",
     "capabilitiesEyebrow": "What we build",
     "capabilitiesTitle": "Every form, one standard.",
     "capabilities": [
-      { "no": "01", "name": "Infinity edge", "desc": "Overflow details where the water meets the horizon and draws in the view." },
-      { "no": "02", "name": "Gunite & concrete", "desc": "A strong, long-lasting sprayed-concrete shell that takes any form." },
-      { "no": "03", "name": "Ceramic & glass mosaic", "desc": "Hand-laid finishes that decide the colour of the water." },
-      { "no": "04", "name": "Smart systems", "desc": "Filtration, heating, lighting and automation, invisibly integrated." }
+      {
+        "no": "01",
+        "name": "Infinity edge",
+        "desc": "Overflow details where the water meets the horizon and draws in the view."
+      },
+      {
+        "no": "02",
+        "name": "Gunite & concrete",
+        "desc": "A strong, long-lasting sprayed-concrete shell that takes any form."
+      },
+      {
+        "no": "03",
+        "name": "Ceramic & glass mosaic",
+        "desc": "Hand-laid finishes that decide the colour of the water."
+      },
+      {
+        "no": "04",
+        "name": "Smart systems",
+        "desc": "Filtration, heating, lighting and automation, invisibly integrated."
+      }
     ],
     "processEyebrow": "How we work",
     "processTitle": "From an idea to life's most treasured space.",
     "steps": [
-      { "no": "01", "name": "Design", "desc": "Site survey, 3D design and engineering. The pool becomes one with the architecture." },
-      { "no": "02", "name": "Build", "desc": "A site run with mastery; every stage transparent, every detail recorded." },
-      { "no": "03", "name": "Handover", "desc": "Commissioning, handover, and then a lifetime maintenance guarantee." }
+      {
+        "no": "01",
+        "name": "Design",
+        "desc": "Site survey, 3D design and engineering. The pool becomes one with the architecture."
+      },
+      {
+        "no": "02",
+        "name": "Build",
+        "desc": "A site run with mastery; every stage transparent, every detail recorded."
+      },
+      {
+        "no": "03",
+        "name": "Handover",
+        "desc": "Commissioning, handover, and then a lifetime maintenance guarantee."
+      }
     ],
     "ctaTitle": "Let's draw your pool together.",
-    "ctaButton": "Start your project"
+    "ctaButton": "Start your project",
+    "faqEyebrow": "Frequently asked",
+    "faqTitle": "Common questions.",
+    "faq": [
+      {
+        "q": "How long does building a pool in Çeşme or Alaçatı take?",
+        "a": "It depends on the pool's size, form and ground conditions. A standard villa pool is usually completed in 8–14 weeks after design approval. Projects with an infinity edge, a movable floor or complex automation take longer. We give you a clear schedule once the site survey is done."
+      },
+      {
+        "q": "What is an infinity pool and which sites suit it?",
+        "a": "An infinity pool is one where the water spills invisibly over an edge and appears to merge with the horizon. It works best on sloped sites overlooking the sea or a valley. The overflowing water is collected in a balance tank below and continuously circulated, so it needs precise levelling and engineering."
+      },
+      {
+        "q": "What is the difference between a gunite (sprayed concrete) pool and a fibreglass/prefabricated one?",
+        "a": "A gunite pool is built on site by spraying concrete over steel reinforcement; it can take any shape or size, lasts for decades and sits fully on the ground. Fibreglass/prefabricated pools are pre-moulded and limited in size. For durability and design freedom we build with gunite and reinforced concrete."
+      },
+      {
+        "q": "Do you need a permit to build a pool in İzmir?",
+        "a": "Depending on the municipality and zoning status, a permit or notification may be required. We know the processes in Çeşme, Alaçatı and the surrounding districts, prepare the project in line with the relevant regulations and guide you through the paperwork and engineering calculations."
+      },
+      {
+        "q": "What determines the cost of a pool?",
+        "a": "Cost is driven mostly by the pool's size and depth, the overflow type (infinity, deck-level, skimmer), the finish (ceramic, glass mosaic, travertine), ground conditions and the heating and automation equipment. After the site survey we provide a transparent, itemised quote."
+      },
+      {
+        "q": "Can a pool be built on a sloped or view site?",
+        "a": "Yes. Sloped sites often give the strongest results for infinity edges and terraced pools. With soil surveys, retaining and engineering solutions we turn the slope into an advantage rather than a constraint."
+      }
+    ]
   },
   "maintenance": {
     "eyebrow": "Pool Maintenance",
     "title": "Clarity of water, uninterrupted.",
-    "intro": "A pool succeeds not on the day it is finished, but if it is still as clear as day one years later. Maintenance is the quiet guarantee of that clarity.",
+    "intro": "Regular pool maintenance for villas across Çeşme, Alaçatı and İzmir. A pool succeeds not on the day it is finished, but if it is still as clear as day one years later. Maintenance is the quiet guarantee of that clarity.",
     "includedEyebrow": "What's included",
     "includedTitle": "Constant care for the water.",
     "included": [
-      { "no": "01", "name": "Chemical balance", "desc": "We measure pH, free chlorine, alkalinity and hardness on every visit and hold the water in balance — before any swing can harm skin or equipment." },
-      { "no": "02", "name": "Filtration & circulation", "desc": "Sand or cartridge filter cleaning, backwash, pump and valve checks. Proper circulation is the unseen engine of clarity." },
-      { "no": "03", "name": "Surface & floor cleaning", "desc": "Floor vacuuming by robot and by hand, wall brushing and waterline oil-band cleaning. Algae and scale are removed before they take hold." },
-      { "no": "04", "name": "Skimmer & line checks", "desc": "Cleaning of skimmer baskets, pump pre-filter and overflow channels — so leaves, insects and sediment never reach the system." },
-      { "no": "05", "name": "Equipment & automation", "desc": "Periodic checks of the heat pump, chlorination, dosing unit and lighting. Faults are caught quietly, before they grow." },
-      { "no": "06", "name": "Winterising & opening", "desc": "Protecting the water and draining the lines at season's end, then full recommissioning in spring. The pool passes winter unharmed." }
+      {
+        "no": "01",
+        "name": "Chemical balance",
+        "desc": "We measure pH, free chlorine, alkalinity and hardness on every visit and hold the water in balance — before any swing can harm skin or equipment."
+      },
+      {
+        "no": "02",
+        "name": "Filtration & circulation",
+        "desc": "Sand or cartridge filter cleaning, backwash, pump and valve checks. Proper circulation is the unseen engine of clarity."
+      },
+      {
+        "no": "03",
+        "name": "Surface & floor cleaning",
+        "desc": "Floor vacuuming by robot and by hand, wall brushing and waterline oil-band cleaning. Algae and scale are removed before they take hold."
+      },
+      {
+        "no": "04",
+        "name": "Skimmer & line checks",
+        "desc": "Cleaning of skimmer baskets, pump pre-filter and overflow channels — so leaves, insects and sediment never reach the system."
+      },
+      {
+        "no": "05",
+        "name": "Equipment & automation",
+        "desc": "Periodic checks of the heat pump, chlorination, dosing unit and lighting. Faults are caught quietly, before they grow."
+      },
+      {
+        "no": "06",
+        "name": "Winterising & opening",
+        "desc": "Protecting the water and draining the lines at season's end, then full recommissioning in spring. The pool passes winter unharmed."
+      }
     ],
     "waterEyebrow": "Water chemistry",
     "waterTitle": "Clarity, in measurable form.",
     "waterIntro": "Water that looks clean may not be chemically balanced. On every visit we measure these ranges, log them, and fine-tune where needed — both comfort and equipment life depend on this balance.",
     "waterValues": [
-      { "value": "7.2 – 7.6", "label": "pH", "note": "Skin and eye comfort, balanced disinfection" },
-      { "value": "1 – 3 ppm", "label": "Free chlorine", "note": "Safe, continuous disinfection" },
-      { "value": "80 – 120 ppm", "label": "Alkalinity", "note": "Guards pH against sudden swings" },
-      { "value": "200 – 400 ppm", "label": "Calcium hardness", "note": "Protects the surface from wear and scale" },
-      { "value": "30 – 50 ppm", "label": "Cyanuric acid", "note": "Shields chlorine from sunlight" },
-      { "value": "< 1500 ppm", "label": "Dissolved solids (TDS)", "note": "Clarity and balance of taste" }
+      {
+        "value": "7.2 – 7.6",
+        "label": "pH",
+        "note": "Skin and eye comfort, balanced disinfection"
+      },
+      {
+        "value": "1 – 3 ppm",
+        "label": "Free chlorine",
+        "note": "Safe, continuous disinfection"
+      },
+      {
+        "value": "80 – 120 ppm",
+        "label": "Alkalinity",
+        "note": "Guards pH against sudden swings"
+      },
+      {
+        "value": "200 – 400 ppm",
+        "label": "Calcium hardness",
+        "note": "Protects the surface from wear and scale"
+      },
+      {
+        "value": "30 – 50 ppm",
+        "label": "Cyanuric acid",
+        "note": "Shields chlorine from sunlight"
+      },
+      {
+        "value": "< 1500 ppm",
+        "label": "Dissolved solids (TDS)",
+        "note": "Clarity and balance of taste"
+      }
     ],
     "plansEyebrow": "Maintenance programmes",
     "plansTitle": "A rhythm to suit your pool.",
     "plansIntro": "Every pool has different needs. We offer three core programmes, shaped by usage, location and season.",
     "plans": [
-      { "no": "01", "name": "Regular Maintenance", "tag": "Active season", "desc": "Chemical balance, cleaning and equipment checks on weekly or fortnightly visits. The standard programme that keeps water ready to use every day." },
-      { "no": "02", "name": "Season Opening & Closing", "tag": "Twice a year", "desc": "Full recommissioning in spring and winterising in autumn. Water, lines and equipment are protected; the season opens without surprises." },
-      { "no": "03", "name": "Emergency Response", "tag": "When you need it", "desc": "Rapid diagnosis and correction for cloudy water, sudden algae or equipment failure. An on-site fix on a single call." }
+      {
+        "no": "01",
+        "name": "Regular Maintenance",
+        "tag": "Active season",
+        "desc": "Chemical balance, cleaning and equipment checks on weekly or fortnightly visits. The standard programme that keeps water ready to use every day."
+      },
+      {
+        "no": "02",
+        "name": "Season Opening & Closing",
+        "tag": "Twice a year",
+        "desc": "Full recommissioning in spring and winterising in autumn. Water, lines and equipment are protected; the season opens without surprises."
+      },
+      {
+        "no": "03",
+        "name": "Emergency Response",
+        "tag": "When you need it",
+        "desc": "Rapid diagnosis and correction for cloudy water, sudden algae or equipment failure. An on-site fix on a single call."
+      }
     ],
     "rhythmEyebrow": "Rhythm",
     "rhythmTitle": "Care by the season.",
     "rhythmBody": "From weekly checks to seasonal deep service — a maintenance calendar built around your pool's size and use. Every visit is reported and every reading logged. You enjoy the water; we take on the rest.",
     "ctaTitle": "A maintenance plan for your pool.",
-    "ctaButton": "Write for maintenance"
+    "ctaButton": "Write for maintenance",
+    "faqEyebrow": "Frequently asked",
+    "faqTitle": "Common questions.",
+    "faq": [
+      {
+        "q": "How often should a pool be serviced?",
+        "a": "Through the season (spring to autumn) weekly maintenance is ideal: measuring the water values, dosing, surface and floor cleaning and filter checks. Frequency may rise in heavy use or hot spells. In winter the pool is protected with a reduced but regular programme."
+      },
+      {
+        "q": "What should the pool's pH and chlorine levels be?",
+        "a": "The ideal ranges are 7.2–7.6 for pH, 1–3 ppm for free chlorine and 80–120 ppm for total alkalinity. These values directly affect water clarity, skin and eye comfort and equipment life. We measure and rebalance them on every visit."
+      },
+      {
+        "q": "How is a pool maintained in winter?",
+        "a": "When preparing a pool for winter the water level is set, the values are balanced, a winter chemical is applied and the plumbing is protected against freezing. The water is not fully drained; a cover and periodic checks ensure a healthy spring opening."
+      },
+      {
+        "q": "Do you offer regular maintenance contracts for villas in Çeşme and Alaçatı?",
+        "a": "Yes. We offer seasonal and annual maintenance contracts for villas in Çeşme, Alaçatı, Ilıca and the surrounding districts. Our team visits at set intervals, measures and reports every value — so you enjoy the pool rather than manage it."
+      },
+      {
+        "q": "Why does pool water turn cloudy or green?",
+        "a": "The most common causes are unbalanced pH/chlorine, weak filtration and algae growth. In hot weather chlorine is consumed quickly and algae multiply. With the right dosing, regular filter cleaning and, when needed, shock chlorination the water returns to clarity within a few days."
+      },
+      {
+        "q": "How often should all the water be replaced?",
+        "a": "In a well-maintained pool a full water change is rarely needed — usually once every few years, or when the values can no longer be corrected chemically. Regular maintenance markedly reduces water use and cost."
+      }
+    ]
   },
   "journal": {
     "eyebrow": "Journal",
@@ -268,9 +467,21 @@
     "stateLabel": "In preparation",
     "upcomingEyebrow": "Coming soon",
     "upcoming": [
-      { "tag": "Design", "title": "Anatomy of an infinity edge", "teaser": "How is that line where water meets the horizon calculated?" },
-      { "tag": "Material", "title": "Why glass mosaic is different", "teaser": "The millimetric choices that decide the water's colour." },
-      { "tag": "Care", "title": "The chemistry of clear water", "teaser": "Season changes without upsetting the balance." }
+      {
+        "tag": "Design",
+        "title": "Anatomy of an infinity edge",
+        "teaser": "How is that line where water meets the horizon calculated?"
+      },
+      {
+        "tag": "Material",
+        "title": "Why glass mosaic is different",
+        "teaser": "The millimetric choices that decide the water's colour."
+      },
+      {
+        "tag": "Care",
+        "title": "The chemistry of clear water",
+        "teaser": "Season changes without upsetting the balance."
+      }
     ],
     "ctaTitle": "Have a question?",
     "ctaButton": "Write to us"

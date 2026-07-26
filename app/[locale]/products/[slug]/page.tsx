@@ -1,11 +1,15 @@
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { isAppLocale, locales } from '@/i18n/routing';
+import { isAppLocale, locales, type AppLocale } from '@/i18n/routing';
+import { pageMetadata, absoluteUrl } from '@/lib/seo';
+import { productSchema, breadcrumbSchema } from '@/lib/schema';
+import { JsonLd } from '@/components/seo/JsonLd';
 import {
   visibleProducts,
   categories,
   getProduct,
   hasPhoto,
+  productPhoto,
   localize,
   localizeProduct,
   productsByCategory,
@@ -30,10 +34,13 @@ export async function generateMetadata({
   const { locale, slug } = await params;
   const p = getProduct(slug);
   if (!p) return {};
-  return {
-    title: `${localize(p.name, locale)} — Seçkin`,
+  return pageMetadata({
+    locale: locale as AppLocale,
+    href: { pathname: '/products/[slug]', params: { slug } },
+    title: localize(p.name, locale),
     description: localize(p.description, locale),
-  };
+    image: productPhoto(slug),
+  });
 }
 
 export default async function ProductDetailPage({
@@ -65,8 +72,26 @@ export default async function ProductDetailPage({
       category: catMap[p.category],
     }));
 
+  const productUrl = absoluteUrl({ pathname: '/products/[slug]', params: { slug } }, locale);
+  const ld = [
+    productSchema({
+      name: lp.name,
+      description: lp.description,
+      url: productUrl,
+      image: productPhoto(slug),
+      brand: product.brand,
+      category: catMap[product.category],
+    }),
+    breadcrumbSchema([
+      { name: locale === 'tr' ? 'Ana Sayfa' : 'Home', url: absoluteUrl('/', locale) },
+      { name: t('eyebrow'), url: absoluteUrl('/products', locale) },
+      { name: lp.name, url: productUrl },
+    ]),
+  ];
+
   return (
     <main>
+      <JsonLd data={ld} />
       <ProductHero lp={lp} category={catMap[product.category]} />
       <ProductBody lp={lp} />
       <RelatedProducts items={related} />

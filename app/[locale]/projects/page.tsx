@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { isAppLocale } from '@/i18n/routing';
+import { isAppLocale, type AppLocale } from '@/i18n/routing';
+import { pageMetadata } from '@/lib/seo';
 import { ProjectsHub } from '@/components/projects/ProjectsHub';
 import { SplitReveal } from '@/components/ui/SplitReveal';
 import { Eyebrow } from '@/components/ui/Eyebrow';
@@ -13,7 +14,12 @@ export async function generateMetadata({
 }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'projectsPage' });
-  return { title: `${t('eyebrow')} — Seçkin`, description: t('intro') };
+  return pageMetadata({
+    locale: locale as AppLocale,
+    href: '/projects',
+    title: t('eyebrow'),
+    description: t('intro'),
+  });
 }
 
 export default async function ProjectsPage({
