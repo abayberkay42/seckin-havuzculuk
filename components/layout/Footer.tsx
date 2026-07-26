@@ -3,7 +3,7 @@ import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { TextLink } from '@/components/ui/TextLink';
 import type { AppPathname } from '@/i18n/routing';
-import { PHONE_DISPLAY, EMAIL, whatsappLink } from '@/lib/contact';
+import { PHONE_DISPLAY, EMAIL, whatsappLink, SOCIAL_LINKS } from '@/lib/contact';
 
 /** Static (non-parameterised) routes — the footer never links to [slug] pages. */
 type StaticPathname = Exclude<AppPathname, '/products/[slug]' | '/projects/[slug]'>;
@@ -149,8 +149,22 @@ export async function Footer() {
         </div>
       </div>
 
-      <div className="mt-16 flex flex-col gap-2 font-mono text-label uppercase text-canvas/40 sm:flex-row sm:justify-between">
+      <div className="mt-16 flex flex-col gap-4 font-mono text-label uppercase text-canvas/40 sm:flex-row sm:items-center sm:justify-between">
         <span>Seçkin Havuzculuk · STC Royal A.Ş.</span>
+        <ul className="flex items-center gap-6">
+          {SOCIAL_LINKS.map((s) => (
+            <li key={s.href}>
+              <a
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-water text-canvas/60 transition-colors duration-[var(--dur-quick)] hover:text-canvas"
+              >
+                {s.label}
+              </a>
+            </li>
+          ))}
+        </ul>
         <span>
           © {new Date().getFullYear()} · {t('rights')}
         </span>

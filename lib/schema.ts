@@ -1,5 +1,5 @@
 import { SITE_URL, SITE_NAME } from '@/lib/seo';
-import { PHONE_DISPLAY, EMAIL } from '@/lib/contact';
+import { PHONE_DISPLAY, EMAIL, INSTAGRAM_URL, GBP_URL } from '@/lib/contact';
 
 /**
  * JSON-LD builders. Kept as plain objects so pages can compose a graph and
@@ -68,8 +68,7 @@ export function localBusinessSchema() {
       'Sonsuzluk havuzu',
       'Havuz kimyasalları',
     ],
-    // No public social profiles supplied yet; add here when available.
-    sameAs: [] as string[],
+    sameAs: [INSTAGRAM_URL, GBP_URL],
   };
 }
 
