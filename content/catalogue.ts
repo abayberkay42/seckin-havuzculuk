@@ -2644,6 +2644,124 @@ export const products: Product[] = [
       "en": "Professional water analysis"
     },
     "galleryCount": 1
+  }  ,
+  {
+    "slug": "vana-boru",
+    "category": "plumbing",
+    "brand": "Pimtaş",
+    "name": {
+      "tr": "U-PVC Vana & Ek Parçalar",
+      "en": "U-PVC Valves & Fittings"
+    },
+    "tagline": {
+      "tr": "Suyun görünmez altyapısı",
+      "en": "The unseen infrastructure"
+    },
+    "description": {
+      "tr": "Pimtaş U-PVC küresel su vanaları ve yapıştırma muflu ek parçalar — dirsek, istavroz (kruva) ve redüksiyon. Havuz tesisatının dayanıklı bağlantı grubu; 63'lük ve 50'lik çaplarda.",
+      "en": "Pimtaş U-PVC ball valves and solvent-cement fittings — elbows, crosses and reducers. The durable connection set for pool plumbing, in Ø63 and Ø50."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Tesisat"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Pimtaş"
+      },
+      {
+        "label": {
+          "tr": "Çap",
+          "en": "Diameter"
+        },
+        "value": "63'lük · 50'lik"
+      }
+    ],
+    "features": [
+      {
+        "tr": "U-PVC dayanıklılık",
+        "en": "Durable U-PVC"
+      },
+      {
+        "tr": "Yapıştırma muflu bağlantı",
+        "en": "Solvent-cement joints"
+      },
+      {
+        "tr": "Vana, dirsek, kruva, redüksiyon",
+        "en": "Valve, elbow, cross, reducer"
+      }
+    ],
+    "usage": {
+      "tr": "Havuz tesisatında",
+      "en": "Pool plumbing"
+    },
+    "galleryCount": 1
+  },
+  {
+    "slug": "pvc-borular",
+    "category": "plumbing",
+    "brand": "Pimtaş",
+    "name": {
+      "tr": "U-PVC Basınçlı Borular",
+      "en": "U-PVC Pressure Pipes"
+    },
+    "tagline": {
+      "tr": "Sağlam su hattı",
+      "en": "A solid water line"
+    },
+    "description": {
+      "tr": "Pimtaş U-PVC basınçlı havuz boruları; farklı çaplarda, 63'lük ve 50'lik dahil. Yapıştırma muflu sistemle sızdırmaz, uzun ömürlü tesisat.",
+      "en": "Pimtaş U-PVC pressure pipes for pools in a range of diameters, including Ø63 and Ø50. A leak-free, long-life line with solvent-cement joints."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Tesisat"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Pimtaş"
+      },
+      {
+        "label": {
+          "tr": "Çap",
+          "en": "Diameter"
+        },
+        "value": "63'lük · 50'lik"
+      }
+    ],
+    "features": [
+      {
+        "tr": "Farklı çap seçenekleri",
+        "en": "Multiple diameters"
+      },
+      {
+        "tr": "Basınca dayanıklı",
+        "en": "Pressure-rated"
+      },
+      {
+        "tr": "Sızdırmaz bağlantı",
+        "en": "Leak-free joints"
+      }
+    ],
+    "usage": {
+      "tr": "Havuz su tesisatında",
+      "en": "Pool water lines"
+    },
+    "galleryCount": 1
   }
 ];
 
@@ -2663,6 +2781,7 @@ const PHOTO_SLUGS = new Set<string>([
   'led-32w', 'led-9w', 'kum-filtresi-600', 'pompa-1hp', 'isikli-fiskiye', 'solar-fiskiye', 'balina-hoparlor',
   'yuzen-hoparlor', 'deniz-yildizi', 'havuz-robotu', 'havuz-supurgesi', 'havuz-hortumu', 'yuzey-kepcesi',
   'havuz-fircasi', 'termometre', 'dispanser', 'test-insta', 'test-damla', 'test-set', 'test-colorq',
+  'vana-boru', 'pvc-borular',
 ]);
 
 /**
@@ -2683,7 +2802,7 @@ export const hasPhoto = (slug: string): boolean => PHOTO_SLUGS.has(slug);
  * A product's brand/size variants (e.g. Quardex + Selenoid + Poolbox of the same
  * chemical) are grouped into one card and surfaced together in its gallery.
  */
-const GALLERY_COUNTS: Record<string, number> = { 'sivi-ph-quardex': 1, 'sivi-ph-selenoid': 1, 'toz-ph-quardex': 1, 'toz-ph-selenoid': 1, 'sivi-klor-quardex': 1, 'sivi-klor-selenoid': 1, 'toz-klor-quardex': 2, 'toz-klor-selenoid': 1, 'multi-tablet-wtr': 2, 'yosun-onleyici-selenoid': 1, 'yosun-onleyici-poolbox': 2, 'yosun-onleyici-quardex': 1, 'yosun-giderici-quardex': 1, 'berraklastirici-quardex': 1, 'parlatici-selenoid': 1, 'parlatici-poolbox': 2, 'cokturucu-selenoid': 1, 'cokturucu-poolbox': 1, 'flok-tablet': 1, 'anti-iyon-quardex': 1, 'iyon-tutucu-selenoid': 1, 'iyon-topu': 1, 'hucre-temizleyici-selenoid': 1, 'bagli-klor-poolbox': 1, 'cevre-temizlik-quardex': 1, 'alkalinite-dusurucu-selenoid': 1, 'temizlik-asidi-selenoid': 1, 'led-23w': 2, 'led-32w': 1, 'led-9w': 1, 'kum-filtresi-600': 1, 'pompa-1hp': 1, 'isikli-fiskiye': 1, 'solar-fiskiye': 1, 'balina-hoparlor': 1, 'yuzen-hoparlor': 1, 'deniz-yildizi': 1, 'havuz-robotu': 1, 'havuz-supurgesi': 1, 'havuz-hortumu': 1, 'yuzey-kepcesi': 1, 'havuz-fircasi': 1, 'termometre': 1, 'dispanser': 1, 'test-insta': 1, 'test-damla': 1, 'test-set': 1, 'test-colorq': 1 };
+const GALLERY_COUNTS: Record<string, number> = { 'sivi-ph-quardex': 1, 'sivi-ph-selenoid': 1, 'toz-ph-quardex': 1, 'toz-ph-selenoid': 1, 'sivi-klor-quardex': 1, 'sivi-klor-selenoid': 1, 'toz-klor-quardex': 2, 'toz-klor-selenoid': 1, 'multi-tablet-wtr': 2, 'yosun-onleyici-selenoid': 1, 'yosun-onleyici-poolbox': 2, 'yosun-onleyici-quardex': 1, 'yosun-giderici-quardex': 1, 'berraklastirici-quardex': 1, 'parlatici-selenoid': 1, 'parlatici-poolbox': 2, 'cokturucu-selenoid': 1, 'cokturucu-poolbox': 1, 'flok-tablet': 1, 'anti-iyon-quardex': 1, 'iyon-tutucu-selenoid': 1, 'iyon-topu': 1, 'hucre-temizleyici-selenoid': 1, 'bagli-klor-poolbox': 1, 'cevre-temizlik-quardex': 1, 'alkalinite-dusurucu-selenoid': 1, 'temizlik-asidi-selenoid': 1, 'led-23w': 2, 'led-32w': 1, 'led-9w': 1, 'kum-filtresi-600': 1, 'pompa-1hp': 1, 'isikli-fiskiye': 1, 'solar-fiskiye': 1, 'balina-hoparlor': 1, 'yuzen-hoparlor': 1, 'deniz-yildizi': 1, 'havuz-robotu': 1, 'havuz-supurgesi': 1, 'havuz-hortumu': 1, 'yuzey-kepcesi': 1, 'havuz-fircasi': 1, 'termometre': 1, 'dispanser': 1, 'test-insta': 1, 'test-damla': 1, 'test-set': 1, 'test-colorq': 1, 'vana-boru': 1, 'pvc-borular': 1 };
 
 const GALLERY_OVERRIDES: Record<string, string[]> = {
   'test-colorq': ['/products/test-colorq-dijital.webp'],
