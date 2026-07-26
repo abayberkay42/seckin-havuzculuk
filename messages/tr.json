@@ -57,10 +57,10 @@
     "title": "Suyla yazılmış mimari.",
     "cta": "Tüm projeler",
     "items": [
-      { "name": "Ege Kıyısı Villası", "place": "Çeşme", "year": "2024" },
-      { "name": "Zeytinlik Rezidans", "place": "Seferihisar", "year": "2023" },
-      { "name": "Tepe Malikâne", "place": "Urla", "year": "2024" },
-      { "name": "Deniz Terası", "place": "Karaburun", "year": "2023" }
+      { "name": "Antrasit Aydınlatmalı Renovasyon", "place": "Çeşme", "year": "2024" },
+      { "name": "Jakuzili Havuz Renovasyonu", "place": "Alaçatı", "year": "2024" },
+      { "name": "Gizli Savaklı Renovasyon", "place": "Ilıca", "year": "2024" },
+      { "name": "Plazma Taşmalı Villa Havuzu", "place": "Alaçatı", "year": "2024" }
     ]
   },
   "process": {
