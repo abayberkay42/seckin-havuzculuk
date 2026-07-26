@@ -2665,8 +2665,16 @@ const PHOTO_SLUGS = new Set<string>([
   'havuz-fircasi', 'termometre', 'dispanser', 'test-insta', 'test-damla', 'test-set', 'test-colorq',
 ]);
 
+/**
+ * Per-product primary-photo overrides. Used when a product's image is swapped
+ * to a new file and the URL must change so no cached version is served.
+ */
+const PHOTO_OVERRIDES: Record<string, string> = {
+  'test-colorq': '/products/test-colorq-dijital.webp',
+};
+
 export const productPhoto = (slug: string): string | undefined =>
-  PHOTO_SLUGS.has(slug) ? `/products/${slug}.webp` : undefined;
+  PHOTO_OVERRIDES[slug] ?? (PHOTO_SLUGS.has(slug) ? `/products/${slug}.webp` : undefined);
 
 export const hasPhoto = (slug: string): boolean => PHOTO_SLUGS.has(slug);
 
@@ -2677,7 +2685,12 @@ export const hasPhoto = (slug: string): boolean => PHOTO_SLUGS.has(slug);
  */
 const GALLERY_COUNTS: Record<string, number> = { 'sivi-ph-quardex': 1, 'sivi-ph-selenoid': 1, 'toz-ph-quardex': 1, 'toz-ph-selenoid': 1, 'sivi-klor-quardex': 1, 'sivi-klor-selenoid': 1, 'toz-klor-quardex': 2, 'toz-klor-selenoid': 1, 'multi-tablet-wtr': 2, 'yosun-onleyici-selenoid': 1, 'yosun-onleyici-poolbox': 2, 'yosun-onleyici-quardex': 1, 'yosun-giderici-quardex': 1, 'berraklastirici-quardex': 1, 'parlatici-selenoid': 1, 'parlatici-poolbox': 2, 'cokturucu-selenoid': 1, 'cokturucu-poolbox': 1, 'flok-tablet': 1, 'anti-iyon-quardex': 1, 'iyon-tutucu-selenoid': 1, 'iyon-topu': 1, 'hucre-temizleyici-selenoid': 1, 'bagli-klor-poolbox': 1, 'cevre-temizlik-quardex': 1, 'alkalinite-dusurucu-selenoid': 1, 'temizlik-asidi-selenoid': 1, 'led-23w': 2, 'led-32w': 1, 'led-9w': 1, 'kum-filtresi-600': 1, 'pompa-1hp': 1, 'isikli-fiskiye': 1, 'solar-fiskiye': 1, 'balina-hoparlor': 1, 'yuzen-hoparlor': 1, 'deniz-yildizi': 1, 'havuz-robotu': 1, 'havuz-supurgesi': 1, 'havuz-hortumu': 1, 'yuzey-kepcesi': 1, 'havuz-fircasi': 1, 'termometre': 1, 'dispanser': 1, 'test-insta': 1, 'test-damla': 1, 'test-set': 1, 'test-colorq': 1 };
 
+const GALLERY_OVERRIDES: Record<string, string[]> = {
+  'test-colorq': ['/products/test-colorq-dijital.webp'],
+};
+
 export const productGallery = (slug: string): string[] =>
+  GALLERY_OVERRIDES[slug] ??
   Array.from(
     { length: GALLERY_COUNTS[slug] ?? 0 },
     (_, i) => `/products/gallery/${slug}-${i + 1}.webp`,
