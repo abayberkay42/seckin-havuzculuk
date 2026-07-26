@@ -118,14 +118,16 @@ export function ProductBody({ lp }: { lp: LocalizedProduct }) {
         </div>
 
         <div className="grid grid-cols-2 gap-[clamp(1rem,2.5vw,2.5rem)] md:grid-cols-3">
-          {Array.from({ length: lp.galleryCount }, (_, i) => (
+          {(lp.gallery.length ? lp.gallery : lp.photo ? [lp.photo] : []).map((src, i) => (
             <figure
-              key={i}
+              key={src}
               data-reveal
-              className="group relative overflow-hidden rounded-[1.5rem] shadow-[0_26px_60px_-36px_rgba(26,23,18,0.4)] ring-1 ring-ink/5"
+              className={`group relative overflow-hidden rounded-[1.5rem] shadow-[0_26px_60px_-36px_rgba(26,23,18,0.4)] ring-1 ring-ink/5 ${
+                i === 0 ? 'col-span-2 md:col-span-2' : ''
+              }`}
             >
               <div className="transition-transform duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.05]">
-                <ProductShot src={lp.photo} alt={lp.name} className={i === 0 ? 'aspect-[4/3] md:col-span-2' : 'aspect-square'} />
+                <ProductShot src={src} alt={lp.name} className={i === 0 ? 'aspect-[4/3]' : 'aspect-square'} />
               </div>
               <Sheen tint="steel" />
             </figure>

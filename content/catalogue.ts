@@ -41,918 +41,2610 @@ export const categories: { key: CategoryKey; name: L; desc: L }[] = [
 ];
 
 export const products: Product[] = [
-  // ══ Havuz Kimyasalları ═══════════════════════════════════════
   {
-    slug: 'sivi-ph-dusurucu', category: 'chemicals', brand: 'Quardex · Selenoid',
-    name: { tr: 'Sıvı pH Düşürücü', en: 'Liquid pH Reducer' },
-    tagline: { tr: 'Dengeyi korur', en: 'Keeps the balance' },
-    description: { tr: 'Suyun pH değerini ideal aralığa çeken sıvı çözüm; cilde ve ekipmana dost.', en: 'A liquid that draws pH into its ideal range — gentle on skin and equipment.' },
-    specs: [
-      { label: { tr: 'Form', en: 'Form' }, value: 'Sıvı / Liquid' },
-      { label: { tr: 'Ambalaj', en: 'Pack' }, value: '20 L · 25 kg' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Quardex · Selenoid' },
+    "slug": "sivi-ph-quardex",
+    "category": "chemicals",
+    "brand": "Quardex",
+    "name": {
+      "tr": "Sıvı pH Düşürücü",
+      "en": "Liquid pH Reducer"
+    },
+    "tagline": {
+      "tr": "Dengeli su",
+      "en": "Balanced water"
+    },
+    "description": {
+      "tr": "Quardex sıvı pH düşürücü, havuz suyunun pH değerini ideal 7,2-7,6 aralığına çeker.",
+      "en": "Quardex liquid pH reducer brings pool water pH down into the ideal 7.2-7.6 range."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Kimyasal"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Quardex"
+      }
     ],
-    features: [
-      { tr: 'Hızlı çözünür', en: 'Fast acting' },
-      { tr: 'Dozaj pompasıyla uyumlu', en: 'Dosing-pump ready' },
+    "features": [
+      {
+        "tr": "Hızlı çözünür",
+        "en": "Fast dissolving"
+      },
+      {
+        "tr": "İdeal pH dengesi",
+        "en": "Ideal pH balance"
+      },
+      {
+        "tr": "Berrak, konforlu su",
+        "en": "Clear, comfortable water"
+      }
     ],
-    usage: { tr: 'Tüm havuz tipleri', en: 'All pool types' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Tüm havuz tiplerinde",
+      "en": "All pool types"
+    },
+    "galleryCount": 1
   },
   {
-    slug: 'toz-ph-dusurucu', category: 'chemicals', brand: 'Quardex · Selenoid',
-    name: { tr: 'Toz / Granül pH Düşürücü', en: 'Powder / Granular pH Reducer' },
-    tagline: { tr: 'Ölçülü ayar', en: 'Measured control' },
-    description: { tr: 'Granül formda, kolay dozlanan pH düşürücü; hassas su dengesi için.', en: 'An easy-to-dose granular pH reducer for precise water balance.' },
-    specs: [
-      { label: { tr: 'Form', en: 'Form' }, value: 'Granül / Granular' },
-      { label: { tr: 'Ambalaj', en: 'Pack' }, value: '25 kg' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Quardex · Selenoid' },
+    "slug": "sivi-ph-selenoid",
+    "category": "chemicals",
+    "brand": "Selenoid",
+    "name": {
+      "tr": "Sıvı pH Düşürücü",
+      "en": "Liquid pH Reducer"
+    },
+    "tagline": {
+      "tr": "Doğru pH",
+      "en": "Right pH"
+    },
+    "description": {
+      "tr": "Selenoid sıvı pH düşürücü, yüksek pH'ı düşürerek suyu 7,2-7,6 konfor aralığında tutar.",
+      "en": "Selenoid liquid pH reducer lowers high pH, keeping water within the 7.2-7.6 comfort range."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Kimyasal"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Selenoid"
+      },
+      {
+        "label": {
+          "tr": "Ambalaj",
+          "en": "Pack"
+        },
+        "value": "25 kg"
+      }
     ],
-    features: [
-      { tr: 'Kolay dozaj', en: 'Easy dosing' },
-      { tr: 'Kararlı sonuç', en: 'Stable result' },
+    "features": [
+      {
+        "tr": "Kolay dozajlama",
+        "en": "Easy dosing"
+      },
+      {
+        "tr": "Etkili pH kontrolü",
+        "en": "Effective pH control"
+      },
+      {
+        "tr": "25 kg endüstriyel ambalaj",
+        "en": "25 kg industrial pack"
+      }
     ],
-    usage: { tr: 'Manuel bakım', en: 'Manual upkeep' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Tüm havuz tiplerinde",
+      "en": "All pool types"
+    },
+    "galleryCount": 1
   },
   {
-    slug: 'sivi-klor', category: 'chemicals', brand: 'Quardex · Selenoid',
-    name: { tr: 'Sıvı Klor', en: 'Liquid Chlorine' },
-    tagline: { tr: 'Sürekli dezenfeksiyon', en: 'Continuous disinfection' },
-    description: { tr: 'Otomatik dozaj sistemleriyle uyumlu, güçlü sıvı sodyum hipoklorit.', en: 'A strong liquid sodium hypochlorite, ideal for automatic dosing systems.' },
-    specs: [
-      { label: { tr: 'Form', en: 'Form' }, value: 'Sıvı / Liquid' },
-      { label: { tr: 'Ambalaj', en: 'Pack' }, value: '20 L · 25 kg' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Quardex · Selenoid' },
+    "slug": "toz-ph-quardex",
+    "category": "chemicals",
+    "brand": "Quardex",
+    "name": {
+      "tr": "Toz pH Düşürücü",
+      "en": "Powder pH Reducer"
+    },
+    "tagline": {
+      "tr": "Kolay dozaj",
+      "en": "Easy dosing"
+    },
+    "description": {
+      "tr": "Quardex toz pH düşürücü, granül yapısıyla suyun pH değerini kontrollü şekilde ideal aralığa indirir.",
+      "en": "Quardex powder pH reducer lowers water pH into the ideal range in a controlled, granular form."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Kimyasal"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Quardex"
+      },
+      {
+        "label": {
+          "tr": "Ambalaj",
+          "en": "Pack"
+        },
+        "value": "25 kg"
+      }
     ],
-    features: [
-      { tr: 'Güçlü etki', en: 'Strong action' },
-      { tr: 'Dozaj sistemi uyumlu', en: 'Dosing-system ready' },
+    "features": [
+      {
+        "tr": "Granül yapı",
+        "en": "Granular form"
+      },
+      {
+        "tr": "Kontrollü dozajlama",
+        "en": "Controlled dosing"
+      },
+      {
+        "tr": "Dengeli pH",
+        "en": "Balanced pH"
+      }
     ],
-    usage: { tr: 'Otomatik dozaj', en: 'Automatic dosing' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Tüm havuz tiplerinde",
+      "en": "All pool types"
+    },
+    "galleryCount": 1
   },
   {
-    slug: 'granul-klor', category: 'chemicals', brand: 'Quardex',
-    name: { tr: 'Granül Klor %90', en: 'Granular Chlorine 90%' },
-    tagline: { tr: 'Hızlı müdahale', en: 'Rapid reset' },
-    description: { tr: 'Bulanıklık ve yoğun kirlilikte suyu hızla toparlayan yüksek oranlı granül klor.', en: 'A high-strength granular chlorine that recovers cloudy, heavily loaded water fast.' },
-    specs: [
-      { label: { tr: 'Form', en: 'Form' }, value: 'Granül / Granular' },
-      { label: { tr: 'Klor', en: 'Chlorine' }, value: '%90' },
-      { label: { tr: 'Ambalaj', en: 'Pack' }, value: '10 kg · 25 kg' },
+    "slug": "toz-ph-selenoid",
+    "category": "chemicals",
+    "brand": "Selenoid",
+    "name": {
+      "tr": "Toz pH Düşürücü",
+      "en": "Powder pH Reducer"
+    },
+    "tagline": {
+      "tr": "Net denge",
+      "en": "Clear balance"
+    },
+    "description": {
+      "tr": "Selenoid toz pH düşürücü, granül formuyla pH değerini 7,2-7,6 aralığına güvenli şekilde ayarlar.",
+      "en": "Selenoid powder pH reducer safely adjusts pH into the 7.2-7.6 range in granular form."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Kimyasal"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Selenoid"
+      },
+      {
+        "label": {
+          "tr": "Ambalaj",
+          "en": "Pack"
+        },
+        "value": "25 kg"
+      }
     ],
-    features: [
-      { tr: 'Anında çözünür', en: 'Instantly soluble' },
-      { tr: 'Şok dozlama', en: 'Shock dosing' },
+    "features": [
+      {
+        "tr": "Pratik toz form",
+        "en": "Practical powder form"
+      },
+      {
+        "tr": "Hassas pH ayarı",
+        "en": "Precise pH adjustment"
+      },
+      {
+        "tr": "25 kg ambalaj",
+        "en": "25 kg pack"
+      }
     ],
-    usage: { tr: 'Sezon açılışı & şok', en: 'Season opening & shock' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Tüm havuz tiplerinde",
+      "en": "All pool types"
+    },
+    "galleryCount": 1
   },
   {
-    slug: 'multi-tablet-klor', category: 'chemicals', brand: 'WTR',
-    name: { tr: 'Multi Tablet Klor', en: 'Multi-Tablet Chlorine' },
-    tagline: { tr: 'Yavaş, kararlı', en: 'Slow, steady' },
-    description: { tr: 'Uzun süreli dezenfeksiyon için yavaş çözünen çok fonksiyonlu tablet.', en: 'A slow-dissolving multifunction tablet for long-lasting disinfection.' },
-    specs: [
-      { label: { tr: 'Form', en: 'Form' }, value: 'Tablet' },
-      { label: { tr: 'Ambalaj', en: 'Pack' }, value: '10 kg · 25 kg' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'WTR' },
+    "slug": "sivi-klor-quardex",
+    "category": "chemicals",
+    "brand": "Quardex",
+    "name": {
+      "tr": "Sıvı Klor",
+      "en": "Liquid Chlorine"
+    },
+    "tagline": {
+      "tr": "Berrak dezenfeksiyon",
+      "en": "Clear disinfection"
+    },
+    "description": {
+      "tr": "Quardex sıvı klor (sodyum hipoklorit), havuz suyunu etkili şekilde dezenfekte ederek mikroorganizmaları giderir.",
+      "en": "Quardex liquid chlorine (sodium hypochlorite) effectively disinfects pool water, eliminating microorganisms."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Kimyasal"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Quardex"
+      },
+      {
+        "label": {
+          "tr": "Ambalaj",
+          "en": "Pack"
+        },
+        "value": "25 kg"
+      }
     ],
-    features: [
-      { tr: 'Yavaş çözünür', en: 'Slow dissolving' },
-      { tr: 'Çok fonksiyonlu', en: 'Multifunction' },
+    "features": [
+      {
+        "tr": "Hızlı dezenfeksiyon",
+        "en": "Fast disinfection"
+      },
+      {
+        "tr": "Sodyum hipoklorit bazlı",
+        "en": "Sodium hypochlorite based"
+      },
+      {
+        "tr": "Sürekli klor koruması",
+        "en": "Continuous chlorine protection"
+      }
     ],
-    usage: { tr: 'Haftalık bakım', en: 'Weekly upkeep' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Havuz dezenfeksiyonunda",
+      "en": "Pool disinfection"
+    },
+    "galleryCount": 1
   },
   {
-    slug: 'trikloro-tablet', category: 'chemicals', brand: 'Selenoid',
-    name: { tr: 'Trikloro Tablet', en: 'Trichloro Tablet' },
-    tagline: { tr: 'Stabil klor', en: 'Stabilised chlorine' },
-    description: { tr: 'Güneşe karşı stabilizatörlü, uzun ömürlü triklor tablet.', en: 'A stabilised, long-lasting trichlor tablet that resists sunlight.' },
-    specs: [
-      { label: { tr: 'Form', en: 'Form' }, value: 'Tablet' },
-      { label: { tr: 'Ambalaj', en: 'Pack' }, value: '25 kg' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Selenoid' },
+    "slug": "sivi-klor-selenoid",
+    "category": "chemicals",
+    "brand": "Selenoid",
+    "name": {
+      "tr": "Sıvı Klor",
+      "en": "Liquid Chlorine"
+    },
+    "tagline": {
+      "tr": "Güvenli su",
+      "en": "Safe water"
+    },
+    "description": {
+      "tr": "Selenoid sıvı klor, havuz suyunu dezenfekte ederek serbest klor seviyesini 1-3 ppm aralığında tutar.",
+      "en": "Selenoid liquid chlorine disinfects pool water, maintaining free chlorine within the 1-3 ppm range."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Kimyasal"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Selenoid"
+      },
+      {
+        "label": {
+          "tr": "Ambalaj",
+          "en": "Pack"
+        },
+        "value": "25 kg"
+      }
     ],
-    features: [
-      { tr: 'Stabilizatörlü', en: 'Stabilised' },
-      { tr: 'Uzun ömür', en: 'Long-lasting' },
+    "features": [
+      {
+        "tr": "Etkili sanitasyon",
+        "en": "Effective sanitation"
+      },
+      {
+        "tr": "Kolay uygulama",
+        "en": "Easy application"
+      },
+      {
+        "tr": "25 kg ambalaj",
+        "en": "25 kg pack"
+      }
     ],
-    usage: { tr: 'Skimmer / dozajlayıcı', en: 'Skimmer or feeder' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Havuz dezenfeksiyonunda",
+      "en": "Pool disinfection"
+    },
+    "galleryCount": 1
   },
   {
-    slug: 'yosun-onleyici', category: 'chemicals', brand: 'Quardex · Selenoid · Poolbox',
-    name: { tr: 'Yosun Önleyici', en: 'Algaecide' },
-    tagline: { tr: 'Berraklığı korur', en: 'Protects clarity' },
-    description: { tr: 'Yosun oluşumunu baştan engelleyen, sıvı ve toz seçenekli koruyucu.', en: 'A preventive treatment that stops algae before it forms — liquid or powder.' },
-    specs: [
-      { label: { tr: 'Form', en: 'Form' }, value: 'Sıvı · Toz / Liquid · Powder' },
-      { label: { tr: 'Ambalaj', en: 'Pack' }, value: '10 kg / 10 L' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Quardex · Selenoid · Poolbox' },
+    "slug": "toz-klor-quardex",
+    "category": "chemicals",
+    "brand": "Quardex",
+    "name": {
+      "tr": "Granül Klor %90",
+      "en": "90% Granular Chlorine"
+    },
+    "tagline": {
+      "tr": "Hızlı şok",
+      "en": "Fast shock"
+    },
+    "description": {
+      "tr": "Quardex %90 granül klor, yüksek etkinliğiyle hızlı dozaj ve şok klorlama için ideal çözümdür.",
+      "en": "Quardex 90% granular chlorine is an ideal solution for fast dosing and shock chlorination."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Kimyasal"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Quardex"
+      },
+      {
+        "label": {
+          "tr": "Ambalaj",
+          "en": "Pack"
+        },
+        "value": "10 kg · 25 kg"
+      }
     ],
-    features: [
-      { tr: 'Önleyici etki', en: 'Preventive action' },
-      { tr: 'Köpürmez formül', en: 'Non-foaming' },
+    "features": [
+      {
+        "tr": "%90 yüksek etkinlik",
+        "en": "90% high strength"
+      },
+      {
+        "tr": "Şok klorlamaya uygun",
+        "en": "Ideal for shock"
+      },
+      {
+        "tr": "10 kg · 25 kg seçeneği",
+        "en": "10 kg · 25 kg options"
+      }
     ],
-    usage: { tr: 'Düzenli bakım', en: 'Regular upkeep' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Şok klorlama ve dozajda",
+      "en": "Shock chlorination and dosing"
+    },
+    "galleryCount": 2
   },
   {
-    slug: 'yosun-giderici', category: 'chemicals', brand: 'Quardex',
-    name: { tr: 'Yosun Giderici', en: 'Algae Remover' },
-    tagline: { tr: 'Hızlı arındırma', en: 'Fast recovery' },
-    description: { tr: 'Yerleşmiş yosunu hızla çözen güçlü giderici; şok bakımı tamamlar.', en: 'A strong remover that clears established algae fast, completing a shock treatment.' },
-    specs: [
-      { label: { tr: 'Form', en: 'Form' }, value: 'Sıvı / Liquid' },
-      { label: { tr: 'Ambalaj', en: 'Pack' }, value: '10 kg' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Quardex' },
+    "slug": "toz-klor-selenoid",
+    "category": "chemicals",
+    "brand": "Selenoid",
+    "name": {
+      "tr": "Toz Klor",
+      "en": "Granular Chlorine"
+    },
+    "tagline": {
+      "tr": "Etkili koruma",
+      "en": "Effective protection"
+    },
+    "description": {
+      "tr": "Selenoid granül klor, havuz suyunun dezenfeksiyonu ve şok klorlama için güçlü ve pratik bir çözümdür.",
+      "en": "Selenoid granular chlorine is a strong, practical solution for pool disinfection and shock treatment."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Kimyasal"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Selenoid"
+      },
+      {
+        "label": {
+          "tr": "Ambalaj",
+          "en": "Pack"
+        },
+        "value": "25 kg"
+      }
     ],
-    features: [
-      { tr: 'Güçlü etki', en: 'Strong action' },
-      { tr: 'Şokla uyumlu', en: 'Pairs with shock' },
+    "features": [
+      {
+        "tr": "Güçlü dezenfeksiyon",
+        "en": "Strong disinfection"
+      },
+      {
+        "tr": "Pratik granül form",
+        "en": "Practical granular form"
+      },
+      {
+        "tr": "25 kg ambalaj",
+        "en": "25 kg pack"
+      }
     ],
-    usage: { tr: 'Yosun müdahalesi', en: 'Algae treatment' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Havuz dezenfeksiyonunda",
+      "en": "Pool disinfection"
+    },
+    "galleryCount": 1
   },
   {
-    slug: 'berraklastirici', category: 'chemicals', brand: 'Quardex · Selenoid · Poolbox',
-    name: { tr: 'Berraklaştırıcı & Parlatıcı', en: 'Clarifier & Brightener' },
-    tagline: { tr: 'Kristal berraklık', en: 'Crystal clarity' },
-    description: { tr: 'Mikro partikülleri toplayarak suya cam gibi bir berraklık kazandırır.', en: 'Gathers micro-particles to give the water a glass-like clarity.' },
-    specs: [
-      { label: { tr: 'Form', en: 'Form' }, value: 'Sıvı · Toz / Liquid · Powder' },
-      { label: { tr: 'Ambalaj', en: 'Pack' }, value: '10 kg / 10 L' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Quardex · Selenoid · Poolbox' },
+    "slug": "multi-tablet-wtr",
+    "category": "chemicals",
+    "brand": "WTR",
+    "name": {
+      "tr": "Multi Tablet Klor",
+      "en": "Multifunction Chlorine Tablets"
+    },
+    "tagline": {
+      "tr": "Tek üründe koruma",
+      "en": "All-in-one care"
+    },
+    "description": {
+      "tr": "WTR çok fonksiyonlu klor tabletleri; yavaş salınımlı klorla dezenfekte eder, suyu berraklaştırır ve yosun oluşumunu önler.",
+      "en": "WTR multifunction chlorine tablets disinfect with slow-release chlorine while clarifying the water and preventing algae growth."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Kimyasal"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "WTR"
+      },
+      {
+        "label": {
+          "tr": "Ambalaj",
+          "en": "Pack"
+        },
+        "value": "10 kg · 25 kg"
+      }
     ],
-    features: [
-      { tr: 'Mikro partikül toplar', en: 'Traps micro-particles' },
-      { tr: 'Filtre verimini artırır', en: 'Boosts filter efficiency' },
+    "features": [
+      {
+        "tr": "Yavaş salınımlı klor",
+        "en": "Slow-release chlorine"
+      },
+      {
+        "tr": "Berraklaştırıcı etki",
+        "en": "Clarifying effect"
+      },
+      {
+        "tr": "Yosun oluşumunu önler",
+        "en": "Prevents algae"
+      }
     ],
-    usage: { tr: 'Haftalık parlatma', en: 'Weekly polish' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Tüm havuz tiplerinde",
+      "en": "All pool types"
+    },
+    "galleryCount": 2
   },
   {
-    slug: 'cokturucu-flok', category: 'chemicals', brand: 'Selenoid · WTR · Poolbox',
-    name: { tr: 'Çöktürücü (Flok)', en: 'Flocculant' },
-    tagline: { tr: 'Dibe indirir', en: 'Settles it down' },
-    description: { tr: 'Bulanıklığı topaklayıp dibe çöktüren; tablet ve toz seçenekli flokülant.', en: 'Clumps cloudiness and settles it to the floor — tablet or powder.' },
-    specs: [
-      { label: { tr: 'Form', en: 'Form' }, value: 'Tablet · Toz / Tablet · Powder' },
-      { label: { tr: 'Ambalaj', en: 'Pack' }, value: '1600 gr · 10–11 kg' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Selenoid · WTR · Poolbox' },
+    "slug": "yosun-onleyici-selenoid",
+    "category": "chemicals",
+    "brand": "Selenoid",
+    "name": {
+      "tr": "Yosun Önleyici",
+      "en": "Algaecide"
+    },
+    "tagline": {
+      "tr": "Yosunsuz su",
+      "en": "Algae-free water"
+    },
+    "description": {
+      "tr": "Selenoid yosun önleyici, düzenli dozlamayla havuz suyunda yosun oluşumunu ve gelişimini engeller.",
+      "en": "Selenoid algaecide prevents the formation and growth of algae in pool water with regular dosing."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Kimyasal"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Selenoid"
+      },
+      {
+        "label": {
+          "tr": "Ambalaj",
+          "en": "Pack"
+        },
+        "value": "10 kg"
+      }
     ],
-    features: [
-      { tr: 'Güçlü çöktürme', en: 'Strong settling' },
-      { tr: 'Vakumla temizlenir', en: 'Vacuum away' },
+    "features": [
+      {
+        "tr": "Yosun oluşumunu önler",
+        "en": "Prevents algae growth"
+      },
+      {
+        "tr": "Berrak su korur",
+        "en": "Keeps water clear"
+      },
+      {
+        "tr": "Düzenli koruma",
+        "en": "Ongoing protection"
+      }
     ],
-    usage: { tr: 'Ağır bulanıklık', en: 'Heavy cloudiness' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Tüm havuz tiplerinde",
+      "en": "All pool types"
+    },
+    "galleryCount": 1
   },
   {
-    slug: 'anti-iyon', category: 'chemicals', brand: 'Quardex · Poolbox',
-    name: { tr: 'Anti İyon & İyon Topu', en: 'Anti-Ion & Ion Ball' },
-    tagline: { tr: 'Metale karşı', en: 'Guards against metals' },
-    description: { tr: 'Metal iyonlarını bağlayarak leke ve renk değişimini önler.', en: 'Binds metal ions to prevent staining and discolouration.' },
-    specs: [
-      { label: { tr: 'Form', en: 'Form' }, value: 'Sıvı · Top / Liquid · Ball' },
-      { label: { tr: 'Ambalaj', en: 'Pack' }, value: '200 gr · 400 gr · 10 kg' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Quardex · Poolbox' },
+    "slug": "yosun-onleyici-poolbox",
+    "category": "chemicals",
+    "brand": "Poolbox",
+    "name": {
+      "tr": "Yosun Önleyici",
+      "en": "Algaecide"
+    },
+    "tagline": {
+      "tr": "Yosuna karşı",
+      "en": "Against algae"
+    },
+    "description": {
+      "tr": "Poolbox yosun önleyici, konsantre ve kutulu formlarıyla havuz suyunda yosun oluşumunu etkili biçimde engeller.",
+      "en": "Poolbox algaecide effectively prevents algae growth in pool water, available in concentrate and boxed forms."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Kimyasal"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Poolbox"
+      },
+      {
+        "label": {
+          "tr": "Ambalaj",
+          "en": "Pack"
+        },
+        "value": "Konsantre · Kutu"
+      }
     ],
-    features: [
-      { tr: 'Metal iyonu bağlar', en: 'Sequesters metals' },
-      { tr: 'Leke önler', en: 'Prevents staining' },
+    "features": [
+      {
+        "tr": "Konsantre formül",
+        "en": "Concentrated formula"
+      },
+      {
+        "tr": "Yosun oluşumunu önler",
+        "en": "Prevents algae"
+      },
+      {
+        "tr": "Pratik kullanım",
+        "en": "Easy to use"
+      }
     ],
-    usage: { tr: 'Sert / kuyu suyu', en: 'Hard / well water' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Tüm havuz tiplerinde",
+      "en": "All pool types"
+    },
+    "galleryCount": 2
   },
   {
-    slug: 'kompleks-bakim', category: 'chemicals', brand: 'Selenoid',
-    name: { tr: 'Kompleks Bakım', en: 'Complex Care' },
-    tagline: { tr: 'Çok yönlü koruma', en: 'All-in-one care' },
-    description: { tr: 'Dezenfeksiyon, berraklık ve yosun korumasını tek üründe birleştirir.', en: 'Combines disinfection, clarity and algae protection in one product.' },
-    specs: [
-      { label: { tr: 'Form', en: 'Form' }, value: 'Sıvı / Liquid' },
-      { label: { tr: 'Ambalaj', en: 'Pack' }, value: '10 L · 10,5 kg' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Selenoid' },
+    "slug": "yosun-onleyici-quardex",
+    "category": "chemicals",
+    "brand": "Quardex",
+    "name": {
+      "tr": "Yosun Önleyici",
+      "en": "Algaecide"
+    },
+    "tagline": {
+      "tr": "Yosunsuz su",
+      "en": "Algae-free water"
+    },
+    "description": {
+      "tr": "Quardex yosun önleyici, düzenli dozlamayla havuz suyunda yosun oluşumunu önleyerek berraklığı korur.",
+      "en": "Quardex algaecide prevents algae formation in pool water with regular dosing, maintaining clarity."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Kimyasal"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Quardex"
+      },
+      {
+        "label": {
+          "tr": "Ambalaj",
+          "en": "Pack"
+        },
+        "value": "10 kg"
+      }
     ],
-    features: [
-      { tr: 'Çok fonksiyonlu', en: 'Multifunction' },
-      { tr: 'Pratik bakım', en: 'Simple upkeep' },
+    "features": [
+      {
+        "tr": "Yosun oluşumunu önler",
+        "en": "Prevents algae growth"
+      },
+      {
+        "tr": "Berrak su korur",
+        "en": "Keeps water clear"
+      },
+      {
+        "tr": "Düzenli koruma",
+        "en": "Ongoing protection"
+      }
     ],
-    usage: { tr: 'Genel bakım', en: 'General care' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Tüm havuz tiplerinde",
+      "en": "All pool types"
+    },
+    "galleryCount": 1
   },
   {
-    slug: 'hucre-temizleyici', category: 'chemicals', brand: 'Selenoid',
-    name: { tr: 'Hücre Temizleyici', en: 'Cell Cleaner' },
-    tagline: { tr: 'Sistemi korur', en: 'Protects the system' },
-    description: { tr: 'Tuz klorinatör hücrelerindeki kireç ve tortuyu çözen bakım ürünü.', en: 'Dissolves scale and deposits in salt-chlorinator cells.' },
-    specs: [
-      { label: { tr: 'Form', en: 'Form' }, value: 'Sıvı / Liquid' },
-      { label: { tr: 'Ambalaj', en: 'Pack' }, value: '10 kg' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Selenoid' },
+    "slug": "yosun-giderici-quardex",
+    "category": "chemicals",
+    "brand": "Quardex",
+    "name": {
+      "tr": "Yosun Giderici",
+      "en": "Algae Remover"
+    },
+    "tagline": {
+      "tr": "Yosunu temizler",
+      "en": "Clears algae"
+    },
+    "description": {
+      "tr": "Quardex yosun giderici, halihazırda oluşmuş yosun tabakalarını çözerek havuz suyunu hızla temizler.",
+      "en": "Quardex algae remover dissolves existing algae blooms to rapidly clean up pool water."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Kimyasal"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Quardex"
+      },
+      {
+        "label": {
+          "tr": "Ambalaj",
+          "en": "Pack"
+        },
+        "value": "10 kg"
+      }
     ],
-    features: [
-      { tr: 'Kireç çözer', en: 'Descales' },
-      { tr: 'Hücre ömrünü uzatır', en: 'Extends cell life' },
+    "features": [
+      {
+        "tr": "Mevcut yosunu giderir",
+        "en": "Removes existing algae"
+      },
+      {
+        "tr": "Hızlı etki",
+        "en": "Fast acting"
+      },
+      {
+        "tr": "Suyu berraklaştırır",
+        "en": "Restores clarity"
+      }
     ],
-    usage: { tr: 'Tuz sistemleri', en: 'Salt systems' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Yosunlanmış havuzlarda",
+      "en": "Algae-affected pools"
+    },
+    "galleryCount": 1
   },
   {
-    slug: 'bagli-klor', category: 'chemicals', brand: 'Poolbox',
-    name: { tr: 'Bağlı Klor', en: 'Combined Chlorine' },
-    tagline: { tr: 'Kararlı koruma', en: 'Stable protection' },
-    description: { tr: 'Stabilizatörle bağlı, güneşe dayanıklı ve uzun etkili klor.', en: 'A stabiliser-bound chlorine that resists sunlight for lasting protection.' },
-    specs: [
-      { label: { tr: 'Form', en: 'Form' }, value: 'Granül / Granular' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Poolbox' },
-      { label: { tr: 'Etki', en: 'Action' }, value: 'Uzun / Lasting' },
+    "slug": "berraklastirici-quardex",
+    "category": "chemicals",
+    "brand": "Quardex",
+    "name": {
+      "tr": "Berraklaştırıcı",
+      "en": "Clarifier"
+    },
+    "tagline": {
+      "tr": "Berrak su",
+      "en": "Clear water"
+    },
+    "description": {
+      "tr": "Quardex berraklaştırıcı, ince partikülleri kümeleştirerek filtrede tutulmasını sağlar ve bulanık suyu berraklaştırır.",
+      "en": "Quardex clarifier coagulates fine particles for filtration, clearing cloudy pool water."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Kimyasal"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Quardex"
+      },
+      {
+        "label": {
+          "tr": "Ambalaj",
+          "en": "Pack"
+        },
+        "value": "10 kg"
+      }
     ],
-    features: [
-      { tr: 'Güneşe dayanıklı', en: 'UV-resistant' },
-      { tr: 'Uzun etki', en: 'Lasting action' },
+    "features": [
+      {
+        "tr": "Bulanıklığı giderir",
+        "en": "Removes cloudiness"
+      },
+      {
+        "tr": "Pırıl pırıl su",
+        "en": "Sparkling water"
+      },
+      {
+        "tr": "Filtre verimini artırır",
+        "en": "Boosts filtration"
+      }
     ],
-    usage: { tr: 'Açık havuz', en: 'Outdoor pools' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Tüm havuz tiplerinde",
+      "en": "All pool types"
+    },
+    "galleryCount": 1
   },
   {
-    slug: 'cevre-temizlik', category: 'chemicals', brand: 'Quardex',
-    name: { tr: 'Ayak & Çevre Temizlik', en: 'Foot & Surround Cleaner' },
-    tagline: { tr: 'Temiz çevre', en: 'A clean surround' },
-    description: { tr: 'Ayak yıkama ve havuz çevresi için hijyen sağlayan temizlik ürünü.', en: 'A hygiene cleaner for foot baths and the poolside surround.' },
-    specs: [
-      { label: { tr: 'Form', en: 'Form' }, value: 'Sıvı / Liquid' },
-      { label: { tr: 'Ambalaj', en: 'Pack' }, value: '10 kg' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Quardex' },
+    "slug": "parlatici-selenoid",
+    "category": "chemicals",
+    "brand": "Selenoid",
+    "name": {
+      "tr": "Parlatıcı",
+      "en": "Clarifier"
+    },
+    "tagline": {
+      "tr": "Pırıltılı su",
+      "en": "Brilliant water"
+    },
+    "description": {
+      "tr": "Selenoid parlatıcı, suda asılı ince partikülleri toplayarak havuza berrak ve pırıltılı bir görünüm kazandırır.",
+      "en": "Selenoid clarifier gathers fine suspended particles to give the pool a clear, brilliant appearance."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Kimyasal"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Selenoid"
+      },
+      {
+        "label": {
+          "tr": "Ambalaj",
+          "en": "Pack"
+        },
+        "value": "10 kg"
+      }
     ],
-    features: [
-      { tr: 'Hijyenik', en: 'Hygienic' },
-      { tr: 'Çevre dostu doz', en: 'Gentle dosing' },
+    "features": [
+      {
+        "tr": "Berrak, parlak su",
+        "en": "Clear, bright water"
+      },
+      {
+        "tr": "İnce partikülleri toplar",
+        "en": "Captures fine particles"
+      },
+      {
+        "tr": "Filtre verimini artırır",
+        "en": "Boosts filtration"
+      }
     ],
-    usage: { tr: 'Ayak yıkama & çevre', en: 'Foot bath & surround' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Tüm havuz tiplerinde",
+      "en": "All pool types"
+    },
+    "galleryCount": 1
   },
   {
-    slug: 'alkalinite-dusurucu', category: 'chemicals', brand: 'Selenoid',
-    name: { tr: 'Alkalinite Düşürücü', en: 'Alkalinity Reducer' },
-    tagline: { tr: 'pH’ı stabilize eder', en: 'Stabilises pH' },
-    description: { tr: 'Toplam alkaliniteyi düşürerek pH dengesini kararlı ve kalıcı kılar.', en: 'Lowers total alkalinity to keep the pH balance stable and lasting.' },
-    specs: [
-      { label: { tr: 'Form', en: 'Form' }, value: 'Sıvı / Liquid' },
-      { label: { tr: 'Ambalaj', en: 'Pack' }, value: '20 L · 25 kg' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Selenoid' },
+    "slug": "parlatici-poolbox",
+    "category": "chemicals",
+    "brand": "Poolbox",
+    "name": {
+      "tr": "Parlatıcı",
+      "en": "Clarifier"
+    },
+    "tagline": {
+      "tr": "Pırıltılı su",
+      "en": "Brilliant water"
+    },
+    "description": {
+      "tr": "Poolbox parlatıcı, konsantre ve kutulu formlarıyla bulanık suyu berraklaştırarak havuza pırıltılı bir görünüm verir.",
+      "en": "Poolbox clarifier clears cloudy water for a brilliant pool finish, available in concentrate and boxed forms."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Kimyasal"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Poolbox"
+      },
+      {
+        "label": {
+          "tr": "Ambalaj",
+          "en": "Pack"
+        },
+        "value": "Konsantre · Kutu"
+      }
     ],
-    features: [
-      { tr: 'pH salınımını azaltır', en: 'Reduces pH swing' },
-      { tr: 'Kararlı denge', en: 'Stable balance' },
+    "features": [
+      {
+        "tr": "Konsantre formül",
+        "en": "Concentrated formula"
+      },
+      {
+        "tr": "Bulanıklığı giderir",
+        "en": "Removes cloudiness"
+      },
+      {
+        "tr": "Pırıl pırıl su",
+        "en": "Sparkling water"
+      }
     ],
-    usage: { tr: 'Yüksek alkalinite', en: 'High alkalinity' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Tüm havuz tiplerinde",
+      "en": "All pool types"
+    },
+    "galleryCount": 2
   },
   {
-    slug: 'temizlik-asidi', category: 'chemicals', brand: 'Selenoid',
-    name: { tr: 'Temizlik Asidi', en: 'Descaling Acid' },
-    tagline: { tr: 'Kireç ve tortuya karşı', en: 'Against scale' },
-    description: { tr: 'Yüzey, ekipman ve su hattındaki kireç ile tortuyu çözen güçlü temizlik asidi.', en: 'A strong acid that dissolves scale and deposits on surfaces, equipment and the waterline.' },
-    specs: [
-      { label: { tr: 'Form', en: 'Form' }, value: 'Sıvı / Liquid' },
-      { label: { tr: 'Ambalaj', en: 'Pack' }, value: '25 kg' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Selenoid' },
+    "slug": "cokturucu-selenoid",
+    "category": "chemicals",
+    "brand": "Selenoid",
+    "name": {
+      "tr": "Çöktürücü (Flok)",
+      "en": "Liquid Flocculant"
+    },
+    "tagline": {
+      "tr": "Berrak su",
+      "en": "Crystal clarity"
+    },
+    "description": {
+      "tr": "Selenoid çöktürücü, suda asılı ince partikülleri bir araya getirerek havuz tabanına çökeltir ve suyu berraklaştırır.",
+      "en": "Selenoid flocculant binds fine suspended particles into settling clumps, clearing cloudy pool water to the floor."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Kimyasal"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Selenoid"
+      },
+      {
+        "label": {
+          "tr": "Ambalaj",
+          "en": "Pack"
+        },
+        "value": "10 kg"
+      }
     ],
-    features: [
-      { tr: 'Kireç çözer', en: 'Descales' },
-      { tr: 'Su hattı temizliği', en: 'Waterline cleaning' },
+    "features": [
+      {
+        "tr": "İnce partikülleri çöktürür",
+        "en": "Settles fine particles"
+      },
+      {
+        "tr": "Bulanıklığı giderir",
+        "en": "Removes cloudiness"
+      },
+      {
+        "tr": "Kolay süpürülür",
+        "en": "Easy to vacuum"
+      }
     ],
-    usage: { tr: 'Sezon bakımı', en: 'Seasonal service' },
-    galleryCount: 2,
-  },
-
-  // ══ Tesisat & Bağlantı (Pimtaş) ══════════════════════════════
-  {
-    slug: 'pvc-boru', category: 'plumbing', brand: 'Pimtaş',
-    name: { tr: 'PVC Basınçlı Boru (10 Atü)', en: 'PVC Pressure Pipe (10 Atm)' },
-    tagline: { tr: 'Sağlam altyapı', en: 'A solid backbone' },
-    description: { tr: 'Havuz tesisatının omurgası; 10 atü basınca dayanıklı sert PVC boru.', en: 'The backbone of pool plumbing — rigid PVC pipe rated to 10 atmospheres.' },
-    specs: [
-      { label: { tr: 'Çap', en: 'Diameter' }, value: 'Ø 32 · Ø 50 · Ø 63' },
-      { label: { tr: 'Basınç', en: 'Pressure' }, value: '10 Atü / Atm' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Pimtaş' },
-    ],
-    features: [
-      { tr: 'Yüksek basınç dayanımı', en: 'High pressure rating' },
-      { tr: 'Uzun ömürlü', en: 'Long service life' },
-    ],
-    usage: { tr: 'Tesisat hattı', en: 'Plumbing lines' },
-    galleryCount: 2,
-  },
-  {
-    slug: 'pvc-dirsek', category: 'plumbing', brand: 'Pimtaş',
-    name: { tr: 'PVC Dirsek (90° / 45°)', en: 'PVC Elbow (90° / 45°)' },
-    tagline: { tr: 'Akışı yönlendirir', en: 'Turns the flow' },
-    description: { tr: 'Hattı sızdırmadan yönlendiren yapıştırmalı 90° ve 45° PVC dirsekler.', en: 'Solvent-weld 90° and 45° elbows that turn the line without leaks.' },
-    specs: [
-      { label: { tr: 'Çap', en: 'Diameter' }, value: 'Ø 50 · Ø 63' },
-      { label: { tr: 'Açı', en: 'Angle' }, value: '90° · 45°' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Pimtaş' },
-    ],
-    features: [
-      { tr: 'Sızdırmaz birleşim', en: 'Leak-free joint' },
-      { tr: 'Yapıştırmalı', en: 'Solvent weld' },
-    ],
-    usage: { tr: 'Hat dönüşleri', en: 'Line turns' },
-    galleryCount: 2,
-  },
-  {
-    slug: 'pvc-te', category: 'plumbing', brand: 'Pimtaş',
-    name: { tr: 'PVC Te & Kruva Te', en: 'PVC Tee & Cross Tee' },
-    tagline: { tr: 'Hattı böler', en: 'Splits the line' },
-    description: { tr: 'Hattı ikiye ya da çapraz dört yöne ayıran yapıştırmalı te bağlantılar.', en: 'Solvent-weld tees that split the line in two or across four ways.' },
-    specs: [
-      { label: { tr: 'Çap', en: 'Diameter' }, value: 'Ø 50 · Ø 63' },
-      { label: { tr: 'Tip', en: 'Type' }, value: 'Te · Kruva Te' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Pimtaş' },
-    ],
-    features: [
-      { tr: 'Çok yönlü dağıtım', en: 'Multi-way branch' },
-      { tr: 'Sağlam gövde', en: 'Sturdy body' },
-    ],
-    usage: { tr: 'Hat dağıtımı', en: 'Line distribution' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Bulanık havuz sularında",
+      "en": "Cloudy pool water"
+    },
+    "galleryCount": 1
   },
   {
-    slug: 'pvc-manson', category: 'plumbing', brand: 'Pimtaş',
-    name: { tr: 'PVC Manşon', en: 'PVC Coupling' },
-    tagline: { tr: 'Boruyu birleştirir', en: 'Joins the pipe' },
-    description: { tr: 'İki boruyu düz ve sızdırmaz biçimde ekleyen yapıştırmalı manşon.', en: 'A solvent-weld coupling that joins two pipes straight and tight.' },
-    specs: [
-      { label: { tr: 'Çap', en: 'Diameter' }, value: 'Ø 50 · Ø 63' },
-      { label: { tr: 'Tip', en: 'Type' }, value: 'Yapıştırmalı' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Pimtaş' },
+    "slug": "cokturucu-poolbox",
+    "category": "chemicals",
+    "brand": "Poolbox",
+    "name": {
+      "tr": "Çöktürücü (Flok)",
+      "en": "Liquid Flocculant"
+    },
+    "tagline": {
+      "tr": "Duru su",
+      "en": "Clear water"
+    },
+    "description": {
+      "tr": "Poolbox çöktürücü, asılı kalan mikro kirlilikleri topaklayıp tabana indirir ve bulanık havuz suyunu berraklaştırır.",
+      "en": "Poolbox flocculant clumps suspended micro-particles and sinks them to the floor, restoring clear pool water."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Kimyasal"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Poolbox"
+      },
+      {
+        "label": {
+          "tr": "Ambalaj",
+          "en": "Pack"
+        },
+        "value": "Kutu"
+      }
     ],
-    features: [
-      { tr: 'Düz ekleme', en: 'Straight join' },
-      { tr: 'Sızdırmaz', en: 'Leak-free' },
+    "features": [
+      {
+        "tr": "Hızlı berraklaştırma",
+        "en": "Fast clarifying"
+      },
+      {
+        "tr": "Mikro kirliliği toplar",
+        "en": "Gathers micro-debris"
+      },
+      {
+        "tr": "Pratik kutulu form",
+        "en": "Practical boxed form"
+      }
     ],
-    usage: { tr: 'Boru ekleme', en: 'Pipe joins' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Bulanık havuz sularında",
+      "en": "Cloudy pool water"
+    },
+    "galleryCount": 1
   },
   {
-    slug: 'pvc-kortapa', category: 'plumbing', brand: 'Pimtaş',
-    name: { tr: 'Kör Tapa', en: 'End Cap' },
-    tagline: { tr: 'Hattı kapatır', en: 'Seals the line' },
-    description: { tr: 'Hat ucunu kalıcı ve sızdırmaz biçimde kapatan yapıştırmalı tapa.', en: 'A solvent-weld cap that seals a line end permanently and tightly.' },
-    specs: [
-      { label: { tr: 'Çap', en: 'Diameter' }, value: 'Ø 50 · Ø 63' },
-      { label: { tr: 'Tip', en: 'Type' }, value: 'Kör Tapa' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Pimtaş' },
+    "slug": "flok-tablet",
+    "category": "chemicals",
+    "brand": "Poolbox",
+    "name": {
+      "tr": "Flok Tablet",
+      "en": "Flocculant Tablet"
+    },
+    "tagline": {
+      "tr": "Kolay dozaj",
+      "en": "Effortless dosing"
+    },
+    "description": {
+      "tr": "Poolbox flok tablet, skimmer sepetine yerleştirilerek yavaşça çözünür ve suyu sürekli berrak tutan pratik çöktürücüdür.",
+      "en": "Poolbox flocculant tablet dissolves slowly in the skimmer basket, continuously clarifying water with effortless dosing."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Kimyasal"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Poolbox"
+      }
     ],
-    features: [
-      { tr: 'Tam sızdırmazlık', en: 'Full seal' },
-      { tr: 'Kolay montaj', en: 'Easy fit' },
+    "features": [
+      {
+        "tr": "Skimmerde yavaş çözünür",
+        "en": "Slow skimmer release"
+      },
+      {
+        "tr": "Sürekli berraklık",
+        "en": "Continuous clarity"
+      },
+      {
+        "tr": "Ölçüsüz kullanım",
+        "en": "No measuring"
+      }
     ],
-    usage: { tr: 'Hat sonu', en: 'Line ends' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Skimmer sepetinde",
+      "en": "In skimmer basket"
+    },
+    "galleryCount": 1
   },
   {
-    slug: 'kuresel-vana', category: 'plumbing', brand: 'Pimtaş',
-    name: { tr: 'PVC Küresel Vana', en: 'PVC Ball Valve' },
-    tagline: { tr: 'Akışı keser', en: 'Shuts the flow' },
-    description: { tr: 'Çeyrek turla tam açma-kapama sağlayan dayanıklı PVC küresel vana.', en: 'A durable PVC ball valve giving full on-off in a quarter turn.' },
-    specs: [
-      { label: { tr: 'Çap', en: 'Diameter' }, value: 'Ø 32 · Ø 50 · Ø 63' },
-      { label: { tr: 'Tip', en: 'Type' }, value: 'Küresel / Ball' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Pimtaş' },
+    "slug": "anti-iyon-quardex",
+    "category": "chemicals",
+    "brand": "Quardex",
+    "name": {
+      "tr": "Anti İyon",
+      "en": "Metal Sequestrant"
+    },
+    "tagline": {
+      "tr": "Lekesiz yüzey",
+      "en": "Stain-free surface"
+    },
+    "description": {
+      "tr": "Quardex anti iyon, sudaki demir ve bakır gibi metalleri bağlayarak yüzeyde leke ve renk oluşumunu önler.",
+      "en": "Quardex sequestrant binds dissolved metals like iron and copper, preventing staining and discoloration on pool surfaces."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Kimyasal"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Quardex"
+      },
+      {
+        "label": {
+          "tr": "Ambalaj",
+          "en": "Pack"
+        },
+        "value": "10 kg"
+      }
     ],
-    features: [
-      { tr: 'Çeyrek tur kontrol', en: 'Quarter-turn control' },
-      { tr: 'Sızdırmaz', en: 'Leak-free' },
+    "features": [
+      {
+        "tr": "Metalleri bağlar",
+        "en": "Binds metals"
+      },
+      {
+        "tr": "Lekeyi önler",
+        "en": "Prevents staining"
+      },
+      {
+        "tr": "Su rengini korur",
+        "en": "Protects water color"
+      }
     ],
-    usage: { tr: 'Hat kontrolü', en: 'Line control' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Metal içeren sularda",
+      "en": "Metal-rich water"
+    },
+    "galleryCount": 1
   },
   {
-    slug: 'cekvalf', category: 'plumbing', brand: 'Pimtaş',
-    name: { tr: 'Çekvalf', en: 'Check Valve' },
-    tagline: { tr: 'Tek yön', en: 'One-way only' },
-    description: { tr: 'Suyun geri kaçmasını önleyen, pompayı koruyan tek yönlü çekvalf.', en: 'A one-way check valve that stops backflow and protects the pump.' },
-    specs: [
-      { label: { tr: 'Çap', en: 'Diameter' }, value: 'Ø 32 · Ø 50 · Ø 63' },
-      { label: { tr: 'Yön', en: 'Flow' }, value: 'Tek yönlü / One-way' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Pimtaş' },
+    "slug": "iyon-tutucu-selenoid",
+    "category": "chemicals",
+    "brand": "Selenoid",
+    "name": {
+      "tr": "İyon Tutucu",
+      "en": "Metal Sequestrant"
+    },
+    "tagline": {
+      "tr": "Temiz denge",
+      "en": "Clean balance"
+    },
+    "description": {
+      "tr": "Selenoid iyon tutucu, suda çözünmüş metal iyonlarını bağlayarak leke, bulanıklık ve renk bozulmalarının önüne geçer.",
+      "en": "Selenoid sequestrant binds dissolved metal ions, preventing stains, cloudiness and color changes in pool water."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Kimyasal"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Selenoid"
+      },
+      {
+        "label": {
+          "tr": "Ambalaj",
+          "en": "Pack"
+        },
+        "value": "10 kg"
+      }
     ],
-    features: [
-      { tr: 'Geri akışı önler', en: 'Prevents backflow' },
-      { tr: 'Pompayı korur', en: 'Protects the pump' },
+    "features": [
+      {
+        "tr": "Metal iyonlarını bağlar",
+        "en": "Binds metal ions"
+      },
+      {
+        "tr": "Lekelenmeyi önler",
+        "en": "Prevents stains"
+      },
+      {
+        "tr": "Suyu berrak tutar",
+        "en": "Keeps water clear"
+      }
     ],
-    usage: { tr: 'Pompa çıkışı', en: 'Pump outlet' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Metal içeren sularda",
+      "en": "Metal-rich water"
+    },
+    "galleryCount": 1
   },
   {
-    slug: 'reduksiyon', category: 'plumbing', brand: 'Pimtaş',
-    name: { tr: 'Redüksiyon', en: 'Reducer' },
-    tagline: { tr: 'Çapı düşürür', en: 'Steps the size' },
-    description: { tr: 'Farklı çaptaki boruları sorunsuz birleştiren yapıştırmalı redüksiyon.', en: 'A solvent-weld reducer that joins pipes of different diameters smoothly.' },
-    specs: [
-      { label: { tr: 'Ölçü', en: 'Size' }, value: '63–50 · 50–32' },
-      { label: { tr: 'Tip', en: 'Type' }, value: 'Redüksiyon' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Pimtaş' },
+    "slug": "iyon-topu",
+    "category": "chemicals",
+    "name": {
+      "tr": "İyon Topu",
+      "en": "Mineral Ion Ball"
+    },
+    "tagline": {
+      "tr": "Dengeli mineral",
+      "en": "Mineral balance"
+    },
+    "description": {
+      "tr": "İyon topu, suya kademeli olarak mineral bırakarak su dengesini destekler ve temiz, sağlıklı bir havuz ortamı sağlar.",
+      "en": "The ion ball gradually releases minerals into the water, supporting balance for a clean, healthy pool environment."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Kimyasal"
+      },
+      {
+        "label": {
+          "tr": "Ambalaj",
+          "en": "Pack"
+        },
+        "value": "200 gr"
+      }
     ],
-    features: [
-      { tr: 'Sorunsuz geçiş', en: 'Smooth transition' },
-      { tr: 'Sağlam birleşim', en: 'Strong joint' },
+    "features": [
+      {
+        "tr": "Kademeli mineral salımı",
+        "en": "Gradual mineral release"
+      },
+      {
+        "tr": "Su dengesini destekler",
+        "en": "Supports water balance"
+      },
+      {
+        "tr": "Pratik kullanım",
+        "en": "Practical to use"
+      }
     ],
-    usage: { tr: 'Çap geçişi', en: 'Diameter change' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Tüm havuz tiplerinde",
+      "en": "All pool types"
+    },
+    "galleryCount": 1
   },
   {
-    slug: 'dis-disli-adaptor', category: 'plumbing', brand: 'Pimtaş',
-    name: { tr: 'Dış Dişli Adaptör', en: 'Male Threaded Adapter' },
-    tagline: { tr: 'Dişliye geçiş', en: 'Pipe to thread' },
-    description: { tr: 'Yapıştırmalı boruyu dişli ekipmana bağlayan dış dişli adaptör.', en: 'Connects solvent-weld pipe to threaded equipment.' },
-    specs: [
-      { label: { tr: 'Çap', en: 'Diameter' }, value: 'Ø 32' },
-      { label: { tr: 'Tip', en: 'Type' }, value: 'Dış dişli / Male' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Pimtaş' },
+    "slug": "hucre-temizleyici-selenoid",
+    "category": "chemicals",
+    "brand": "Selenoid",
+    "name": {
+      "tr": "Hücre Temizleme Sıvısı",
+      "en": "Salt Cell Cleaner"
+    },
+    "tagline": {
+      "tr": "Verimli hücre",
+      "en": "Efficient cell"
+    },
+    "description": {
+      "tr": "Selenoid hücre temizleyici, tuz klor jeneratörü hücrelerindeki kireç ve kalıntıları çözerek verimli çalışmayı korur.",
+      "en": "Selenoid cell cleaner dissolves scale and residue on salt chlorinator cells, maintaining efficient chlorine production."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Kimyasal"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Selenoid"
+      },
+      {
+        "label": {
+          "tr": "Ambalaj",
+          "en": "Pack"
+        },
+        "value": "10 kg"
+      }
     ],
-    features: [
-      { tr: 'Dişli bağlantı', en: 'Threaded link' },
-      { tr: 'Sızdırmaz', en: 'Leak-free' },
+    "features": [
+      {
+        "tr": "Kireci çözer",
+        "en": "Dissolves scale"
+      },
+      {
+        "tr": "Hücre ömrünü uzatır",
+        "en": "Extends cell life"
+      },
+      {
+        "tr": "Verimi korur",
+        "en": "Maintains efficiency"
+      }
     ],
-    usage: { tr: 'Ekipman bağlantısı', en: 'Equipment link' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Tuz klor hücrelerinde",
+      "en": "Salt chlorinator cells"
+    },
+    "galleryCount": 1
   },
   {
-    slug: 'pvc-yapistirici', category: 'plumbing', brand: 'Pimtaş',
-    name: { tr: 'PVC Yapıştırıcı', en: 'PVC Solvent Cement' },
-    tagline: { tr: 'Kalıcı birleşim', en: 'A permanent bond' },
-    description: { tr: 'Sert PVC bağlantılarını kaynaklayan, sızdırmaz ve dayanıklı yapıştırıcı.', en: 'Welds rigid PVC joints into a durable, leak-free bond.' },
-    specs: [
-      { label: { tr: 'Ambalaj', en: 'Pack' }, value: '1 kg' },
-      { label: { tr: 'Tip', en: 'Type' }, value: 'Sert PVC / Rigid PVC' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Pimtaş' },
+    "slug": "bagli-klor-poolbox",
+    "category": "chemicals",
+    "brand": "Poolbox",
+    "name": {
+      "tr": "Bağlı Klor Çözücü",
+      "en": "Combined Chlorine Remover"
+    },
+    "tagline": {
+      "tr": "Taze su",
+      "en": "Fresh water"
+    },
+    "description": {
+      "tr": "Poolbox bağlı klor giderici, koku ve göz yanmasına yol açan kloramin bileşiklerini parçalayarak suyun tazeliğini geri kazandırır.",
+      "en": "Poolbox combined-chlorine remover breaks down chloramines that cause odor and eye irritation, restoring fresh water."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Kimyasal"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Poolbox"
+      }
     ],
-    features: [
-      { tr: 'Hızlı kürlenme', en: 'Fast curing' },
-      { tr: 'Yüksek mukavemet', en: 'High strength' },
+    "features": [
+      {
+        "tr": "Kloramini parçalar",
+        "en": "Breaks chloramines"
+      },
+      {
+        "tr": "Klor kokusunu giderir",
+        "en": "Removes chlorine odor"
+      },
+      {
+        "tr": "Göz yanmasını azaltır",
+        "en": "Reduces eye irritation"
+      }
     ],
-    usage: { tr: 'Tüm PVC ekler', en: 'All PVC joints' },
-    galleryCount: 2,
-  },
-
-  // ══ Aydınlatma (Aquativ) ═════════════════════════════════════
-  {
-    slug: 'led-smart-23w', category: 'lighting', brand: 'Aquativ',
-    name: { tr: '23W SMART Sıva Üstü LED', en: '23W SMART Surface LED' },
-    tagline: { tr: 'Suya düşen ışık', en: 'Light on water' },
-    description: { tr: 'Sıva üstü montajlı, ince çerçeveli güçlü sualtı LED armatürü.', en: 'A surface-mounted, slim-bezel underwater LED with strong output.' },
-    specs: [
-      { label: { tr: 'Güç', en: 'Power' }, value: '23 W' },
-      { label: { tr: 'Işık', en: 'Colour' }, value: 'Beyaz · Gün ışığı · Mavibeyaz' },
-      { label: { tr: 'Çerçeve', en: 'Frame' }, value: 'Beyaz · Antrasit' },
-    ],
-    features: [
-      { tr: 'Sıva üstü montaj', en: 'Surface mount' },
-      { tr: 'Çoklu ışık rengi', en: 'Multiple colours' },
-    ],
-    usage: { tr: 'Beton & prefabrik', en: 'Concrete & liner' },
-    galleryCount: 2,
-  },
-  {
-    slug: 'led-mini-9w', category: 'lighting', brand: 'Aquativ',
-    name: { tr: '9W MINI SMART LED', en: '9W MINI SMART LED' },
-    tagline: { tr: 'İnce vurgular', en: 'Subtle accents' },
-    description: { tr: 'Küçük havuz ve vurgu aydınlatması için kompakt mini sualtı LED.', en: 'A compact mini underwater LED for small pools and accent lighting.' },
-    specs: [
-      { label: { tr: 'Güç', en: 'Power' }, value: '9 W' },
-      { label: { tr: 'Işık', en: 'Colour' }, value: 'Beyaz · Gün ışığı · Mavibeyaz' },
-      { label: { tr: 'Çerçeve', en: 'Frame' }, value: 'Beyaz · Antrasit' },
-    ],
-    features: [
-      { tr: 'Kompakt gövde', en: 'Compact body' },
-      { tr: 'Vurgu aydınlatma', en: 'Accent lighting' },
-    ],
-    usage: { tr: 'Küçük havuz & vurgu', en: 'Small pools & accents' },
-    galleryCount: 2,
-  },
-  {
-    slug: 'led-thin-23w', category: 'lighting', brand: 'Aquativ',
-    name: { tr: '23W SMART THIN LED', en: '23W SMART THIN LED' },
-    tagline: { tr: 'Neredeyse görünmez', en: 'Almost flush' },
-    description: { tr: 'Ultra ince gövdesiyle yüzeyle bütünleşen 23W sualtı LED.', en: 'An ultra-slim 23W underwater LED that sits nearly flush with the surface.' },
-    specs: [
-      { label: { tr: 'Güç', en: 'Power' }, value: '23 W' },
-      { label: { tr: 'Işık', en: 'Colour' }, value: 'Beyaz · Gün ışığı · Mavibeyaz' },
-      { label: { tr: 'Çerçeve', en: 'Frame' }, value: 'Beyaz · Antrasit' },
-    ],
-    features: [
-      { tr: 'Ultra ince', en: 'Ultra-slim' },
-      { tr: 'Yüzeyle bütünleşir', en: 'Near-flush' },
-    ],
-    usage: { tr: 'Mimari havuz', en: 'Architectural pools' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Tüm havuz tiplerinde",
+      "en": "All pool types"
+    },
+    "galleryCount": 1
   },
   {
-    slug: 'led-trafo', category: 'lighting', brand: 'Aquativ',
-    name: { tr: 'İzolasyonlu Trafo 300W 12V', en: 'Isolated Transformer 300W 12V' },
-    tagline: { tr: 'Güvenli besleme', en: 'Safe supply' },
-    description: { tr: 'Sualtı LED armatürleri güvenle besleyen izolasyonlu 12V trafo.', en: 'An isolated 12V transformer that safely powers underwater LEDs.' },
-    specs: [
-      { label: { tr: 'Güç', en: 'Power' }, value: '300 W' },
-      { label: { tr: 'Çıkış', en: 'Output' }, value: '12 V' },
-      { label: { tr: 'Kod', en: 'Code' }, value: 'DMT03' },
+    "slug": "cevre-temizlik-quardex",
+    "category": "chemicals",
+    "brand": "Quardex",
+    "name": {
+      "tr": "Ayak & Çevre Temizlik",
+      "en": "Poolside Surface Cleaner"
+    },
+    "tagline": {
+      "tr": "Temiz çevre",
+      "en": "Clean surrounds"
+    },
+    "description": {
+      "tr": "Quardex çevre temizlik ürünü, havuz kenarı ve ayak yıkama alanlarındaki kir ve tortuyu etkin şekilde temizler.",
+      "en": "Quardex poolside cleaner effectively removes dirt and residue from pool surrounds and foot-wash areas."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Kimyasal"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Quardex"
+      },
+      {
+        "label": {
+          "tr": "Ambalaj",
+          "en": "Pack"
+        },
+        "value": "10 kg"
+      }
     ],
-    features: [
-      { tr: 'İzolasyonlu', en: 'Isolated' },
-      { tr: 'Güvenli düşük voltaj', en: 'Safe low voltage' },
+    "features": [
+      {
+        "tr": "Güçlü kir çözücü",
+        "en": "Powerful dirt remover"
+      },
+      {
+        "tr": "Kenar ve zemin için",
+        "en": "Edges and floors"
+      },
+      {
+        "tr": "Kolay uygulama",
+        "en": "Easy application"
+      }
     ],
-    usage: { tr: 'LED besleme', en: 'LED supply' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Havuz kenarı ve ayak yıkama alanları",
+      "en": "Pool surrounds and foot-wash areas"
+    },
+    "galleryCount": 1
   },
   {
-    slug: 'montaj-pabucu', category: 'lighting', brand: 'Aquativ',
-    name: { tr: 'Montaj Pabucu', en: 'Mounting Shoe' },
-    tagline: { tr: 'Sağlam yuva', en: 'A solid seat' },
-    description: { tr: 'Sualtı armatürünün beton yapıya sızdırmaz montajını sağlayan pabuç.', en: 'Seats an underwater fixture into the concrete shell, leak-free.' },
-    specs: [
-      { label: { tr: 'Kod', en: 'Code' }, value: 'PMP' },
-      { label: { tr: 'Uyum', en: 'Fit' }, value: 'SMART seri' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Aquativ' },
+    "slug": "alkalinite-dusurucu-selenoid",
+    "category": "chemicals",
+    "brand": "Selenoid",
+    "name": {
+      "tr": "Sıvı Alkalinite Düşürücü",
+      "en": "Liquid Alkalinity Reducer"
+    },
+    "tagline": {
+      "tr": "Dengeli alkalinite",
+      "en": "Balanced alkalinity"
+    },
+    "description": {
+      "tr": "Selenoid sıvı alkalinite düşürücü, havuz suyundaki yüksek toplam alkaliniteyi ideal aralığa indirir.",
+      "en": "Selenoid liquid alkalinity reducer lowers high total alkalinity in pool water to the ideal range."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Kimyasal"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Selenoid"
+      },
+      {
+        "label": {
+          "tr": "Ambalaj",
+          "en": "Pack"
+        },
+        "value": "25 kg"
+      }
     ],
-    features: [
-      { tr: 'Sızdırmaz yuva', en: 'Leak-free seat' },
-      { tr: 'Kolay montaj', en: 'Easy install' },
+    "features": [
+      {
+        "tr": "Toplam alkaliniteyi düşürür",
+        "en": "Lowers total alkalinity"
+      },
+      {
+        "tr": "pH dengesini destekler",
+        "en": "Supports pH balance"
+      },
+      {
+        "tr": "Sıvı, hızlı etki",
+        "en": "Fast-acting liquid"
+      }
     ],
-    usage: { tr: 'Beton havuz', en: 'Concrete pools' },
-    galleryCount: 2,
-  },
-
-  // ══ Nozul, Filtre & Pompa (Tenda) ════════════════════════════
-  {
-    slug: 'taban-nozul', category: 'circulation', brand: 'Tenda',
-    name: { tr: 'Taban Besleme Nozulu', en: 'Floor Inlet Nozzle' },
-    tagline: { tr: 'Dipten dengeli akış', en: 'Even flow from below' },
-    description: { tr: 'Temiz suyu havuz tabanından dengeli dağıtan besleme nozulu; özel renk seçenekli.', en: 'Distributes clean water evenly from the pool floor — custom colours available.' },
-    specs: [
-      { label: { tr: 'Bağlantı', en: 'Port' }, value: 'Ø 63' },
-      { label: { tr: 'Renk', en: 'Colour' }, value: 'Standart · Özel renk' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Tenda' },
-    ],
-    features: [
-      { tr: 'Dengeli dağıtım', en: 'Even distribution' },
-      { tr: 'Özel renk', en: 'Custom colour' },
-    ],
-    usage: { tr: 'Taban sirkülasyonu', en: 'Floor circulation' },
-    galleryCount: 2,
-  },
-  {
-    slug: 'duvar-nozul', category: 'circulation', brand: 'Tenda',
-    name: { tr: 'Duvar Besleme Nozulu', en: 'Wall Inlet Nozzle' },
-    tagline: { tr: 'Yönlü akış', en: 'Directed flow' },
-    description: { tr: 'Suyu duvardan istenen yöne veren, yönlendirilebilir besleme nozulu.', en: 'An adjustable wall inlet that aims the return flow where you want it.' },
-    specs: [
-      { label: { tr: 'Bağlantı', en: 'Port' }, value: 'Ø 50 · Ø 63' },
-      { label: { tr: 'Renk', en: 'Colour' }, value: 'Standart · Özel renk' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Tenda' },
-    ],
-    features: [
-      { tr: 'Yönlendirilebilir', en: 'Adjustable aim' },
-      { tr: 'Özel renk', en: 'Custom colour' },
-    ],
-    usage: { tr: 'Duvar sirkülasyonu', en: 'Wall circulation' },
-    galleryCount: 2,
-  },
-  {
-    slug: 'vakum-nozul', category: 'circulation', brand: 'Tenda',
-    name: { tr: 'Vakum Nozulu', en: 'Vacuum Nozzle' },
-    tagline: { tr: 'Süpürge bağlantısı', en: 'Cleaner connection' },
-    description: { tr: 'Süpürge hortumunu emiş hattına bağlayan duvar tipi vakum nozulu.', en: 'A wall vacuum point that connects the cleaner hose to the suction line.' },
-    specs: [
-      { label: { tr: 'Bağlantı', en: 'Port' }, value: 'Ø 50 · Ø 63' },
-      { label: { tr: 'Renk', en: 'Colour' }, value: 'Standart · Özel renk' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Tenda' },
-    ],
-    features: [
-      { tr: 'Sızdırmaz bağlantı', en: 'Sealed connection' },
-      { tr: 'Özel renk', en: 'Custom colour' },
-    ],
-    usage: { tr: 'Manuel süpürge', en: 'Manual vacuuming' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Alkalinitesi yüksek havuzlarda",
+      "en": "High-alkalinity pools"
+    },
+    "galleryCount": 1
   },
   {
-    slug: 'dip-izgara', category: 'circulation', brand: 'Tenda',
-    name: { tr: 'Kare Dip Emiş Izgarası', en: 'Square Main-Drain Grille' },
-    tagline: { tr: 'Güvenli emiş', en: 'Safe suction' },
-    description: { tr: 'Havuz dibinden güvenli ve dengeli emiş sağlayan kare ızgara; özel renk seçenekli.', en: 'A square main-drain grille for safe, even suction from the pool floor.' },
-    specs: [
-      { label: { tr: 'Ölçü', en: 'Size' }, value: '26,5 × 26,5 cm' },
-      { label: { tr: 'Renk', en: 'Colour' }, value: 'Standart · Özel renk' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Tenda' },
+    "slug": "temizlik-asidi-selenoid",
+    "category": "chemicals",
+    "brand": "Selenoid",
+    "name": {
+      "tr": "Sıvı Temizlik Asidi",
+      "en": "Cleaning Acid"
+    },
+    "tagline": {
+      "tr": "Kireç çözücü",
+      "en": "Scale remover"
+    },
+    "description": {
+      "tr": "Selenoid temizlik asidi, havuz yüzeylerindeki kireç ve kalıntıları çözerek etkili yüzey temizliği sağlar.",
+      "en": "Selenoid cleaning acid dissolves scale and deposits on pool surfaces for effective surface cleaning."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Kimyasal"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Selenoid"
+      },
+      {
+        "label": {
+          "tr": "Ambalaj",
+          "en": "Pack"
+        },
+        "value": "25 kg"
+      }
     ],
-    features: [
-      { tr: 'Güvenli emiş', en: 'Safe suction' },
-      { tr: 'Özel renk', en: 'Custom colour' },
+    "features": [
+      {
+        "tr": "Kireç ve tortu çözer",
+        "en": "Dissolves scale and deposits"
+      },
+      {
+        "tr": "Yüzey temizliği",
+        "en": "Surface cleaning"
+      },
+      {
+        "tr": "Etkili sonuç",
+        "en": "Effective results"
+      }
     ],
-    usage: { tr: 'Dip emiş hattı', en: 'Main-drain line' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Havuz yüzeyi temizliğinde",
+      "en": "Pool surface cleaning"
+    },
+    "galleryCount": 1
   },
   {
-    slug: 'su-perdesi', category: 'circulation', brand: 'Tenda',
-    name: { tr: 'Su Perdesi (Şelale) 316 Krom', en: 'Water Curtain 316 Chrome' },
-    tagline: { tr: 'Sessiz şelale', en: 'A quiet cascade' },
-    description: { tr: 'Duvardan ince bir perde hâlinde dökülen 316 paslanmaz krom şelale.', en: 'A 316 stainless-chrome blade that pours a thin curtain of water.' },
-    specs: [
-      { label: { tr: 'Ölçü', en: 'Size' }, value: '60 × 40 cm' },
-      { label: { tr: 'Malzeme', en: 'Material' }, value: 'AISI 316 Krom' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Tenda' },
+    "slug": "led-23w",
+    "category": "lighting",
+    "brand": "Aquativ",
+    "name": {
+      "tr": "23W SMART LED",
+      "en": "23W RGB/White LED"
+    },
+    "tagline": {
+      "tr": "Renkli aydınlatma",
+      "en": "Colour lighting"
+    },
+    "description": {
+      "tr": "Aquativ 23W sıva üstü havuz LED'i, RGB veya beyaz ışıkla beyaz ya da antrasit çerçeve seçeneğinde etkileyici aydınlatma sunar.",
+      "en": "Aquativ 23W surface-mount pool LED delivers striking RGB or white lighting with white or anthracite bezel options."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Aydınlatma"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Aquativ"
+      },
+      {
+        "label": {
+          "tr": "Seçenek",
+          "en": "Option"
+        },
+        "value": "Beyaz / Antrasit çerçeve"
+      }
     ],
-    features: [
-      { tr: 'Paslanmaz 316', en: '316 stainless' },
-      { tr: 'İnce su perdesi', en: 'Thin water blade' },
+    "features": [
+      {
+        "tr": "RGB ve beyaz ışık",
+        "en": "RGB and white light"
+      },
+      {
+        "tr": "Sıva üstü montaj",
+        "en": "Surface-mount fitting"
+      },
+      {
+        "tr": "Beyaz veya antrasit çerçeve",
+        "en": "White or anthracite bezel"
+      }
     ],
-    usage: { tr: 'Dekoratif şelale', en: 'Decorative cascade' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Tüm havuz tiplerinde",
+      "en": "All pool types"
+    },
+    "galleryCount": 2
   },
   {
-    slug: 'plastik-filtre', category: 'circulation', brand: 'Tenda',
-    name: { tr: 'Plastik Kum Filtresi 600mm', en: 'Plastic Sand Filter 600mm' },
-    tagline: { tr: 'Kanıtlanmış berraklık', en: 'Proven clarity' },
-    description: { tr: 'Yüksek debili, dayanıklı gövdeli klasik kum filtresi; orta ölçekli havuzlar için.', en: 'A durable, high-flow classic sand filter for mid-size pools.' },
-    specs: [
-      { label: { tr: 'Çap', en: 'Diameter' }, value: 'Ø 600 mm' },
-      { label: { tr: 'Gövde', en: 'Body' }, value: 'Plastik / Plastic' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Tenda' },
+    "slug": "led-32w",
+    "category": "lighting",
+    "brand": "Tenda",
+    "name": {
+      "tr": "32W LED",
+      "en": "32W Pool LED"
+    },
+    "tagline": {
+      "tr": "Güçlü ışık",
+      "en": "Powerful light"
+    },
+    "description": {
+      "tr": "Tenda 32W havuz LED aydınlatması, geniş havuzlarda güçlü ve homojen aydınlatma için beyaz veya antrasit çerçeve ile sunulur.",
+      "en": "Tenda 32W pool LED provides strong, even illumination for larger pools, available with white or anthracite bezel."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Aydınlatma"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Tenda"
+      },
+      {
+        "label": {
+          "tr": "Seçenek",
+          "en": "Option"
+        },
+        "value": "Beyaz / Antrasit çerçeve"
+      }
     ],
-    features: [
-      { tr: 'Dayanıklı gövde', en: 'Durable shell' },
-      { tr: 'Kolay bakım', en: 'Easy service' },
+    "features": [
+      {
+        "tr": "Yüksek ışık gücü",
+        "en": "High light output"
+      },
+      {
+        "tr": "Geniş havuzlara uygun",
+        "en": "Suits larger pools"
+      },
+      {
+        "tr": "Beyaz veya antrasit çerçeve",
+        "en": "White or anthracite bezel"
+      }
     ],
-    usage: { tr: 'Orta havuz', en: 'Mid-size pools' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Büyük havuzlarda",
+      "en": "Larger pools"
+    },
+    "galleryCount": 1
   },
   {
-    slug: 'monofaze-pompa', category: 'circulation', brand: 'Tenda',
-    name: { tr: 'Monofaze Havuz Pompası 1 HP', en: 'Single-Phase Pool Pump 1 HP' },
-    tagline: { tr: 'Kararlı sirkülasyon', en: 'Steady circulation' },
-    description: { tr: 'Ön filtre sepetli, sessiz ve güvenilir monofaze sirkülasyon pompası.', en: 'A quiet, reliable single-phase circulation pump with a prefilter basket.' },
-    specs: [
-      { label: { tr: 'Güç', en: 'Power' }, value: '1 HP' },
-      { label: { tr: 'Besleme', en: 'Supply' }, value: 'Monofaze / Single-phase' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Tenda' },
+    "slug": "led-9w",
+    "category": "lighting",
+    "brand": "Aquativ",
+    "name": {
+      "tr": "9W MINI LED",
+      "en": "9W Mini LED"
+    },
+    "tagline": {
+      "tr": "İnce vurgu",
+      "en": "Subtle accent"
+    },
+    "description": {
+      "tr": "Aquativ 9W mini havuz LED'i, havuz içinde ince vurgu aydınlatması için antrasit veya beyaz çerçeve seçeneğiyle sunulur.",
+      "en": "Aquativ 9W mini pool LED offers subtle accent lighting with anthracite or white bezel options."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Aydınlatma"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Aquativ"
+      },
+      {
+        "label": {
+          "tr": "Seçenek",
+          "en": "Option"
+        },
+        "value": "Antrasit / Beyaz çerçeve"
+      }
     ],
-    features: [
-      { tr: 'Ön filtre sepeti', en: 'Prefilter basket' },
-      { tr: 'Sessiz motor', en: 'Quiet motor' },
+    "features": [
+      {
+        "tr": "Vurgu aydınlatması",
+        "en": "Accent lighting"
+      },
+      {
+        "tr": "Kompakt tasarım",
+        "en": "Compact design"
+      },
+      {
+        "tr": "Antrasit veya beyaz çerçeve",
+        "en": "Anthracite or white bezel"
+      }
     ],
-    usage: { tr: 'Küçük–orta havuz', en: 'Small–mid pools' },
-    galleryCount: 2,
-  },
-
-  // ══ Dekoratif & Su Oyunları (Aquativ) ════════════════════════
-  {
-    slug: 'rgb-fiskiye', category: 'decorative', brand: 'Aquativ',
-    name: { tr: 'RGB LED Işıklı Fıskiye', en: 'RGB LED Fountain' },
-    tagline: { tr: 'Renkli su gösterisi', en: 'A colour show' },
-    description: { tr: 'Su jetini RGB ışıkla renklendiren, gece havuza hareket katan fıskiye.', en: 'Lights the water jet with RGB colour, bringing the pool alive at night.' },
-    specs: [
-      { label: { tr: 'Işık', en: 'Light' }, value: 'RGB LED' },
-      { label: { tr: 'Kod', en: 'Code' }, value: 'CT507' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Aquativ' },
-    ],
-    features: [
-      { tr: 'RGB renk', en: 'RGB colour' },
-      { tr: 'Su + ışık gösterisi', en: 'Water & light show' },
-    ],
-    usage: { tr: 'Dekoratif havuz', en: 'Decorative pools' },
-    galleryCount: 2,
-  },
-  {
-    slug: 'rgb-solar-fiskiye', category: 'decorative', brand: 'Aquativ',
-    name: { tr: 'RGB Solar LED Fıskiye', en: 'RGB Solar LED Fountain' },
-    tagline: { tr: 'Kablosuz, güneşle', en: 'Wireless, solar-powered' },
-    description: { tr: 'Güneş enerjisiyle çalışan, kablosuz ve kolay konumlanan RGB fıskiye.', en: 'A wireless, solar-powered RGB fountain you can place anywhere.' },
-    specs: [
-      { label: { tr: 'Enerji', en: 'Power' }, value: 'Solar' },
-      { label: { tr: 'Kod', en: 'Code' }, value: 'CT508' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Aquativ' },
-    ],
-    features: [
-      { tr: 'Kablosuz', en: 'Wireless' },
-      { tr: 'Güneş enerjili', en: 'Solar-powered' },
-    ],
-    usage: { tr: 'Süs havuzu & bahçe', en: 'Ponds & gardens' },
-    galleryCount: 2,
-  },
-  {
-    slug: 'yuzen-speaker', category: 'decorative', brand: 'Aquativ',
-    name: { tr: 'Yüzen RGB Speaker', en: 'Floating RGB Speaker' },
-    tagline: { tr: 'Işık ve müzik', en: 'Light and music' },
-    description: { tr: 'Suda yüzen, su geçirmez RGB ışıklı kablosuz hoparlör; balık figürlü seçeneği ile.', en: 'A floating, waterproof RGB speaker — including a playful fish-shaped option.' },
-    specs: [
-      { label: { tr: 'Koruma', en: 'Rating' }, value: 'Su geçirmez / Waterproof' },
-      { label: { tr: 'Kod', en: 'Code' }, value: 'HK605 · HK703' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Aquativ' },
-    ],
-    features: [
-      { tr: 'Su geçirmez', en: 'Waterproof' },
-      { tr: 'RGB ışık + ses', en: 'RGB light + audio' },
-    ],
-    usage: { tr: 'Havuz eğlencesi', en: 'Poolside fun' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Vurgu aydınlatmasında",
+      "en": "Accent lighting"
+    },
+    "galleryCount": 1
   },
   {
-    slug: 'deniz-yildizi-led', category: 'decorative', brand: 'Aquativ',
-    name: { tr: 'Deniz Yıldızı RGB LED', en: 'Starfish RGB LED' },
-    tagline: { tr: 'Yumuşak parıltı', en: 'A soft glow' },
-    description: { tr: 'Su yüzeyine yumuşak renkli parıltı katan deniz yıldızı figürlü RGB lamba.', en: 'A starfish RGB lamp that casts a soft colour glow across the surface.' },
-    specs: [
-      { label: { tr: 'Işık', en: 'Light' }, value: 'RGB LED' },
-      { label: { tr: 'Kod', en: 'Code' }, value: 'CT008' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Aquativ' },
+    "slug": "kum-filtresi-600",
+    "category": "circulation",
+    "brand": "Tenda",
+    "name": {
+      "tr": "Kum Filtresi 600mm",
+      "en": "600mm Sand Filter"
+    },
+    "tagline": {
+      "tr": "Berrak su",
+      "en": "Clear water"
+    },
+    "description": {
+      "tr": "Tenda 600mm plastik gövdeli kum filtresi, havuz suyundaki partikülleri tutarak berrak ve sağlıklı su sağlar.",
+      "en": "Tenda 600mm plastic-body sand filter traps particles in pool water for clear, healthy water."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Sirkülasyon"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Tenda"
+      }
     ],
-    features: [
-      { tr: 'Dekoratif figür', en: 'Decorative form' },
-      { tr: 'Yumuşak RGB', en: 'Soft RGB' },
+    "features": [
+      {
+        "tr": "Plastik gövde, korozyona dayanıklı",
+        "en": "Corrosion-resistant plastic body"
+      },
+      {
+        "tr": "600mm tank çapı",
+        "en": "600mm tank diameter"
+      },
+      {
+        "tr": "Etkili filtrasyon",
+        "en": "Effective filtration"
+      }
     ],
-    usage: { tr: 'Dekoratif aydınlatma', en: 'Decorative lighting' },
-    galleryCount: 2,
-  },
-
-  // ══ Temizlik & Test Ekipmanları (Divitech · Sutest) ═════════
-  {
-    slug: 'havuz-robotu', category: 'cleaning', brand: 'Spino',
-    name: { tr: 'Otomatik Havuz Robotu', en: 'Robotic Pool Cleaner' },
-    tagline: { tr: 'Kendi kendine temiz', en: 'Cleans on its own' },
-    description: { tr: 'Zemini, duvarları ve su hattını tarayarak temizleyen bağımsız havuz robotu.', en: 'An autonomous robot that scans and cleans floor, walls and waterline.' },
-    specs: [
-      { label: { tr: 'Tip', en: 'Type' }, value: 'Otomatik / Robotic' },
-      { label: { tr: 'Filtre', en: 'Filter' }, value: 'Yıkanabilir' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Spino' },
-    ],
-    features: [
-      { tr: 'Bağımsız temizlik', en: 'Autonomous cleaning' },
-      { tr: 'Duvar & su hattı', en: 'Walls & waterline' },
-    ],
-    usage: { tr: 'Orta–büyük havuz', en: 'Mid–large pools' },
-    galleryCount: 2,
-  },
-  {
-    slug: 'havuz-supurgesi', category: 'cleaning', brand: 'Divitech · Tenda',
-    name: { tr: 'Havuz Süpürgesi (Vakum Başlığı)', en: 'Pool Vacuum Head' },
-    tagline: { tr: 'Dibi toparlar', en: 'Clears the floor' },
-    description: { tr: 'Klipsli bağlantılı, tabanı ve köşeleri toparlayan vakum süpürge başlığı.', en: 'A clip-fit vacuum head that clears the floor and corners.' },
-    specs: [
-      { label: { tr: 'Bağlantı', en: 'Fitting' }, value: '1,5" · 2" Klipsli' },
-      { label: { tr: 'Genişlik', en: 'Width' }, value: '44,5 cm' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Divitech · Tenda' },
-    ],
-    features: [
-      { tr: 'Klipsli bağlantı', en: 'Clip-fit' },
-      { tr: 'Geniş kapsama', en: 'Wide coverage' },
-    ],
-    usage: { tr: 'Manuel süpürme', en: 'Manual vacuuming' },
-    galleryCount: 2,
-  },
-  {
-    slug: 'havuz-hortumu', category: 'cleaning', brand: 'Divitech',
-    name: { tr: 'Havuz Hortumu', en: 'Pool Hose' },
-    tagline: { tr: 'Esnek, dayanıklı', en: 'Flexible, durable' },
-    description: { tr: 'Süpürge başlığını emiş hattına bağlayan esnek ve dayanıklı havuz hortumu.', en: 'A flexible, durable hose linking the vacuum head to the suction line.' },
-    specs: [
-      { label: { tr: 'Çap', en: 'Diameter' }, value: '38 mm · 50 mm' },
-      { label: { tr: 'Yapı', en: 'Build' }, value: 'Spiral takviyeli' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Divitech' },
-    ],
-    features: [
-      { tr: 'Esnek', en: 'Flexible' },
-      { tr: 'Ezilmez yapı', en: 'Crush-resistant' },
-    ],
-    usage: { tr: 'Süpürge hattı', en: 'Vacuum line' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Havuz filtrasyon sisteminde",
+      "en": "Pool filtration systems"
+    },
+    "galleryCount": 1
   },
   {
-    slug: 'yuzey-kepcesi', category: 'cleaning', brand: 'Divitech',
-    name: { tr: 'Derin Yüzey Kepçesi', en: 'Deep Skimmer Net' },
-    tagline: { tr: 'Yüzeyi berrak tutar', en: 'Keeps the surface clear' },
-    description: { tr: 'Yaprak ve tortuyu tek geçişte toplayan derin fileli lüks yüzey kepçesi.', en: 'A deep-bag skimmer net that lifts leaves and debris in a single pass.' },
-    specs: [
-      { label: { tr: 'File', en: 'Mesh' }, value: 'Derin / Deep' },
-      { label: { tr: 'Gövde', en: 'Body' }, value: 'Lüks plastik' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Divitech' },
+    "slug": "pompa-1hp",
+    "category": "circulation",
+    "brand": "Tenda",
+    "name": {
+      "tr": "Havuz Pompası 1 HP",
+      "en": "1 HP Pool Pump"
+    },
+    "tagline": {
+      "tr": "Sürekli sirkülasyon",
+      "en": "Steady circulation"
+    },
+    "description": {
+      "tr": "Tenda 1 HP monofaze havuz pompası, suyu güvenilir şekilde döndürerek filtrasyon ve dengeli su sirkülasyonu sağlar.",
+      "en": "Tenda 1 HP single-phase pool pump reliably circulates water for filtration and balanced water flow."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Sirkülasyon"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Tenda"
+      }
     ],
-    features: [
-      { tr: 'Derin file', en: 'Deep bag' },
-      { tr: 'Sapa uyumlu', en: 'Pole compatible' },
+    "features": [
+      {
+        "tr": "1 HP monofaze motor",
+        "en": "1 HP single-phase motor"
+      },
+      {
+        "tr": "Güvenilir sirkülasyon",
+        "en": "Reliable circulation"
+      },
+      {
+        "tr": "Sessiz çalışma",
+        "en": "Quiet operation"
+      }
     ],
-    usage: { tr: 'Günlük yüzey', en: 'Daily surface' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Havuz sirkülasyon sisteminde",
+      "en": "Pool circulation systems"
+    },
+    "galleryCount": 1
   },
   {
-    slug: 'havuz-fircasi', category: 'cleaning', brand: 'Divitech',
-    name: { tr: 'Havuz Fırçası', en: 'Pool Brush' },
-    tagline: { tr: 'Duvarları parlatır', en: 'Scrubs the walls' },
-    description: { tr: 'Duvar ve tabandaki biofilmi çözen kavisli, geniş havuz fırçası.', en: 'A curved, wide brush that lifts biofilm from walls and floor.' },
-    specs: [
-      { label: { tr: 'Genişlik', en: 'Width' }, value: '45 cm' },
-      { label: { tr: 'Form', en: 'Form' }, value: 'Kavisli / Curved' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Divitech' },
+    "slug": "isikli-fiskiye",
+    "category": "decorative",
+    "brand": "Aquativ",
+    "name": {
+      "tr": "Işıklı Fıskiye",
+      "en": "Aquativ RGB Illuminated Fountain"
+    },
+    "tagline": {
+      "tr": "Renkli su gösterisi",
+      "en": "Colorful water show"
+    },
+    "description": {
+      "tr": "Aquativ ışıklı fıskiye, RGB LED aydınlatmayla havuz yüzeyine renk değiştiren su jetleri ve gece atmosferi katar.",
+      "en": "The Aquativ illuminated fountain adds color-shifting water jets and nighttime ambiance to your pool surface with RGB LED lighting."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Dekoratif"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Aquativ"
+      }
     ],
-    features: [
-      { tr: 'Kavisli tasarım', en: 'Curved design' },
-      { tr: 'Sapa uyumlu', en: 'Pole compatible' },
+    "features": [
+      {
+        "tr": "RGB renk geçişleri",
+        "en": "RGB color transitions"
+      },
+      {
+        "tr": "Dekoratif su jeti",
+        "en": "Decorative water jet"
+      },
+      {
+        "tr": "Gece atmosferi",
+        "en": "Nighttime ambiance"
+      }
     ],
-    usage: { tr: 'Duvar & taban', en: 'Walls & floor' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Dekoratif havuzlarda",
+      "en": "Decorative pools"
+    },
+    "galleryCount": 1
   },
   {
-    slug: 'teleskopik-sap', category: 'cleaning', brand: 'Divitech',
-    name: { tr: 'Teleskopik Sap', en: 'Telescopic Pole' },
-    tagline: { tr: 'Her köşeye ulaşır', en: 'Reaches every corner' },
-    description: { tr: 'Hafif alüminyum, uzayabilen sap; ağ, fırça ve vakum başlığına uyumlu.', en: 'A light aluminium extendable pole for nets, brushes and vacuum heads.' },
-    specs: [
-      { label: { tr: 'Malzeme', en: 'Material' }, value: 'Alüminyum' },
-      { label: { tr: 'Uzunluk', en: 'Length' }, value: '2 × 2,4 m · 2 × 3 m' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Divitech' },
+    "slug": "solar-fiskiye",
+    "category": "decorative",
+    "brand": "Aquativ",
+    "name": {
+      "tr": "Solar Fıskiye",
+      "en": "Aquativ Solar RGB Fountain"
+    },
+    "tagline": {
+      "tr": "Kablosuz enerji",
+      "en": "Wireless energy"
+    },
+    "description": {
+      "tr": "Aquativ solar fıskiye, güneş enerjisiyle çalışan kablosuz yapısı ve RGB LED ışığıyla havuza zahmetsiz renkli su gösterisi sunar.",
+      "en": "The Aquativ solar fountain delivers an effortless colorful water display with its wireless, solar-powered design and RGB LED lighting."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Dekoratif"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Aquativ"
+      }
     ],
-    features: [
-      { tr: 'Kilitli teleskop', en: 'Locking telescope' },
-      { tr: 'Korozyona dayanıklı', en: 'Corrosion resistant' },
+    "features": [
+      {
+        "tr": "Güneş enerjili",
+        "en": "Solar powered"
+      },
+      {
+        "tr": "Kablosuz kurulum",
+        "en": "Wireless setup"
+      },
+      {
+        "tr": "RGB aydınlatma",
+        "en": "RGB lighting"
+      }
     ],
-    usage: { tr: 'Genel temizlik', en: 'General cleaning' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Açık havuzlarda",
+      "en": "Outdoor pools"
+    },
+    "galleryCount": 1
   },
   {
-    slug: 'termometre', category: 'cleaning', brand: 'Divitech',
-    name: { tr: 'Havuz Termometresi', en: 'Pool Thermometer' },
-    tagline: { tr: 'Su sıcaklığı', en: 'Water temperature' },
-    description: { tr: 'İpli, yüzen ve figürlü tasarımıyla su sıcaklığını anlık gösteren termometre.', en: 'A corded floating thermometer that reads water temperature at a glance.' },
-    specs: [
-      { label: { tr: 'Tip', en: 'Type' }, value: 'Yüzer / Floating' },
-      { label: { tr: 'Bağlantı', en: 'Cord' }, value: 'İpli / Corded' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Divitech' },
+    "slug": "balina-hoparlor",
+    "category": "decorative",
+    "name": {
+      "tr": "Balina Hoparlör",
+      "en": "Floating Whale Bluetooth Speaker"
+    },
+    "tagline": {
+      "tr": "Suda müzik",
+      "en": "Music on water"
+    },
+    "description": {
+      "tr": "Balina formundaki bu yüzen su geçirmez Bluetooth hoparlör, havuz keyfine kablosuz müzik ve şirin bir dekoratif dokunuş katar.",
+      "en": "This whale-shaped floating waterproof Bluetooth speaker brings wireless music and a playful decorative touch to your poolside."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Dekoratif"
+      }
     ],
-    features: [
-      { tr: 'Anlık okuma', en: 'Instant read' },
-      { tr: 'Yüzer tasarım', en: 'Floating design' },
+    "features": [
+      {
+        "tr": "Su geçirmez gövde",
+        "en": "Waterproof body"
+      },
+      {
+        "tr": "Bluetooth bağlantı",
+        "en": "Bluetooth connectivity"
+      },
+      {
+        "tr": "Yüzen tasarım",
+        "en": "Floating design"
+      }
     ],
-    usage: { tr: 'Günlük kontrol', en: 'Daily check' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Havuz ve deniz",
+      "en": "Pool and sea"
+    },
+    "galleryCount": 1
   },
   {
-    slug: 'dispanser', category: 'cleaning', brand: 'Divitech',
-    name: { tr: 'Yüzer Klor Dispanseri', en: 'Floating Chlorine Dispenser' },
-    tagline: { tr: 'Kararlı dozaj', en: 'Steady dosing' },
-    description: { tr: 'Klor tabletini yüzerken kademeli salan, ayarlanabilir büyük tip dispanser.', en: 'A large adjustable floater that releases chlorine tablets gradually.' },
-    specs: [
-      { label: { tr: 'Tip', en: 'Type' }, value: 'Büyük yüzer / Large float' },
-      { label: { tr: 'Ayar', en: 'Control' }, value: 'Ayarlanabilir' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Divitech' },
+    "slug": "yuzen-hoparlor",
+    "category": "decorative",
+    "name": {
+      "tr": "Yüzen Hoparlör",
+      "en": "Floating RGB Bluetooth Speaker"
+    },
+    "tagline": {
+      "tr": "Işık ve ses",
+      "en": "Light and sound"
+    },
+    "description": {
+      "tr": "Yüzen su geçirmez bu Bluetooth hoparlör, RGB ışık efektleri ve kablosuz ses ile havuza hem müzik hem atmosfer taşır.",
+      "en": "This floating waterproof Bluetooth speaker brings both music and ambiance to your pool with RGB light effects and wireless sound."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Dekoratif"
+      }
     ],
-    features: [
-      { tr: 'Kademeli salım', en: 'Gradual release' },
-      { tr: 'Ayarlanabilir doz', en: 'Adjustable dose' },
+    "features": [
+      {
+        "tr": "RGB ışık efekti",
+        "en": "RGB light effect"
+      },
+      {
+        "tr": "Su geçirmez tasarım",
+        "en": "Waterproof design"
+      },
+      {
+        "tr": "Kablosuz ses",
+        "en": "Wireless sound"
+      }
     ],
-    usage: { tr: 'Tablet klor', en: 'Tablet chlorine' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Havuz yüzeyinde",
+      "en": "On pool surface"
+    },
+    "galleryCount": 1
   },
   {
-    slug: 'ayak-havuzu', category: 'cleaning', brand: 'Divitech',
-    name: { tr: 'Ayak Yıkama Havuzu', en: 'Foot Wash Basin' },
-    tagline: { tr: 'Temiz giriş', en: 'A clean entry' },
-    description: { tr: 'Havuza girişte ayak hijyenini sağlayan, dayanıklı ayak yıkama havuzu.', en: 'A durable foot basin that keeps entry hygienic.' },
-    specs: [
-      { label: { tr: 'Tip', en: 'Type' }, value: 'Ayak yıkama' },
-      { label: { tr: 'Malzeme', en: 'Material' }, value: 'Dayanıklı plastik' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Divitech' },
+    "slug": "deniz-yildizi",
+    "category": "decorative",
+    "brand": "Aquativ",
+    "name": {
+      "tr": "Deniz Yıldızı LED",
+      "en": "Aquativ Floating Starfish LED Light"
+    },
+    "tagline": {
+      "tr": "Yüzen ışık",
+      "en": "Floating light"
+    },
+    "description": {
+      "tr": "Aquativ deniz yıldızı formundaki yüzen RGB LED ışık, havuz yüzeyinde yumuşak renk geçişleriyle zarif bir gece dokunuşu yaratır.",
+      "en": "The Aquativ starfish-shaped floating RGB LED light creates an elegant nighttime touch with soft color transitions across the pool surface."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Dekoratif"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Aquativ"
+      }
     ],
-    features: [
-      { tr: 'Hijyenik giriş', en: 'Hygienic entry' },
-      { tr: 'Dayanıklı', en: 'Durable' },
+    "features": [
+      {
+        "tr": "Yüzen LED ışık",
+        "en": "Floating LED light"
+      },
+      {
+        "tr": "RGB renk geçişi",
+        "en": "RGB color shift"
+      },
+      {
+        "tr": "Dekoratif form",
+        "en": "Decorative shape"
+      }
     ],
-    usage: { tr: 'Havuz girişi', en: 'Pool entry' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Havuz yüzeyinde",
+      "en": "On pool surface"
+    },
+    "galleryCount": 1
   },
   {
-    slug: 'su-test-kiti', category: 'cleaning', brand: 'Sutest · ColorQ',
-    name: { tr: 'Su Test Kiti', en: 'Water Test Kit' },
-    tagline: { tr: 'Suyu okuyun', en: 'Read your water' },
-    description: { tr: 'pH ve kloru ölçen; sıvı damla ve dijital fotometre seçenekli su test kiti.', en: 'Measures pH and chlorine — available as liquid drop tests or a digital photometer.' },
-    specs: [
-      { label: { tr: 'Tip', en: 'Type' }, value: 'Damla · Dijital / Drop · Digital' },
-      { label: { tr: 'Parametre', en: 'Parameters' }, value: 'pH · Klor · +' },
-      { label: { tr: 'Marka', en: 'Brand' }, value: 'Sutest · ColorQ · Insta' },
+    "slug": "havuz-robotu",
+    "category": "cleaning",
+    "brand": "Spino",
+    "name": {
+      "tr": "Havuz Robotu",
+      "en": "Spino Robotic Pool Cleaner"
+    },
+    "tagline": {
+      "tr": "Otomatik temizlik",
+      "en": "Automatic cleaning"
+    },
+    "description": {
+      "tr": "Spino havuz robotu, havuz taban ve duvarlarını otomatik olarak tarayıp temizleyerek manuel çabayı ortadan kaldırır.",
+      "en": "The Spino robotic cleaner automatically scans and cleans pool floors and walls, eliminating the need for manual effort."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Temizlik"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Spino"
+      }
     ],
-    features: [
-      { tr: 'Hızlı sonuç', en: 'Fast results' },
-      { tr: 'Damla & dijital', en: 'Drop & digital' },
+    "features": [
+      {
+        "tr": "Otomatik çalışma",
+        "en": "Automatic operation"
+      },
+      {
+        "tr": "Taban ve duvar",
+        "en": "Floor and walls"
+      },
+      {
+        "tr": "Zahmetsiz bakım",
+        "en": "Effortless upkeep"
+      }
     ],
-    usage: { tr: 'Haftalık kontrol', en: 'Weekly checks' },
-    galleryCount: 2,
+    "usage": {
+      "tr": "Tüm havuz tiplerinde",
+      "en": "All pool types"
+    },
+    "galleryCount": 1
   },
+  {
+    "slug": "havuz-supurgesi",
+    "category": "cleaning",
+    "brand": "Gemaş",
+    "name": {
+      "tr": "Havuz Süpürgesi 2 inç",
+      "en": "Gemaş 2\" Vacuum Head"
+    },
+    "tagline": {
+      "tr": "Manuel temizlik",
+      "en": "Manual cleaning"
+    },
+    "description": {
+      "tr": "Gemaş havuz süpürgesi, 2 inç bağlantısıyla havuz tabanındaki kir ve tortuları manuel olarak toplamak için kullanılan vakum başlığıdır.",
+      "en": "The Gemaş vacuum head, with its 2-inch connection, manually collects dirt and sediment from the pool floor."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Temizlik"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Gemaş"
+      }
+    ],
+    "features": [
+      {
+        "tr": "2 inç bağlantı",
+        "en": "2-inch connection"
+      },
+      {
+        "tr": "Taban temizliği",
+        "en": "Floor cleaning"
+      },
+      {
+        "tr": "Manuel vakum",
+        "en": "Manual vacuum"
+      }
+    ],
+    "usage": {
+      "tr": "Havuz tabanında",
+      "en": "Pool floor"
+    },
+    "galleryCount": 1
+  },
+  {
+    "slug": "havuz-hortumu",
+    "category": "cleaning",
+    "name": {
+      "tr": "Havuz Hortumu",
+      "en": "Flexible Pool Vacuum Hose"
+    },
+    "tagline": {
+      "tr": "Esnek bağlantı",
+      "en": "Flexible link"
+    },
+    "description": {
+      "tr": "Esnek havuz vakum hortumu, 38 mm ve 50 mm seçenekleriyle süpürge başlığını sisteme bağlayarak manuel temizliği kolaylaştırır.",
+      "en": "This flexible pool vacuum hose, available in 38 mm and 50 mm, connects the vacuum head to the system for easy manual cleaning."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Temizlik"
+      },
+      {
+        "label": {
+          "tr": "Seçenek",
+          "en": "Option"
+        },
+        "value": "38 mm · 50 mm"
+      }
+    ],
+    "features": [
+      {
+        "tr": "38 mm ve 50 mm",
+        "en": "38 mm and 50 mm"
+      },
+      {
+        "tr": "Esnek yapı",
+        "en": "Flexible build"
+      },
+      {
+        "tr": "Süpürge uyumlu",
+        "en": "Vacuum compatible"
+      }
+    ],
+    "usage": {
+      "tr": "Manuel temizlikte",
+      "en": "Manual cleaning"
+    },
+    "galleryCount": 1
+  },
+  {
+    "slug": "yuzey-kepcesi",
+    "category": "cleaning",
+    "name": {
+      "tr": "Yüzey Kepçesi",
+      "en": "Deep Leaf Skimmer Net"
+    },
+    "tagline": {
+      "tr": "Berrak yüzey",
+      "en": "Clear surface"
+    },
+    "description": {
+      "tr": "Su yüzeyinde biriken yaprak ve iri kirleri zahmetsizce toplayan derin ağızlı yüzey kepçesi.",
+      "en": "A deep-bag surface net that effortlessly lifts leaves and floating debris from the water surface."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Temizlik"
+      }
+    ],
+    "features": [
+      {
+        "tr": "Derin toplama ağı",
+        "en": "Deep collection bag"
+      },
+      {
+        "tr": "Yaprak ve kaba kir",
+        "en": "Leaves and coarse debris"
+      },
+      {
+        "tr": "Teleskopik sapa uyumlu",
+        "en": "Fits telescopic poles"
+      }
+    ],
+    "usage": {
+      "tr": "Tüm havuz tiplerinde",
+      "en": "All pool types"
+    },
+    "galleryCount": 1
+  },
+  {
+    "slug": "havuz-fircasi",
+    "category": "cleaning",
+    "name": {
+      "tr": "Havuz Fırçası",
+      "en": "Pool Wall & Floor Brush"
+    },
+    "tagline": {
+      "tr": "Temiz zemin",
+      "en": "Spotless surfaces"
+    },
+    "description": {
+      "tr": "Havuz duvar ve tabanındaki alg ve kalıntıları etkin biçimde ovarak temizleyen dayanıklı havuz fırçası.",
+      "en": "A durable brush that scrubs walls and floors to remove algae and stubborn residue effectively."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Temizlik"
+      }
+    ],
+    "features": [
+      {
+        "tr": "Alg ve kalıntıya karşı",
+        "en": "Against algae buildup"
+      },
+      {
+        "tr": "Dayanıklı kıllar",
+        "en": "Durable bristles"
+      },
+      {
+        "tr": "Teleskopik sapa uyumlu",
+        "en": "Fits telescopic poles"
+      }
+    ],
+    "usage": {
+      "tr": "Duvar ve taban temizliğinde",
+      "en": "Wall and floor cleaning"
+    },
+    "galleryCount": 1
+  },
+  {
+    "slug": "termometre",
+    "category": "cleaning",
+    "name": {
+      "tr": "Havuz Termometresi",
+      "en": "Floating Pool Thermometer"
+    },
+    "tagline": {
+      "tr": "Doğru sıcaklık",
+      "en": "Accurate temperature"
+    },
+    "description": {
+      "tr": "Sevimli hayvan figürlü, su yüzeyinde yüzerek havuz sıcaklığını sürekli gösteren pratik termometre.",
+      "en": "A charming animal-figure thermometer that floats on the surface and continuously displays pool temperature."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Temizlik"
+      }
+    ],
+    "features": [
+      {
+        "tr": "Yüzer tasarım",
+        "en": "Floating design"
+      },
+      {
+        "tr": "Kolay okunur skala",
+        "en": "Easy-read scale"
+      },
+      {
+        "tr": "Dekoratif figür",
+        "en": "Decorative figure"
+      }
+    ],
+    "usage": {
+      "tr": "Tüm havuzlarda",
+      "en": "All pools"
+    },
+    "galleryCount": 1
+  },
+  {
+    "slug": "dispanser",
+    "category": "cleaning",
+    "name": {
+      "tr": "Yüzen Klor Dispanseri",
+      "en": "Floating Chlorine Dispenser"
+    },
+    "tagline": {
+      "tr": "Dengeli klor",
+      "en": "Steady chlorine"
+    },
+    "description": {
+      "tr": "Klor tabletlerini yüzerken kademeli çözerek suya dengeli dezenfeksiyon sağlayan ayarlanabilir yüzer dispenser.",
+      "en": "An adjustable floating dispenser that gradually releases chlorine tablets for balanced, continuous disinfection."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Temizlik"
+      }
+    ],
+    "features": [
+      {
+        "tr": "Ayarlanabilir salınım",
+        "en": "Adjustable release"
+      },
+      {
+        "tr": "Kademeli çözünme",
+        "en": "Gradual dissolving"
+      },
+      {
+        "tr": "Serbest klor 1-3 ppm",
+        "en": "Free chlorine 1-3 ppm"
+      }
+    ],
+    "usage": {
+      "tr": "Klor tabletleriyle",
+      "en": "With chlorine tablets"
+    },
+    "galleryCount": 1
+  },
+  {
+    "slug": "test-insta",
+    "category": "cleaning",
+    "name": {
+      "tr": "Insta Test Şeridi",
+      "en": "Instant Test Strips"
+    },
+    "tagline": {
+      "tr": "Hızlı ölçüm",
+      "en": "Instant reading"
+    },
+    "description": {
+      "tr": "Suya daldırıp saniyeler içinde klor ve pH değerlerini gösteren pratik anlık test stripleri.",
+      "en": "Dip-and-read strips that reveal chlorine and pH levels within seconds for quick water checks."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Temizlik"
+      }
+    ],
+    "features": [
+      {
+        "tr": "Saniyeler içinde sonuç",
+        "en": "Results in seconds"
+      },
+      {
+        "tr": "Klor ve pH",
+        "en": "Chlorine and pH"
+      },
+      {
+        "tr": "Pratik kullanım",
+        "en": "Simple to use"
+      }
+    ],
+    "usage": {
+      "tr": "Günlük hızlı kontrolde",
+      "en": "Daily quick checks"
+    },
+    "galleryCount": 1
+  },
+  {
+    "slug": "test-damla",
+    "category": "cleaning",
+    "name": {
+      "tr": "Test Kiti (Klor & pH)",
+      "en": "Drop Test Kit"
+    },
+    "tagline": {
+      "tr": "Kesin değer",
+      "en": "Precise values"
+    },
+    "description": {
+      "tr": "OTO ve fenol kırmızısı reaktifleriyle klor ve pH değerlerini damla yöntemiyle net ölçen test kiti.",
+      "en": "A drop-based kit using OTO and phenol red reagents to measure chlorine and pH with clear accuracy."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Temizlik"
+      }
+    ],
+    "features": [
+      {
+        "tr": "OTO ve fenol kırmızısı",
+        "en": "OTO and phenol red"
+      },
+      {
+        "tr": "pH hedefi 7.2-7.6",
+        "en": "pH target 7.2-7.6"
+      },
+      {
+        "tr": "Renk karşılaştırmalı",
+        "en": "Color comparison"
+      }
+    ],
+    "usage": {
+      "tr": "Klor ve pH ölçümünde",
+      "en": "Chlorine and pH testing"
+    },
+    "galleryCount": 1
+  },
+  {
+    "slug": "test-set",
+    "category": "cleaning",
+    "name": {
+      "tr": "Test Kiti Seti",
+      "en": "Complete Water Testing Kit"
+    },
+    "tagline": {
+      "tr": "Eksiksiz analiz",
+      "en": "Complete analysis"
+    },
+    "description": {
+      "tr": "Havuz suyunun temel değerlerini eksiksiz ölçmek için gereken reaktif ve aparatları bir arada sunan test seti.",
+      "en": "A complete set bringing together the reagents and tools needed to test all essential pool water values."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Temizlik"
+      }
+    ],
+    "features": [
+      {
+        "tr": "Çoklu parametre ölçümü",
+        "en": "Multi-parameter testing"
+      },
+      {
+        "tr": "Reaktifler dahil",
+        "en": "Reagents included"
+      },
+      {
+        "tr": "Düzenli bakım için",
+        "en": "For routine care"
+      }
+    ],
+    "usage": {
+      "tr": "Kapsamlı su analizinde",
+      "en": "Full water analysis"
+    },
+    "galleryCount": 1
+  },
+  {
+    "slug": "test-colorq",
+    "category": "cleaning",
+    "brand": "WaterLink",
+    "name": {
+      "tr": "ColorQ Dijital Test Kiti",
+      "en": "WaterLink ColorQ 2X Photometer"
+    },
+    "tagline": {
+      "tr": "Dijital hassasiyet",
+      "en": "Digital precision"
+    },
+    "description": {
+      "tr": "WaterLink ColorQ 2X, dijital fotometre teknolojisiyle 7 su parametresini hızlı ve hassas biçimde ölçen laboratuvar seviyesinde test cihazı.",
+      "en": "The WaterLink ColorQ 2X is a digital photometer measuring 7 water parameters with lab-grade speed and precision."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Temizlik"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "WaterLink"
+      }
+    ],
+    "features": [
+      {
+        "tr": "7 parametre ölçümü",
+        "en": "7-parameter testing"
+      },
+      {
+        "tr": "Dijital fotometre",
+        "en": "Digital photometer"
+      },
+      {
+        "tr": "Laboratuvar hassasiyeti",
+        "en": "Lab-grade accuracy"
+      }
+    ],
+    "usage": {
+      "tr": "Profesyonel su analizinde",
+      "en": "Professional water analysis"
+    },
+    "galleryCount": 1
+  }
 ];
 
 // ── helpers ────────────────────────────────────────────────
@@ -962,21 +2654,34 @@ export const localize = (l: L, locale: string): string =>
 /** Slugs that have real photography under /public/products/<slug>.webp (4:5).
  *  Everything else falls back to the ProductShot studio placeholder. */
 const PHOTO_SLUGS = new Set<string>([
-  'sivi-ph-dusurucu', 'toz-ph-dusurucu', 'sivi-klor', 'granul-klor',
-  'multi-tablet-klor', 'yosun-onleyici', 'yosun-giderici', 'berraklastirici',
-  'cokturucu-flok', 'anti-iyon', 'hucre-temizleyici', 'bagli-klor',
-  'cevre-temizlik', 'alkalinite-dusurucu', 'temizlik-asidi',
-  'led-smart-23w', 'led-mini-9w', 'led-thin-23w',
-  'plastik-filtre', 'monofaze-pompa',
-  'rgb-fiskiye', 'rgb-solar-fiskiye', 'yuzen-speaker', 'deniz-yildizi-led',
-  'havuz-robotu', 'havuz-supurgesi', 'havuz-hortumu', 'yuzey-kepcesi',
-  'havuz-fircasi', 'termometre', 'dispanser', 'su-test-kiti',
+  'sivi-ph-quardex', 'sivi-ph-selenoid', 'toz-ph-quardex', 'toz-ph-selenoid', 'sivi-klor-quardex',
+  'sivi-klor-selenoid', 'toz-klor-quardex', 'toz-klor-selenoid', 'multi-tablet-wtr', 'yosun-onleyici-selenoid',
+  'yosun-onleyici-poolbox', 'yosun-onleyici-quardex', 'yosun-giderici-quardex', 'berraklastirici-quardex',
+  'parlatici-selenoid', 'parlatici-poolbox', 'cokturucu-selenoid', 'cokturucu-poolbox', 'flok-tablet',
+  'anti-iyon-quardex', 'iyon-tutucu-selenoid', 'iyon-topu', 'hucre-temizleyici-selenoid', 'bagli-klor-poolbox',
+  'cevre-temizlik-quardex', 'alkalinite-dusurucu-selenoid', 'temizlik-asidi-selenoid', 'led-23w',
+  'led-32w', 'led-9w', 'kum-filtresi-600', 'pompa-1hp', 'isikli-fiskiye', 'solar-fiskiye', 'balina-hoparlor',
+  'yuzen-hoparlor', 'deniz-yildizi', 'havuz-robotu', 'havuz-supurgesi', 'havuz-hortumu', 'yuzey-kepcesi',
+  'havuz-fircasi', 'termometre', 'dispanser', 'test-insta', 'test-damla', 'test-set', 'test-colorq',
 ]);
 
 export const productPhoto = (slug: string): string | undefined =>
   PHOTO_SLUGS.has(slug) ? `/products/${slug}.webp` : undefined;
 
 export const hasPhoto = (slug: string): boolean => PHOTO_SLUGS.has(slug);
+
+/**
+ * Variant/detail shots per product under /public/products/gallery/<slug>-<n>.webp.
+ * A product's brand/size variants (e.g. Quardex + Selenoid + Poolbox of the same
+ * chemical) are grouped into one card and surfaced together in its gallery.
+ */
+const GALLERY_COUNTS: Record<string, number> = { 'sivi-ph-quardex': 1, 'sivi-ph-selenoid': 1, 'toz-ph-quardex': 1, 'toz-ph-selenoid': 1, 'sivi-klor-quardex': 1, 'sivi-klor-selenoid': 1, 'toz-klor-quardex': 2, 'toz-klor-selenoid': 1, 'multi-tablet-wtr': 2, 'yosun-onleyici-selenoid': 1, 'yosun-onleyici-poolbox': 2, 'yosun-onleyici-quardex': 1, 'yosun-giderici-quardex': 1, 'berraklastirici-quardex': 1, 'parlatici-selenoid': 1, 'parlatici-poolbox': 2, 'cokturucu-selenoid': 1, 'cokturucu-poolbox': 1, 'flok-tablet': 1, 'anti-iyon-quardex': 1, 'iyon-tutucu-selenoid': 1, 'iyon-topu': 1, 'hucre-temizleyici-selenoid': 1, 'bagli-klor-poolbox': 1, 'cevre-temizlik-quardex': 1, 'alkalinite-dusurucu-selenoid': 1, 'temizlik-asidi-selenoid': 1, 'led-23w': 2, 'led-32w': 1, 'led-9w': 1, 'kum-filtresi-600': 1, 'pompa-1hp': 1, 'isikli-fiskiye': 1, 'solar-fiskiye': 1, 'balina-hoparlor': 1, 'yuzen-hoparlor': 1, 'deniz-yildizi': 1, 'havuz-robotu': 1, 'havuz-supurgesi': 1, 'havuz-hortumu': 1, 'yuzey-kepcesi': 1, 'havuz-fircasi': 1, 'termometre': 1, 'dispanser': 1, 'test-insta': 1, 'test-damla': 1, 'test-set': 1, 'test-colorq': 1 };
+
+export const productGallery = (slug: string): string[] =>
+  Array.from(
+    { length: GALLERY_COUNTS[slug] ?? 0 },
+    (_, i) => `/products/gallery/${slug}-${i + 1}.webp`,
+  );
 
 /** Only products with real photography are shown on the site for now; the rest
  *  (and any category left empty by that) are hidden until photos arrive. */
@@ -1002,6 +2707,7 @@ export type LocalizedProduct = {
   galleryCount: number;
   pdf?: string;
   photo?: string;
+  gallery: string[];
   specs: { label: string; value: string }[];
   features: string[];
 };
@@ -1019,6 +2725,7 @@ export function localizeProduct(p: Product, locale: string): LocalizedProduct {
     galleryCount: p.galleryCount,
     pdf: p.pdf,
     photo: productPhoto(p.slug),
+    gallery: productGallery(p.slug),
     specs: p.specs.map((s) => ({ label: pick(s.label), value: s.value })),
     features: p.features.map(pick),
   };
