@@ -9,7 +9,10 @@ import type { AppPathname } from '@/i18n/routing';
 import { useIsChrome } from '@/lib/isChrome';
 
 /** Nav only ever links to static routes — never a parameterised [slug] page. */
-type StaticPathname = Exclude<AppPathname, '/products/[slug]' | '/projects/[slug]'>;
+type StaticPathname = Exclude<
+  AppPathname,
+  '/products/[slug]' | '/projects/[slug]' | '/blog/[slug]'
+>;
 
 export type NavLeaf = { href: StaticPathname; label: string; desc?: string };
 export type NavGroup = { label: string; panel: NavLeaf[] };

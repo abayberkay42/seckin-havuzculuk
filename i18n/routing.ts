@@ -20,6 +20,7 @@ export const pathnames = {
   '/projects': { tr: '/projeler', en: '/projects' },
   '/projects/[slug]': { tr: '/projeler/[slug]', en: '/projects/[slug]' },
   '/blog': '/blog',
+  '/blog/[slug]': '/blog/[slug]',
   '/contact': { tr: '/iletisim', en: '/contact' },
 } as const;
 

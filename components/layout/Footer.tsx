@@ -6,7 +6,10 @@ import type { AppPathname } from '@/i18n/routing';
 import { PHONE_DISPLAY, EMAIL, whatsappLink, SOCIAL_LINKS } from '@/lib/contact';
 
 /** Static (non-parameterised) routes — the footer never links to [slug] pages. */
-type StaticPathname = Exclude<AppPathname, '/products/[slug]' | '/projects/[slug]'>;
+type StaticPathname = Exclude<
+  AppPathname,
+  '/products/[slug]' | '/projects/[slug]' | '/blog/[slug]'
+>;
 
 const MAP_SRC =
   'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3131.11746756088!2d26.37410777643129!3d38.29994608173414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bb793e314ab417%3A0x9fc07db0ca0d761e!2sSe%C3%A7kin%20Havuzculuk!5e0!3m2!1str!2str!4v1784819832872!5m2!1str!2str';

@@ -473,7 +473,7 @@
   "journal": {
     "eyebrow": "Journal",
     "title": "Notes on water, light and craft.",
-    "intro": "Design decisions, material stories and what we learn on site. The journal is coming here soon.",
+    "intro": "Design decisions, material stories, pool maintenance and lessons from the site — notes on water, light and craft.",
     "stateLabel": "In preparation",
     "upcomingEyebrow": "Coming soon",
     "upcoming": [
@@ -494,7 +494,13 @@
       }
     ],
     "ctaTitle": "Have a question?",
-    "ctaButton": "Write to us"
+    "ctaButton": "Write to us",
+    "seoTitle": "Pool Blog — Care, Construction & Tips",
+    "seoDescription": "Guides on pool maintenance, construction and renovation. Practical, expert pool knowledge for Çeşme, Alaçatı and İzmir.",
+    "postsEyebrow": "Articles",
+    "readMinutes": "min read",
+    "readMore": "Read article",
+    "relatedServiceLead": "Related service"
   },
   "contact": {
     "eyebrow": "Contact",

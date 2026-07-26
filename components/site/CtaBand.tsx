@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/Button';
 import type { AppPathname } from '@/i18n/routing';
 
 /** The CTA never points at a parameterised [slug] page. */
-type StaticPathname = Exclude<AppPathname, '/products/[slug]' | '/projects/[slug]'>;
+type StaticPathname = Exclude<AppPathname, '/products/[slug]' | '/projects/[slug]' | '/blog/[slug]'>;
 
 /**
  * The quiet close shared by interior pages — a deep-water band, the interlocking

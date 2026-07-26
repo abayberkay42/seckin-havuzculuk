@@ -473,7 +473,7 @@
   "journal": {
     "eyebrow": "Günce",
     "title": "Su, ışık ve zanaat üzerine notlar.",
-    "intro": "Tasarım kararları, malzeme hikâyeleri ve şantiyeden öğrendiklerimiz. Günce yakında burada.",
+    "intro": "Tasarım kararları, malzeme hikâyeleri, havuz bakımı ve şantiyeden öğrendiklerimiz — su, ışık ve zanaat üzerine notlar.",
     "stateLabel": "Hazırlanıyor",
     "upcomingEyebrow": "Yakında",
     "upcoming": [
@@ -494,7 +494,13 @@
       }
     ],
     "ctaTitle": "Bir sorunuz mu var?",
-    "ctaButton": "Bize yazın"
+    "ctaButton": "Bize yazın",
+    "seoTitle": "Havuz Blogu — Bakım, İnşaat & İpuçları",
+    "seoDescription": "Havuz bakımı, inşaatı ve renovasyonu üzerine rehberler. Çeşme, Alaçatı ve İzmir için pratik, uzman havuz bilgisi.",
+    "postsEyebrow": "Yazılar",
+    "readMinutes": "dk okuma",
+    "readMore": "Yazıyı oku",
+    "relatedServiceLead": "İlgili hizmet"
   },
   "contact": {
     "eyebrow": "İletişim",

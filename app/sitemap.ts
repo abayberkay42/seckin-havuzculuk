@@ -3,6 +3,7 @@ import { routing, type AppLocale, type AppPathname } from '@/i18n/routing';
 import { absoluteUrl, type SeoHref } from '@/lib/seo';
 import { visibleProducts, hasPhoto } from '@/content/catalogue';
 import { projects } from '@/content/projects';
+import { posts } from '@/content/blog';
 
 /**
  * One entry per page, keyed on the default-locale URL, each carrying the full
@@ -38,8 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/maintenance', priority: 0.9, cf: 'monthly' },
     { path: '/products', priority: 0.8, cf: 'weekly' },
     { path: '/projects', priority: 0.8, cf: 'weekly' },
-    // '/blog' intentionally omitted until it has real published articles — it is
-    // noindex for now (see app/[locale]/blog/page.tsx).
+    { path: '/blog', priority: 0.7, cf: 'weekly' },
     { path: '/contact', priority: 0.7, cf: 'monthly' },
   ];
 
@@ -63,5 +63,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ),
   );
 
-  return [...staticEntries, ...productEntries, ...projectEntries];
+  const blogEntries = posts.map((p) =>
+    entry(
+      { pathname: '/blog/[slug]', params: { slug: p.slug } },
+      { priority: 0.6, changeFrequency: 'monthly' },
+    ),
+  );
+
+  return [...staticEntries, ...productEntries, ...projectEntries, ...blogEntries];
 }

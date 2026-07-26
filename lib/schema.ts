@@ -121,6 +121,31 @@ export function productSchema(input: {
   };
 }
 
+/** A blog post -> BlogPosting rich result. Author/publisher = the firm. */
+export function articleSchema(input: {
+  headline: string;
+  description: string;
+  url: string;
+  image?: string;
+  datePublished: string;
+  dateModified: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: input.headline,
+    description: input.description,
+    url: input.url,
+    mainEntityOfPage: input.url,
+    ...(input.image ? { image: `${SITE_URL}${input.image}` } : {}),
+    datePublished: input.datePublished,
+    dateModified: input.dateModified,
+    inLanguage: 'tr',
+    author: { '@id': ORG_ID },
+    publisher: { '@id': ORG_ID },
+  };
+}
+
 /** FAQ block -> FAQPage rich result. items = [{q, a}]. */
 export function faqSchema(items: { q: string; a: string }[]) {
   return {
