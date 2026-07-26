@@ -23,7 +23,7 @@ export function SignatureProjects() {
   const covers = [
     '/proj-antrasit-renovasyon.webp',
     '/proj-bahce-yenileme.webp',
-    '/proj-deniz-terasi.webp',
+    '/proj-gizli-savakli-cover.webp',
     '/proj-zeytinlik.webp',
   ];
   const root = useRef<HTMLDivElement>(null);
