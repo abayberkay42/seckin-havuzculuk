@@ -2762,6 +2762,65 @@ export const products: Product[] = [
       "en": "Pool water lines"
     },
     "galleryCount": 1
+  }  ,
+  {
+    "slug": "pvc-yapistirici",
+    "category": "plumbing",
+    "brand": "Pimtaş",
+    "name": {
+      "tr": "PVC-U Yapıştırıcı & Temizleyici",
+      "en": "PVC-U Solvent Cement & Cleaner"
+    },
+    "tagline": {
+      "tr": "Sızdırmaz birleşim",
+      "en": "A leak-tight bond"
+    },
+    "description": {
+      "tr": "Pimtaş PVC-U yapıştırıcı ve temizleyici; boru ile ek parçaları kalıcı ve sızdırmaz biçimde birleştirir. 125 g, 250 g ve 500 g seçenekleriyle.",
+      "en": "Pimtaş PVC-U solvent cement and cleaner join pipes and fittings into a permanent, leak-tight bond. Available in 125 g, 250 g and 500 g."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Tesisat"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Pimtaş"
+      },
+      {
+        "label": {
+          "tr": "Ambalaj",
+          "en": "Pack"
+        },
+        "value": "125 g · 250 g · 500 g"
+      }
+    ],
+    "features": [
+      {
+        "tr": "Kalıcı sızdırmaz birleşim",
+        "en": "Permanent leak-tight bond"
+      },
+      {
+        "tr": "Temizleyici ile yüzey hazırlığı",
+        "en": "Cleaner for surface prep"
+      },
+      {
+        "tr": "125 / 250 / 500 g seçenekleri",
+        "en": "125 / 250 / 500 g options"
+      }
+    ],
+    "usage": {
+      "tr": "PVC tesisat montajında",
+      "en": "PVC plumbing assembly"
+    },
+    "galleryCount": 1
   }
 ];
 
@@ -2782,6 +2841,7 @@ const PHOTO_SLUGS = new Set<string>([
   'yuzen-hoparlor', 'deniz-yildizi', 'havuz-robotu', 'havuz-supurgesi', 'havuz-hortumu', 'yuzey-kepcesi',
   'havuz-fircasi', 'termometre', 'dispanser', 'test-insta', 'test-damla', 'test-set', 'test-colorq',
   'vana-boru', 'pvc-borular',
+  'pvc-yapistirici',
 ]);
 
 /**
@@ -2802,7 +2862,7 @@ export const hasPhoto = (slug: string): boolean => PHOTO_SLUGS.has(slug);
  * A product's brand/size variants (e.g. Quardex + Selenoid + Poolbox of the same
  * chemical) are grouped into one card and surfaced together in its gallery.
  */
-const GALLERY_COUNTS: Record<string, number> = { 'sivi-ph-quardex': 1, 'sivi-ph-selenoid': 1, 'toz-ph-quardex': 1, 'toz-ph-selenoid': 1, 'sivi-klor-quardex': 1, 'sivi-klor-selenoid': 1, 'toz-klor-quardex': 2, 'toz-klor-selenoid': 1, 'multi-tablet-wtr': 2, 'yosun-onleyici-selenoid': 1, 'yosun-onleyici-poolbox': 2, 'yosun-onleyici-quardex': 1, 'yosun-giderici-quardex': 1, 'berraklastirici-quardex': 1, 'parlatici-selenoid': 1, 'parlatici-poolbox': 2, 'cokturucu-selenoid': 1, 'cokturucu-poolbox': 1, 'flok-tablet': 1, 'anti-iyon-quardex': 1, 'iyon-tutucu-selenoid': 1, 'iyon-topu': 1, 'hucre-temizleyici-selenoid': 1, 'bagli-klor-poolbox': 1, 'cevre-temizlik-quardex': 1, 'alkalinite-dusurucu-selenoid': 1, 'temizlik-asidi-selenoid': 1, 'led-23w': 2, 'led-32w': 1, 'led-9w': 1, 'kum-filtresi-600': 1, 'pompa-1hp': 1, 'isikli-fiskiye': 1, 'solar-fiskiye': 1, 'balina-hoparlor': 1, 'yuzen-hoparlor': 1, 'deniz-yildizi': 1, 'havuz-robotu': 1, 'havuz-supurgesi': 1, 'havuz-hortumu': 1, 'yuzey-kepcesi': 1, 'havuz-fircasi': 1, 'termometre': 1, 'dispanser': 1, 'test-insta': 1, 'test-damla': 1, 'test-set': 1, 'test-colorq': 1, 'vana-boru': 1, 'pvc-borular': 1 };
+const GALLERY_COUNTS: Record<string, number> = { 'sivi-ph-quardex': 1, 'sivi-ph-selenoid': 1, 'toz-ph-quardex': 1, 'toz-ph-selenoid': 1, 'sivi-klor-quardex': 1, 'sivi-klor-selenoid': 1, 'toz-klor-quardex': 2, 'toz-klor-selenoid': 1, 'multi-tablet-wtr': 2, 'yosun-onleyici-selenoid': 1, 'yosun-onleyici-poolbox': 2, 'yosun-onleyici-quardex': 1, 'yosun-giderici-quardex': 1, 'berraklastirici-quardex': 1, 'parlatici-selenoid': 1, 'parlatici-poolbox': 2, 'cokturucu-selenoid': 1, 'cokturucu-poolbox': 1, 'flok-tablet': 1, 'anti-iyon-quardex': 1, 'iyon-tutucu-selenoid': 1, 'iyon-topu': 1, 'hucre-temizleyici-selenoid': 1, 'bagli-klor-poolbox': 1, 'cevre-temizlik-quardex': 1, 'alkalinite-dusurucu-selenoid': 1, 'temizlik-asidi-selenoid': 1, 'led-23w': 2, 'led-32w': 1, 'led-9w': 1, 'kum-filtresi-600': 1, 'pompa-1hp': 1, 'isikli-fiskiye': 1, 'solar-fiskiye': 1, 'balina-hoparlor': 1, 'yuzen-hoparlor': 1, 'deniz-yildizi': 1, 'havuz-robotu': 1, 'havuz-supurgesi': 1, 'havuz-hortumu': 1, 'yuzey-kepcesi': 1, 'havuz-fircasi': 1, 'termometre': 1, 'dispanser': 1, 'test-insta': 1, 'test-damla': 1, 'test-set': 1, 'test-colorq': 1, 'vana-boru': 1, 'pvc-borular': 1, 'pvc-yapistirici': 1 };
 
 const GALLERY_OVERRIDES: Record<string, string[]> = {
   'test-colorq': ['/products/test-colorq-dijital.webp'],
