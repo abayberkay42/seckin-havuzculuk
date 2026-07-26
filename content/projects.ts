@@ -189,7 +189,7 @@ export const projects: Project[] = [
   {
     slug: 'tundra-gri-renovasyon',
     type: 'before-after',
-    cover: '/proj-tundra-gri.webp',
+    cover: '/proj-tundra-gri-cover.webp',
     name: { tr: 'Tundra Gri Renovasyon', en: 'Tundra Grey Renovation' },
     place: { tr: 'Çeşme, İzmir', en: 'Çeşme, İzmir' },
     year: '2024',
