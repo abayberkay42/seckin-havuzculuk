@@ -163,7 +163,7 @@ function ProjectRow({
 
       <div className={`md:col-span-4 ${flip ? 'md:order-1 md:col-start-1' : ''}`}>
         <span className="mb-4 block font-mono text-label uppercase text-ink/40">
-          {place} · {year}
+          {place}
         </span>
         <h2 className="mb-5 font-display text-title text-ink">{name}</h2>
         <p className="mb-7 max-w-[30rem] text-[1.0625rem] leading-relaxed text-ink/65">

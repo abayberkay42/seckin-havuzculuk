@@ -73,7 +73,7 @@ export function ProjectHero({ lp }: { lp: LocalizedProject }) {
             {typeLabel}
           </span>
           <span className="font-mono text-label uppercase text-canvas/60">
-            {lp.place} · {lp.year}
+            {lp.place}
           </span>
         </div>
         <h1

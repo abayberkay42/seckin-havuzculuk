@@ -19,9 +19,7 @@ export function ProjectStory({ lp }: { lp: LocalizedProject }) {
   const facts: { label: string; value: string }[] = [
     { label: t('location'), value: lp.place },
     { label: t('type'), value: typeLabel },
-    { label: t('duration'), value: lp.duration },
     { label: t('area'), value: lp.area },
-    { label: t('year'), value: lp.year },
   ];
 
   useGSAP(

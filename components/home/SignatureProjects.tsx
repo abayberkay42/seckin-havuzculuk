@@ -96,7 +96,7 @@ export function SignatureProjects() {
                   {String(i + 1).padStart(2, '0')}
                 </span>
                 <span className="font-mono text-label uppercase text-canvas/60">
-                  {project.place} · {project.year}
+                  {project.place}
                 </span>
               </div>
             </article>
