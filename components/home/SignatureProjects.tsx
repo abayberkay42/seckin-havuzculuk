@@ -91,14 +91,6 @@ export function SignatureProjects() {
                 sizes="(max-width: 768px) 88vw, 1170px"
                 className="h-full w-full"
               />
-              <div className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between p-7">
-                <span className="font-mono text-label uppercase text-canvas/60">
-                  {String(i + 1).padStart(2, '0')}
-                </span>
-                <span className="font-mono text-label uppercase text-canvas/60">
-                  {project.place}
-                </span>
-              </div>
             </article>
           ))}
 
