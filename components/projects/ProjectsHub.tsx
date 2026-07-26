@@ -25,7 +25,6 @@ export function ProjectsHub() {
   const filters: { key: FilterKey; label: string }[] = [
     { key: 'all', label: t('filterAll') },
     { key: 'completed', label: t('filterCompleted') },
-    { key: 'ongoing', label: t('filterOngoing') },
     { key: 'before-after', label: t('filterBeforeAfter') },
   ];
 
