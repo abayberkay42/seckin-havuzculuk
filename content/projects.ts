@@ -19,6 +19,9 @@ export type Project = {
   duration: L;
   area: string;
   galleryCount: number;
+  /** Real gallery photos under /public. Empty until the client sends them —
+   *  the carousel falls back to galleryCount placeholder cards meanwhile. */
+  gallery?: string[];
   hasBeforeAfter: boolean;
   timeline: { date: L; title: L; desc: L }[];
   stages: { title: L; desc: L }[];
@@ -41,6 +44,7 @@ export const projects: Project[] = [
     duration: { tr: '6 hafta', en: '6 weeks' },
     area: '4×6 m',
     galleryCount: 6,
+    gallery: ['/projects/gallery/antrasit-aydinlatmali-renovasyon-1.webp', '/projects/gallery/antrasit-aydinlatmali-renovasyon-2.webp'],
     hasBeforeAfter: true,
     timeline: [
       { date: { tr: 'Söküm', en: 'Strip-out' }, title: { tr: 'Söküm', en: 'Strip-out' }, desc: { tr: 'Eski kaplama ve kenar mermerleri kaldırıldı.', en: 'Old lining and coping removed.' } },
@@ -79,6 +83,7 @@ export const projects: Project[] = [
     duration: { tr: '6 hafta', en: '6 weeks' },
     area: '3×6 m',
     galleryCount: 5,
+    gallery: ['/projects/gallery/selaleli-bahce-havuzu-1.webp', '/projects/gallery/selaleli-bahce-havuzu-2.webp', '/projects/gallery/selaleli-bahce-havuzu-3.webp', '/projects/gallery/selaleli-bahce-havuzu-4.webp', '/projects/gallery/selaleli-bahce-havuzu-5.webp', '/projects/gallery/selaleli-bahce-havuzu-6.webp'],
     hasBeforeAfter: true,
     timeline: [
       { date: { tr: 'Söküm & İnşaat', en: 'Strip-out & Build' }, title: { tr: 'Söküm & İnşaat', en: 'Strip-out & Build' }, desc: { tr: 'Eski yüzey kaldırıldı, gizli savak inşa edildi.', en: 'Old surface removed, hidden weir built.' } },
@@ -106,7 +111,7 @@ export const projects: Project[] = [
   {
     slug: 'gizli-savakli-renovasyon',
     type: 'before-after',
-    cover: '/proj-deniz-terasi.webp',
+    cover: '/proj-gizli-savakli-cover.webp',
     name: { tr: 'Gizli Savaklı Renovasyon', en: 'Hidden-Weir Renovation' },
     place: { tr: 'Ilıca, Çeşme, İzmir', en: 'Ilıca, Çeşme, İzmir' },
     year: '2024',
@@ -117,6 +122,7 @@ export const projects: Project[] = [
     duration: { tr: '6 hafta', en: '6 weeks' },
     area: '4×8 m',
     galleryCount: 5,
+    gallery: ['/projects/gallery/gizli-savakli-renovasyon-1.webp', '/projects/gallery/gizli-savakli-renovasyon-2.webp'],
     hasBeforeAfter: true,
     timeline: [
       { date: { tr: 'Söküm', en: 'Strip-out' }, title: { tr: 'Söküm', en: 'Strip-out' }, desc: { tr: 'Eski yüzey kaldırıldı, savak hazırlığı yapıldı.', en: 'Old surface removed, weir prepared.' } },
@@ -155,6 +161,7 @@ export const projects: Project[] = [
     duration: { tr: '8 hafta', en: '8 weeks' },
     area: '4×8 m',
     galleryCount: 5,
+    gallery: ['/projects/gallery/plazma-tasmali-villa-havuzu-1.webp', '/projects/gallery/plazma-tasmali-villa-havuzu-2.webp', '/projects/gallery/plazma-tasmali-villa-havuzu-3.webp', '/projects/gallery/plazma-tasmali-villa-havuzu-4.webp'],
     hasBeforeAfter: false,
     timeline: [
       { date: { tr: 'Kabuk', en: 'Shell' }, title: { tr: 'Betonarme', en: 'Concrete' }, desc: { tr: 'Gunit kabuk ve taşma kanalı.', en: 'Gunite shell and overflow channel.' } },
@@ -193,6 +200,7 @@ export const projects: Project[] = [
     duration: { tr: '5 hafta', en: '5 weeks' },
     area: '3×6 m',
     galleryCount: 5,
+    gallery: ['/projects/gallery/tundra-gri-renovasyon-1.webp', '/projects/gallery/tundra-gri-renovasyon-2.webp'],
     hasBeforeAfter: true,
     timeline: [
       { date: { tr: 'Söküm', en: 'Strip-out' }, title: { tr: 'Söküm', en: 'Strip-out' }, desc: { tr: 'Eski yüzey ve kenar mermerleri kaldırıldı.', en: 'Old surface and coping removed.' } },
@@ -231,6 +239,7 @@ export const projects: Project[] = [
     duration: { tr: '10 hafta', en: '10 weeks' },
     area: '17×5 m',
     galleryCount: 6,
+    gallery: ['/projects/gallery/ates-cukurlu-villa-havuzu-1.webp', '/projects/gallery/ates-cukurlu-villa-havuzu-2.webp'],
     hasBeforeAfter: false,
     timeline: [
       { date: { tr: 'Kabuk', en: 'Shell' }, title: { tr: 'Betonarme', en: 'Concrete' }, desc: { tr: '17 m havuz kabuğu ve taşma kanalı.', en: 'A 17 m shell and overflow channel.' } },
@@ -273,6 +282,7 @@ export type LocalizedProject = {
   year: string;
   area: string;
   galleryCount: number;
+  gallery: string[];
   hasBeforeAfter: boolean;
   name: string;
   place: string;
@@ -295,6 +305,7 @@ export function localizeProject(p: Project, locale: string): LocalizedProject {
     year: p.year,
     area: p.area,
     galleryCount: p.galleryCount,
+    gallery: p.gallery ?? [],
     hasBeforeAfter: p.hasBeforeAfter,
     name: pick(p.name),
     place: pick(p.place),

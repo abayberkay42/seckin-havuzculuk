@@ -1,103 +1,98 @@
 'use client';
 
-import { useRef } from 'react';
+import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { gsap, useGSAP } from '@/lib/gsap';
-import { Sheen } from '@/components/ui/Sheen';
+import { motion } from 'motion/react';
 import { Eyebrow } from '@/components/ui/Eyebrow';
+import { Sheen } from '@/components/ui/Sheen';
+import { EASE_WATER } from '@/lib/motion';
 import type { LocalizedProject } from '@/content/projects';
 
-const WATER = 'bg-[radial-gradient(130%_130%_at_28%_18%,#20516a_0%,#16303c_58%,#0d1f29_100%)]';
+const WATER =
+  'bg-[radial-gradient(130%_130%_at_28%_18%,#20516a_0%,#16303c_58%,#0d1f29_100%)]';
 
-function GalleryImage({
-  aspect,
-  label,
-}: {
-  aspect: string;
-  label?: string;
-}) {
-  return (
-    <figure
-      data-fig
-      className={`group relative overflow-hidden rounded-[1.75rem] ${aspect}`}
-    >
-      {/* over-scanned so the parallax translate never reveals an edge */}
-      <div data-parallax className="absolute inset-[-8%]">
-        <div
-          className={`h-full w-full transition-transform duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.06] ${WATER}`}
-        >
-          <div className="absolute -right-1/4 -top-1/4 h-[70%] w-[70%] rounded-full bg-[radial-gradient(closest-side,rgba(169,203,227,0.18),transparent_72%)]" />
-        </div>
-      </div>
-      <Sheen tint="light" />
-      {label && (
-        <figcaption className="absolute left-5 top-5 rounded-full bg-black/25 px-3 py-1 font-mono text-label uppercase text-canvas/85 backdrop-blur-sm">
-          {label}
-        </figcaption>
-      )}
-    </figure>
-  );
-}
-
+/**
+ * Draggable gallery carousel — a row of small cards the visitor grabs and flings
+ * left/right (pointer or touch), with momentum. Replaces the old big stacked
+ * cards. Renders real photos from lp.gallery when present; until the client
+ * sends them, it falls back to galleryCount placeholder cards so the carousel
+ * is populated and interactive.
+ */
 export function ProjectGallery({ lp }: { lp: LocalizedProject }) {
   const t = useTranslations('projectsPage');
-  const root = useRef<HTMLElement>(null);
-  const rest = Math.max(lp.galleryCount - 1, 0);
+  const viewport = useRef<HTMLDivElement>(null);
+  const track = useRef<HTMLDivElement>(null);
+  const [maxDrag, setMaxDrag] = useState(0);
 
-  useGSAP(
-    () => {
-      gsap.utils.toArray<HTMLElement>('[data-parallax]').forEach((el) => {
-        gsap.fromTo(
-          el,
-          { yPercent: -6 },
-          {
-            yPercent: 6,
-            ease: 'none',
-            scrollTrigger: {
-              trigger: el.parentElement,
-              start: 'top bottom',
-              end: 'bottom top',
-              scrub: true,
-            },
-          },
-        );
-      });
-      gsap.from('[data-fig]', {
-        opacity: 0,
-        y: 52,
-        duration: 1.1,
-        ease: 'power3.out',
-        stagger: 0.1,
-        scrollTrigger: { trigger: root.current, start: 'top 78%' },
-      });
-    },
-    { scope: root },
-  );
+  const shots = lp.gallery.length
+    ? lp.gallery
+    : Array.from({ length: Math.max(lp.galleryCount, 5) }, () => '');
+
+  // How far the track may travel = its overflow past the viewport.
+  useEffect(() => {
+    const measure = () => {
+      if (!viewport.current || !track.current) return;
+      setMaxDrag(Math.max(0, track.current.scrollWidth - viewport.current.offsetWidth));
+    };
+    measure();
+    window.addEventListener('resize', measure);
+    return () => window.removeEventListener('resize', measure);
+  }, [shots.length]);
 
   return (
     <section
-      ref={root}
       data-nav-theme="light"
-      className="bg-canvas px-[clamp(1.5rem,6vw,8rem)] pb-[clamp(6rem,12vh,10rem)]"
+      className="overflow-hidden bg-canvas pb-[clamp(6rem,12vh,10rem)]"
     >
-      <Eyebrow tone="dark" className="mb-12 justify-center">
-        {t('gallery')}
-      </Eyebrow>
+      <div className="px-[clamp(1.5rem,6vw,8rem)]">
+        <div className="mb-[clamp(2.5rem,5vh,4rem)] flex items-end justify-between gap-6">
+          <Eyebrow tone="dark">{t('gallery')}</Eyebrow>
+          <span className="hidden select-none items-center gap-2 font-mono text-label uppercase text-ink/40 sm:inline-flex">
+            {t('dragHint')} <span aria-hidden>↔</span>
+          </span>
+        </div>
+      </div>
 
-      <div className="flex flex-col gap-[clamp(1.5rem,3vw,2.5rem)]">
-        {/* the drone establishing shot */}
-        <GalleryImage aspect="aspect-[21/9]" label={t('drone')} />
-
-        {rest > 0 && (
-          <div className="grid gap-[clamp(1.5rem,3vw,2.5rem)] md:grid-cols-2">
-            {Array.from({ length: rest }, (_, i) => (
-              <GalleryImage
-                key={i}
-                aspect={i % 3 === 2 ? 'aspect-[4/3] md:col-span-2' : 'aspect-[4/5]'}
-              />
-            ))}
-          </div>
-        )}
+      <div
+        ref={viewport}
+        className="cursor-grab overflow-hidden active:cursor-grabbing"
+      >
+        <motion.div
+          ref={track}
+          drag="x"
+          dragConstraints={{ left: -maxDrag, right: 0 }}
+          dragElastic={0.08}
+          dragTransition={{ power: 0.3, timeConstant: 200 }}
+          className="flex w-max gap-[clamp(0.9rem,1.8vw,1.6rem)] px-[clamp(1.5rem,6vw,8rem)]"
+        >
+          {shots.map((src, i) => (
+            <motion.figure
+              key={i}
+              initial={{ opacity: 0, y: 28 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-8%' }}
+              transition={{ duration: 0.7, delay: Math.min(i, 6) * 0.05, ease: EASE_WATER }}
+              className="relative aspect-[4/5] w-[clamp(190px,24vw,280px)] shrink-0 overflow-hidden rounded-[1.4rem] ring-1 ring-ink/8 shadow-[0_24px_50px_-38px_rgba(9,22,30,0.5)]"
+            >
+              {src ? (
+                <Image
+                  src={src}
+                  alt={`${lp.name} — ${i + 1}`}
+                  fill
+                  sizes="(max-width: 768px) 60vw, 280px"
+                  draggable={false}
+                  className="pointer-events-none object-cover"
+                />
+              ) : (
+                <div className={`h-full w-full ${WATER}`}>
+                  <div className="absolute -right-1/4 -top-1/4 h-[70%] w-[70%] rounded-full bg-[radial-gradient(closest-side,rgba(169,203,227,0.18),transparent_72%)]" />
+                </div>
+              )}
+              <Sheen tint="light" />
+            </motion.figure>
+          ))}
+        </motion.div>
       </div>
     </section>
   );
