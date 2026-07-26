@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useMemo, useRef, useState } from 'react';
+import { useRef } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { AnimatePresence, motion, useScroll, useTransform } from 'motion/react';
 import { Link } from '@/i18n/navigation';
@@ -10,23 +10,13 @@ import { Sheen } from '@/components/ui/Sheen';
 import { TextLink } from '@/components/ui/TextLink';
 import { EASE_WATER, layoutTransition } from '@/lib/motion';
 
-type FilterKey = 'all' | ProjectType;
-
 /**
- * Not a grid. A filterable editorial run of full-width case-study openers that
- * alternate side to side, each image drifting on a gentle parallax. Filtering
- * relayouts with motion's shared layout so nothing snaps.
+ * Not a grid. An editorial run of full-width case-study openers that alternate
+ * side to side, each image drifting on a gentle parallax.
  */
 export function ProjectsHub() {
   const t = useTranslations('projectsPage');
   const locale = useLocale();
-  const [filter, setFilter] = useState<FilterKey>('all');
-
-  const filters: { key: FilterKey; label: string }[] = [
-    { key: 'all', label: t('filterAll') },
-    { key: 'completed', label: t('filterCompleted') },
-    { key: 'before-after', label: t('filterBeforeAfter') },
-  ];
 
   const typeLabel: Record<ProjectType, string> = {
     completed: t('typeCompleted'),
@@ -34,36 +24,13 @@ export function ProjectsHub() {
     'before-after': t('typeBeforeAfter'),
   };
 
-  const list = useMemo(
-    () => projects.filter((p) => filter === 'all' || p.type === filter),
-    [filter],
-  );
+  const list = projects;
 
   return (
     <section
       data-nav-theme="light"
-      className="bg-canvas px-[clamp(1.5rem,6vw,8rem)] pb-[clamp(7rem,14vh,12rem)] pt-[clamp(3rem,7vh,6rem)]"
+      className="bg-canvas px-[clamp(1.5rem,6vw,8rem)] pb-[clamp(7rem,14vh,12rem)] pt-[clamp(4rem,9vh,8rem)]"
     >
-      <div className="mb-[clamp(3.5rem,8vh,7rem)] flex flex-wrap gap-x-9 gap-y-3 border-t border-ink/10 pt-8">
-        {filters.map((f) => (
-          <button
-            key={f.key}
-            onClick={() => setFilter(f.key)}
-            className={`relative pb-1 font-mono text-label uppercase transition-colors duration-300 ${
-              filter === f.key ? 'text-ink' : 'text-ink/40 hover:text-ink/70'
-            }`}
-          >
-            {f.label}
-            {filter === f.key && (
-              <motion.span
-                layoutId="filter-underline"
-                className="absolute -bottom-px left-0 h-px w-full bg-bronze"
-              />
-            )}
-          </button>
-        ))}
-      </div>
-
       <motion.div
         layout
         transition={layoutTransition}
