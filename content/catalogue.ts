@@ -2646,65 +2646,6 @@ export const products: Product[] = [
     "galleryCount": 1
   }  ,
   {
-    "slug": "vana-boru",
-    "category": "plumbing",
-    "brand": "Pimtaş",
-    "name": {
-      "tr": "U-PVC Vana & Ek Parçalar",
-      "en": "U-PVC Valves & Fittings"
-    },
-    "tagline": {
-      "tr": "Suyun görünmez altyapısı",
-      "en": "The unseen infrastructure"
-    },
-    "description": {
-      "tr": "Pimtaş U-PVC küresel su vanaları ve yapıştırma muflu ek parçalar — dirsek, istavroz (kruva) ve redüksiyon. Havuz tesisatının dayanıklı bağlantı grubu; 63'lük ve 50'lik çaplarda.",
-      "en": "Pimtaş U-PVC ball valves and solvent-cement fittings — elbows, crosses and reducers. The durable connection set for pool plumbing, in Ø63 and Ø50."
-    },
-    "specs": [
-      {
-        "label": {
-          "tr": "Kategori",
-          "en": "Category"
-        },
-        "value": "Tesisat"
-      },
-      {
-        "label": {
-          "tr": "Marka",
-          "en": "Brand"
-        },
-        "value": "Pimtaş"
-      },
-      {
-        "label": {
-          "tr": "Çap",
-          "en": "Diameter"
-        },
-        "value": "63'lük · 50'lik"
-      }
-    ],
-    "features": [
-      {
-        "tr": "U-PVC dayanıklılık",
-        "en": "Durable U-PVC"
-      },
-      {
-        "tr": "Yapıştırma muflu bağlantı",
-        "en": "Solvent-cement joints"
-      },
-      {
-        "tr": "Vana, dirsek, kruva, redüksiyon",
-        "en": "Valve, elbow, cross, reducer"
-      }
-    ],
-    "usage": {
-      "tr": "Havuz tesisatında",
-      "en": "Pool plumbing"
-    },
-    "galleryCount": 1
-  },
-  {
     "slug": "pvc-borular",
     "category": "plumbing",
     "brand": "Pimtaş",
@@ -2717,8 +2658,8 @@ export const products: Product[] = [
       "en": "A solid water line"
     },
     "description": {
-      "tr": "Pimtaş U-PVC basınçlı havuz boruları; farklı çaplarda, 63'lük ve 50'lik dahil. Yapıştırma muflu sistemle sızdırmaz, uzun ömürlü tesisat.",
-      "en": "Pimtaş U-PVC pressure pipes for pools in a range of diameters, including Ø63 and Ø50. A leak-free, long-life line with solvent-cement joints."
+      "tr": "Pimtaş U-PVC basınçlı havuz boruları; 32, 50 ve 63 mm çaplarda, 10 atü basınca dayanıklı. Yapıştırma muflu sistemle sızdırmaz, uzun ömürlü tesisat.",
+      "en": "Pimtaş U-PVC pressure pipes for pools in 32, 50 and 63 mm, rated to 10 bar. A leak-free, long-life line with solvent-cement joints."
     },
     "specs": [
       {
@@ -2740,7 +2681,7 @@ export const products: Product[] = [
           "tr": "Çap",
           "en": "Diameter"
         },
-        "value": "63'lük · 50'lik"
+        "value": "32 · 50 · 63 mm · 10 Atü"
       }
     ],
     "features": [
@@ -2799,7 +2740,7 @@ export const products: Product[] = [
           "tr": "Ambalaj",
           "en": "Pack"
         },
-        "value": "125 g · 250 g · 500 g"
+        "value": "1 kg · 500 g · 250 g · 125 g"
       }
     ],
     "features": [
@@ -2821,6 +2762,596 @@ export const products: Product[] = [
       "en": "PVC plumbing assembly"
     },
     "galleryCount": 1
+  }  ,
+  {
+    "slug": "kuresel-vana",
+    "category": "plumbing",
+    "brand": "Pimtaş",
+    "name": {
+      "tr": "U-PVC Küresel Vana",
+      "en": "U-PVC Ball Valve"
+    },
+    "tagline": {
+      "tr": "Akışı kontrol",
+      "en": "Flow control"
+    },
+    "description": {
+      "tr": "Pimtaş U-PVC küresel vana; havuz tesisatında su akışını güvenle açıp kapatır.",
+      "en": "Pimtaş U-PVC ball valve to open and shut pool water flow safely."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Tesisat"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Pimtaş"
+      },
+      {
+        "label": {
+          "tr": "Çap",
+          "en": "Diameter"
+        },
+        "value": "32 · 63 mm"
+      }
+    ],
+    "features": [
+      {
+        "tr": "Tam sızdırmazlık",
+        "en": "Full seal"
+      },
+      {
+        "tr": "Kolay kullanım",
+        "en": "Easy to operate"
+      },
+      {
+        "tr": "Yapıştırma muflu",
+        "en": "Solvent-cement ends"
+      }
+    ],
+    "usage": {
+      "tr": "Havuz tesisatında",
+      "en": "Pool plumbing"
+    },
+    "galleryCount": 1
+  },
+  {
+    "slug": "cekvalf",
+    "category": "plumbing",
+    "brand": "Pimtaş",
+    "name": {
+      "tr": "U-PVC Yaylı Çekvalf",
+      "en": "U-PVC Spring Check Valve"
+    },
+    "tagline": {
+      "tr": "Tek yön",
+      "en": "One way"
+    },
+    "description": {
+      "tr": "Yaylı çekvalf; suyun tek yönde akmasını sağlar ve geri akışı önler.",
+      "en": "A spring check valve that keeps water flowing one way and prevents backflow."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Tesisat"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Pimtaş"
+      },
+      {
+        "label": {
+          "tr": "Çap",
+          "en": "Diameter"
+        },
+        "value": "32 · 50 · 63 mm"
+      }
+    ],
+    "features": [
+      {
+        "tr": "Geri akışı önler",
+        "en": "Prevents backflow"
+      },
+      {
+        "tr": "Yaylı mekanizma",
+        "en": "Spring mechanism"
+      },
+      {
+        "tr": "Yapıştırma muflu",
+        "en": "Solvent-cement ends"
+      }
+    ],
+    "usage": {
+      "tr": "Havuz tesisatında",
+      "en": "Pool plumbing"
+    },
+    "galleryCount": 1
+  },
+  {
+    "slug": "dis-disli-adaptor",
+    "category": "plumbing",
+    "brand": "Pimtaş",
+    "name": {
+      "tr": "U-PVC Dişli Adaptör",
+      "en": "U-PVC Threaded Adaptor"
+    },
+    "tagline": {
+      "tr": "Dişli geçiş",
+      "en": "Threaded join"
+    },
+    "description": {
+      "tr": "PVC boru ile dişli bağlantıları birleştiren yapıştırma adaptör.",
+      "en": "A solvent-cement adaptor joining PVC pipe to threaded connections."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Tesisat"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Pimtaş"
+      },
+      {
+        "label": {
+          "tr": "Çap",
+          "en": "Diameter"
+        },
+        "value": "32 mm"
+      }
+    ],
+    "features": [
+      {
+        "tr": "Dişli–yapıştırma geçiş",
+        "en": "Thread-to-cement"
+      },
+      {
+        "tr": "Sızdırmaz",
+        "en": "Leak-free"
+      },
+      {
+        "tr": "32 mm",
+        "en": "32 mm"
+      }
+    ],
+    "usage": {
+      "tr": "Havuz tesisatında",
+      "en": "Pool plumbing"
+    },
+    "galleryCount": 1
+  },
+  {
+    "slug": "kruva",
+    "category": "plumbing",
+    "brand": "Pimtaş",
+    "name": {
+      "tr": "U-PVC Kruva (İstavroz)",
+      "en": "U-PVC Cross"
+    },
+    "tagline": {
+      "tr": "Dört yön",
+      "en": "Four ways"
+    },
+    "description": {
+      "tr": "Hattı dört yöne ayıran U-PVC kruva (istavroz) ek parça.",
+      "en": "A U-PVC cross that splits the line four ways."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Tesisat"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Pimtaş"
+      },
+      {
+        "label": {
+          "tr": "Çap",
+          "en": "Diameter"
+        },
+        "value": "50 · 63 mm"
+      }
+    ],
+    "features": [
+      {
+        "tr": "Dört yollu",
+        "en": "Four-way"
+      },
+      {
+        "tr": "Yapıştırma muflu",
+        "en": "Solvent-cement"
+      },
+      {
+        "tr": "50–63 mm",
+        "en": "50–63 mm"
+      }
+    ],
+    "usage": {
+      "tr": "Havuz tesisatında",
+      "en": "Pool plumbing"
+    },
+    "galleryCount": 1
+  },
+  {
+    "slug": "kortapa",
+    "category": "plumbing",
+    "brand": "Pimtaş",
+    "name": {
+      "tr": "U-PVC Kör Tapa",
+      "en": "U-PVC End Cap"
+    },
+    "tagline": {
+      "tr": "Hattı kapatır",
+      "en": "Seals the line"
+    },
+    "description": {
+      "tr": "Boru hattının ucunu sızdırmaz biçimde kapatan kör tapa.",
+      "en": "An end cap that seals the end of a pipe run."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Tesisat"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Pimtaş"
+      },
+      {
+        "label": {
+          "tr": "Çap",
+          "en": "Diameter"
+        },
+        "value": "50 · 63 mm"
+      }
+    ],
+    "features": [
+      {
+        "tr": "Tam sızdırmazlık",
+        "en": "Full seal"
+      },
+      {
+        "tr": "Yapıştırma muflu",
+        "en": "Solvent-cement"
+      },
+      {
+        "tr": "50–63 mm",
+        "en": "50–63 mm"
+      }
+    ],
+    "usage": {
+      "tr": "Havuz tesisatında",
+      "en": "Pool plumbing"
+    },
+    "galleryCount": 1
+  },
+  {
+    "slug": "te",
+    "category": "plumbing",
+    "brand": "Pimtaş",
+    "name": {
+      "tr": "U-PVC Te",
+      "en": "U-PVC Tee"
+    },
+    "tagline": {
+      "tr": "Üç yön",
+      "en": "Three ways"
+    },
+    "description": {
+      "tr": "Hattı üç yöne ayıran U-PVC te ek parça.",
+      "en": "A U-PVC tee that branches the line three ways."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Tesisat"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Pimtaş"
+      },
+      {
+        "label": {
+          "tr": "Çap",
+          "en": "Diameter"
+        },
+        "value": "50 · 63 mm"
+      }
+    ],
+    "features": [
+      {
+        "tr": "Üç yollu",
+        "en": "Three-way"
+      },
+      {
+        "tr": "Yapıştırma muflu",
+        "en": "Solvent-cement"
+      },
+      {
+        "tr": "50–63 mm",
+        "en": "50–63 mm"
+      }
+    ],
+    "usage": {
+      "tr": "Havuz tesisatında",
+      "en": "Pool plumbing"
+    },
+    "galleryCount": 1
+  },
+  {
+    "slug": "reduksiyon",
+    "category": "plumbing",
+    "brand": "Pimtaş",
+    "name": {
+      "tr": "U-PVC Redüksiyon",
+      "en": "U-PVC Reducer"
+    },
+    "tagline": {
+      "tr": "Çap geçişi",
+      "en": "Size change"
+    },
+    "description": {
+      "tr": "Farklı çaptaki boruları birbirine geçiren redüksiyon.",
+      "en": "A reducer that joins pipes of different diameters."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Tesisat"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Pimtaş"
+      },
+      {
+        "label": {
+          "tr": "Çap",
+          "en": "Diameter"
+        },
+        "value": "50 · 32 mm"
+      }
+    ],
+    "features": [
+      {
+        "tr": "Çap dönüşümü",
+        "en": "Diameter change"
+      },
+      {
+        "tr": "Yapıştırma muflu",
+        "en": "Solvent-cement"
+      },
+      {
+        "tr": "50–32 mm",
+        "en": "50–32 mm"
+      }
+    ],
+    "usage": {
+      "tr": "Havuz tesisatında",
+      "en": "Pool plumbing"
+    },
+    "galleryCount": 1
+  },
+  {
+    "slug": "manson",
+    "category": "plumbing",
+    "brand": "Pimtaş",
+    "name": {
+      "tr": "U-PVC Manşon",
+      "en": "U-PVC Coupler"
+    },
+    "tagline": {
+      "tr": "Uç uca ekleme",
+      "en": "End-to-end join"
+    },
+    "description": {
+      "tr": "İki boruyu uç uca birleştiren yapıştırma manşon.",
+      "en": "A solvent-cement coupler joining two pipes end to end."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Tesisat"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Pimtaş"
+      },
+      {
+        "label": {
+          "tr": "Çap",
+          "en": "Diameter"
+        },
+        "value": "50 · 63 mm"
+      }
+    ],
+    "features": [
+      {
+        "tr": "Düz ekleme",
+        "en": "Straight join"
+      },
+      {
+        "tr": "Yapıştırma muflu",
+        "en": "Solvent-cement"
+      },
+      {
+        "tr": "50–63 mm",
+        "en": "50–63 mm"
+      }
+    ],
+    "usage": {
+      "tr": "Havuz tesisatında",
+      "en": "Pool plumbing"
+    },
+    "galleryCount": 1
+  },
+  {
+    "slug": "dirsek-90",
+    "category": "plumbing",
+    "brand": "Pimtaş",
+    "name": {
+      "tr": "U-PVC Dirsek 90°",
+      "en": "U-PVC 90° Elbow"
+    },
+    "tagline": {
+      "tr": "90° dönüş",
+      "en": "90° turn"
+    },
+    "description": {
+      "tr": "Hattı 90° döndüren U-PVC dirsek.",
+      "en": "A U-PVC elbow that turns the line 90°."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Tesisat"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Pimtaş"
+      },
+      {
+        "label": {
+          "tr": "Çap",
+          "en": "Diameter"
+        },
+        "value": "50 · 63 mm"
+      }
+    ],
+    "features": [
+      {
+        "tr": "90° yön değişimi",
+        "en": "90° turn"
+      },
+      {
+        "tr": "Yapıştırma muflu",
+        "en": "Solvent-cement"
+      },
+      {
+        "tr": "50–63 mm",
+        "en": "50–63 mm"
+      }
+    ],
+    "usage": {
+      "tr": "Havuz tesisatında",
+      "en": "Pool plumbing"
+    },
+    "galleryCount": 1
+  },
+  {
+    "slug": "dirsek-45",
+    "category": "plumbing",
+    "brand": "Pimtaş",
+    "name": {
+      "tr": "U-PVC Dirsek 45°",
+      "en": "U-PVC 45° Elbow"
+    },
+    "tagline": {
+      "tr": "45° dönüş",
+      "en": "45° turn"
+    },
+    "description": {
+      "tr": "Hattı 45° yönlendiren U-PVC dirsek.",
+      "en": "A U-PVC elbow that turns the line 45°."
+    },
+    "specs": [
+      {
+        "label": {
+          "tr": "Kategori",
+          "en": "Category"
+        },
+        "value": "Tesisat"
+      },
+      {
+        "label": {
+          "tr": "Marka",
+          "en": "Brand"
+        },
+        "value": "Pimtaş"
+      },
+      {
+        "label": {
+          "tr": "Çap",
+          "en": "Diameter"
+        },
+        "value": "50 · 63 mm"
+      }
+    ],
+    "features": [
+      {
+        "tr": "45° yön değişimi",
+        "en": "45° turn"
+      },
+      {
+        "tr": "Yapıştırma muflu",
+        "en": "Solvent-cement"
+      },
+      {
+        "tr": "50–63 mm",
+        "en": "50–63 mm"
+      }
+    ],
+    "usage": {
+      "tr": "Havuz tesisatında",
+      "en": "Pool plumbing"
+    },
+    "galleryCount": 1
   }
 ];
 
@@ -2840,8 +3371,9 @@ const PHOTO_SLUGS = new Set<string>([
   'led-32w', 'led-9w', 'kum-filtresi-600', 'pompa-1hp', 'isikli-fiskiye', 'solar-fiskiye', 'balina-hoparlor',
   'yuzen-hoparlor', 'deniz-yildizi', 'havuz-robotu', 'havuz-supurgesi', 'havuz-hortumu', 'yuzey-kepcesi',
   'havuz-fircasi', 'termometre', 'dispanser', 'test-insta', 'test-damla', 'test-set', 'test-colorq',
-  'vana-boru', 'pvc-borular',
+  'pvc-borular',
   'pvc-yapistirici',
+  'kuresel-vana', 'cekvalf', 'dis-disli-adaptor', 'kruva', 'kortapa', 'te', 'reduksiyon', 'manson', 'dirsek-90', 'dirsek-45',
 ]);
 
 /**
@@ -2862,7 +3394,7 @@ export const hasPhoto = (slug: string): boolean => PHOTO_SLUGS.has(slug);
  * A product's brand/size variants (e.g. Quardex + Selenoid + Poolbox of the same
  * chemical) are grouped into one card and surfaced together in its gallery.
  */
-const GALLERY_COUNTS: Record<string, number> = { 'sivi-ph-quardex': 1, 'sivi-ph-selenoid': 1, 'toz-ph-quardex': 1, 'toz-ph-selenoid': 1, 'sivi-klor-quardex': 1, 'sivi-klor-selenoid': 1, 'toz-klor-quardex': 2, 'toz-klor-selenoid': 1, 'multi-tablet-wtr': 2, 'yosun-onleyici-selenoid': 1, 'yosun-onleyici-poolbox': 2, 'yosun-onleyici-quardex': 1, 'yosun-giderici-quardex': 1, 'berraklastirici-quardex': 1, 'parlatici-selenoid': 1, 'parlatici-poolbox': 2, 'cokturucu-selenoid': 1, 'cokturucu-poolbox': 1, 'flok-tablet': 1, 'anti-iyon-quardex': 1, 'iyon-tutucu-selenoid': 1, 'iyon-topu': 1, 'hucre-temizleyici-selenoid': 1, 'bagli-klor-poolbox': 1, 'cevre-temizlik-quardex': 1, 'alkalinite-dusurucu-selenoid': 1, 'temizlik-asidi-selenoid': 1, 'led-23w': 2, 'led-32w': 1, 'led-9w': 1, 'kum-filtresi-600': 1, 'pompa-1hp': 1, 'isikli-fiskiye': 1, 'solar-fiskiye': 1, 'balina-hoparlor': 1, 'yuzen-hoparlor': 1, 'deniz-yildizi': 1, 'havuz-robotu': 1, 'havuz-supurgesi': 1, 'havuz-hortumu': 1, 'yuzey-kepcesi': 1, 'havuz-fircasi': 1, 'termometre': 1, 'dispanser': 1, 'test-insta': 1, 'test-damla': 1, 'test-set': 1, 'test-colorq': 1, 'vana-boru': 1, 'pvc-borular': 1, 'pvc-yapistirici': 1 };
+const GALLERY_COUNTS: Record<string, number> = { 'sivi-ph-quardex': 1, 'sivi-ph-selenoid': 1, 'toz-ph-quardex': 1, 'toz-ph-selenoid': 1, 'sivi-klor-quardex': 1, 'sivi-klor-selenoid': 1, 'toz-klor-quardex': 2, 'toz-klor-selenoid': 1, 'multi-tablet-wtr': 2, 'yosun-onleyici-selenoid': 1, 'yosun-onleyici-poolbox': 2, 'yosun-onleyici-quardex': 1, 'yosun-giderici-quardex': 1, 'berraklastirici-quardex': 1, 'parlatici-selenoid': 1, 'parlatici-poolbox': 2, 'cokturucu-selenoid': 1, 'cokturucu-poolbox': 1, 'flok-tablet': 1, 'anti-iyon-quardex': 1, 'iyon-tutucu-selenoid': 1, 'iyon-topu': 1, 'hucre-temizleyici-selenoid': 1, 'bagli-klor-poolbox': 1, 'cevre-temizlik-quardex': 1, 'alkalinite-dusurucu-selenoid': 1, 'temizlik-asidi-selenoid': 1, 'led-23w': 2, 'led-32w': 1, 'led-9w': 1, 'kum-filtresi-600': 1, 'pompa-1hp': 1, 'isikli-fiskiye': 1, 'solar-fiskiye': 1, 'balina-hoparlor': 1, 'yuzen-hoparlor': 1, 'deniz-yildizi': 1, 'havuz-robotu': 1, 'havuz-supurgesi': 1, 'havuz-hortumu': 1, 'yuzey-kepcesi': 1, 'havuz-fircasi': 1, 'termometre': 1, 'dispanser': 1, 'test-insta': 1, 'test-damla': 1, 'test-set': 1, 'test-colorq': 1, 'pvc-borular': 1, 'pvc-yapistirici': 1, 'kuresel-vana': 1, 'cekvalf': 1, 'dis-disli-adaptor': 1, 'kruva': 1, 'kortapa': 1, 'te': 1, 'reduksiyon': 1, 'manson': 1, 'dirsek-90': 1, 'dirsek-45': 1 };
 
 const GALLERY_OVERRIDES: Record<string, string[]> = {
   'test-colorq': ['/products/test-colorq-dijital.webp'],
