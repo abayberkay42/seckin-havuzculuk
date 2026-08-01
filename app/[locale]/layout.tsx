@@ -77,7 +77,11 @@ export async function generateMetadata({
         'max-video-preview': -1,
       },
     },
-    icons: { icon: '/icon.png' },
+    icons: {
+      icon: [{ url: '/icon.png', sizes: '192x192', type: 'image/png' }],
+      shortcut: '/icon.png',
+      apple: '/icon.png',
+    },
   };
 }
 
