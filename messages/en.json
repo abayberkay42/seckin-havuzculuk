@@ -560,5 +560,20 @@
       }
     ],
     "areasLink": "Our service areas"
+  },
+  "privacy": {
+    "eyebrow": "Legal",
+    "title": "Privacy & KVKK Notice",
+    "updatedLabel": "Last updated",
+    "seoTitle": "Privacy & KVKK Notice",
+    "seoDescription": "Which personal data is processed on the Seçkin Havuzculuk website, how cookies are used and your rights under the Turkish KVKK.",
+    "mapTitle": "Seçkin Havuzculuk location",
+    "mapBlocked": "The map is provided by Google. Loading it shares your IP address with Google.",
+    "mapLoad": "Load map",
+    "noticeTitle": "Cookie notice",
+    "noticeBody": "This site has no analytics or advertising cookies; only a strictly necessary cookie that remembers your language. Google Maps loads only if you allow it.",
+    "noticeLink": "Details",
+    "noticeAccept": "Allow maps",
+    "noticeDeny": "Necessary only"
   }
 }

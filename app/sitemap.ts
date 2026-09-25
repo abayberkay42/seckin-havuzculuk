@@ -49,6 +49,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/service-areas', priority: 0.8, cf: 'monthly' },
     { path: '/blog', priority: 0.7, cf: 'weekly' },
     { path: '/contact', priority: 0.7, cf: 'monthly' },
+    { path: '/privacy', priority: 0.3, cf: 'yearly' },
   ];
 
   const staticEntries = staticRoutes.map((r) =>

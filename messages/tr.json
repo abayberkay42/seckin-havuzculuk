@@ -560,5 +560,20 @@
       }
     ],
     "areasLink": "Hizmet bölgelerimiz"
+  },
+  "privacy": {
+    "eyebrow": "Yasal",
+    "title": "Gizlilik ve KVKK Aydınlatma Metni",
+    "updatedLabel": "Son güncelleme",
+    "seoTitle": "Gizlilik ve KVKK Aydınlatma Metni",
+    "seoDescription": "Seçkin Havuzculuk web sitesinde hangi kişisel verilerin işlendiği, çerez kullanımı ve KVKK kapsamındaki haklarınız.",
+    "mapTitle": "Seçkin Havuzculuk konumu",
+    "mapBlocked": "Harita Google tarafından sağlanır. Yüklendiğinde IP adresiniz Google ile paylaşılır.",
+    "mapLoad": "Haritayı yükle",
+    "noticeTitle": "Çerez bildirimi",
+    "noticeBody": "Bu sitede analiz veya reklam çerezi yoktur; yalnızca dil tercihinizi hatırlayan zorunlu bir çerez kullanılır. Google Haritalar ise ancak izin verirseniz yüklenir.",
+    "noticeLink": "Ayrıntılar",
+    "noticeAccept": "Haritalara izin ver",
+    "noticeDeny": "Yalnızca zorunlu"
   }
 }

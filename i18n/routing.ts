@@ -24,6 +24,7 @@ export const pathnames = {
   '/blog': '/blog',
   '/blog/[slug]': '/blog/[slug]',
   '/contact': { tr: '/iletisim', en: '/contact' },
+  '/privacy': { tr: '/gizlilik', en: '/privacy' },
 } as const;
 
 export const routing = defineRouting({

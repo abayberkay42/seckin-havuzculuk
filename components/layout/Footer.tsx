@@ -5,6 +5,7 @@ import { TextLink } from '@/components/ui/TextLink';
 import type { AppPathname } from '@/i18n/routing';
 import { PHONE_DISPLAY, EMAIL, whatsappLink, SOCIAL_LINKS } from '@/lib/contact';
 import { districts } from '@/content/districts';
+import { MapEmbed } from '@/components/privacy/MapEmbed';
 
 /** Static (non-parameterised) routes — the footer never links to [slug] pages. */
 type StaticPathname = Exclude<
@@ -24,6 +25,7 @@ export async function Footer() {
   const t = await getTranslations('footer');
   const tNav = await getTranslations('nav');
   const tContact = await getTranslations('contact');
+  const tPrivacy = await getTranslations('privacy');
 
   const links: { href: StaticPathname; label: string }[] = [
     { href: '/about', label: tNav('about') },
@@ -161,13 +163,10 @@ export async function Footer() {
             {tContact('mapEyebrow')}
           </span>
           <div className="overflow-hidden rounded-[1.25rem] ring-1 ring-canvas/12">
-            <iframe
-              title={tContact('mapTitle')}
+            <MapEmbed
               src={MAP_SRC}
+              tone="dark"
               className="block h-[clamp(13rem,26vh,17rem)] w-full border-0 [filter:grayscale(0.25)_contrast(1.03)]"
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="strict-origin-when-cross-origin"
             />
           </div>
         </div>
@@ -189,6 +188,14 @@ export async function Footer() {
               </a>
             </li>
           ))}
+          <li>
+            <TextLink
+              href="/privacy"
+              className="text-canvas/60 transition-colors duration-[var(--dur-quick)] hover:text-canvas"
+            >
+              {tPrivacy('title')}
+            </TextLink>
+          </li>
         </ul>
         <span>
           © {new Date().getFullYear()} · {t('rights')}

@@ -13,6 +13,7 @@ import { Footer } from '@/components/layout/Footer';
 import { Grain } from '@/components/atmosphere/Grain';
 import { CursorFx } from '@/components/atmosphere/CursorFx';
 import { WhatsAppButton } from '@/components/site/WhatsAppButton';
+import { CookieNotice } from '@/components/privacy/CookieNotice';
 import '../globals.css';
 
 // Same pairing as the Doğrular reference: Syne for display headings, DM Sans
@@ -130,6 +131,7 @@ export default async function LocaleLayout({
             <Footer />
           </SmoothScroll>
           <WhatsAppButton />
+          <CookieNotice />
         </NextIntlClientProvider>
       </body>
     </html>
