@@ -36,7 +36,11 @@ export function CookieNotice() {
       className="fixed inset-x-0 bottom-0 z-[60] px-[clamp(1rem,4vw,2.5rem)] pb-[clamp(1rem,3vh,2rem)]"
     >
       <div className="mx-auto flex max-w-[64rem] flex-col gap-5 rounded-[1.5rem] bg-deep/95 p-6 text-canvas shadow-[0_30px_80px_-40px_rgba(9,22,30,0.8)] ring-1 ring-canvas/12 backdrop-blur-xl sm:flex-row sm:items-center sm:gap-8 sm:p-7">
-        <p className="flex-1 text-[0.9rem] leading-relaxed text-canvas/75">
+        {/* Kept deliberately short and width-capped: this bar renders after
+            hydration, and when its text block was the largest painted element
+            it became the page's LCP — adding ~1.9s for every first-time
+            visitor. The full detail lives on the privacy page it links to. */}
+        <p className="max-w-[34rem] flex-1 text-[0.9rem] leading-relaxed text-canvas/75">
           {t('noticeBody')}{' '}
           <Link href="/privacy" className="link-water text-canvas">
             {t('noticeLink')}
