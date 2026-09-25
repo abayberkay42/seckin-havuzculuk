@@ -8,6 +8,9 @@ import { SignatureProjects } from '@/components/home/SignatureProjects';
 import { Process } from '@/components/home/Process';
 import { Products } from '@/components/home/Products';
 import { Invitation } from '@/components/home/Invitation';
+import { AtAGlance } from '@/components/home/AtAGlance';
+import { faqSchema } from '@/lib/schema';
+import { JsonLd } from '@/components/seo/JsonLd';
 import { ScrollCue } from '@/components/home/ScrollCue';
 import { Seam } from '@/components/ui/Seam';
 
@@ -21,9 +24,12 @@ export default async function HomePage({
   setRequestLocale(locale);
 
   const t = await getTranslations('hero');
+  const tGlance = await getTranslations('glance');
+  const faq = faqSchema(tGlance.raw('faq') as { q: string; a: string }[]);
 
   return (
     <main>
+      <JsonLd data={faq} />
       <Hero
         line1={t('headlineLine1')}
         line2={t('headlineLine2')}
@@ -39,6 +45,7 @@ export default async function HomePage({
       <Seam from="deep" to="surface" />
       <Process />
       <Products />
+      <AtAGlance />
       <Seam from="canvas" to="deep" />
       <Invitation />
 

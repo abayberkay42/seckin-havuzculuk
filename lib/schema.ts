@@ -147,6 +147,54 @@ export function articleSchema(input: {
   };
 }
 
+/**
+ * An ordered list of the entries on a listing page (products, projects,
+ * service areas). Lets search and AI engines enumerate the items as discrete,
+ * linked things rather than inferring them from a card grid.
+ */
+export function itemListSchema(name: string, items: { name: string; url: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name,
+    numberOfItems: items.length,
+    itemListElement: items.map((it, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: it.name,
+      url: it.url,
+    })),
+  };
+}
+
+/**
+ * A completed pool project as a portfolio piece. schema.org has no "built
+ * structure" type, so CreativeWork (the work the firm made) is the honest fit;
+ * creator points at the business node, locationCreated at the real place.
+ */
+export function projectSchema(input: {
+  name: string;
+  description: string;
+  url: string;
+  image: string;
+  place: string;
+  year: string;
+  inLanguage: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    name: input.name,
+    description: input.description,
+    url: input.url,
+    image: `${SITE_URL}${input.image}`,
+    creator: { '@id': ORG_ID },
+    locationCreated: { '@type': 'Place', name: input.place },
+    dateCreated: input.year,
+    inLanguage: input.inLanguage,
+  };
+}
+
 /** FAQ block -> FAQPage rich result. items = [{q, a}]. */
 export function faqSchema(items: { q: string; a: string }[]) {
   return {

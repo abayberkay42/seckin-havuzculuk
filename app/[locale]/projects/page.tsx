@@ -3,7 +3,8 @@ import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { isAppLocale, type AppLocale } from '@/i18n/routing';
 import { pageMetadata, absoluteUrl } from '@/lib/seo';
-import { breadcrumbSchema } from '@/lib/schema';
+import { breadcrumbSchema, itemListSchema } from '@/lib/schema';
+import { projects, localize } from '@/content/projects';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { ProjectsHub } from '@/components/projects/ProjectsHub';
 import { SplitReveal } from '@/components/ui/SplitReveal';
@@ -37,10 +38,17 @@ export default async function ProjectsPage({
     { name: locale === 'tr' ? 'Ana Sayfa' : 'Home', url: absoluteUrl('/', locale) },
     { name: t('eyebrow'), url: absoluteUrl('/projects', locale) },
   ]);
+  const list = itemListSchema(
+    t('eyebrow'),
+    projects.map((p) => ({
+      name: `${localize(p.name, locale)} — ${localize(p.place, locale)}`,
+      url: absoluteUrl({ pathname: '/projects/[slug]', params: { slug: p.slug } }, locale),
+    })),
+  );
 
   return (
     <main>
-      <JsonLd data={crumbs} />
+      <JsonLd data={[crumbs, list]} />
       <section
         data-nav-theme="dark"
         className="relative overflow-hidden bg-deep px-[clamp(1.5rem,6vw,8rem)] pb-[clamp(3rem,6vh,5rem)] pt-[clamp(7.5rem,16vh,11rem)]"

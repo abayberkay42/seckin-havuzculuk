@@ -532,5 +532,31 @@
     "formSubject": "Web sitesi — Proje talebi",
     "seoTitle": "İletişim — Çeşme / İzmir",
     "seoDescription": "Çeşme, Alaçatı ve İzmir havuz projeleriniz için bize ulaşın: telefon, WhatsApp, e-posta ve Alaçatı ofis konumu. Seçkin Havuzculuk."
+  },
+  "glance": {
+    "eyebrow": "Kısaca Seçkin",
+    "title": "Çeşme yarımadasının havuz firması.",
+    "summary": "Seçkin Havuzculuk (STC Royal A.Ş.), 2017'den beri İzmir'in Çeşme yarımadasında villa ve konut havuzları üzerine çalışan bir havuz firmasıdır. Sıfırdan havuz inşaatı (sonsuzluk, taşmalı ve klasik havuzlar; gunit ve betonarme), mevcut havuzların renovasyonu ve sözleşmeli düzenli bakım hizmeti verir; havuz kimyasalları ve ekipmanları da sunar. Hizmet bölgesi Çeşme, Alaçatı, Ilıca, Seferihisar, Karaburun ve Urla'dır. Ofisi Alaçatı'dadır; pazartesiden cumartesiye 09:00–18:00 arası telefon ve WhatsApp üzerinden ulaşılabilir.",
+    "faqEyebrow": "Sık sorulan sorular",
+    "faqTitle": "Başlamadan önce.",
+    "faq": [
+      {
+        "q": "Seçkin Havuzculuk hangi bölgelerde hizmet veriyor?",
+        "a": "İzmir'in Çeşme yarımadasında çalışıyoruz: Çeşme, Alaçatı, Ilıca, Seferihisar, Karaburun ve Urla. Her bölgenin iklimine, arazisine ve mimarisine göre havuzu farklı planlıyoruz; bölgeye özel bilgileri hizmet bölgeleri sayfalarında bulabilirsiniz."
+      },
+      {
+        "q": "Hangi hizmetleri sunuyorsunuz?",
+        "a": "Sıfırdan havuz inşaatı (sonsuzluk, taşmalı ve klasik havuzlar), mevcut havuzların renovasyonu, sözleşmeli düzenli bakım, sezon açılışı ve kışa hazırlık. Havuz kimyasalları ile filtrasyon, aydınlatma ve temizlik ekipmanları da sunuyoruz."
+      },
+      {
+        "q": "Keşif ve teklif süreci nasıl işliyor?",
+        "a": "Telefon ya da WhatsApp üzerinden ulaştığınızda sahada ücretsiz keşif planlıyoruz. Arazi, zemin ve kullanım ihtiyacınızı yerinde değerlendirdikten sonra projeye özel teklif hazırlıyoruz; fiyat, havuzun ölçüsüne, tipine ve arazi koşullarına göre belirleniyor."
+      },
+      {
+        "q": "Ürünleri internetten satıyor musunuz?",
+        "a": "Hayır. Ürün kataloğumuz bilgilendirme amaçlıdır; online satış yapmıyoruz. Bir ürünle ilgili bilgi ve sipariş için bize telefon ya da WhatsApp üzerinden ulaşabilirsiniz."
+      }
+    ],
+    "areasLink": "Hizmet bölgelerimiz"
   }
 }

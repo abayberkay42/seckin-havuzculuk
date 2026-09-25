@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { isAppLocale, locales, type AppLocale } from '@/i18n/routing';
 import { pageMetadata, absoluteUrl } from '@/lib/seo';
-import { breadcrumbSchema } from '@/lib/schema';
+import { breadcrumbSchema, projectSchema } from '@/lib/schema';
 import { JsonLd } from '@/components/seo/JsonLd';
 import {
   projects,
@@ -81,9 +81,19 @@ export default async function ProjectDetailPage({
     },
   ]);
 
+  const work = projectSchema({
+    name: lp.name,
+    description: lp.overview,
+    url: absoluteUrl({ pathname: '/projects/[slug]', params: { slug } }, locale),
+    image: lp.cover,
+    place: lp.place,
+    year: lp.year,
+    inLanguage: locale,
+  });
+
   return (
     <main>
-      <JsonLd data={crumbs} />
+      <JsonLd data={[work, crumbs]} />
       <ProjectHero lp={lp} />
       <ProjectStory lp={lp} />
 

@@ -4,7 +4,7 @@ import { setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { isAppLocale, type AppLocale } from '@/i18n/routing';
 import { pageMetadata, absoluteUrl } from '@/lib/seo';
-import { breadcrumbSchema } from '@/lib/schema';
+import { breadcrumbSchema, itemListSchema } from '@/lib/schema';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { districts, localizeDistrict } from '@/content/districts';
 import { PageHero } from '@/components/site/PageHero';
@@ -37,19 +37,14 @@ export default async function ServiceAreasHub({ params }: { params: Promise<{ lo
       { name: tr ? 'Ana Sayfa' : 'Home', url: absoluteUrl('/', locale) },
       { name: tr ? 'Hizmet Bölgeleri' : 'Service Areas', url: hubUrl },
     ]),
-    // Enumerable list of the districts — lets search and AI engines read the
-    // service footprint as discrete, linked places rather than prose.
-    {
-      '@context': 'https://schema.org',
-      '@type': 'ItemList',
-      name: tr ? 'Hizmet bölgeleri' : 'Service areas',
-      itemListElement: items.map((d, i) => ({
-        '@type': 'ListItem',
-        position: i + 1,
+    // Enumerable list of the districts — the service footprint as discrete, linked places.
+    itemListSchema(
+      tr ? 'Hizmet bölgeleri' : 'Service areas',
+      items.map((d) => ({
         name: d.name,
         url: absoluteUrl({ pathname: '/service-areas/[slug]', params: { slug: d.slug } }, locale),
       })),
-    },
+    ),
   ];
 
   return (

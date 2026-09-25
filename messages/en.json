@@ -532,5 +532,31 @@
     "formSubject": "Website — Project enquiry",
     "seoTitle": "Contact — Çeşme / İzmir",
     "seoDescription": "Get in touch for your pool project in Çeşme, Alaçatı and İzmir: phone, WhatsApp, email and our Alaçatı office. Seçkin Havuzculuk."
+  },
+  "glance": {
+    "eyebrow": "Seçkin at a glance",
+    "title": "The pool firm of the Çeşme peninsula.",
+    "summary": "Seçkin Havuzculuk (STC Royal A.Ş.) is a pool company working on villa and residential pools on İzmir's Çeşme peninsula since 2017. It builds pools from scratch (infinity, overflow and classic pools; gunite and reinforced concrete), renovates existing pools and provides contracted regular maintenance; it also supplies pool chemicals and equipment. Its service area covers Çeşme, Alaçatı, Ilıca, Seferihisar, Karaburun and Urla. The office is in Alaçatı and can be reached by phone and WhatsApp Monday to Saturday, 09:00–18:00.",
+    "faqEyebrow": "Frequently asked",
+    "faqTitle": "Before you begin.",
+    "faq": [
+      {
+        "q": "Which areas does Seçkin Havuzculuk serve?",
+        "a": "We work on İzmir's Çeşme peninsula: Çeşme, Alaçatı, Ilıca, Seferihisar, Karaburun and Urla. We plan each pool differently according to the area's climate, terrain and architecture; you can find area-specific details on our service-area pages."
+      },
+      {
+        "q": "What services do you offer?",
+        "a": "Pool construction from scratch (infinity, overflow and classic pools), renovation of existing pools, contracted regular maintenance, season opening and winterizing. We also supply pool chemicals and filtration, lighting and cleaning equipment."
+      },
+      {
+        "q": "How do the site visit and quote work?",
+        "a": "When you reach us by phone or WhatsApp, we schedule a free site visit. After assessing the land, the ground and how you plan to use the pool on site, we prepare a project-specific quote; the price depends on the pool's size, type and site conditions."
+      },
+      {
+        "q": "Do you sell products online?",
+        "a": "No. Our product catalogue is for information only; we do not sell online. For information or to order a product, you can reach us by phone or WhatsApp."
+      }
+    ],
+    "areasLink": "Our service areas"
   }
 }

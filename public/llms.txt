@@ -20,6 +20,19 @@ Seçkin Havuzculuk, gunit (püskürtme beton) ve betonarme sistemlerle sonsuzluk
 - [About](https://seckinhavuzculuk.com/en/about): The firm, the team and the approach.
 - [Contact](https://seckinhavuzculuk.com/en/contact): Address, map, phone, WhatsApp and email.
 
+## Hizmet bölgeleri (TR)
+- [Hizmet Bölgeleri](https://seckinhavuzculuk.com/tr/hizmet-bolgeleri): Firmanın çalıştığı 6 bölgenin listesi.
+- [Çeşme](https://seckinhavuzculuk.com/tr/hizmet-bolgeleri/cesme): Tuzlu deniz havasına dayanıklı ekipman, yaşlanan havuzların renovasyonu, uzun sezonda düzenli bakım.
+- [Alaçatı](https://seckinhavuzculuk.com/tr/hizmet-bolgeleri/alacati): Taş ev ve koruma bölgesi dokusuna uyumlu havuzlar, imbat/lodos kaynaklı buharlaşma, butik otel havuzları.
+- [Ilıca](https://seckinhavuzculuk.com/tr/hizmet-bolgeleri/ilica): Site havuzlarında kapasite planlaması, ısı pompası entegrasyonu, gizli savaklı renovasyon.
+- [Seferihisar](https://seckinhavuzculuk.com/tr/hizmet-bolgeleri/seferihisar): Yıl boyu yaşanan evler için aile havuzu güvenliği, bahçe ve ağaç yakınında havuz.
+- [Karaburun](https://seckinhavuzculuk.com/tr/hizmet-bolgeleri/karaburun): Kaya zeminde kazı, eğimli arazide istinat ve sonsuzluk kenarı, uzak şantiye lojistiği.
+- [Urla](https://seckinhavuzculuk.com/tr/hizmet-bolgeleri/urla): Bağ evi ve zeytinlik villalarında manzara odaklı büyük havuzlar, uzun tesisat hattı planlaması.
+
+## Service areas (EN)
+- [Service Areas](https://seckinhavuzculuk.com/en/service-areas): The six areas the firm works in.
+- [Çeşme](https://seckinhavuzculuk.com/en/service-areas/cesme) · [Alaçatı](https://seckinhavuzculuk.com/en/service-areas/alacati) · [Ilıca](https://seckinhavuzculuk.com/en/service-areas/ilica) · [Seferihisar](https://seckinhavuzculuk.com/en/service-areas/seferihisar) · [Karaburun](https://seckinhavuzculuk.com/en/service-areas/karaburun) · [Urla](https://seckinhavuzculuk.com/en/service-areas/urla)
+
 ## Rehberler (Günce · TR)
 - [İzmir'de Havuz Yapım Maliyeti: Fiyatı Belirleyen Kalemler](https://seckinhavuzculuk.com/tr/blog/havuz-yapim-maliyeti-izmir): İzmir ve Çeşme'de havuz yapım maliyetini belirleyen kalemler, fiber-beton farkı, taşma sistemi ve kaya zemin etkisi. Net fiyat için keşif şart.
 - [Havuz Su Kaçağı Tamiri: Nasıl Anlaşılır ve Çözülür?](https://seckinhavuzculuk.com/tr/blog/havuz-su-kacagi-tamiri): Havuz su kaçağı belirtileri, kova testiyle buharlaşma ayrımı, olası kaçak kaynakları ve tamir yöntemleri. Çeşme ve Alaçatı için uzman rehberi.
