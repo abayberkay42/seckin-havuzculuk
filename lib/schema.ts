@@ -43,6 +43,7 @@ export function localBusinessSchema() {
       streetAddress: 'Alaçatı, 16088 Sokak C Blok No: 2-A',
       addressLocality: 'Çeşme',
       addressRegion: 'İzmir',
+      postalCode: '35930',
       addressCountry: 'TR',
     },
     geo: {
@@ -60,6 +61,9 @@ export function localBusinessSchema() {
       },
     ],
     foundingDate: '2017',
+    // A named person behind the firm — the "experience" leg of E-E-A-T, and an
+    // entity search engines can tie the business to.
+    founder: { '@type': 'Person', name: 'Seçkin Satıcı' },
     knowsAbout: [
       'Havuz tasarımı',
       'Havuz inşaatı',

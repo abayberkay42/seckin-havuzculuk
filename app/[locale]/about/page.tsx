@@ -93,6 +93,15 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             <Reveal as="p" delay={0.08} className="mx-auto max-w-[34rem] text-body text-ink/70">
               {t('storyBody2')}
             </Reveal>
+            {/* A name behind the firm — quiet attribution, not a team grid. */}
+            <Reveal delay={0.14} className="mt-9">
+              <span className="block font-mono text-label uppercase tracking-wide text-ink/40">
+                {t('founderLabel')}
+              </span>
+              <span className="mt-2 block font-display text-[1.35rem] text-ink">
+                {t('founderName')}
+              </span>
+            </Reveal>
           </div>
           <div className="md:col-span-6">
             <Frame
