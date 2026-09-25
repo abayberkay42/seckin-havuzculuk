@@ -90,9 +90,11 @@ export function Hero({
         };
 
         const resize = () => {
-          // Back the canvas at the device's true pixel density (capped at 3)
-          // so it draws at full resolution — a lower cap would downscale it.
-          const dpr = Math.min(window.devicePixelRatio || 1, 3);
+          // Back the canvas at the device's true pixel density (capped at 2).
+          // 2× already reads as retina-sharp; a 3× backing store triples the
+          // pixels the canvas must allocate and redraw each scrub tick — a real
+          // INP/jank cost on high-DPR phones for no visible gain.
+          const dpr = Math.min(window.devicePixelRatio || 1, 2);
           canvas.width = Math.round(window.innerWidth * dpr);
           canvas.height = Math.round(window.innerHeight * dpr);
           if (lastDrawn >= 0 && frames[lastDrawn]) draw(frames[lastDrawn]);
@@ -100,9 +102,21 @@ export function Hero({
         resize();
         window.addEventListener('resize', resize);
 
-        for (let i = 0; i < set.count; i++) {
+        // Frames stream in through a bounded pool rather than 72 parallel
+        // requests fired at once — the old all-at-once loop dumped ~16 MB onto
+        // the network the instant the hero mounted, starving the LCP poster and
+        // first frame of bandwidth. Mobile keeps its tuned all-at-once behaviour
+        // (pool size = frame count, so every request still starts immediately);
+        // only desktop is throttled. Order is 0,1,2… so the first frame is in
+        // the opening batch, and drawIndex() still draws the nearest loaded one.
+        const CONCURRENCY = mobile ? set.count : 6;
+        let next = 0;
+        const loadNext = () => {
+          if (next >= set.count) return;
+          const i = next++;
           const img = new window.Image();
           img.src = `${set.dir}/frame_${String(i + 1).padStart(4, '0')}.webp`;
+          const advance = () => loadNext();
           img.onload = () => {
             frames[i] = img;
             if (i === 0 && canvas.dataset.ready !== 'true') {
@@ -115,8 +129,12 @@ export function Hero({
             // frame-walk made the film play by itself when a remount (e.g. a
             // language switch) loaded all frames instantly from cache.
             if (i === wanted) drawIndex(wanted);
+            advance();
           };
-        }
+          // A missing/failed frame must not stall the pool — pull the next one.
+          img.onerror = advance;
+        };
+        for (let n = 0; n < CONCURRENCY; n++) loadNext();
 
         scrub = (t) => drawIndex(Math.floor(t * (set.count - 1)));
         cleanup = () => window.removeEventListener('resize', resize);

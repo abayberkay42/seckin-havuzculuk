@@ -149,7 +149,8 @@
   "footer": {
     "tagline": "Suyu mimariye dönüştüren havuz ustalığı.",
     "rights": "Tüm hakları saklıdır.",
-    "navLabel": "Site haritası"
+    "navLabel": "Site haritası",
+    "areasLabel": "Hizmet Bölgeleri"
   },
   "projectsPage": {
     "eyebrow": "Projeler",
@@ -336,7 +337,7 @@
         "a": "Evet. Eğimli araziler, sonsuzluk kenarı ve kademeli teras havuzları için çoğu zaman en güçlü sonuçları verir. Zemin etüdü, istinat ve mühendislik çözümleriyle eğimi bir dezavantaj değil, tasarımın avantajına çeviriyoruz."
       }
     ],
-    "seoTitle": "Havuz İnşaatı Çeşme & Alaçatı",
+    "seoTitle": "Havuz İnşaatı Çeşme, Alaçatı & İzmir",
     "seoDescription": "Çeşme, Alaçatı ve İzmir'de villalar için sıfırdan lüks havuz inşaatı: sonsuzluk havuzu, gunit/beton, seramik kaplama ve akıllı sistemler. Ücretsiz keşif."
   },
   "maintenance": {
@@ -469,7 +470,7 @@
       }
     ],
     "seoTitle": "Havuz Bakımı Çeşme, Alaçatı & İzmir",
-    "seoDescription": "Çeşme, Alaçatı ve İzmir'deki villalar için düzenli havuz bakımı: su kimyası dengesi, temizlik, kışa hazırlık ve sezonluk bakım anlaşmaları."
+    "seoDescription": "Çeşme, Alaçatı ve İzmir'deki villalar için düzenli havuz bakımı: su kimyası dengesi, temizlik, kışa hazırlık ve sezonluk bakım anlaşmaları. Ücretsiz keşif."
   },
   "journal": {
     "eyebrow": "Günce",

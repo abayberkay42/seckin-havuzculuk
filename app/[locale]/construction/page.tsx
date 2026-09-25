@@ -5,6 +5,7 @@ import { pageMetadata, absoluteUrl } from '@/lib/seo';
 import { serviceSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { Faq } from '@/components/site/Faq';
+import { ServiceAreaLinks } from '@/components/site/ServiceAreaLinks';
 import { PageHero } from '@/components/site/PageHero';
 import { CtaBand } from '@/components/site/CtaBand';
 import { Seam } from '@/components/ui/Seam';
@@ -35,7 +36,9 @@ export default async function ConstructionPage({ params }: { params: Promise<{ l
   const faq = t.raw('faq') as { q: string; a: string }[];
   const ld = [
     serviceSchema({
-      name: t('title'),
+      // Real service name, not the poetic H1 slogan — Google reads this as the
+      // service identity.
+      name: t('eyebrow'),
       description: t('intro'),
       url,
       serviceType: t('eyebrow'),
@@ -111,6 +114,8 @@ export default async function ConstructionPage({ params }: { params: Promise<{ l
       </section>
 
       <Seam from="navy" to="canvas" />
+
+      <ServiceAreaLinks locale={locale} />
 
       <Faq eyebrow={t('faqEyebrow')} title={t('faqTitle')} items={faq} />
 

@@ -1,7 +1,9 @@
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { isAppLocale, type AppLocale } from '@/i18n/routing';
-import { pageMetadata } from '@/lib/seo';
+import { pageMetadata, absoluteUrl } from '@/lib/seo';
+import { breadcrumbSchema } from '@/lib/schema';
+import { JsonLd } from '@/components/seo/JsonLd';
 import { PageHero } from '@/components/site/PageHero';
 import { ContactForm } from '@/components/site/ContactForm';
 import { Seam } from '@/components/ui/Seam';
@@ -32,8 +34,14 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
     { label: t('emailLabel'), value: EMAIL, href: `mailto:${EMAIL}` },
   ];
 
+  const crumbs = breadcrumbSchema([
+    { name: locale === 'tr' ? 'Ana Sayfa' : 'Home', url: absoluteUrl('/', locale) },
+    { name: t('eyebrow'), url: absoluteUrl('/contact', locale) },
+  ]);
+
   return (
     <main>
+      <JsonLd data={crumbs} />
       <PageHero eyebrow={t('eyebrow')} title={t('title')} intro={t('intro')} />
 
       <Seam from="canvas" to="surface" />
@@ -110,6 +118,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3131.11746756088!2d26.37410777643129!3d38.29994608173414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bb793e314ab417%3A0x9fc07db0ca0d761e!2sSe%C3%A7kin%20Havuzculuk!5e0!3m2!1str!2str!4v1784819832872!5m2!1str!2str"
               className="block h-[clamp(20rem,46vh,32rem)] w-full border-0 [filter:grayscale(0.2)_contrast(1.03)]"
               allowFullScreen
+              loading="lazy"
               referrerPolicy="strict-origin-when-cross-origin"
             />
           </div>

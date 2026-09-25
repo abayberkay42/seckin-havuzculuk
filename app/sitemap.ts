@@ -4,6 +4,7 @@ import { absoluteUrl, type SeoHref } from '@/lib/seo';
 import { visibleProducts, hasPhoto } from '@/content/catalogue';
 import { projects } from '@/content/projects';
 import { posts } from '@/content/blog';
+import { districts } from '@/content/districts';
 
 /**
  * One entry per page, keyed on the default-locale URL, each carrying the full
@@ -18,13 +19,19 @@ const LAST_MODIFIED = new Date('2026-07-26');
 
 function entry(
   href: SeoHref,
-  opts: { priority: number; changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency'] },
+  opts: {
+    priority: number;
+    changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency'];
+    lastModified?: Date;
+  },
 ): MetadataRoute.Sitemap[number] {
   const languages: Record<string, string> = {};
   for (const l of routing.locales) languages[l] = absoluteUrl(href, l as AppLocale);
+  // Mirror the HTML <head> hreflang cluster, which also emits x-default -> TR.
+  languages['x-default'] = absoluteUrl(href, routing.defaultLocale);
   return {
     url: absoluteUrl(href, routing.defaultLocale),
-    lastModified: LAST_MODIFIED,
+    lastModified: opts.lastModified ?? LAST_MODIFIED,
     changeFrequency: opts.changeFrequency,
     priority: opts.priority,
     alternates: { languages },
@@ -39,6 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/maintenance', priority: 0.9, cf: 'monthly' },
     { path: '/products', priority: 0.8, cf: 'weekly' },
     { path: '/projects', priority: 0.8, cf: 'weekly' },
+    { path: '/service-areas', priority: 0.8, cf: 'monthly' },
     { path: '/blog', priority: 0.7, cf: 'weekly' },
     { path: '/contact', priority: 0.7, cf: 'monthly' },
   ];
@@ -66,9 +74,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const blogEntries = posts.map((p) =>
     entry(
       { pathname: '/blog/[slug]', params: { slug: p.slug } },
-      { priority: 0.6, changeFrequency: 'monthly' },
+      // Posts carry real publish/update dates — use them instead of the site-wide
+      // constant so the crawl-priority signal is meaningful for fresh content.
+      { priority: 0.6, changeFrequency: 'monthly', lastModified: new Date(p.updated) },
     ),
   );
 
-  return [...staticEntries, ...productEntries, ...projectEntries, ...blogEntries];
+  const districtEntries = districts.map((d) =>
+    entry(
+      { pathname: '/service-areas/[slug]', params: { slug: d.slug } },
+      { priority: 0.8, changeFrequency: 'monthly' },
+    ),
+  );
+
+  return [
+    ...staticEntries,
+    ...productEntries,
+    ...projectEntries,
+    ...blogEntries,
+    ...districtEntries,
+  ];
 }

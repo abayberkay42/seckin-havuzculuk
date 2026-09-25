@@ -2,7 +2,9 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { isAppLocale, type AppLocale } from '@/i18n/routing';
-import { pageMetadata } from '@/lib/seo';
+import { pageMetadata, absoluteUrl } from '@/lib/seo';
+import { breadcrumbSchema } from '@/lib/schema';
+import { JsonLd } from '@/components/seo/JsonLd';
 import { PageHero } from '@/components/site/PageHero';
 import { CtaBand } from '@/components/site/CtaBand';
 import { Seam } from '@/components/ui/Seam';
@@ -32,9 +34,14 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
   const t = await getTranslations('about');
   const principles = t.raw('principles') as Principle[];
   const figures = t.raw('figures') as Figure[];
+  const crumbs = breadcrumbSchema([
+    { name: locale === 'tr' ? 'Ana Sayfa' : 'Home', url: absoluteUrl('/', locale) },
+    { name: t('eyebrow'), url: absoluteUrl('/about', locale) },
+  ]);
 
   return (
     <main>
+      <JsonLd data={crumbs} />
       <PageHero
         eyebrow={t('eyebrow')}
         title={t('title')}

@@ -56,6 +56,7 @@ export default async function BlogPostPage({
       image: lp.cover,
       datePublished: post.date,
       dateModified: post.updated,
+      inLanguage: locale,
     }),
     breadcrumbSchema([
       { name: locale === 'tr' ? 'Ana Sayfa' : 'Home', url: absoluteUrl('/', locale) },

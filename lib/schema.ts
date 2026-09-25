@@ -129,6 +129,7 @@ export function articleSchema(input: {
   image?: string;
   datePublished: string;
   dateModified: string;
+  inLanguage?: string;
 }) {
   return {
     '@context': 'https://schema.org',
@@ -140,7 +141,7 @@ export function articleSchema(input: {
     ...(input.image ? { image: `${SITE_URL}${input.image}` } : {}),
     datePublished: input.datePublished,
     dateModified: input.dateModified,
-    inLanguage: 'tr',
+    inLanguage: input.inLanguage ?? 'tr',
     author: { '@id': ORG_ID },
     publisher: { '@id': ORG_ID },
   };
@@ -156,6 +157,29 @@ export function faqSchema(items: { q: string; a: string }[]) {
       name: it.q,
       acceptedAnswer: { '@type': 'Answer', text: it.a },
     })),
+  };
+}
+
+/**
+ * A service scoped to ONE district — areaServed narrowed to that single city so
+ * Google reads "this URL = this district", the schema leg of the per-district
+ * service pages. Provider points back to the one business node via @id.
+ */
+export function districtServiceSchema(input: {
+  districtName: string;
+  url: string;
+  description: string;
+  serviceType: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: `${input.serviceType} — ${input.districtName}`,
+    serviceType: input.serviceType,
+    description: input.description,
+    url: input.url,
+    provider: { '@id': ORG_ID },
+    areaServed: { '@type': 'City', name: input.districtName },
   };
 }
 

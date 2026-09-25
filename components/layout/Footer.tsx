@@ -4,11 +4,12 @@ import { Link } from '@/i18n/navigation';
 import { TextLink } from '@/components/ui/TextLink';
 import type { AppPathname } from '@/i18n/routing';
 import { PHONE_DISPLAY, EMAIL, whatsappLink, SOCIAL_LINKS } from '@/lib/contact';
+import { districts } from '@/content/districts';
 
 /** Static (non-parameterised) routes — the footer never links to [slug] pages. */
 type StaticPathname = Exclude<
   AppPathname,
-  '/products/[slug]' | '/projects/[slug]' | '/blog/[slug]'
+  '/products/[slug]' | '/projects/[slug]' | '/blog/[slug]' | '/service-areas/[slug]'
 >;
 
 const MAP_SRC =
@@ -132,6 +133,26 @@ export async function Footer() {
               </li>
             ))}
           </ul>
+
+          {/* Service areas — every district page gets a site-wide internal link */}
+          <TextLink
+            href="/service-areas"
+            className="mb-5 mt-10 block font-mono text-label uppercase text-canvas/40 transition-colors duration-[var(--dur-quick)] hover:text-canvas/70"
+          >
+            {t('areasLabel')}
+          </TextLink>
+          <ul className="grid grid-cols-2 gap-x-10 gap-y-3">
+            {districts.map((d) => (
+              <li key={d.slug}>
+                <TextLink
+                  href={{ pathname: '/service-areas/[slug]', params: { slug: d.slug } }}
+                  className="text-[0.9rem] text-canvas/70 transition-colors duration-[var(--dur-quick)] hover:text-canvas"
+                >
+                  {d.name.tr}
+                </TextLink>
+              </li>
+            ))}
+          </ul>
         </nav>
 
         {/* Live map */}
@@ -145,6 +166,7 @@ export async function Footer() {
               src={MAP_SRC}
               className="block h-[clamp(13rem,26vh,17rem)] w-full border-0 [filter:grayscale(0.25)_contrast(1.03)]"
               allowFullScreen
+              loading="lazy"
               referrerPolicy="strict-origin-when-cross-origin"
             />
           </div>

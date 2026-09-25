@@ -2,7 +2,9 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { isAppLocale, type AppLocale } from '@/i18n/routing';
-import { pageMetadata } from '@/lib/seo';
+import { pageMetadata, absoluteUrl } from '@/lib/seo';
+import { breadcrumbSchema } from '@/lib/schema';
+import { JsonLd } from '@/components/seo/JsonLd';
 import { ProjectsHub } from '@/components/projects/ProjectsHub';
 import { SplitReveal } from '@/components/ui/SplitReveal';
 import { Eyebrow } from '@/components/ui/Eyebrow';
@@ -31,9 +33,14 @@ export default async function ProjectsPage({
   if (!isAppLocale(locale)) notFound();
   setRequestLocale(locale);
   const t = await getTranslations('projectsPage');
+  const crumbs = breadcrumbSchema([
+    { name: locale === 'tr' ? 'Ana Sayfa' : 'Home', url: absoluteUrl('/', locale) },
+    { name: t('eyebrow'), url: absoluteUrl('/projects', locale) },
+  ]);
 
   return (
     <main>
+      <JsonLd data={crumbs} />
       <section
         data-nav-theme="dark"
         className="relative overflow-hidden bg-deep px-[clamp(1.5rem,6vw,8rem)] pb-[clamp(3rem,6vh,5rem)] pt-[clamp(7.5rem,16vh,11rem)]"

@@ -11,7 +11,7 @@ import { useIsChrome } from '@/lib/isChrome';
 /** Nav only ever links to static routes — never a parameterised [slug] page. */
 type StaticPathname = Exclude<
   AppPathname,
-  '/products/[slug]' | '/projects/[slug]' | '/blog/[slug]'
+  '/products/[slug]' | '/projects/[slug]' | '/blog/[slug]' | '/service-areas/[slug]'
 >;
 
 export type NavLeaf = { href: StaticPathname; label: string; desc?: string };

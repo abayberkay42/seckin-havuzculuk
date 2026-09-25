@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import type { LocalizedPost } from '@/content/blog';
+import { RichText } from '@/components/blog/RichText';
 
 /**
  * The article itself — a readable measure column. H2 per section keeps the
@@ -29,7 +30,7 @@ export async function BlogPostBody({ lp }: { lp: LocalizedPost }) {
               <div className="space-y-5">
                 {s.paragraphs.map((p, i) => (
                   <p key={i} className="text-body leading-relaxed text-ink/72">
-                    {p}
+                    <RichText text={p} />
                   </p>
                 ))}
               </div>
@@ -37,7 +38,7 @@ export async function BlogPostBody({ lp }: { lp: LocalizedPost }) {
                 <ul className="mt-6 space-y-3 border-l-2 border-bronze/40 pl-6">
                   {s.bullets.map((b, i) => (
                     <li key={i} className="text-body leading-relaxed text-ink/72">
-                      {b}
+                      <RichText text={b} />
                     </li>
                   ))}
                 </ul>

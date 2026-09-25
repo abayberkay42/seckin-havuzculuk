@@ -19,6 +19,8 @@ export const pathnames = {
   '/products/[slug]': { tr: '/urunler/[slug]', en: '/products/[slug]' },
   '/projects': { tr: '/projeler', en: '/projects' },
   '/projects/[slug]': { tr: '/projeler/[slug]', en: '/projects/[slug]' },
+  '/service-areas': { tr: '/hizmet-bolgeleri', en: '/service-areas' },
+  '/service-areas/[slug]': { tr: '/hizmet-bolgeleri/[slug]', en: '/service-areas/[slug]' },
   '/blog': '/blog',
   '/blog/[slug]': '/blog/[slug]',
   '/contact': { tr: '/iletisim', en: '/contact' },
