@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getPathname } from '@/i18n/navigation';
 import { routing, type AppLocale, type AppPathname } from '@/i18n/routing';
+import { OG_SOURCES } from '@/lib/og-manifest';
 
 /**
  * Single source of truth for anything that needs the production origin —
@@ -11,6 +12,19 @@ import { routing, type AppLocale, type AppPathname } from '@/i18n/routing';
 export const SITE_URL = 'https://seckinhavuzculuk.com';
 export const SITE_NAME = 'Seçkin Havuzculuk';
 export const DEFAULT_OG_IMAGE = '/og-default.jpg';
+
+/**
+ * Social card for a page's cover image.
+ *
+ * Covers here are WebP, which LinkedIn and WhatsApp will not render as a
+ * preview — a shared link arrived with no image at all. scripts/generate-og.mjs
+ * renders each cover to a 1200x630 JPEG under /og; anything without one falls
+ * back to the site card rather than previewing as nothing.
+ */
+function ogImage(src?: string): string {
+  if (!src || !OG_SOURCES.has(src)) return DEFAULT_OG_IMAGE;
+  return '/og/' + src.replace(/^\//, '').replace(/\//g, '-').replace(/\.\w+$/, '') + '.jpg';
+}
 
 /** next-intl locale -> OpenGraph locale tag. */
 const OG_LOCALE: Record<AppLocale, string> = { tr: 'tr_TR', en: 'en_US' };
@@ -83,7 +97,8 @@ export function pageMetadata({
 }: PageMetaInput): Metadata {
   const alternates = buildAlternates(href, locale);
   const canonical = typeof alternates?.canonical === 'string' ? alternates.canonical : SITE_URL;
-  const img = image ?? DEFAULT_OG_IMAGE;
+  // Always a generated 1200x630 JPEG, so the dimensions declared below are true.
+  const img = ogImage(image);
   description = clampDescription(description);
 
   return {
