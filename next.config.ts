@@ -37,12 +37,10 @@ const nextConfig: NextConfig = {
           },
         ],
       },
-      // Hero frame sequences and videos never change once shipped — the biggest
-      // CWV leak was these serving `max-age=0, must-revalidate` (revalidated on
-      // every visit). Fingerprint-free but effectively immutable content.
-      { source: '/frames-desktop/:path*', headers: [{ key: 'Cache-Control', value: IMMUTABLE }] },
-      { source: '/frames-mobile/:path*', headers: [{ key: 'Cache-Control', value: IMMUTABLE }] },
-      { source: '/videos/:path*', headers: [{ key: 'Cache-Control', value: IMMUTABLE }] },
+      // ORDER MATTERS: when several rules set the same header, the LAST matching
+      // rule wins. The generic image rule therefore comes first and the specific
+      // immutable directories after it, so they override it for frames/videos.
+      //
       // Static brand/image assets in /public: cache a day, revalidate in the
       // background for a week — instant serve without the year-long lock-in that
       // immutable would impose on files that might be swapped in place.
@@ -52,6 +50,12 @@ const nextConfig: NextConfig = {
           { key: 'Cache-Control', value: 'public, max-age=86400, stale-while-revalidate=604800' },
         ],
       },
+      // Hero frame sequences and videos never change once shipped — the biggest
+      // CWV leak was these serving `max-age=0, must-revalidate` (revalidated on
+      // every visit). Fingerprint-free but effectively immutable content.
+      { source: '/frames-desktop/:path*', headers: [{ key: 'Cache-Control', value: IMMUTABLE }] },
+      { source: '/frames-mobile/:path*', headers: [{ key: 'Cache-Control', value: IMMUTABLE }] },
+      { source: '/videos/:path*', headers: [{ key: 'Cache-Control', value: IMMUTABLE }] },
     ];
   },
 };
