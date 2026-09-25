@@ -7,6 +7,7 @@ import { JsonLd } from '@/components/seo/JsonLd';
 import { Faq } from '@/components/site/Faq';
 import { ServiceAreaLinks } from '@/components/site/ServiceAreaLinks';
 import { ServiceDetail } from '@/components/site/ServiceDetail';
+import { Testimonials } from '@/components/site/Testimonials';
 import { serviceDetail } from '@/content/services';
 import { RelatedProjects } from '@/components/projects/RelatedProjects';
 import { projects, localize as localizeProjectField } from '@/content/projects';
@@ -178,6 +179,8 @@ export default async function MaintenancePage({ params }: { params: Promise<{ lo
 
       {/* Proof: pools brought back by renovation — what sustained care looks like */}
       <RelatedProjects items={proof} />
+
+      <Testimonials />
 
       <Seam from="surface" to="canvas" />
 

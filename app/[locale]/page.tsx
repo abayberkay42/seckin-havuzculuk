@@ -9,6 +9,7 @@ import { Process } from '@/components/home/Process';
 import { Products } from '@/components/home/Products';
 import { Invitation } from '@/components/home/Invitation';
 import { AtAGlance } from '@/components/home/AtAGlance';
+import { Testimonials } from '@/components/site/Testimonials';
 import { faqSchema } from '@/lib/schema';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { ScrollCue } from '@/components/home/ScrollCue';
@@ -46,7 +47,8 @@ export default async function HomePage({
       <Process />
       <Products />
       <AtAGlance />
-      <Seam from="canvas" to="deep" />
+      <Testimonials />
+      <Seam from="surface" to="deep" />
       <Invitation />
 
       {/* whole-page scroll nudge: hides while scrolling, returns when paused */}

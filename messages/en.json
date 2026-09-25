@@ -607,5 +607,10 @@
     "noticeLink": "Details",
     "noticeAccept": "Allow maps",
     "noticeDeny": "Necessary only"
+  },
+  "testimonials": {
+    "eyebrow": "Our customers",
+    "title": "People who trusted us with their pool.",
+    "source": "All reviews on our Google Business Profile"
   }
 }

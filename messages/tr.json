@@ -607,5 +607,10 @@
     "noticeLink": "Ayrıntılar",
     "noticeAccept": "Haritalara izin ver",
     "noticeDeny": "Yalnızca zorunlu"
+  },
+  "testimonials": {
+    "eyebrow": "Müşterilerimiz",
+    "title": "Havuzunu bize emanet edenler.",
+    "source": "Yorumların tamamı Google işletme profilimizde"
   }
 }

@@ -25,8 +25,13 @@ type HeroProps = {
 //   Desktop — landscape 1440-wide frames (matches the wide viewport).
 //   Mobile  — a lighter portrait cut (fewer, smaller frames) — DO NOT CHANGE,
 //             it's tuned and already smooth on phones.
-const DESKTOP = { dir: '/frames-desktop', count: 72, w: 1912, h: 1080 };
-const MOBILE = { dir: '/frames-mobile', count: 64, w: 608, h: 1080 };
+// Frame counts and widths are a direct trade against page weight: the original
+// 72×1912 desktop set was 17.7 MB and the 64-frame mobile set 3.6 MB. Sampled
+// down to 48 and 32 frames (evenly across the same shot) at 1440 wide on
+// desktop, they are 5.1 MB and 1.6 MB with no visible loss in the scrub.
+// Re-run scratch/reframe.mjs if the source footage is ever replaced.
+const DESKTOP = { dir: '/frames-desktop', count: 48, w: 1440, h: 814 };
+const MOBILE = { dir: '/frames-mobile', count: 32, w: 608, h: 1080 };
 
 export function Hero({
   line1,
