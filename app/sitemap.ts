@@ -12,10 +12,33 @@ import { districts } from '@/content/districts';
  * have a photo are listed — the detail route 404s otherwise, so an unphotographed
  * slug in the sitemap would be a soft-404 invitation.
  */
-// A stable content date rather than Date.now() at generation time — otherwise
+// Stable content dates rather than Date.now() at generation time — otherwise
 // every URL's <lastmod> churns on each build and Google learns to ignore the
-// signal. Bump this when content is meaningfully revised.
-const LAST_MODIFIED = new Date('2026-07-26');
+// signal entirely.
+//
+// But one site-wide constant is just as useless in the other direction: pages
+// created or rewritten later still claimed the original launch date, so the
+// sitemap told Google "nothing here has changed" about brand-new district pages
+// and rewritten product pages. Each body of content now carries the date it was
+// genuinely last revised. Bump the relevant one when you revise that content —
+// and only then, so the signal stays honest.
+const LAUNCH = new Date('2026-07-26');
+/** Districts created, product body copy written, service pages expanded,
+ *  home summary + privacy page added. */
+const REVISED_2026_09_25 = new Date('2026-09-25');
+
+/** Per-route revision dates for the static pages. Anything absent is untouched
+ *  since launch and keeps the launch date. */
+const STATIC_REVISED: Partial<Record<AppPathname, Date>> = {
+  '/': REVISED_2026_09_25, // "Kısaca Seçkin" summary + FAQ
+  '/about': REVISED_2026_09_25, // founder named
+  '/construction': REVISED_2026_09_25, // depth sections, proof, FAQ 6 -> 10
+  '/maintenance': REVISED_2026_09_25, // same
+  '/products': REVISED_2026_09_25, // every product gained body copy
+  '/contact': REVISED_2026_09_25, // consent-gated map
+  '/service-areas': REVISED_2026_09_25, // new
+  '/privacy': REVISED_2026_09_25, // new
+};
 
 function entry(
   href: SeoHref,
@@ -31,7 +54,7 @@ function entry(
   languages['x-default'] = absoluteUrl(href, routing.defaultLocale);
   return {
     url: absoluteUrl(href, routing.defaultLocale),
-    lastModified: opts.lastModified ?? LAST_MODIFIED,
+    lastModified: opts.lastModified ?? LAUNCH,
     changeFrequency: opts.changeFrequency,
     priority: opts.priority,
     alternates: { languages },
@@ -53,7 +76,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const staticEntries = staticRoutes.map((r) =>
-    entry(r.path, { priority: r.priority, changeFrequency: r.cf }),
+    entry(r.path, {
+      priority: r.priority,
+      changeFrequency: r.cf,
+      lastModified: STATIC_REVISED[r.path],
+    }),
   );
 
   const productEntries = visibleProducts
@@ -61,7 +88,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .map((p) =>
       entry(
         { pathname: '/products/[slug]', params: { slug: p.slug } },
-        { priority: 0.6, changeFrequency: 'monthly' },
+        // Each product went from a single sentence to 2-3 paragraphs.
+        { priority: 0.6, changeFrequency: 'monthly', lastModified: REVISED_2026_09_25 },
       ),
     );
 
@@ -84,7 +112,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const districtEntries = districts.map((d) =>
     entry(
       { pathname: '/service-areas/[slug]', params: { slug: d.slug } },
-      { priority: 0.8, changeFrequency: 'monthly' },
+      // These pages did not exist before this date.
+      { priority: 0.8, changeFrequency: 'monthly', lastModified: REVISED_2026_09_25 },
     ),
   );
 
