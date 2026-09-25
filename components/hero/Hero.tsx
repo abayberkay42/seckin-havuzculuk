@@ -102,21 +102,21 @@ export function Hero({
         resize();
         window.addEventListener('resize', resize);
 
-        // Frames stream in through a bounded pool rather than 72 parallel
-        // requests fired at once — the old all-at-once loop dumped ~16 MB onto
-        // the network the instant the hero mounted, starving the LCP poster and
-        // first frame of bandwidth. Mobile keeps its tuned all-at-once behaviour
-        // (pool size = frame count, so every request still starts immediately);
-        // only desktop is throttled. Order is 0,1,2… so the first frame is in
-        // the opening batch, and drawIndex() still draws the nearest loaded one.
-        const CONCURRENCY = mobile ? set.count : 6;
-        let next = 0;
-        const loadNext = () => {
-          if (next >= set.count) return;
-          const i = next++;
+        // The film is ~3.6 MB on mobile and ~16 MB on desktop. None of it is
+        // needed to render the hero — the poster covers the first paint and the
+        // frames only matter once the visitor scrolls into the pinned section.
+        // Fetching them during load made the page take 16.7s to become
+        // interactive on mobile, so: frame 0 immediately (the canvas needs
+        // something to show), the rest through a bounded pool that does not
+        // start until the page is loaded and idle — or the moment the visitor
+        // scrolls, whichever comes first. drawIndex() draws the nearest loaded
+        // frame, so an early scrub degrades to a slightly coarser film rather
+        // than a stall.
+        const CONCURRENCY = mobile ? 4 : 6;
+
+        const fetchFrame = (i: number, onSettled?: () => void) => {
           const img = new window.Image();
           img.src = `${set.dir}/frame_${String(i + 1).padStart(4, '0')}.webp`;
-          const advance = () => loadNext();
           img.onload = () => {
             frames[i] = img;
             if (i === 0 && canvas.dataset.ready !== 'true') {
@@ -129,15 +129,40 @@ export function Hero({
             // frame-walk made the film play by itself when a remount (e.g. a
             // language switch) loaded all frames instantly from cache.
             if (i === wanted) drawIndex(wanted);
-            advance();
+            onSettled?.();
           };
           // A missing/failed frame must not stall the pool — pull the next one.
-          img.onerror = advance;
+          img.onerror = () => onSettled?.();
         };
-        for (let n = 0; n < CONCURRENCY; n++) loadNext();
+
+        fetchFrame(0);
+
+        let next = 1;
+        const pump = () => {
+          if (next < set.count) fetchFrame(next++, pump);
+        };
+        let started = false;
+        const startRest = () => {
+          if (started) return;
+          started = true;
+          for (let n = 0; n < CONCURRENCY; n++) pump();
+        };
+        const onIdle = () => {
+          const ric = window.requestIdleCallback;
+          if (ric) ric(startRest, { timeout: 2000 });
+          else window.setTimeout(startRest, 200);
+        };
+        if (document.readyState === 'complete') onIdle();
+        else window.addEventListener('load', onIdle, { once: true });
+        // A visitor who scrolls straight away needs the film now, not at idle.
+        window.addEventListener('scroll', startRest, { once: true, passive: true });
 
         scrub = (t) => drawIndex(Math.floor(t * (set.count - 1)));
-        cleanup = () => window.removeEventListener('resize', resize);
+        cleanup = () => {
+          window.removeEventListener('resize', resize);
+          window.removeEventListener('load', onIdle);
+          window.removeEventListener('scroll', startRest);
+        };
       }
 
       // ── Reduced motion: show everything, park the film on its last frame ──
