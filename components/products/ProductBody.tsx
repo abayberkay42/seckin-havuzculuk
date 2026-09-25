@@ -30,6 +30,24 @@ export function ProductBody({ lp }: { lp: LocalizedProduct }) {
 
   return (
     <div ref={root}>
+      {/* Detail — a readable column before the spec sheet. Skipped when a
+          product has no body copy yet, so the page never shows an empty band. */}
+      {lp.body.length > 0 && (
+        <section
+          data-block
+          data-nav-theme="light"
+          className="bg-canvas px-[clamp(1.5rem,6vw,8rem)] py-[clamp(5rem,10vh,8rem)]"
+        >
+          <div className="mx-auto max-w-[46rem] space-y-6">
+            {lp.body.map((p, i) => (
+              <p key={i} data-reveal className="text-body leading-relaxed text-ink/72">
+                {p}
+              </p>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* Technical — dark, to read as spec sheet */}
       <section
         data-block
