@@ -3,6 +3,7 @@
 export const OG_SOURCES = new Set<string>([
   '/havuz-bakimi-servis.webp',
   '/havuz-bakimi-v2.webp',
+  '/havuz-insaati-hero.webp',
   '/havuz-insaati-v2.webp',
   '/havuz-insaati.webp',
   '/products-bg.webp',
@@ -77,5 +78,6 @@ export const OG_SOURCES = new Set<string>([
   '/proj-tundra-gri.webp',
   '/proj-zeytinlik.webp',
   '/renovasyon-v2.webp',
+  '/renovasyon.webp',
   '/services-bg.webp',
 ]);

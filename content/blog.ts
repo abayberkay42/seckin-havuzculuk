@@ -143,6 +143,86 @@ const META: Meta[] = [
     relatedService: '/maintenance',
     relatedServiceLabel: SERVICE_LABEL['/maintenance'],
   },
+  {
+    slug: 'havuz-renovasyonu-rehberi',
+    category: { tr: 'İnşaat', en: 'Construction' },
+    date: '2026-09-25',
+    updated: '2026-09-25',
+    readMinutes: 7,
+    cover: '/renovasyon.webp',
+    relatedService: '/construction',
+    relatedServiceLabel: SERVICE_LABEL['/construction'],
+  },
+  {
+    slug: 'havuz-ph-klor-dozaj',
+    category: { tr: 'Bakım', en: 'Maintenance' },
+    date: '2026-09-25',
+    updated: '2026-09-25',
+    readMinutes: 8,
+    cover: '/proj-ege-kiyisi.webp',
+    relatedService: '/maintenance',
+    relatedServiceLabel: SERVICE_LABEL['/maintenance'],
+  },
+  {
+    slug: 'havuz-bahar-acilisi',
+    category: { tr: 'Bakım', en: 'Maintenance' },
+    date: '2026-09-25',
+    updated: '2026-09-25',
+    readMinutes: 8,
+    cover: '/proj-bahce-yenileme.webp',
+    relatedService: '/maintenance',
+    relatedServiceLabel: SERVICE_LABEL['/maintenance'],
+  },
+  {
+    slug: 'urla-seferihisar-havuz-yaptirma',
+    category: { tr: 'İnşaat', en: 'Construction' },
+    date: '2026-09-25',
+    updated: '2026-09-25',
+    readMinutes: 7,
+    cover: '/proj-zeytinlik.webp',
+    relatedService: '/construction',
+    relatedServiceLabel: SERVICE_LABEL['/construction'],
+  },
+  {
+    slug: 'havuz-derz-fayans-yenileme',
+    category: { tr: 'İnşaat', en: 'Construction' },
+    date: '2026-09-25',
+    updated: '2026-09-25',
+    readMinutes: 7,
+    cover: '/proj-gizli-savakli-cover.webp',
+    relatedService: '/construction',
+    relatedServiceLabel: SERVICE_LABEL['/construction'],
+  },
+  {
+    slug: 'havuz-test-kiti-karsilastirma',
+    category: { tr: 'Bakım', en: 'Maintenance' },
+    date: '2026-09-25',
+    updated: '2026-09-25',
+    readMinutes: 8,
+    cover: '/products/test-colorq-dijital.webp',
+    relatedService: '/maintenance',
+    relatedServiceLabel: SERVICE_LABEL['/maintenance'],
+  },
+  {
+    slug: 'havuz-suyu-bulanikligi-kokusu',
+    category: { tr: 'Bakım', en: 'Maintenance' },
+    date: '2026-09-25',
+    updated: '2026-09-25',
+    readMinutes: 7,
+    cover: '/proj-ates-cukuru.webp',
+    relatedService: '/maintenance',
+    relatedServiceLabel: SERVICE_LABEL['/maintenance'],
+  },
+  {
+    slug: 'havuz-pompasi-arizalari',
+    category: { tr: 'Bakım', en: 'Maintenance' },
+    date: '2026-09-25',
+    updated: '2026-09-25',
+    readMinutes: 7,
+    cover: '/havuz-insaati-hero.webp',
+    relatedService: '/maintenance',
+    relatedServiceLabel: SERVICE_LABEL['/maintenance'],
+  },
 ];
 
 // PROSE_START — real article content, authored per slug. Replaced wholesale.
@@ -1973,6 +2053,1790 @@ const PROSE: Record<string, Prose> = {
         "a": {
           "tr": "Hayır, havuz kimyasalları asla birbirine karıştırılmaz; özellikle asitli ürünlerle klorun teması tehlikeli klor gazı açığa çıkarabilir. Her ürünü ayrı ekleyin, seyreltirken suya kimyasal ekleyin. Ürünleri orijinal ambalajında, kapağı kapalı, çocuklardan uzak, serin, kuru ve havadar bir yerde saklayın. Asit içeren ürünleri klorlu ürünlerden ayrı raflarda tutun.",
           "en": "No, pool chemicals must never be mixed; contact between acid-based products and chlorine in particular can release dangerous chlorine gas. Add each product separately, and when diluting, add the chemical to water. Store products in their original packaging with lids closed, out of children's reach, in a cool, dry, ventilated place. Keep acid-based products on separate shelves from chlorine products."
+        }
+      }
+    ]
+  },
+  "havuz-renovasyonu-rehberi": {
+    "title": {
+      "tr": "Havuz Renovasyonu: Ne Zaman Gerekir, Nasıl Planlanır?",
+      "en": "Pool Renovation: When Is It Needed and How Is It Planned?"
+    },
+    "seoTitle": {
+      "tr": "Havuz Renovasyonu Rehberi: Kapsam ve Süreç",
+      "en": "Pool Renovation Guide: Scope and Process"
+    },
+    "excerpt": {
+      "tr": "Havuz renovasyonu ne zaman gerekir, kapsam nasıl belirlenir, süreç hangi sırayla ilerler? Çeşme ve Alaçatı villa havuzları için uzman rehberi.",
+      "en": "When is a pool renovation needed, how is the scope set and in what order does the work run? An expert guide for villa pools in Çeşme and Alaçatı."
+    },
+    "intro": {
+      "tr": "Havuz renovasyonu, yıpranmış bir havuzu yeniden sağlam, verimli ve bakımı kolay bir yapıya kavuşturma işidir. Yılda birkaç kez yapılan küçük onarımlardan farklı olarak, sorunun kaynağına inen ve havuzun kabuğundan tesisatına, kaplamasından taşma sistemine kadar birden fazla kalemi aynı anda ele alan planlı bir çalışmadır. Doğru zamanda ve doğru kapsamda yapıldığında, bir havuzu yıllarca sorunsuz kullanmanın en ekonomik yoludur. Bu rehberde renovasyon gerektiren belirtileri, onarım ile tam yenileme arasındaki kararı, kapsamın işi nasıl büyüttüğünü, sürecin adımlarını ve en uygun mevsimi anlatıyoruz.",
+      "en": "A pool renovation is the work of bringing a worn pool back to a sound, efficient and easily maintained condition. Unlike the small repairs made a few times a year, it is planned work that gets to the root of the problem and addresses several items at once, from the shell and the plumbing to the finish and the overflow system. Carried out at the right time and to the right scope, it is the most economical way to use a pool trouble-free for years. In this guide we cover the signs that call for a renovation, the decision between repair and full replacement, how scope drives the size of the job, the steps of the process and the best season for the work."
+    },
+    "sections": [
+      {
+        "heading": {
+          "tr": "Havuzunuz renovasyon istediğini nasıl belli eder?",
+          "en": "How does a pool show that it needs renovating?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Havuzlar bir anda bozulmaz; yıllar içinde biriken küçük işaretler bir noktada birbirini besleyerek büyür. Tek bir belirti çoğu zaman sınırlı bir onarımla çözülür. Ancak aşağıdaki işaretlerden üçü ya da daha fazlası aynı havuzda bir aradaysa, artık tek tek müdahale etmek yerine bütünü ele alan bir renovasyon daha doğrudur. Çeşme yarımadasında bu süreç iç bölgelere göre daha hızlı işler: tuzlu deniz havası açıktaki metal parçaları ve derz dolgularını yıpratır, imbat ve lodos suyun yüzeyini sürekli hareket ettirir, uzun ve yoğun yaz sezonu ise ekipmanı normalden fazla çalıştırır.",
+            "en": "Pools do not fail overnight; small signs build up over the years until they start feeding one another. A single symptom can usually be solved with a limited repair. But when three or more of the signs below appear in the same pool, it makes more sense to address the whole rather than patch each item separately. On the Çeşme peninsula this process runs faster than inland: the salty sea air wears down exposed metal parts and grout, the imbat and lodos winds keep the water surface in constant motion, and the long, busy summer season runs the equipment harder than usual."
+          }
+        ],
+        "bullets": [
+          {
+            "tr": "Kaplamada yaygın çatlak, kabarma, renk atması ya da dökülmeye başlayan derzler; tek bir bölgeyle sınırlı değilse bu, [derz ve fayans yenileme](post:havuz-derz-fayans-yenileme) kaleminin gündeme geldiğinin işaretidir",
+            "en": "Widespread cracking, blistering or fading in the finish, or grout that is starting to crumble; when it is not confined to one area, it signals that [regrouting and retiling](post:havuz-derz-fayans-yenileme) is on the agenda"
+          },
+          {
+            "tr": "Onarıma rağmen tekrarlayan ve bir türlü kapanmayan su kaybı — önce kaynağın [su kaçağı teşhisiyle](post:havuz-su-kacagi-tamiri) kesinleştirilmesi gerekir",
+            "en": "Water loss that keeps returning despite repairs — the source first needs to be confirmed through [leak detection](post:havuz-su-kacagi-tamiri)"
+          },
+          {
+            "tr": "Filtrasyonun havuz hacmine yetmemesi: suyun berraklığını geç toparlaması, filtrenin çok sık geri yıkama istemesi",
+            "en": "Filtration that no longer suits the pool's volume: water that takes too long to clear, a filter that needs backwashing far too often"
+          },
+          {
+            "tr": "Teknik odadan gelen gürültü, titreşim ve ısınma; bunlar çoğu zaman bir [pompa arızasının](post:havuz-pompasi-arizalari) habercisidir",
+            "en": "Noise, vibration and heat from the plant room; these are often the early warning of a [pump fault](post:havuz-pompasi-arizalari)"
+          },
+          {
+            "tr": "Eski skimmerlı sistemin yetersiz kalması, yüzey temizliğinin zorlaşması ve modern taşma kanalı arzusu",
+            "en": "An older skimmer system no longer coping, surface cleaning becoming harder, and the wish for a modern overflow channel"
+          },
+          {
+            "tr": "Isıtmalı havuzlarda ısı kaybının artması, ısıtmanın giderek daha uzun sürmesi ve sezon dışında havuzun kullanılamaz hale gelmesi",
+            "en": "In heated pools, growing heat loss, heating that takes ever longer, and a pool that becomes unusable outside the season"
+          },
+          {
+            "tr": "Estetik eskime: havuzun rengi, aydınlatması ve çevre döşemesinin villanın yenilenmiş mimarisiyle artık uyuşmaması",
+            "en": "Aesthetic ageing: the pool's colour, lighting and surrounding paving no longer matching the villa's updated architecture"
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Onarım mı, renovasyon mu, tam yenileme mi?",
+          "en": "Repair, renovation or full rebuild?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Bu üçü arasındaki fark, işin büyüklüğünden çok kararın dayandığı soruda saklıdır. Onarım, nedeni belli ve sınırlı bir sorunu ortadan kaldırır: yerinden oynamış bir nozul contası, tek bir bölgede dökülen derz, arızalanan bir pompa. Havuzun geri kalanı sağlamsa doğru olan da budur. Renovasyon ise havuzun sağlam kalan yapısını koruyup yıpranan katmanlarını yenilemektir; kabuk ayakta kalır, üzerindeki su yalıtımı, kaplama, tesisat ve ekipman elden geçirilir. Tam yenileme, yani havuzun sökülüp yeniden inşa edilmesi, çoğu villa havuzunda gerekmez ve yalnızca kabuğun taşıyıcı bütünlüğü kaybolduğunda, havuzun konumu ya da geometrisi kullanımla temelden çeliştiğinde gündeme gelir.",
+            "en": "The difference between the three lies less in the size of the job than in the question behind the decision. A repair removes a problem whose cause is known and contained: a return nozzle seal that has shifted, grout crumbling in one area, a pump that has failed. If the rest of the pool is sound, that is exactly the right answer. A renovation keeps the sound structure of the pool and renews its worn layers; the shell stays, while the waterproofing over it, the finish, the plumbing and the equipment are overhauled. A full rebuild, meaning demolishing the pool and building it again, is rarely needed in a villa pool and only arises when the shell has lost its structural integrity, or when the pool's position or geometry fundamentally conflicts with how it is used."
+          },
+          {
+            "tr": "Kararı verirken en kritik ölçüt tekrar eden masraftır. Aynı sorun için yılda birkaç kez ekip çağırıyorsanız, her sezon yeni bir yama açılıyorsa ya da bir kalemi onarmak için zaten havuzun boşaltılması ve kaplamanın kısmen sökülmesi gerekiyorsa, parçalı onarımlar toplamda renovasyondan daha pahalıya gelir. Sağlıklı bir karar için önce kabuğun ve su yalıtımının durumu, ardından tesisatın ve ekipmanın yaşı yerinde değerlendirilmelidir. Bu değerlendirme keşifle başlar; havuzu görmeden verilen kapsam kararları çoğu zaman ya gereğinden geniş ya da eksik kalır.",
+            "en": "The most telling criterion in this decision is recurring cost. If you are calling a team out several times a year for the same issue, if a new patch opens up every season, or if repairing one item already means draining the pool and partly stripping the finish, then piecemeal repairs add up to more than a renovation. To decide soundly, the condition of the shell and the waterproofing must be assessed first, then the age of the plumbing and equipment, and all of it on site. That assessment begins with a survey; scope decisions made without seeing the pool tend to be either broader than necessary or incomplete."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Kapsam renovasyonun maliyetini nasıl değiştirir?",
+          "en": "How does scope change the cost of a renovation?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Renovasyonda maliyeti belirleyen tek bir kalem yoktur; işi büyüten şey kapsamın katman katman derinleşmesidir. Yalnızca kaplamanın yenilendiği bir çalışma ile kabuğa kadar inip su yalıtımının tamamen yeniden yapıldığı bir çalışma, aynı havuzda bile birbirinden çok farklı iki iştir. Kapsamı genişleten başlıca etkenler; havuzun hacmi ve geometrisi, seçilen kaplama malzemesi, taşma sisteminin değişip değişmeyeceği, tesisatın ne kadarının yenileneceği, ısıtma ve otomasyon gibi yeni sistemlerin eklenip eklenmeyeceği ve şantiyeye erişim koşullarıdır.",
+            "en": "No single item sets the cost of a renovation; what enlarges the job is scope deepening layer by layer. Work that renews only the finish and work that goes down to the shell and rebuilds the waterproofing entirely are two very different jobs, even in the same pool. The main factors that widen scope are the pool's volume and geometry, the finish material chosen, whether the overflow system changes, how much of the plumbing is renewed, whether new systems such as heating and automation are added, and the access conditions on site."
+          },
+          {
+            "tr": "Erişim, bu bölgede sık hafife alınan bir kalemdir. Karaburun ve Çeşme kıyılarındaki kayalık, eğimli arazilerde söküm malzemesinin tahliyesi ve yeni malzemenin havuz başına taşınması, düz bir bahçedeki aynı işe göre belirgin şekilde daha fazla emek ister. Bütçe planlarken bir başka nokta da sürprizlere pay bırakmaktır: kaplama söküldüğünde ancak o zaman görünen kabuk çatlakları ya da yorulmuş bir izolasyon, kapsamı bir kademe büyütebilir. Havuzunuzun mevcut durumuna göre net bir kapsam ve fiyat için yerinde keşif şarttır; [havuz inşaatı ve renovasyon](page:construction) hizmetimiz kapsamında havuzu görüp kalem kalem bir plan çıkarıyoruz.",
+            "en": "Access is an item that is often underestimated in this region. On the rocky, sloping plots along the Karaburun and Çeşme coast, removing demolition waste and carrying new material to the poolside takes noticeably more effort than the same job in a flat garden. Another point when budgeting is to leave room for surprises: cracks in the shell, or tired waterproofing that only becomes visible once the finish comes off, can push the scope up a level. For a clear scope and price based on your pool's actual condition, an on-site survey is essential; as part of our [pool construction and renovation](page:construction) service we inspect the pool and draw up an item-by-item plan."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Renovasyon süreci hangi sırayla ilerler?",
+          "en": "In what order does a renovation proceed?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Renovasyonun kalitesini belirleyen en önemli şey sıralamadır. Her katman, altındaki katman kusursuz olduğu için ayakta kalır; bu yüzden bir adımı atlamak ya da sırasını değiştirmek, birkaç sezon sonra aynı sorunun geri dönmesi anlamına gelir. Sıralamanın bir faydası daha vardır: her aşama, bir sonraki aşamanın kapsamını netleştirir. Söküm tamamlanmadan yapısal onarımın büyüklüğü, yapısal onarım bitmeden de kaplama takvimi kesinleşmez. Tipik bir villa havuzunda süreç aşağıdaki gibi ilerler ve her adımın sonunda, bir sonrakine geçmeden önce bir kontrol noktası bulunur.",
+            "en": "The single most important factor in the quality of a renovation is sequence. Each layer holds because the one beneath it is sound, so skipping a step or changing its order means the same problem returns a few seasons later. Sequence has a second benefit: every stage clarifies the scope of the next. The extent of the structural repair is not known until the strip-out is complete, and the schedule for the finish is not fixed until the structural repair is done. In a typical villa pool the process runs as follows, with a checkpoint at the end of each step before the next begins."
+          }
+        ],
+        "bullets": [
+          {
+            "tr": "1. Tespit ve keşif: havuz boşaltılmadan önce su kaybı, ekipman performansı, kaplama ve çevre döşemesinin durumu yerinde incelenir; varsa geçmiş onarımlar not edilir.",
+            "en": "1. Assessment and survey: before the pool is drained, water loss, equipment performance and the condition of the finish and surrounding paving are examined on site, and any past repairs are noted."
+          },
+          {
+            "tr": "2. Kapsam ve tasarım kararı: hangi kalemlerin yenileneceği, kaplama malzemesi, renk, aydınlatma ve taşma sistemi netleştirilir; iş programı çıkarılır.",
+            "en": "2. Scope and design decisions: which items will be renewed, along with the finish material, colour, lighting and overflow system, are settled and a work programme is drawn up."
+          },
+          {
+            "tr": "3. Söküm: havuz kontrollü biçimde boşaltılır, eski kaplama ve yıpranmış katmanlar kabuğa kadar alınır; ancak bu aşamada yapının gerçek durumu tam olarak görülebilir.",
+            "en": "3. Strip-out: the pool is drained in a controlled way and the old finish and worn layers are taken back to the shell; only at this stage can the true condition of the structure be seen in full."
+          },
+          {
+            "tr": "4. Yapısal onarım ve su yalıtımı: kabuktaki çatlaklar nedenine göre onarılır, yüzey düzeltilir ve su yalıtımı yeniden uygulanır. Renovasyonun ömrünü belirleyen adım budur.",
+            "en": "4. Structural repair and waterproofing: cracks in the shell are repaired according to their cause, the surface is levelled and the waterproofing is reapplied. This is the step that determines how long the renovation lasts."
+          },
+          {
+            "tr": "5. Tesisat ve ekipman: emiş ve dönüş hatları, vanalar, nozullar yenilenir; filtre ve pompa havuzun gerçek hacmine göre yeniden boyutlandırılır. Havuza küçük gelen bir filtre yerine hacme uygun bir [kum filtresi](product:kum-filtresi-600) seçmek, sonraki yılların su kalitesini baştan belirler.",
+            "en": "5. Plumbing and equipment: suction and return lines, valves and nozzles are renewed, and the filter and pump are resized to the pool's actual volume. Choosing a [sand filter](product:kum-filtresi-600) matched to the volume, rather than one that is undersized, sets the water quality for years to come."
+          },
+          {
+            "tr": "6. Kaplama: yeni seramik, mozaik ya da tercih edilen bitiş malzemesi uygulanır, derzler doldurulur ve gerekli kür süresi beklenir.",
+            "en": "6. Finish: the new ceramic, mosaic or chosen finish material is applied, the joints are filled and the required curing time is observed."
+          },
+          {
+            "tr": "7. Devreye alma: havuz doldurulur, tesisat basınçla ve kaçak kontrolüyle sınanır, kimyasal denge kurulur ve ekipmanın çalışma programı ayarlanır.",
+            "en": "7. Commissioning: the pool is filled, the plumbing is tested under pressure and checked for leaks, the chemistry is balanced and the equipment's running schedule is set."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Havuz renovasyonu için en uygun zaman ne zaman?",
+          "en": "When is the best time for a pool renovation?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Renovasyon için ideal dönem kış ve erken bahardır. Havuz zaten kapalı olduğu için kullanım kaybı yaşanmaz, söküm ve yapısal işler acele etmeden yürütülür, beton ve derz uygulamaları için gereken kür süreleri rahatça beklenebilir. Ege'nin ılıman kışı bu açıdan avantajlıdır; buna karşılık yağışlı günler ve nem, dış cephe ile çevre döşemesi işlerinde programı bir miktar uzatabilir. Bu yüzden iş programı hava koşullarına pay bırakacak şekilde kurulmalıdır.",
+            "en": "The ideal period for a renovation is winter and early spring. The pool is closed anyway, so no use is lost, strip-out and structural work can proceed without haste, and the curing times needed for concrete and grout can be observed comfortably. The Aegean's mild winter is an advantage here, though rainy days and humidity can stretch the programme somewhat for exterior and paving work. The schedule should therefore be built with an allowance for the weather."
+          },
+          {
+            "tr": "Sezona yetiştirmek istiyorsanız kararı geciktirmemek önemlidir. Kapsamı geniş bir renovasyonda malzeme tedariki, söküm, yapısal onarım ve kür süreleri arka arkaya gelir; haziran başında hazır bir havuz için planlamanın kışın başlamış olması gerekir. Havuzunuzu kış için zaten kapatıyorsanız, [kışa hazırlık](post:havuzu-kisa-hazirlama) sırasında yapılan kontroller renovasyon kapsamını belirlemek için doğal bir fırsattır. Sezonun tam ortasında başlanan işler ise hem tatil dönemini boşa çıkarır hem de acele nedeniyle kalitesiz sonuç riski taşır.",
+            "en": "If you want the pool ready for the season, it matters not to delay the decision. In a wide-scope renovation, material supply, strip-out, structural repair and curing times follow one after another; for a pool that is ready in early June, planning needs to have started in winter. If you are closing the pool for winter anyway, the checks made during [winterising](post:havuzu-kisa-hazirlama) are a natural opportunity to define the renovation scope. Work started in the middle of the season, by contrast, writes off the holiday period and risks poor results through haste."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Renovasyonda en sık yapılan hatalar nelerdir?",
+          "en": "What are the most common mistakes in a renovation?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Renovasyonların çoğu kötü malzeme yüzünden değil, eksik teşhis ve aceleci sıralama yüzünden kısa ömürlü olur. Kullanılan malzemenin kalitesi elbette önemlidir; ancak doğru malzeme yanlış zeminin üzerine geldiğinde ya da yeterince beklenmediğinde aynı sonucu verir. Aşağıdaki hatalar, birkaç sezon sonra aynı işin yeniden yapılmasına yol açan en yaygın nedenlerdir ve neredeyse tamamı planlama aşamasında önlenebilir. Tamamlanmış işlerin nasıl bir bütünlük oluşturduğunu görmek de karar vermeyi kolaylaştırır; antrasit aydınlatmalı, gizli savaklı ve tundra gri renovasyonlarımızın öncesi ve sonrası [tamamlanan projelerimiz](page:projects) arasında yer alıyor.",
+            "en": "Most renovations fall short not because of poor materials but because of incomplete diagnosis and a rushed sequence. The quality of the material used certainly matters, yet the right material laid over the wrong substrate, or given too little time, produces the same outcome. The mistakes below are the most common reasons the same work has to be redone a few seasons later, and nearly all of them can be avoided at the planning stage. Seeing how finished jobs come together as a whole also makes deciding easier; the before and after of our anthracite lit, hidden-weir and tundra grey renovations can be found among our [completed projects](page:projects)."
+          }
+        ],
+        "bullets": [
+          {
+            "tr": "Nedeni bulunmadan yüzeyi yenilemek: altında devam eden bir su kaçağı ya da zemin hareketi varken yapılan kaplama, yeni derzleri kısa sürede geri verir.",
+            "en": "Renewing the surface without finding the cause: a finish laid over an ongoing leak or continuing ground movement will give up its new grout within a short time."
+          },
+          {
+            "tr": "Su yalıtımından tasarruf etmek: görünmeyen bu katman, renovasyonun görünen tüm kalemlerinin ömrünü belirler.",
+            "en": "Economising on waterproofing: this invisible layer determines the life of every visible item in the renovation."
+          },
+          {
+            "tr": "Kaplamayı yenileyip tesisatı olduğu gibi bırakmak: yıllanmış hatlar ve yetersiz filtrasyon, yeni kaplamanın altında aynı sorunları üretmeye devam eder.",
+            "en": "Renewing the finish while leaving the plumbing untouched: ageing lines and inadequate filtration keep producing the same problems beneath the new surface."
+          },
+          {
+            "tr": "Kür sürelerini beklememek: sezona yetişme telaşıyla erken doldurulan bir havuz, derzlerinde ve yalıtımında kalıcı zafiyet taşır.",
+            "en": "Not waiting out the curing times: a pool filled too early in the rush to make the season carries permanent weakness in its joints and waterproofing."
+          },
+          {
+            "tr": "Ekipmanı havuzun gerçek hacmine göre seçmemek: yetersiz pompa ve filtre, sonraki her sezon fazladan kimyasal ve emek olarak geri döner.",
+            "en": "Not sizing the equipment to the pool's actual volume: an undersized pump and filter come back as extra chemicals and labour every season afterwards."
+          },
+          {
+            "tr": "Devreye alma sonrasını planlamamak: yeni bir havuz kadar hassas olan bu dönemde [düzenli bakım](page:maintenance) programının kurulmaması, kimyasal dengenin ve yeni yüzeyin erkenden yıpranmasına yol açar.",
+            "en": "Not planning for life after commissioning: in this period, which is as delicate as that of a brand-new pool, failing to set up a [regular maintenance](page:maintenance) programme leads to unstable chemistry and early wear on the new surface."
+          },
+          {
+            "tr": "Yerel koşulları hesaba katmamak: [Çeşme'de](area:cesme) tuzlu hava ve rüzgâr, seçilen malzemenin ve metal parçaların dayanımını doğrudan etkiler.",
+            "en": "Ignoring local conditions: [in Çeşme](area:cesme), salty air and wind directly affect the durability of the chosen materials and metal parts."
+          }
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "q": {
+          "tr": "Havuz renovasyonu ne kadar sürer?",
+          "en": "How long does a pool renovation take?"
+        },
+        "a": {
+          "tr": "Süre tamamen kapsama bağlıdır. Yalnızca kaplama ve derzlerin yenilendiği bir çalışma birkaç hafta içinde tamamlanabilirken, kabuğa kadar inilen, su yalıtımı ve tesisatın da yenilendiği bir renovasyon belirgin şekilde uzar. Beton ve derz uygulamalarının kür süreleri kısaltılamaz. Havuzunuzu görmeden gerçekçi bir takvim vermek doğru olmaz; keşif sonrasında adım adım bir iş programı paylaşıyoruz.",
+          "en": "The duration depends entirely on the scope. Work that renews only the finish and grout can be completed within a few weeks, while a renovation that goes down to the shell and also renews the waterproofing and plumbing takes considerably longer. The curing times for concrete and grout cannot be shortened. It would not be right to give a realistic timeline without seeing your pool; after a survey we share a step-by-step work programme."
+        }
+      },
+      {
+        "q": {
+          "tr": "Havuz renovasyonunda havuzun tamamen boşaltılması gerekir mi?",
+          "en": "Does the pool have to be fully drained for a renovation?"
+        },
+        "a": {
+          "tr": "Kaplama, derz, su yalıtımı ve kabuk onarımı gerektiren her renovasyonda havuzun boşaltılması gerekir; bu işler kuru yüzeyde yapılır. Boşaltma kontrollü yapılmalıdır, çünkü yeraltı su seviyesinin yüksek olduğu arazilerde aniden boşaltılan bir havuz zemin basıncından zarar görebilir. Yalnızca teknik odayla sınırlı ekipman yenilemelerinde ise boşaltma çoğu zaman gerekmez.",
+          "en": "Any renovation involving the finish, grout, waterproofing or shell repair requires the pool to be drained, as this work is done on a dry surface. Draining must be controlled, because on sites with a high water table a pool emptied suddenly can be damaged by ground pressure. For equipment renewals confined to the plant room, draining is usually not necessary."
+        }
+      },
+      {
+        "q": {
+          "tr": "Eski skimmerlı havuz taşmalı havuza dönüştürülebilir mi?",
+          "en": "Can an older skimmer pool be converted to an overflow pool?"
+        },
+        "a": {
+          "tr": "Çoğu durumda mümkündür, ancak bu renovasyonun en kapsamlı kalemlerinden biridir. Taşma kanalı, denge deposu, yeni tesisat hatları ve çevre döşemesinin kot ayarı birlikte planlanmalıdır. Mevcut kabuğun yapısı, bahçedeki yer durumu ve teknik odanın kapasitesi kararı belirler. Bu dönüşüm yapılabilir mi ve hangi kapsamda yapılır, ancak yerinde keşifle netleşir.",
+          "en": "In most cases it is possible, but it is one of the most extensive items in a renovation. The overflow channel, balance tank, new plumbing lines and the levels of the surrounding paving all have to be planned together. The structure of the existing shell, the space available in the garden and the capacity of the plant room shape the decision. Whether this conversion can be done, and to what scope, only becomes clear with an on-site survey."
+        }
+      },
+      {
+        "q": {
+          "tr": "Havuz renovasyonu için ruhsat gerekir mi?",
+          "en": "Is a permit required for a pool renovation?"
+        },
+        "a": {
+          "tr": "Mevcut havuzun kaplamasının, tesisatının ve ekipmanının yenilenmesi genellikle yapının ölçüsünü ve konumunu değiştirmez. Ancak havuzun boyutu, derinliği ya da yeri değişiyorsa veya denge deposu gibi yeni bir yapı ekleniyorsa durum farklılaşabilir. İzin gereklilikleri belediyeden belediyeye değişir; işe başlamadan önce bağlı olduğunuz belediyeden ve ilgili kurumlardan teyit almanızı öneririz.",
+          "en": "Renewing the finish, plumbing and equipment of an existing pool generally does not change the structure's dimensions or position. The situation can differ, however, if the pool's size, depth or location changes, or if a new structure such as a balance tank is added. Permit requirements vary from one municipality to another; we recommend confirming with your municipality and the relevant authorities before work begins."
+        }
+      }
+    ]
+  },
+  "havuz-ph-klor-dozaj": {
+    "title": {
+      "tr": "Havuz pH ve Klor Dozajı Nasıl Ayarlanır?",
+      "en": "How Do You Set Pool pH and Chlorine Dosage?"
+    },
+    "seoTitle": {
+      "tr": "Havuz pH ve Klor Dozajı Nasıl Ayarlanır?",
+      "en": "How to Set Pool pH and Chlorine Dosage"
+    },
+    "excerpt": {
+      "tr": "Ölçmeden dozaj yapılmaz: havuz hacmi hesabı, ölçüm sırası, pH ile klorun ilişkisi ve küçük adımlarla doğru dozaj disiplini.",
+      "en": "No dosing without measuring: pool volume, the right testing order, how pH and chlorine interact and the discipline of small, measured steps."
+    },
+    "intro": {
+      "tr": "Havuz pH ve klor dozajı tahminle değil, ölçümle kurulur. Doğru sıra her zaman aynıdır: önce havuzunuzun su hacmini bilirsiniz, sonra suyu ölçersiniz, en sonunda ürün etiketindeki dozajı uygularsınız. Bu sıra bozulduğunda kimyasal hem israf olur hem de su bir gün aşırı klorlu, ertesi gün dengesiz hale gelir. Bu yazıda hacim hesabından ölçüm sırasına, pH'ın klor üzerindeki etkisinden stabilizatörün rolüne kadar dozaj mantığının tamamını anlatıyoruz. Amacımız size bir formül ezberletmek değil; hangi değeri neden ölçtüğünüzü ve müdahaleyi neden küçük adımlarla yapmanız gerektiğini anlaşılır kılmak.",
+      "en": "Pool pH and chlorine dosage is built on measurement, not guesswork. The correct order is always the same: first you know your pool's water volume, then you test the water, and only then do you apply the dosage printed on the product label. When that order breaks down, chemicals are wasted and the water swings from over-chlorinated one day to unbalanced the next. In this article we explain the whole logic of dosing, from calculating volume and the order of testing to how pH affects chlorine and what the stabiliser actually does. Our aim is not to make you memorise a formula, but to make clear why you measure each value and why every correction should be made in small steps."
+    },
+    "sections": [
+      {
+        "heading": {
+          "tr": "Havuzunuzun su hacmini nasıl hesaplarsınız?",
+          "en": "How do you calculate your pool's water volume?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Her dozaj hesabının çıkış noktası metreküp cinsinden su hacmidir, çünkü ürün etiketlerindeki miktarlar birim su hacmi üzerinden verilir. Dikdörtgen bir havuzda hesap basittir: en × boy × ortalama derinlik. Buradaki kritik kelime \"ortalama\"dır. Villa havuzlarının çoğunda taban eğimlidir; sığ uçta bel hizasında olan su, derin uçta bir insan boyunu geçebilir. Yalnızca derin ucun ölçüsünü kullanırsanız hacmi olduğundan büyük, yalnızca sığ ucu kullanırsanız küçük hesaplarsınız. Her iki uçtaki derinliği ölçüp ortalamasını almak, dozajınızın gerçekten havuzunuza ait olmasını sağlar.",
+            "en": "Every dosing calculation starts with the water volume in cubic metres, because the quantities on product labels are always given per unit of water. For a rectangular pool the maths is simple: width × length × average depth. The critical word here is \"average\". Most villa pools have a sloping floor; water that reaches your waist at the shallow end can be over head height at the deep end. If you use only the deep-end measurement you will overestimate the volume, and if you use only the shallow end you will underestimate it. Measuring the depth at both ends and taking the average is what makes the dosage genuinely yours."
+          },
+          {
+            "tr": "Serbest formlu, böbrek veya L biçimli havuzlarda hacmi yaklaşık olarak bulmak için havuzu birkaç dikdörtgen parçaya bölüp toplamak yeterlidir; mutlak kesinlik değil, tutarlı bir referans aranır. Basamaklar, oturma sekileri ve varsa taşma kanalı ile denge deposu da toplam su miktarını değiştirir. Bu yüzden hacmi bir kez dikkatle hesaplayıp yazılı bir yere not etmenizi öneririz. Düzenli olarak yürüttüğümüz [havuz bakım hizmetimizde](page:maintenance) her havuzun hacmi teknik dosyada kayıtlıdır ve sezon boyunca yapılan tüm dozaj hesapları bu tek sayıya dayanır.",
+            "en": "For freeform, kidney or L-shaped pools it is enough to split the pool into a few rectangles and add the results; you are looking for a consistent reference, not absolute precision. Steps, seating ledges and, where present, the overflow channel and balance tank also change the total amount of water. That is why we recommend calculating the volume carefully once and writing it down. In our regular [pool maintenance service](page:maintenance), every pool's volume is recorded in its technical file, and all dosing calculations through the season rest on that single figure."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Ölçümü hangi sırayla yapmalısınız?",
+          "en": "In which order should you run your tests?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Su testinde sıra rastgele değildir: önce alkalinite, sonra pH, en son klor. Toplam alkalinite pH'ın tamponudur; 80–120 ppm aralığının altına düştüğünde pH bir günden ötekine savrulur ve pH'ı düzeltmek için yaptığınız her müdahale kısa ömürlü olur. Alkalinite yerinde olduğunda pH'ı 7,2–7,6 aralığına çekmek hem daha kolay hem de daha kalıcıdır. Klor ölçümünü en sona bırakmanın nedeni ise basit: pH yanlışken okuduğunuz klor değeri, suyun gerçekte ne kadar korunduğunu size doğru anlatmaz.",
+            "en": "The order of testing is not arbitrary: alkalinity first, then pH, and chlorine last. Total alkalinity is the buffer for pH; once it falls below the 80–120 ppm range, pH swings from one day to the next and every correction you make to it is short-lived. When alkalinity sits where it should, bringing pH into the 7.2–7.6 range is both easier and longer-lasting. The reason chlorine comes last is simple: a chlorine reading taken while pH is wrong does not tell you how well the water is actually protected."
+          },
+          {
+            "tr": "Ölçümü her zaman aynı koşullarda yapın: suyu yüzeyden değil dirsek derinliğinden, skimmer ve dönüş ağzından uzak bir noktadan alın, kabı önce havuz suyuyla çalkalayın. Reaktiflerin son kullanma tarihi geçmişse okuma sessizce yanlış çıkar; şişeleri sıcakta ve güneşte bırakmamak bu yüzden önemlidir. Ölçümü mümkünse günün aynı saatinde, filtrasyon çalıştıktan sonra tekrarlamak da sonuçları birbiriyle kıyaslanabilir kılar. Damla kitinden şerit teste, fotometrik cihazdan test setine kadar hangi ölçüm yönteminin size uyduğunu [havuz test kiti karşılaştırmamızda](post:havuz-test-kiti-karsilastirma) ayrıntılı olarak ele aldık.",
+            "en": "Always test under the same conditions: take the sample at elbow depth rather than from the surface, away from the skimmer and the return inlet, and rinse the vial with pool water first. If the reagents are past their expiry date, the reading will be quietly wrong, which is why the bottles should never be left in heat or sunlight. Repeating the test at the same time of day, after the filtration has run, also makes your results comparable with one another. From drop kits and test strips to photometric devices and full test sets, we cover which testing method suits you in our [pool test kit comparison](post:havuz-test-kiti-karsilastirma)."
+          }
+        ],
+        "bullets": [
+          {
+            "tr": "Toplam alkalinite: 80–120 ppm — pH'ı yerinde tutan tampon; önce bu değer oturmalı.",
+            "en": "Total alkalinity: 80–120 ppm — the buffer that holds pH in place; settle this value first."
+          },
+          {
+            "tr": "pH: 7,2–7,6 — klorun verimli çalıştığı, göz ve cildin rahat ettiği aralık.",
+            "en": "pH: 7.2–7.6 — the range where chlorine works efficiently and eyes and skin stay comfortable."
+          },
+          {
+            "tr": "Serbest klor: 1–3 ppm — suyu fiilen dezenfekte eden aktif klor miktarı.",
+            "en": "Free chlorine: 1–3 ppm — the active chlorine that actually disinfects the water."
+          },
+          {
+            "tr": "Siyanürik asit (stabilizatör): 30–50 ppm — uzun sezonda ayda bir kontrol etmek yeterlidir.",
+            "en": "Cyanuric acid (stabiliser): 30–50 ppm — checking it once a month through a long season is enough."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "pH, klorun etkinliğini nasıl değiştirir?",
+          "en": "How does pH change the effectiveness of chlorine?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Havuzdaki klorun tamamı aynı işi yapmaz. Suya giren klor, suyun pH'ına bağlı olarak iki biçim arasında paylaşılır ve bunlardan yalnızca biri güçlü bir dezenfektan gibi davranır. pH yükseldikçe bu etkili biçimin payı azalır: test kitiniz aynı serbest klor değerini gösterdiği halde suyun gerçek dezenfeksiyon gücü düşer. Klor koyup koyup sonuç alamadığını söyleyen havuz sahiplerinde çoğu zaman sorun klorda değil, yükselmiş pH'tadır.",
+            "en": "Not all the chlorine in a pool does the same job. Once chlorine enters the water it is shared between two forms depending on pH, and only one of them behaves as a strong disinfectant. As pH rises, the share of that effective form falls: your test kit may show the same free chlorine figure while the water's real disinfecting power drops. When pool owners tell us they keep adding chlorine and see no result, the problem is usually not the chlorine but a pH that has crept up."
+          },
+          {
+            "tr": "Havuz suyunun pH'ı doğal olarak yükselme eğilimindedir; taze takviye suyu, havalandırma ve sıcak hava bu yönde çalışır. Bu nedenle en sık ihtiyaç duyulan düzenleyici pH düşürücüdür ve [Quardex sıvı pH düşürücü](product:sivi-ph-quardex) gibi sıvı formlar suyla hızla karıştığı için pratik bir seçenektir. Ters yönde, pH 7,2'nin altına indiğinde su aşınmaya başlar, göz ve cilt rahatsız olur, klor ise hızla tükenir. Her iki durumda da hangi üründen hangi miktarı vereceğinizi ürün etiketi söyler; sizin işiniz pH'ı doğru aralığa getirip klorun çalışmasına izin vermektir.",
+            "en": "Pool water pH naturally tends to rise; fresh top-up water, aeration and hot weather all push it that way. That is why a pH reducer is the adjuster most often needed, and liquid forms such as [Quardex liquid pH reducer](product:sivi-ph-quardex) are practical because they blend into the water quickly. In the other direction, once pH falls below 7.2 the water becomes corrosive, eyes and skin are irritated and chlorine burns off fast. In both cases the product label tells you which product and how much; your job is to bring pH into the right range and let the chlorine work."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Stabilizatör ne işe yarar, fazlası neye yol açar?",
+          "en": "What does stabiliser do, and what happens when there is too much?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Siyanürik asit, yaygın adıyla stabilizatör, klorun güneş ışığında parçalanmasını yavaşlatır. Korumasız bir havuzda yaz güneşi, sabah verdiğiniz klorun önemli bir bölümünü gün içinde tüketir; stabilizatör bu kaybı belirgin biçimde azaltır. Hedef aralık 30–50 ppm'dir. Bu aralığın altında klor tüketiminiz gereksiz yere yüksek olur, üstünde ise ters etki başlar: klor suda bulunmaya devam eder ama işini eskisi kadar hızlı yapamaz. Testte klor görünürken suyun kendini toparlayamaması çoğu zaman bu tablonun işaretidir.",
+            "en": "Cyanuric acid, commonly known as stabiliser, slows the breakdown of chlorine in sunlight. In an unprotected pool, summer sun consumes a large part of the chlorine you added in the morning within the same day; stabiliser reduces that loss considerably. The target range is 30–50 ppm. Below it your chlorine consumption is needlessly high; above it the effect reverses: chlorine remains present in the water but no longer works as quickly. Water that will not recover while the test still shows chlorine is often a sign of exactly this."
+          },
+          {
+            "tr": "Stabilizatörün en önemli özelliği kendiliğinden azalmamasıdır. Klor gibi tüketilmez; sadece ters yıkama, taşma ve takviye suyuyla seyrelir. Bu yüzden uzun sezon boyunca stabilizatör içeren ürün kullanıyorsanız değerin sessizce tırmandığını görebilirsiniz. Örneğin [WTR multifonksiyon klor tableti](product:multi-tablet-wtr) gibi yavaş salınımlı tabletler düzenli dezenfeksiyon için çok pratiktir, ancak sürekli kullanımda siyanürik asidi de ölçmek gerekir. Hangi ürün ailesinin hangi ihtiyaca karşılık geldiğini merak ediyorsanız [havuz kimyasalları rehberimiz](post:havuz-kimyasallari-rehberi) bu ayrımı ürün ürün anlatıyor.",
+            "en": "The most important property of stabiliser is that it does not decrease on its own. Unlike chlorine it is not consumed; it is only diluted by backwashing, overflow and top-up water. So if you use stabilised products through a long season, you may find the value climbing quietly. Slow-release tablets such as [WTR multifunction chlorine tablets](product:multi-tablet-wtr), for instance, are very practical for steady disinfection, but with continuous use you need to measure cyanuric acid as well. If you are wondering which product family answers which need, our [pool chemicals guide](post:havuz-kimyasallari-rehberi) explains that distinction product by product."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Serbest klor, bağlı klor ve toplam klor arasındaki fark nedir?",
+          "en": "What is the difference between free, combined and total chlorine?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Test sonuçlarını doğru okumak için üç terimi ayırmak gerekir. Serbest klor, henüz hiçbir kirlilikle birleşmemiş, dezenfeksiyon işini yapmaya hazır olan klordur; hedefiniz olan 1–3 ppm bu değeri tanımlar. Bağlı klor, ter, güneş kremi, yaprak ve benzeri organik kirlilikle birleşmiş, artık dezenfekte edemeyen klordur; kloramin adıyla da anılır. Toplam klor ise bu ikisinin toplamıdır. Dolayısıyla toplam klor ile serbest klor arasındaki fark, suda ne kadar bağlı klor biriktiğini gösterir.",
+            "en": "To read test results correctly you need to separate three terms. Free chlorine is chlorine that has not yet combined with any contaminant and is ready to do the disinfecting work; your 1–3 ppm target refers to this value. Combined chlorine has already bonded with organic load such as sweat, sunscreen or leaves and can no longer disinfect; it is also known as chloramine. Total chlorine is the sum of the two. The gap between total and free chlorine therefore tells you how much combined chlorine has built up in the water."
+          },
+          {
+            "tr": "Bu ayrım pratikte önemlidir, çünkü bağlı klor havuzun tipik keskin \"klor kokusunu\" ve göz yanmasını yaratan asıl etkendir. Yani yoğun klor kokan bir havuzda sorun genellikle fazla klor değil, yorulmuş klordur ve çözüm klorla temas süresini azaltmak değil, suyu toparlamaktır. Bu durumda genellikle şok uygulaması gerekir; [Selenoid granül klor](product:toz-klor-selenoid) gibi yüksek konsantrasyonlu ürünler bu iş için kullanılır, miktar yine ürün etiketine göre belirlenir. Kokunun ve bulanıklığın diğer kök nedenlerini [havuz suyu bulanıklığı ve kokusu yazımızda](post:havuz-suyu-bulanikligi-kokusu) ayrıca ele aldık.",
+            "en": "The distinction matters in practice, because combined chlorine is what creates the sharp \"chlorine smell\" and stinging eyes people associate with pools. In other words, in a strongly chlorine-smelling pool the problem is usually not too much chlorine but exhausted chlorine, and the answer is not less contact with chlorine but recovering the water. This normally calls for a shock treatment; high-concentration products such as [Selenoid granular chlorine](product:toz-klor-selenoid) are used for it, again in the quantity given on the label. We look at the other root causes of odour and cloudiness separately in our article on [cloudy and smelly pool water](post:havuz-suyu-bulanikligi-kokusu)."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Dozajı neden küçük adımlarla vermek gerekir?",
+          "en": "Why should dosing be done in small steps?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Havuz suyu anlık tepki veren bir sistem değildir. Eklediğiniz kimyasalın tüm hacme dağılması ve etkisinin ölçülebilir hale gelmesi, pompanın çalıştığı birkaç saatlik bir sirkülasyon ister. Bu yüzden deneyimli uygulamanın kuralı nettir: etiketin önerdiği dozun bir bölümünü verin, suyun dolaşmasını bekleyin, yeniden ölçün ve gerekiyorsa tamamlayın. Tek seferde büyük müdahale yapıldığında değer hedefin öbür tarafına geçer, onu düzeltmek için ters yönde kimyasal eklenir ve havuz bütün sezon boyunca bir sarkaç gibi salınmaya başlar.",
+            "en": "Pool water is not a system that responds instantly. A chemical you add needs a few hours of circulation, with the pump running, to spread through the whole volume and produce a measurable effect. That is why the rule in experienced practice is clear: add part of the dose the label recommends, let the water circulate, measure again and top up if needed. When a large correction is made in one go, the value overshoots the target, the opposite chemical is added to fix it, and the pool swings like a pendulum for the rest of the season."
+          },
+          {
+            "tr": "Aynı disiplin uygulama biçimi için de geçerlidir. Granül ürünler doğrudan havuza serpilmez; önce temiz bir kovada suyla çözülür, sonra pompa çalışırken havuz yüzeyine yayılarak eklenir. Tabletler zemine bırakılmaz, etiketin gösterdiği şekilde kullanılır. İki farklı kimyasal aynı anda verilmez; aralarına sirkülasyon süresi konur. Kimyasalı havuzun tek bir noktasına boşaltmak yerine derin uçtan başlayarak yüzeye dağıtmak, hem yüzey kaplamasını korur hem de karışımı hızlandırır. Bu adımlar haftalık rutinin bir parçasıdır ve rutinin tamamını [havuz bakımı nasıl yapılır yazımızda](post:havuz-bakimi-nasil-yapilir) adım adım anlattık.",
+            "en": "The same discipline applies to how you apply the product. Granular products are never scattered straight into the pool; they are first dissolved in a clean bucket of water, then spread across the surface while the pump is running. Tablets are not dropped on the floor but used as the label indicates. Two different chemicals are never added at the same time; circulation time is left between them. Rather than emptying the product at a single spot, spread it across the surface starting from the deep end: this protects the pool finish and speeds up mixing. These steps are part of the weekly routine, and we set out that routine step by step in our article on [how to maintain a pool](post:havuz-bakimi-nasil-yapilir)."
+          }
+        ],
+        "bullets": [
+          {
+            "tr": "Ölç, sonra doz ver: ölçüm sonucu olmadan hiçbir kimyasal havuza girmez.",
+            "en": "Measure, then dose: no chemical goes into the pool without a test result behind it."
+          },
+          {
+            "tr": "Etiketteki dozun tamamını değil, bir bölümünü uygulayın; eksiği tamamlamak kolay, fazlasını geri almak zordur.",
+            "en": "Apply part of the label dose rather than all of it; topping up is easy, taking back an overdose is not."
+          },
+          {
+            "tr": "Uygulamadan sonra pompayı çalıştırın ve yeniden ölçmeden önce suyun dolaşmasını bekleyin.",
+            "en": "Run the pump after dosing and let the water circulate before you measure again."
+          },
+          {
+            "tr": "Her ölçümü tarihiyle birlikte not edin; birkaç haftalık kayıt, havuzunuzun eğilimini tek bir testten daha iyi gösterir.",
+            "en": "Record every reading with its date; a few weeks of notes reveal your pool's trend better than any single test."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Sıcak ve güneşli hava klor tüketimini nasıl artırır?",
+          "en": "How do heat and sunshine increase chlorine consumption?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Çeşme yarımadasında sezon uzun, güneş yoğundur ve bu doğrudan dozaja yansır. Ultraviyole ışık sudaki klorun bir bölümünü gün boyunca parçalar; su sıcaklığı yükseldikçe hem organik kirlilik daha hızlı çoğalır hem de klor daha çabuk tükenir. Buna yoğun kullanım eklenir: misafirli bir hafta sonu, havuzun kimyasal yükünü sessiz bir haftanın çok üzerine çıkarır. İmbat ve lodos ise yüzeye sürekli toz, tuz ve bitki artığı taşıyarak klorun bir kısmını daha en baştan meşgul eder.",
+            "en": "On the Çeşme peninsula the season is long and the sun is intense, and that feeds straight into dosing. Ultraviolet light breaks down part of the chlorine in the water through the day; as water temperature rises, organic load multiplies faster and chlorine is used up more quickly. Heavy use adds to it: a weekend with guests puts far more chemical demand on a pool than a quiet week. The imbat and lodos winds, meanwhile, carry a constant film of dust, salt and plant debris onto the surface, occupying part of the chlorine before it does anything else."
+          },
+          {
+            "tr": "Bunun pratik sonucu şudur: temmuz ve ağustostaki dozaj ritminiz mayıstakiyle aynı olmaz. Değişen şey etiketteki dozaj değil, ölçüm sıklığı ve takviye aralığıdır. Yaz ortasında serbest kloru daha sık kontrol etmek, stabilizatörü gözden kaçırmamak ve şok gerektiren durumları erken yakalamak gerekir. Klorun güneşten en az etkilendiği saatlerde, yani akşam serinliğinde takviye yapmak da aynı üründen daha fazla verim almanızı sağlar. [Alaçatı'da bakımını üstlendiğimiz havuzlarda](area:alacati) sezonun en yoğun haftalarında ölçüm aralığını kısaltmamızın nedeni tam olarak budur.",
+            "en": "The practical consequence is this: your dosing rhythm in July and August will not be the same as in May. What changes is not the dosage on the label but how often you measure and how frequently you top up. In midsummer you need to check free chlorine more often, keep an eye on the stabiliser and catch situations that call for shock treatment early. Topping up when the sun affects chlorine least, in the cool of the evening, also gets more out of the same product. That is exactly why, [in the pools we maintain in Alaçatı](area:alacati), we shorten the interval between tests during the busiest weeks of the season."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Kimyasal uygularken hangi güvenlik kurallarına uymalısınız?",
+          "en": "Which safety rules should you follow when applying chemicals?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Havuz kimyasalları doğru kullanıldığında güvenlidir, ancak birkaç kural tartışmaya açık değildir. En önemlisi, iki kimyasalı asla birbiriyle karıştırmamaktır: aynı kovada, aynı ölçekte veya art arda aynı noktada uygulamak bile tehlikeli tepkimelere yol açabilir. İkincisi, her zaman kimyasal suya eklenir, su kimyasalın üzerine dökülmez. Uygulamayı mümkün olduğunca akşam saatlerinde yapmak hem güneşin ürünü boşa harcamasını önler hem de gece boyunca sirkülasyonla dengeli bir dağılım sağlar.",
+            "en": "Pool chemicals are safe when used correctly, but a few rules are not open to debate. The most important is never to mix two chemicals with each other: using the same bucket, the same measuring cup, or applying them one after another at the same spot can all trigger dangerous reactions. Second, the chemical always goes into the water, never water onto the chemical. Applying in the evening where possible both keeps the sun from wasting the product and gives the water a full night of circulation for even distribution."
+          }
+        ],
+        "bullets": [
+          {
+            "tr": "Kimyasalları birbirine karıştırmayın; her ürün için ayrı ve temiz kova, ölçek ve karıştırıcı kullanın.",
+            "en": "Never mix chemicals; use a separate, clean bucket, measure and stirrer for each product."
+          },
+          {
+            "tr": "Kimyasalı suya ekleyin, asla tersini yapmayın; toz ürünlerde yüzünüzü kovadan uzak tutun.",
+            "en": "Add the chemical to water, never the other way round; with powders, keep your face away from the bucket."
+          },
+          {
+            "tr": "Uygulamayı akşam ve rüzgârı arkanıza alacak şekilde yapın; eldiven ve koruyucu gözlük kullanın.",
+            "en": "Apply in the evening and with the wind at your back; wear gloves and eye protection."
+          },
+          {
+            "tr": "Ürünleri orijinal ambalajında, serin ve kuru bir yerde, çocukların ulaşamayacağı şekilde saklayın.",
+            "en": "Store products in their original packaging, in a cool dry place, out of children's reach."
+          },
+          {
+            "tr": "Uygulamadan sonra havuza girmek için ürün etiketinin belirttiği bekleme süresine uyun.",
+            "en": "After dosing, respect the waiting time stated on the product label before anyone enters the pool."
+          }
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "q": {
+          "tr": "Havuzun hacmini bilmeden kimyasal dozajı yapılabilir mi?",
+          "en": "Can you dose chemicals without knowing the pool's volume?"
+        },
+        "a": {
+          "tr": "Hayır. Ürün etiketlerindeki miktarlar belirli bir su hacmi için verilir; hacmi bilmeden yapılan uygulama ya yetersiz kalır ya da gereğinden fazla olur. En boy ve ortalama derinliği bir kez ölçüp metreküp cinsinden hacmi hesaplamak yeterlidir. Bu sayıyı yazılı tutun; sezon boyunca yapacağınız her dozaj hesabının dayanağı olacaktır.",
+          "en": "No. The quantities on product labels are given for a specific water volume; dosing without knowing it will either fall short or overshoot. Measuring width, length and average depth once and working out the volume in cubic metres is enough. Write that figure down, because every dosing calculation you make through the season will rest on it."
+        }
+      },
+      {
+        "q": {
+          "tr": "Önce pH mı yoksa klor mu ayarlanmalı?",
+          "en": "Should pH or chlorine be adjusted first?"
+        },
+        "a": {
+          "tr": "Önce alkalinite, sonra pH, en son klor. Alkalinite 80–120 ppm aralığında değilse pH sürekli savrulur ve yaptığınız düzeltme kalıcı olmaz. pH 7,2–7,6 aralığına geldikten sonra klor ölçümü anlamlı hale gelir, çünkü aynı klor miktarı yüksek pH'ta belirgin biçimde daha az iş görür. Sırayı atlamak çoğu dozaj hatasının kaynağıdır.",
+          "en": "Alkalinity first, then pH, then chlorine. If alkalinity is outside the 80–120 ppm range, pH keeps drifting and your correction will not hold. Once pH is within 7.2–7.6, the chlorine reading becomes meaningful, because the same amount of chlorine does markedly less work at a high pH. Skipping that order is the source of most dosing mistakes."
+        }
+      },
+      {
+        "q": {
+          "tr": "Klor değerim normal görünüyor ama havuz kokuyor ve gözüm yanıyor, neden?",
+          "en": "My chlorine reading looks normal but the pool smells and my eyes sting. Why?"
+        },
+        "a": {
+          "tr": "Bu tablo genellikle bağlı klor birikimini gösterir. Kirlilikle birleşmiş klor artık dezenfekte etmez ama keskin kokuyu ve göz yanmasını yaratır. Toplam klor ile serbest kloru ayrı ayrı ölçün; aradaki fark büyükse suyun toparlanması için şok uygulaması gerekir. Ayrıca yüksek pH da aynı şikâyetlere katkı verir, birlikte kontrol edin.",
+          "en": "That picture usually points to a build-up of combined chlorine. Chlorine that has bonded with contaminants no longer disinfects, but it does produce the sharp smell and the stinging eyes. Measure total and free chlorine separately; if the gap is large, the water needs a shock treatment to recover. A high pH contributes to the same complaints, so check both together."
+        }
+      },
+      {
+        "q": {
+          "tr": "Yaz aylarında havuz suyunu ne sıklıkla ölçmeliyim?",
+          "en": "How often should I test pool water in summer?"
+        },
+        "a": {
+          "tr": "Sıcak ve güneşli dönemde pH ve serbest kloru sık, alkalinite ve stabilizatörü daha seyrek kontrol etmek yeterlidir. Kesin bir takvimden çok kullanım belirleyicidir: kalabalık bir hafta sonu, sağanak yağmur, güçlü rüzgâr veya su sıcaklığının belirgin yükselmesi ölçümü öne çeken durumlardır. Yoğun sezonda ölçüm aralığını kısaltmak, sonradan müdahale etmekten daha ekonomiktir.",
+          "en": "In hot, sunny periods it is enough to check pH and free chlorine frequently and alkalinity and stabiliser less often. Usage matters more than a fixed calendar: a crowded weekend, heavy rain, strong wind or a clear rise in water temperature are all reasons to test sooner. Shortening the interval during peak season costs less than correcting the water after the fact."
+        }
+      }
+    ]
+  },
+  "havuz-bahar-acilisi": {
+    "title": {
+      "tr": "Havuzu Sezona Açma: Bahar Açılışı Adım Adım",
+      "en": "Opening a Pool for the Season: A Step-by-Step Spring Guide"
+    },
+    "seoTitle": {
+      "tr": "Havuzu Sezona Açma: Bahar Açılışı",
+      "en": "Opening Your Pool for the Season"
+    },
+    "excerpt": {
+      "tr": "Havuzu sezona açma rehberi: doğru zamanlama, örtünün sökülmesi, tesisatın kış konumundan çıkarılması, ekipmanın kontrollü devreye alınması ve su dengesi.",
+      "en": "A guide to opening your pool for the season: right timing, removing the cover, reversing the winter setup, restarting equipment and rebalancing the water."
+    },
+    "intro": {
+      "tr": "Havuzu sezona açma, kışlamanın tam tersi yönde ilerleyen tek seferlik bir iştir: kapatırken yaptığınız her şeyi sırayla geri alırsınız. Örtü kalkar, su seviyesi tamamlanır, vanalar çalışma konumuna döner, ekipman kontrollü biçimde devreye girer ve su dengesi neredeyse sıfırdan kurulur. Bu işin bir günde bitmesi beklenmez; havuzun kışı nasıl geçirdiğine göre birkaç güne yayılabilir. Çeşme yarımadasında sezon erken başladığı ve bahar rüzgârı bol toz taşıdığı için açılışın zamanlaması ayrıca önemlidir. Aşağıda açılışı doğru sırayla, her adımda nelere dikkat edileceğini ve kış hasarı gibi bir sürpriz çıktığında ne yapılacağını göstererek anlatıyoruz.",
+      "en": "Opening a pool for the season is a one-off job that runs in exactly the opposite direction to winterising: you undo, in order, everything you did when you closed it. The cover comes off, the water level is topped up, the valves return to their running positions, the equipment is brought back on line under control, and the water balance is rebuilt almost from scratch. Do not expect it to be finished in a day; depending on how the pool came through the winter, it can spread over several. On the Çeşme peninsula the season starts early and the spring wind carries plenty of dust, so timing the opening matters all the more. Below we walk through the job in the right order, showing what to watch for at each step and what to do when a surprise such as frost damage turns up."
+    },
+    "sections": [
+      {
+        "heading": {
+          "tr": "Havuzu sezona ne zaman açmak gerekir?",
+          "en": "When should you open the pool for the season?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Açılışın en yaygın hatası, havayı beklemektir. Çoğu villa sahibi ilk sıcak günleri görene kadar örtüyü yerinde bırakır; oysa örtünün altındaki su çoktan ısınmaya başlamıştır. Su sıcaklığı yaklaşık 15 °C'yi geçtiğinde algler hızla çoğalmaya başlar ve karanlık, durgun, klorsuz bir havuzda bu çoğalma engelsiz ilerler. Havuzu su henüz soğukken açmak, algi daha başlamadan durdurur; bu da ilk temizliği kısaltır, kimyasal tüketimini düşürür ve kaplamada kalıcı leke riskini azaltır. Pratik ölçüt basittir: gündüz sıcaklıkları istikrarlı biçimde 15-18 °C bandına yerleştiğinde açılışa başlayın.",
+            "en": "The most common mistake at opening time is waiting for the weather. Most villa owners leave the cover in place until the first hot days arrive, by which point the water beneath it has already begun to warm. Once the water passes roughly 15 °C, algae start to multiply quickly, and in a dark, still, chlorine-free pool that growth meets no resistance. Opening the pool while the water is still cool stops algae before they start: it shortens the first clean, lowers chemical consumption and reduces the risk of permanent staining on the finish. The practical test is simple: begin the opening once daytime temperatures settle steadily into the 15-18 °C range."
+          },
+          {
+            "tr": "Çeşme yarımadasında bu eşik iç bölgelere göre erken gelir. [Çeşme'de villa havuzu](area:cesme) kullanan bir ev sahibi mayıs başında havuzunu hazır görmek ister; nisan sonunda açılan bir havuz için hazırlık penceresi ise pratikte mart sonu ile nisan ortasıdır. Açılışı sezonun ilk misafirine bırakırsanız temizlik ve filtrasyon için zamanınız kalmaz. Erken açmanın maliyeti havuzun birkaç hafta daha uzun işletilmesidir; yeşermiş bir havuzu toparlamanın maliyeti ise neredeyse her zaman daha yüksektir.",
+            "en": "On the Çeşme peninsula that threshold arrives earlier than inland. An owner with a [villa pool in Çeşme](area:cesme) wants the pool ready by early May, and for a pool that opens in late April the real preparation window runs from late March to mid-April. If you leave the opening until the first guests arrive, you will have no time left for cleaning and filtration. The cost of opening early is a few extra weeks of running the pool; the cost of recovering one that has already turned green is almost always higher."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Havuz örtüsü nasıl temiz sökülür ve saklanır?",
+          "en": "How do you remove and store the pool cover cleanly?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Örtünün üzerinde kış boyunca yağmur suyu, yaprak ve toz birikir. Acele edip örtüyü doğrudan çekerseniz bu kirli suyun tamamı havuza boşalır ve daha işe başlamadan suyu birkaç kat daha kötü hâle getirirsiniz. Doğru yöntem, önce örtü üzerindeki suyu dalgıç pompa ya da örtü pompasıyla bahçeye tahliye etmek, ardından yüzeydeki kuru yaprakları ve kaba kiri süpürerek almaktır. Örtü ancak bundan sonra, mümkünse iki kişiyle, kenarlardan ortaya doğru katlanarak çıkarılmalıdır; tek kişiyle çekilen büyük bir örtü hem yırtılır hem de kaplamanın kenarına iz bırakır.",
+            "en": "Rainwater, leaves and dust collect on the cover all winter. If you rush and simply drag it off, all of that dirty water empties into the pool and you make the water several times worse before the job has even started. The right approach is to pump the standing water off the cover into the garden with a submersible or cover pump first, then sweep away the dry leaves and coarse debris. Only then should the cover be lifted, ideally by two people, folding it from the edges towards the middle. A large cover dragged off by one person tears easily and scuffs the edge of the finish on its way."
+          }
+        ],
+        "bullets": [
+          {
+            "tr": "Örtüyü sökmeden önce üzerindeki suyu tamamen tahliye edin; kirli su havuza karışmasın.",
+            "en": "Drain the standing water off the cover completely before removing it, so the dirty water never reaches the pool."
+          },
+          {
+            "tr": "Örtüyü temiz bir zeminde serin, tatlı suyla durulayıp yumuşak fırçayla yıkayın; deterjan kullanmayın.",
+            "en": "Spread the cover on clean ground, rinse it with fresh water and wash it with a soft brush; do not use detergent."
+          },
+          {
+            "tr": "Tamamen kuruduktan sonra katlayın; nemli katlanan örtü küflenir ve ertesi kış kullanılamaz hâle gelir.",
+            "en": "Fold it only once it is completely dry; a cover folded while damp goes mouldy and is unusable the following winter."
+          },
+          {
+            "tr": "Serin, gölgeli ve kemirgen girmeyen bir yerde, doğrudan güneşten uzak saklayın.",
+            "en": "Store it somewhere cool, shaded and rodent-proof, away from direct sunlight."
+          },
+          {
+            "tr": "Sabitleme aparatlarını, kayış ve halatları ayrı bir kutuda toplayın.",
+            "en": "Collect the fixings, straps and ropes in a separate box."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Su seviyesi ve tesisat kış konumundan nasıl çıkarılır?",
+          "en": "How do you bring the water level and plumbing out of winter mode?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Kışlamada su seviyesi skimmer ağzının altına indirilir, dönüş nozulları tıpalanır ve tesisatın bir bölümü boşaltılır. Açılışta bu adımların tamamı geri alınır. Önce tıpaları ve varsa kış şişelerini çıkarın, sonra suyu skimmer ağzının yaklaşık üçte iki yüksekliğine kadar tamamlayın. Seviye düşük kalırsa pompa hava çeker; fazla yükselirse skimmer yüzeydeki kiri toplayamaz. Vanaları kışın kapattığınız konumdan normal filtrasyon konumuna alın ve hangi vananın hangi hatta gittiğini bu aşamada bir kez daha doğrulayın. Kışlama adımlarının ayrıntısı ayrı bir konudur; havuzu kapatma tarafını [havuzu kışa hazırlama](post:havuzu-kisa-hazirlama) yazısında bulabilirsiniz.",
+            "en": "When a pool is winterised the water level is dropped below the skimmer mouth, the return nozzles are plugged and part of the plumbing is drained. At opening, every one of those steps is reversed. Take out the plugs and any winter float bottles first, then top the water up to about two-thirds of the way up the skimmer mouth. If the level stays too low the pump draws air; if it rises too high the skimmer cannot collect surface debris. Move the valves from their winter positions back to normal filtration, and use this moment to confirm once more which valve feeds which line. The details of winterising are a topic of their own; you will find the closing side of the job in our guide to [preparing a pool for winter](post:havuzu-kisa-hazirlama)."
+          },
+          {
+            "tr": "Su tamamlanırken havuzu gözle de okuyun. Seviyenin kış boyunca beklenenden çok düşmüş olması, çoğu zaman donmadan ya da kaplamadaki bir çatlaktan kaynaklanır. Suyu tamamladıktan sonra seviye bir iki gün içinde yeniden belirgin biçimde düşüyorsa bu bir açılış sorunu değil, yapısal bir sorundur ve teşhis gerektirir; [havuz su kaçağı tespiti](post:havuz-su-kacagi-tamiri) yazısındaki adımlarla ilerlemek en doğrusudur. Açılış sırasında fark edilen bir kaçak, sezon ortasında fark edilenden çok daha ucuza ve çok daha rahat onarılır, çünkü havuz zaten boş ve kullanımda değildir.",
+            "en": "While you top up, read the pool with your eyes as well. A level that has fallen far more than expected over the winter usually points to frost damage or a crack in the finish. If the level drops noticeably again within a day or two after topping up, that is not an opening issue but a structural one and needs diagnosis; the steps in our article on [pool leak detection](post:havuz-su-kacagi-tamiri) are the right place to start. A leak caught during the opening is far cheaper and far easier to repair than one found mid-season, because the pool is already empty of guests and out of use."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Ekipman nasıl kontrollü devreye alınır?",
+          "en": "How do you bring the equipment back on line safely?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Teknik odayı çalıştırmadan önce gözle gezin: boru hatlarında çatlak, rakorlarda nem izi, contalarda sertleşme, pano içinde kemirgen ya da nem var mı? Kış boyunca hareketsiz kalan bir sistemde en sık görülen hasar donma çatlağıdır ve çoğu zaman pompa gövdesinde ya da filtre üzerindeki tahliye tapasında ince bir hat şeklinde görünür. Ardından pompa sepetini ve skimmer sepetlerini yerine takın, pompa gövdesini suyla doldurun ve kapağı contasını yağlayarak kapatın. Pompa kuru çalıştırılmaz; susuz dönen bir salmastra dakikalar içinde zarar görür.",
+            "en": "Before you switch anything on, walk the plant room with your eyes: cracks in the pipework, damp traces at the unions, hardened seals, rodents or moisture inside the panel. In a system that has sat still all winter the most common damage is a frost crack, and it usually shows as a fine line on the pump body or on the drain plug of the filter. Then refit the pump basket and skimmer baskets, fill the pump housing with water and close the lid with its seal lightly greased. A pump must never run dry; a mechanical seal turning without water is damaged within minutes."
+          },
+          {
+            "tr": "İlk çalıştırmada vanayı önce ters yıkama konumuna alıp filtre yatağını yıkayın, sonra durulama ve ardından filtrasyon konumuna geçin. Pompa çalışırken filtrenin üzerindeki hava tahliye vanasını açık tutarak hava tamamen çıkana ve düzgün bir su akışı gelene kadar bekleyin. Manometre tepkisiz kalıyor, pompa gürültülü çalışıyor veya emiş kurmuyorsa hemen kapatın ve sorunu arayın; bu belirtiler [havuz pompası arızaları](post:havuz-pompasi-arizalari) yazısında ayrıntılı ele alınıyor. Zorla çalıştırılan bir pompa, açılışın küçük bir ayrıntısını sezonun en pahalı kalemine dönüştürebilir.",
+            "en": "On the first run, set the valve to backwash and clean the filter bed, then rinse, then move to filtration. With the pump running, keep the air bleed valve on top of the filter open until all the air has escaped and a steady flow of water appears. If the pressure gauge stays flat, the pump runs noisily or it fails to prime, shut it down straight away and find out why; those symptoms are covered in detail in our article on [pool pump faults](post:havuz-pompasi-arizalari). A pump forced to keep running can turn a small detail of the opening into the most expensive item of the season."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "İlk temizlik ve uzun filtrasyon nasıl yapılır?",
+          "en": "How should the first clean and long filtration run be done?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Sistem döndükten sonra sıra kaba temizliktedir ve bu aşamada sıralama, kimyasal kadar belirleyicidir. Önce yüzey kepçesiyle yüzen yaprakları alın, sonra duvarları ve basamakları fırçalayarak kışın tutunmuş biyofilmi ve toz tabakasını askıya kaldırın; fırçalanmayan bir yüzeyde kimyasal etki etmez. Dipteki çökelti yoğun ve ince ise süpürgeyi filtreye değil atığa yönlendirmek filtrenin hemen tıkanmasını önler; bu sırada su seviyesi düşeceği için seviyeyi gözden kaçırmayın.",
+            "en": "Once the system is circulating, the coarse clean comes next, and at this stage the order of the work matters as much as the chemicals. Skim the floating leaves off the surface first, then brush the walls and steps to lift the biofilm and dust layer that have taken hold over the winter; chemicals do nothing on a surface that has not been brushed. When vacuuming the sediment on the floor, sending the vacuum to waste rather than through the filter keeps a heavy, fine deposit from clogging the filter immediately. Because that lowers the water level, keep an eye on it while you vacuum."
+          },
+          {
+            "tr": "Açılışta filtrasyon süresi sezon rutininden uzun tutulur. İlk günlerde sistemi kesintisiz ya da kesintisize yakın çalıştırmak, kışın biriken askıdaki maddenin toplanması için gerekir. Filtre basıncı normal değerinin belirgin üzerine çıktığında ters yıkama yapın; açılış haftasında bunu birkaç kez tekrarlamanız olağandır. Su berraklaştıkça filtrasyonu kademeli olarak normal sezon düzenine indirebilirsiniz. Sezon boyunca uygulanacak haftalık tempo ayrı bir konudur; [havuz bakımı nasıl yapılır](post:havuz-bakimi-nasil-yapilir) yazısı rutinin tamamını anlatıyor.",
+            "en": "At opening, filtration runs longer than the in-season routine. Running the system continuously, or close to it, for the first few days is what collects the suspended matter built up over winter. Backwash whenever the filter pressure climbs clearly above its normal reading; doing this several times during opening week is entirely normal. As the water clears, you can step filtration back down to the usual seasonal schedule. The weekly rhythm you keep through the season is a separate subject; our guide to [how pool maintenance is done](post:havuz-bakimi-nasil-yapilir) covers the whole routine."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Su dengesi hangi sırayla kurulmalı?",
+          "en": "In what order should the water balance be rebuilt?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Açılışta su dengesi pratikte sıfırdan kurulur, çünkü kış boyunca eklenen yağmur suyu ve tamamlanan taze su değerleri seyreltmiştir. Sıra önemlidir: önce toplam alkaliniteyi 80-120 ppm aralığına getirin, çünkü alkalinite pH'ı sabit tutan tampondur ve düzeltilmeden yapılan pH ayarı kalıcı olmaz. Ardından pH'ı 7,2-7,6 bandına çekin. Sonra kalsiyum sertliğini 200-400 ppm aralığında doğrulayın; bu değer özellikle yeni doldurulan havuzlarda düşük kalır ve kaplamayı aşındırır. Stabilizatör (siyanürik asit) 30-50 ppm olmalıdır; Çeşme'nin uzun ve güneşli sezonunda klorun güneşe dayanması buna bağlıdır. Klor ayarı bu dört değer yerine oturduktan sonra yapılır.",
+            "en": "At opening the water balance is effectively rebuilt from scratch, because winter rainfall and the fresh water used for topping up have diluted everything. The order matters: bring total alkalinity into the 80-120 ppm range first, since alkalinity is the buffer that holds pH steady and a pH adjustment made before it is corrected will not last. Next bring pH into the 7.2-7.6 band. Then confirm calcium hardness within 200-400 ppm; this reading tends to sit low in freshly filled pools and will etch the finish. Stabiliser (cyanuric acid) should be 30-50 ppm, which is what lets chlorine survive the sun through Çeşme's long, bright season. Chlorine is adjusted only once those four readings are settled."
+          },
+          {
+            "tr": "Bu sıranın neden işe yaradığını ve ölçüm sonucunu doza çevirme mantığını ayrıntılı görmek isterseniz [pH ve klor dozajı](post:havuz-ph-klor-dozaj) yazısı konuyu hesabıyla birlikte ele alıyor. Açılışta iki noktaya dikkat edin: kışı geçirmiş test kitleri ve reaktifler yanlış okuma verebilir, bu yüzden sezona yeni reaktifle başlayın; kimyasalları hiçbir koşulda birbirine karıştırmayın ve her zaman kimyasalı suya ekleyin, suyu kimyasalın üzerine değil. Ürünleri serin, kuru, çocukların ulaşamayacağı bir yerde saklayın.",
+            "en": "If you want to see why this order works, and how a test reading turns into a dose, our article on [pH and chlorine dosing](post:havuz-ph-klor-dozaj) sets out the reasoning with the arithmetic. Two points deserve care at opening: test kits and reagents that have sat through the winter can read incorrectly, so start the season with fresh reagent; and never mix chemicals with one another, always adding the chemical to the water rather than water to the chemical. Store products somewhere cool, dry and out of children's reach."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Şok klorlamadan sonra havuza ne zaman girilebilir?",
+          "en": "When can you swim after the opening shock treatment?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Denge kurulduktan sonra açılışın son adımı şok klorlamadır. Amaç, kış boyunca suda ve yüzeylerde tutunmuş organik yükü tek seferde oksitlemektir; bu iş normal sezon dozuyla değil, yüksek dozla yapılır. Şoku akşam saatlerinde, güneş çekildikten sonra uygulayın ve sistemi gece boyunca çalıştırın; gündüz uygulanan şokun önemli bir kısmı güneşte kaybolur. [Granül klorla şoklama](product:toz-klor-quardex) için doz her zaman ürün etiketinde belirtilen değere göre hesaplanmalıdır.",
+            "en": "Once the balance is set, the final step of the opening is shock chlorination. The point is to oxidise, in one go, the organic load that has taken hold in the water and on the surfaces over winter, and that calls for a high dose rather than a normal seasonal one. Apply the shock in the evening, after the sun has gone off the water, and run the system overnight; a good part of a shock applied during the day is simply lost to sunlight. When [shocking with granular chlorine](product:toz-klor-quardex), the dose should always be calculated from the figure stated on the product label."
+          },
+          {
+            "tr": "Havuza girme kararını takvimle değil ölçümle verin. Serbest klor 1-3 ppm bandına geri düşmüş, pH 7,2-7,6 aralığında ve su dibi görülecek kadar berraksa havuz kullanıma hazırdır. Bu noktaya ulaşmak çoğu havuzda bir ila iki gün sürer; örtüsüz kışlamış bir havuzda daha uzun sürer. Değerler oturmadan havuza girilmesi hem cilt ve göz tahrişine yol açar hem de ölçümü yanıltır. Şok sonrası ilk ölçümü, sistem bir gece çalıştıktan sonra sabah yapmak en doğru sonucu verir.",
+            "en": "Decide when to swim by measurement, not by the calendar. When free chlorine has fallen back into the 1-3 ppm band, pH sits between 7.2 and 7.6 and the water is clear enough to see the floor, the pool is ready to use. Reaching that point takes one to two days in most pools, and longer in one that wintered without a cover. Swimming before the readings settle causes skin and eye irritation and makes the test results misleading. Taking the first post-shock reading in the morning, after the system has run overnight, gives the truest result."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Açılışta hangi sürprizlerle karşılaşılır?",
+          "en": "What surprises come up during an opening?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Açılış, havuzun kışı nasıl geçirdiğini gösteren ilk ve en dürüst rapordur; sürprizlerin çoğu bu aşamada ortaya çıkar ve neredeyse tamamı kışlamanın eksik yapılmasıyla ilişkilidir. İyi haber, hepsinin sezon başında havuz kullanım dışıyken çözülebilecek işler olmasıdır; aynı sorunlar temmuz ortasında hem daha pahalıya mal olur hem de havuzu günlerce kullanım dışı bırakır. Kaplamada leke, derzde açılma ya da tesisatta hasar gördüğünüzde ertelemek yerine sezon başlamadan [profesyonel havuz bakımı](page:maintenance) desteği almak en ekonomik yaklaşımdır.",
+            "en": "The opening is the first and most honest report on how the pool came through the winter, which is why most surprises turn up at this stage, and why nearly all of them trace back to an incomplete winterisation. The good news is that every one of them can be dealt with at the start of the season while the pool is out of use; the same problems in mid-July cost more and put the pool out of action for days. When you find staining on the finish, open joints or damaged pipework, the cheapest approach is not to postpone but to bring in [professional pool maintenance](page:maintenance) before the season starts."
+          }
+        ],
+        "bullets": [
+          {
+            "tr": "Donma hasarı: pompa gövdesinde, filtre tapasında veya yüzeye yakın borularda ince çatlaklar.",
+            "en": "Frost damage: fine cracks in the pump body, the filter drain plug or pipework close to the surface."
+          },
+          {
+            "tr": "Tıkalı ya da kırılmış tesisat: kış tıpasının içeride unutulması, sepetlerde kemirgen ve yaprak yuvası.",
+            "en": "Blocked or broken plumbing: a winter plug left in place, rodent nests and leaves in the baskets."
+          },
+          {
+            "tr": "Lekeli kaplama: örtü altında kalan yaprakların bıraktığı tanen izleri ya da metal kaynaklı kahverengi-yeşil lekeler.",
+            "en": "Stained finish: tannin marks left by leaves under the cover, or brown-green metal staining."
+          },
+          {
+            "tr": "Sertleşmiş contalar ve kuruyan salmastra: ilk çalıştırmada sızıntı olarak kendini gösterir.",
+            "en": "Hardened seals and a dried-out mechanical seal: these show themselves as drips on the first run."
+          },
+          {
+            "tr": "Beklenenden düşük su seviyesi: yalnızca buharlaşma değil, kış boyunca süren sessiz bir kaçağın işareti olabilir.",
+            "en": "A lower water level than expected: not only evaporation, but possibly the sign of a quiet leak that ran all winter."
+          }
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "q": {
+          "tr": "Havuzu sezona açmak ne kadar sürer?",
+          "en": "How long does it take to open a pool for the season?"
+        },
+        "a": {
+          "tr": "Fiziksel işler, yani örtünün sökülmesi, su tamamlama, tesisatın kış konumundan çıkarılması ve ekipmanın devreye alınması genellikle bir gün içinde biter. Ancak suyun berraklaşması ve dengeye oturması uzun filtrasyon gerektirdiği için havuzun girilebilir hâle gelmesi çoğu zaman iki ila dört gün alır. Kışı örtüsüz geçirmiş ya da yeşermiş havuzlarda bu süre bir haftaya kadar uzayabilir.",
+          "en": "The physical work, namely removing the cover, topping up the water, reversing the winter plumbing setup and restarting the equipment, usually takes a single day. Because clearing the water and settling the balance need a long filtration run, however, getting the pool swimmable most often takes two to four days. In pools that spent the winter uncovered or turned green, that can stretch to a week."
+        }
+      },
+      {
+        "q": {
+          "tr": "Havuz açılışında suyu tamamen değiştirmek gerekir mi?",
+          "en": "Do you need to change all the water when opening a pool?"
+        },
+        "a": {
+          "tr": "Çoğu durumda gerekmez. Yeşil ya da bulanık görünen su bile filtrasyon, fırçalama ve doğru sırayla kurulan kimyasal denge ile toparlanır; suyu boşaltmak hem masraflıdır hem de boş havuz kaplamada ve yapıda risk oluşturabilir. Su değişimi genellikle kimyasal denge kurulamayacak kadar bozulmuş, yüksek stabilizatör veya çok yüksek sertlik değerine sahip havuzlarda düşünülür.",
+          "en": "In most cases, no. Even water that looks green or cloudy recovers with filtration, brushing and a chemical balance rebuilt in the right order; draining is expensive, and an empty pool can put the finish and the structure at risk. A water change is normally considered only where the balance cannot be restored, for example with very high stabiliser or very high hardness readings."
+        }
+      },
+      {
+        "q": {
+          "tr": "Havuzu erken açmak kimyasal masrafını artırır mı?",
+          "en": "Does opening the pool early increase chemical costs?"
+        },
+        "a": {
+          "tr": "Sistem birkaç hafta daha uzun çalıştığı için elektrik ve kimyasal tüketimi bir miktar artar. Buna karşılık su soğukken açılan havuzda alg gelişmediği için şok, yosun giderici ve berraklaştırıcı ihtiyacı belirgin biçimde azalır. Pratikte erken açmanın toplam maliyeti, yeşermiş bir havuzu sezona yetiştirme maliyetinin altında kalır.",
+          "en": "Running the system a few extra weeks does add somewhat to electricity and chemical use. On the other hand, a pool opened while the water is still cool has no algae growth, so the need for shock, algaecide and clarifier drops noticeably. In practice the total cost of opening early stays below the cost of rescuing a green pool in time for the season."
+        }
+      },
+      {
+        "q": {
+          "tr": "Kışlaması yapılmamış bir havuz nasıl açılır?",
+          "en": "How do you open a pool that was never winterised?"
+        },
+        "a": {
+          "tr": "Sıra aynıdır, ancak her adım daha uzun sürer ve kontrol listesi genişler. Kışlama yapılmamış havuzlarda tesisat donma hasarı, filtre yatağında bozulma ve kaplamada kalıcı leke riski yüksektir; bu nedenle ekipman çalıştırılmadan önce mutlaka gözle detaylı kontrol yapılmalıdır. Su genellikle ağır organik yük taşıdığı için önce mekanik temizlik ve uzun filtrasyon, ardından denge ve şok adımları uygulanır.",
+          "en": "The order is the same, but every step takes longer and the checklist grows. Pools that were not winterised carry a high risk of frost damage to the plumbing, a degraded filter bed and permanent staining, so a detailed visual inspection is essential before any equipment is started. As the water usually carries a heavy organic load, mechanical cleaning and a long filtration run come first, followed by balancing and the shock treatment."
+        }
+      }
+    ]
+  },
+  "urla-seferihisar-havuz-yaptirma": {
+    "title": {
+      "tr": "Urla ve Seferihisar'da Havuz Yaptırmak: İki İlçenin Kendine Özgü Koşulları",
+      "en": "Building a Pool in Urla and Seferihisar: What Makes These Two Districts Different"
+    },
+    "seoTitle": {
+      "tr": "Urla ve Seferihisar'da Havuz Yaptırmak",
+      "en": "Building a Pool in Urla and Seferihisar"
+    },
+    "excerpt": {
+      "tr": "Urla'nın geniş bağ ve zeytinlik arazileri, Seferihisar'ın yıl boyu yaşanan evleri: iki ilçede havuz planlamasını değiştiren yerel koşullar.",
+      "en": "Urla's wide vineyard and olive grove plots, Seferihisar's year-round homes: the local conditions that change how a pool is planned in each district."
+    },
+    "intro": {
+      "tr": "Urla ve Seferihisar'da havuz yaptırmak, Çeşme kıyı hattındaki bir villa havuzuyla aynı soruları sordurmaz. Bu iki ilçede parseller genellikle daha geniş, yapı dokusu daha seyrek ve evle bahçe arasındaki ilişki daha farklıdır. Urla'da bağ ve zeytinlik arazilerinin ölçeği, Seferihisar'da ise yıl boyu yaşanan müstakil evlerin günlük düzeni, havuzun yerini, tesisatını ve işletme biçimini baştan belirler. İki ilçe birbirine komşu olsa da havuzun nasıl kurgulanacağı konusunda farklı öncelikler doğurur. Bu yazıda her birinin kendine özgü koşullarını; arazi seçimi, güneş ve rüzgâr aksı, yıl boyu kullanım isteği, lojistik ve süreç tarafıyla birlikte ele alıyoruz.",
+      "en": "Building a pool in Urla and Seferihisar does not raise the same questions as a villa pool on the Çeşme coastline. In these two districts the plots are usually wider, the building fabric is sparser and the relationship between house and garden is different. In Urla the scale of vineyard and olive grove land, and in Seferihisar the daily rhythm of houses lived in year-round, determine the pool's position, its plumbing and the way it is run from the very beginning. Although the two districts are neighbours, they lead to different priorities in how a pool is laid out. In this article we look at the conditions particular to each, together with site selection, the sun and wind axis, the wish for year-round use, logistics and the process side."
+    },
+    "sections": [
+      {
+        "heading": {
+          "tr": "Urla'da havuz planlaması neden farklı ilerler?",
+          "en": "Why does pool planning work differently in Urla?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Urla'da havuz projelerinin çoğu, bağ ve zeytinlik dokusu içinde yer alan geniş parsellerde kurgulanır. Bu ölçek bir özgürlük getirir: havuzu evin hemen yanına sıkıştırmak zorunda değilsinizdir, araziyi okuyup en iyi manzara aksının açıldığı noktayı seçebilirsiniz. Teraslanmış bir bağ yamacında suyun bittiği yerde bağların veya körfezin görünmesi, [sonsuzluk havuzu kurgusunun](post:sonsuzluk-havuzu-nedir) en güçlü olduğu durumlardan biridir. Ancak bu özgürlüğün bedeli, havuzun evden uzaklaşmasıdır ve bu mesafe teknik bir mesele hâline gelir. Karar verirken manzara kadar, o noktaya su, elektrik ve tesisatın nasıl ulaşacağını da birlikte düşünmek gerekir.",
+            "en": "Most pool projects in Urla are set out on wide plots within a fabric of vineyards and olive groves. That scale brings freedom: you are not forced to squeeze the pool up against the house, you can read the land and choose the point where the best view axis opens up. On a terraced vineyard slope, having the vines or the gulf appear where the water ends is one of the situations in which [an infinity pool layout](post:sonsuzluk-havuzu-nedir) is at its strongest. The price of that freedom, however, is distance from the house, and that distance becomes a technical matter. When deciding, the view has to be weighed together with how water, electricity and plumbing will reach that point."
+          },
+          {
+            "tr": "Havuzla makine dairesi arasındaki mesafe uzadıkça emiş ve basma hatlarındaki sürtünme kaybı artar; bu da boru çapının, pompa seçiminin ve hat güzergâhının projede baştan hesaplanmasını gerektirir. Makine dairesini havuza yakın, ancak yaşam alanından ses ve görüntü olarak ayrılmış bir noktaya yerleştirmek çoğu zaman en dengeli çözümdür; gömülü bir teknik hacim, zeytinliğin ortasına bırakılmış bir kulübeye göre hem sessiz hem de göze çarpmayan bir sonuç verir. Elektrik hattının çekilmesi, aydınlatma ve otomasyon kablolaması da aynı güzergâh planına dâhil edilmelidir. [Urla'daki havuz çalışmalarımızda](area:urla) bu altyapı kararlarının, havuzun görünen tarafı kadar belirleyici olduğunu görüyoruz.",
+            "en": "As the distance between the pool and the plant room grows, friction loss in the suction and return lines increases, which means pipe diameter, pump selection and the route of the lines must be calculated in the project from the outset. Placing the plant room close to the pool but separated from the living area in terms of noise and sightlines is usually the most balanced solution; a sunken technical space gives a quieter and less conspicuous result than a shed left in the middle of an olive grove. Running the electrical supply and the lighting and automation cabling belongs to the same route plan. In [our pool work in Urla](area:urla) we see that these infrastructure decisions are every bit as decisive as the visible side of the pool."
+          },
+          {
+            "tr": "Malzeme seçimi de bu kırsal dokuya uyum sağlamalıdır. Bağ ve zeytinlik manzarasının ortasında parlak ve keskin renkli bir kaplama yabancı durur; doğal taş çevre kaplamaları, toprak tonlarında veya gri-yeşil aralıktaki iç kaplamalar ve mat yüzeyler araziyle daha kolay bütünleşir. Havuz kenarındaki sert zeminin genişliği, gölgelik ve oturma alanı kurgusu da evle havuz arasındaki mesafeyi yaşanabilir kılan unsurlardır: havuz başında bir duş, gölgelikli bir alan ve küçük bir depolama, her seferinde eve dönme ihtiyacını ortadan kaldırır.",
+            "en": "Material choices should also suit this rural fabric. In the middle of a vineyard and olive grove landscape, a glossy, sharply coloured finish looks foreign; natural stone coping, interior finishes in earth tones or the grey-green range and matt surfaces integrate more easily with the land. The width of the hard surface around the pool and the arrangement of shade and seating are what make the distance between house and pool liveable: a shower at the poolside, a shaded area and a small store remove the need to walk back to the house each time."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Seferihisar'da havuz kurgusunda neye dikkat edilmeli?",
+          "en": "What should you watch for when planning a pool in Seferihisar?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Seferihisar'ın sakin şehir kimliği, buradaki evlerin çoğunun yazlık değil, yıl boyu yaşanan konutlar olmasıyla doğrudan ilişkilidir. Bu da havuzu sezonluk bir süs olmaktan çıkarıp günlük yaşamın parçası hâline getirir. Yıl boyu yaşanan bir evde havuzun iki özelliği öne çıkar: güvenlik ve kolay yönetim. Çocuklu ailelerde sığ bölümün doğru konumlandırılması, kaymaz yüzeyli çevre kaplaması, basamakların net görünür olması ve havuz kullanılmadığı dönemler için güvenlik örtüsü ya da bahçe tarafında kontrollü geçiş, tasarımın sonradan eklenen değil baştan kurulan parçalarıdır.",
+            "en": "Seferihisar's Cittaslow identity is directly connected to the fact that most houses here are not summer homes but residences lived in all year. That turns the pool from a seasonal ornament into part of daily life. In a house occupied year-round, two qualities come to the fore: safety and easy management. For families with children, correctly positioning the shallow section, non-slip surround, clearly visible steps, and a safety cover or a controlled garden-side access for periods when the pool is not in use are parts of the design set up at the start, not added later."
+          },
+          {
+            "tr": "Kolay yönetim tarafında ise otomasyon ve donanım seçimi belirleyicidir. Filtrasyonun zaman ayarlı çalışması, dozaj sisteminin düzenli tutulması ve tabanın [havuz robotu](product:havuz-robotu) gibi bir ekipmanla temizlenmesi, evde yaşayan bir ailenin havuza ayırdığı süreyi belirgin biçimde kısaltır. Bu düzen kurulduğunda haftalık iş yükü öngörülebilir hâle gelir; günlük rutinin nasıl işlediğini [havuz bakımı hizmetimiz](page:maintenance) kapsamında ayrıntılı olarak ele alıyoruz. [Seferihisar'daki projelerde](area:seferihisar) en çok sorulan konu, havuzun yıl boyu ne kadar ilgi isteyeceğidir; doğru donanımla bu yük çoğu ailenin beklediğinden düşüktür.",
+            "en": "On the management side, automation and equipment selection are decisive. Time-controlled filtration, keeping the dosing system in order and cleaning the floor with a piece of equipment such as [a pool robot](product:havuz-robotu) markedly shorten the time a resident family spends on the pool. Once that routine is established, the weekly workload becomes predictable; we cover how the daily routine works in detail under [our pool maintenance service](page:maintenance). In [projects in Seferihisar](area:seferihisar) the most frequent question is how much attention the pool will need across the year; with the right equipment that load is lower than most families expect."
+          },
+          {
+            "tr": "İkinci belirleyici koşul bahçedeki ağaçlardır. Seferihisar bahçelerinde mandalina başta olmak üzere meyve ağaçları yaygındır ve bunlar havuza iki ayrı yük bindirir. Birincisi yüzeysel yüktür: çiçeklenme döneminde taç yaprakları, sonbaharda yaprak ve zaman zaman dökülen meyve, skimmer sepetlerini ve ön filtreyi hızla doldurur. İkincisi yeraltındadır: kökler yıllar içinde havuz kabuğuna, çevre kaplamasına ve tesisat hattına doğru ilerleyebilir. Bu yüzden ağaç dikimiyle havuz arasında yeterli mesafe bırakmak, gerekiyorsa kök bariyeri kullanmak ve hâkim rüzgârın taşıdığı yöne göre skimmer sayısını artırmak, sonradan çözülmesi zor sorunları baştan engeller.",
+            "en": "The second decisive condition is the trees in the garden. Fruit trees, mandarins above all, are common in Seferihisar gardens, and they place two separate loads on the pool. The first is on the surface: petals during flowering, leaves in autumn and occasionally fallen fruit fill skimmer baskets and the pump strainer quickly. The second is underground: over the years roots can advance towards the pool shell, the surround and the pipe runs. Leaving enough distance between tree planting and the pool, using a root barrier where needed and increasing the number of skimmers according to the direction the prevailing wind carries debris prevent problems that are hard to solve later."
+          }
+        ],
+        "bullets": [
+          {
+            "tr": "Sığ bölüm ve basamakların evden görünen tarafta konumlandırılması, çocuklu kullanımda gözetimi kolaylaştırır.",
+            "en": "Positioning the shallow section and steps on the side visible from the house makes supervision easier when children use the pool."
+          },
+          {
+            "tr": "Kaymaz yüzeyli çevre kaplaması ve düzgün bir su tahliye eğimi, ıslak zeminde kayma riskini azaltır.",
+            "en": "A non-slip surround and a correct drainage fall reduce the risk of slipping on wet ground."
+          },
+          {
+            "tr": "Olgun ağaçların taç genişliği dikkate alınarak havuza mesafe bırakılması, hem yaprak yükünü hem kök riskini düşürür.",
+            "en": "Leaving distance from mature trees, accounting for their canopy spread, lowers both the leaf load and the root risk."
+          },
+          {
+            "tr": "Skimmer sayısının ve filtre kapasitesinin bahçedeki yaprak yüküne göre seçilmesi, yaz boyunca temizlik süresini kısaltır.",
+            "en": "Sizing the number of skimmers and the filter capacity to the garden's leaf load shortens cleaning time through the summer."
+          },
+          {
+            "tr": "Dozaj ve filtrasyon otomasyonu, yıl boyu yaşanan evlerde haftalık iş yükünü öngörülebilir kılar.",
+            "en": "Dosing and filtration automation makes the weekly workload predictable in homes lived in year-round."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Arazide havuzun yeri güneş ve rüzgâr aksına göre nasıl seçilir?",
+          "en": "How is the pool's position chosen according to the sun and wind axis?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Geniş bir arazide havuzun yeri, çoğu zaman manzaraya bakılarak seçilir; oysa güneş ve rüzgâr aksı, havuzun günün hangi saatlerinde kullanılabilir olacağını doğrudan belirler. Gün boyu güneş alan, öğleden sonra ev veya ağaç gölgesinde kalmayan bir konum, suyun doğal yoldan ısınmasına yardımcı olur ve kullanım süresini uzatır. Buna karşılık çevresinde hiç gölge bulunmayan bir havuz, yaz ortasında öğle saatlerinde kullanılmaz hâle gelir. Doğru kurgu, su yüzeyinin açık, oturma alanının ise gölgelenebilir olmasıdır; pergole, ağaç veya yapı gölgesi bu ikisini ayırarak çözülür.",
+            "en": "On a wide plot the pool's position is usually chosen by looking at the view, yet the sun and wind axis directly determines the hours of the day at which the pool is usable. A position that receives sun through the day and is not left in the shade of the house or trees in the afternoon helps the water warm naturally and extends the usable season. A pool with no shade around it, on the other hand, becomes unusable at midday in high summer. The right arrangement leaves the water surface open while allowing the seating area to be shaded; a pergola, a tree or building shade resolves the two separately."
+          },
+          {
+            "tr": "Rüzgâr tarafında ise yarımadanın yaz boyunca hissedilen imbatı belirleyicidir. Sürekli rüzgâr, yüzeyden buharlaşmayı ve dolayısıyla ısı kaybını artırır, su yüzeyindeki yaprak ve tozu tek bir kenara toplar. Havuzun uzun ekseninin ve skimmer konumlarının hâkim rüzgâr yönüne göre kurgulanması, yüzey temizliğinin kendiliğinden işlemesini sağlar. Urla ve Seferihisar'ın iç kesimlerinde rüzgâr, kıyı hattına göre daha kesiklidir; yine de bahçe duvarı, çit bitkisi ya da alçak bir sedde ile oluşturulan rüzgâr kırıcı, havuz çevresindeki oturma alanını belirgin biçimde konforlu hâle getirir.",
+            "en": "On the wind side, the imbat that is felt across the peninsula through the summer is decisive. Constant wind increases evaporation from the surface and therefore heat loss, and gathers leaves and dust on the water at a single edge. Setting the pool's long axis and the skimmer positions according to the prevailing wind direction lets surface cleaning happen on its own. Inland in Urla and Seferihisar the wind is more broken than on the coastline; even so, a windbreak formed by a garden wall, hedge planting or a low bank makes the seating area around the pool noticeably more comfortable."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Havuzu yıl boyu kullanmak için ısıtma ve örtü gerekir mi?",
+          "en": "Do you need heating and a cover to use the pool year-round?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Isıtmasız bir havuz, bu bölgede tipik olarak geç ilkbahardan sonbahar başına kadar rahat kullanılır; bu sürenin dışına çıkmak istiyorsanız ısıtma ve örtü birlikte düşünülmelidir. Isıtmayı tek başına eklemek çoğu zaman yeterli olmaz, çünkü ısının büyük bölümü açık su yüzeyinden kaybolur. Yalıtımlı bir havuz örtüsü bu kaybı azaltarak ısıtmanın işletme yükünü düşürür; aynı zamanda kullanılmadığı saatlerde yüzeyi kapatarak yaprak yükünü ve buharlaşmayı da sınırlar. Seferihisar gibi evin yıl boyu kullanıldığı yerlerde bu ikili, havuzun sezon dışında da devrede kalmasını mümkün kılar.",
+            "en": "Without heating, a pool in this region is typically comfortable to use from late spring to early autumn; to go beyond that window, heating and a cover should be considered together. Adding heating on its own is often not enough, because most of the heat is lost from the open water surface. An insulated pool cover reduces that loss and lowers the running load of the heating; it also limits leaf load and evaporation by closing the surface during unused hours. In places like Seferihisar, where the house is occupied year-round, this pairing makes it possible to keep the pool in service outside the season too."
+          },
+          {
+            "tr": "Isıtma kararının projeye erken dâhil edilmesi önemlidir, çünkü ısı pompası ya da eşdeğeri bir sistem makine dairesinde yer, elektrik kapasitesi ve tesisat bağlantısı ister. Aynı şekilde otomatik bir örtü seçilecekse, örtü haznesi havuz kabuğuyla birlikte kurgulanmak zorundadır; bitmiş bir havuza sonradan eklemek hem daha zor hem daha maliyetlidir. Isıtma ve örtünün bütçeye etkisi, diğer yapım kalemleriyle birlikte [havuz yapım maliyetini belirleyen kalemler](post:havuz-yapim-maliyeti-izmir) yazımızda ayrıntılı olarak ele alınıyor.",
+            "en": "Bringing the heating decision into the project early matters, because a heat pump or an equivalent system needs space in the plant room, electrical capacity and a plumbing connection. Likewise, if an automatic cover is to be chosen, the cover housing has to be planned together with the pool shell; adding it to a finished pool is both harder and more expensive. The budget effect of heating and covers, alongside the other construction items, is covered in detail in our article on [the items that set pool construction cost](post:havuz-yapim-maliyeti-izmir)."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Yarımada merkezine mesafe süreci nasıl etkiler?",
+          "en": "How does distance from the centre of the peninsula affect the process?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Urla ve Seferihisar, yarımadanın giriş tarafında yer aldığı için şehirle bağlantısı kolaydır; asıl mesafe sorusu parselin kendisinde başlar. Bağ yolundan, dar bir köy yolundan veya eğimli bir toprak yoldan erişilen arazilerde beton mikserinin, kazı makinesinin ve hafriyat kamyonunun manevra alanı bulup bulamayacağı, keşif sırasında net olarak görülmesi gereken bir konudur. Erişimin sınırlı olduğu yerlerde pompalı beton dökümü, daha küçük iş makineleri veya kademeli bir hafriyat planı devreye girer. Bu, çözülemez bir sorun değildir; ancak programın ve yöntemin baştan buna göre kurulmasını gerektirir.",
+            "en": "Because Urla and Seferihisar sit at the entrance side of the peninsula, their connection to the city is easy; the real question of distance begins at the plot itself. On land reached by a vineyard track, a narrow village road or a sloping dirt road, whether a concrete mixer, excavator and spoil truck can find room to manoeuvre is something that must be seen clearly during the site survey. Where access is limited, pumped concrete placement, smaller machinery or a staged excavation plan come into play. This is not an unsolvable problem, but it does require the programme and method to be set up accordingly from the start."
+          },
+          {
+            "tr": "Mesafe, inşaat bittikten sonra da devam eden bir konudur: düzenli bakım ziyaretlerinin sıklığı ve zamanlaması, arazinin erişilebilirliğine göre planlanır. Sürecin adım adım nasıl işlediğini ve kayalık kıyı parsellerindeki farkları [Çeşme ve Alaçatı'da havuz yapımı](post:cesme-alacati-havuz-yapimi) yazımızda ayrıca anlatıyoruz. Ruhsat tarafında ise kesin bir genelleme yapmak doğru olmaz: havuz için gereken izin, parselin imar durumuna, yapı ruhsatına ve arazinin tarımsal vasfına göre değişebilir. Zeytinlik ya da tarım arazisi statüsündeki parsellerde ek izinler gündeme gelebileceği için, projeye başlamadan önce ilgili belediyeden ve yetkili kurumlardan resmi teyit almak gerekir. [Havuz inşaatı sürecimizde](page:construction) bu adımı her zaman tasarımdan önce netleştiriyoruz.",
+            "en": "Distance remains relevant after construction ends as well: the frequency and timing of regular maintenance visits are planned according to how accessible the site is. We describe how the process runs step by step, and the differences on rocky coastal plots, separately in our article on [pool construction in Çeşme and Alaçatı](post:cesme-alacati-havuz-yapimi). On the permit side, a firm generalisation would be wrong: the approval required for a pool can vary with the plot's zoning status, the building permit and the agricultural designation of the land. Since additional permissions may come into play on plots classed as olive grove or agricultural land, official confirmation should be obtained from the relevant municipality and competent authorities before the project begins. In [our pool construction process](page:construction) we always settle this step before design."
+          }
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "q": {
+          "tr": "Urla'da havuz yaptırmak için ruhsat gerekir mi?",
+          "en": "Is a permit required to build a pool in Urla?"
+        },
+        "a": {
+          "tr": "Gereken izin, parselin imar durumuna, mevcut yapı ruhsatına ve arazinin tarımsal vasfına göre değişir. Urla'da bağ ve zeytinlik statüsündeki parsellerde ek izinler gündeme gelebilir. Bu nedenle tek bir genel cevap vermek doğru olmaz; projeye başlamadan önce ilgili belediyeden ve yetkili kurumlardan parselinize özel resmi teyit almanızı öneriyoruz. Bu adımın tasarımdan önce netleşmesi, sonradan doğabilecek zaman ve maliyet kaybını önler.",
+          "en": "The approval required varies with the plot's zoning status, the existing building permit and the agricultural designation of the land. In Urla, additional permissions may come into play on plots classed as vineyard or olive grove. A single general answer would therefore be wrong; before starting the project, we recommend obtaining official confirmation specific to your plot from the relevant municipality and competent authorities. Settling this step before design prevents later losses of time and cost."
+        }
+      },
+      {
+        "q": {
+          "tr": "Seferihisar'da havuz yıl boyu kullanılabilir mi?",
+          "en": "Can a pool be used year-round in Seferihisar?"
+        },
+        "a": {
+          "tr": "Isıtmasız bir havuz bu bölgede tipik olarak geç ilkbahardan sonbahar başına kadar rahat kullanılır. Sezonu uzatmak istiyorsanız ısıtma ve yalıtımlı örtüyü birlikte planlamak gerekir; ısı kaybının büyük bölümü açık su yüzeyinden olduğu için tek başına ısıtma çoğu zaman verimli olmaz. Yıl boyu yaşanan evlerde bu ikili, havuzun sezon dışında da kullanılabilir kalmasını sağlar. Kararı proje aşamasında vermek, sonradan eklemeye göre çok daha kolaydır.",
+          "en": "Without heating, a pool in this region is typically comfortable to use from late spring to early autumn. To extend the season, heating and an insulated cover should be planned together; since most heat loss comes from the open water surface, heating alone is often inefficient. In homes lived in year-round, this pairing keeps the pool usable outside the season as well. Making the decision at the project stage is far easier than adding it later."
+        }
+      },
+      {
+        "q": {
+          "tr": "Havuzu evden uzağa, manzaralı bir noktaya yapmak sorun olur mu?",
+          "en": "Is it a problem to build the pool away from the house, at a point with a view?"
+        },
+        "a": {
+          "tr": "Hayır, ancak mesafenin tesisat tarafı baştan hesaplanmalıdır. Havuzla makine dairesi arası uzadıkça boru hattındaki sürtünme kaybı artar; boru çapı, pompa seçimi ve hat güzergâhı buna göre belirlenir. Makine dairesini havuza yakın ama yaşam alanından sesçe ayrılmış bir noktaya yerleştirmek genellikle en dengeli çözümdür. Elektrik ve otomasyon kablolamasının da aynı güzergâh planına dâhil edilmesi, sonradan kazı yapma ihtiyacını ortadan kaldırır.",
+          "en": "No, but the plumbing side of that distance must be calculated from the start. As the run between pool and plant room lengthens, friction loss in the pipework increases; pipe diameter, pump selection and the route of the lines are set accordingly. Placing the plant room near the pool but acoustically separated from the living area is usually the most balanced solution. Including the electrical and automation cabling in the same route plan removes the need to excavate again later."
+        }
+      },
+      {
+        "q": {
+          "tr": "Meyve ağaçlarının yakınına havuz yapılabilir mi?",
+          "en": "Can a pool be built near fruit trees?"
+        },
+        "a": {
+          "tr": "Yapılabilir, ama iki şeye dikkat etmek gerekir. Birincisi yüzey yükü: çiçek, yaprak ve dökülen meyve skimmer sepetlerini hızla doldurur, bu yüzden skimmer sayısı ve filtre kapasitesi bahçedeki yük düşünülerek seçilmelidir. İkincisi kök mesafesi: kökler yıllar içinde kabuğa, çevre kaplamasına ve tesisata doğru ilerleyebilir. Olgun ağacın taç genişliğini dikkate alarak mesafe bırakmak, gerekiyorsa kök bariyeri kullanmak bu riski büyük ölçüde azaltır.",
+          "en": "It can, but two things need attention. First, the surface load: blossom, leaves and fallen fruit fill skimmer baskets quickly, so the number of skimmers and the filter capacity should be chosen with the garden's load in mind. Second, root distance: over the years roots can advance towards the shell, the surround and the pipework. Leaving distance based on the mature tree's canopy spread, and using a root barrier where needed, greatly reduces that risk."
+        }
+      }
+    ]
+  },
+  "havuz-derz-fayans-yenileme": {
+    "title": {
+      "tr": "Havuz Derz ve Fayans Yenileme: Teknik Uygulama Rehberi",
+      "en": "Pool Grout and Tile Renewal: A Technical Application Guide"
+    },
+    "seoTitle": {
+      "tr": "Havuz Derz ve Fayans Yenileme",
+      "en": "Pool Grout and Tile Renewal"
+    },
+    "excerpt": {
+      "tr": "Havuz derzi neden bozulur, ne zaman yenilenir? Raspa, yüzey hazırlığı, ürün seçimi ve kür dahil derz ve kaplama yenilemenin teknik uygulaması.",
+      "en": "Why pool grout fails and when to renew it. The technical side of grout and tile renewal: removal, surface prep, product choice and curing."
+    },
+    "intro": {
+      "tr": "Havuz derz ve fayans yenileme, çoğu villa havuzunun ömründe en az bir kez sırası gelen, görünürde küçük ama tekniği yüksek bir iştir. Derz aralarının boşalması ya da tek tük karonun kalkması ilk bakışta kozmetik bir kusur gibi görünür; oysa bu katman havuzun su ile beton kabuğu arasındaki sınırda çalışır ve bozulduğunda sorun yüzeyde kalmaz. Bu yazıda derzin gerçekte ne iş yaptığını, hangi nedenlerle yıprandığını, hangi belirtilerin yenileme zamanının geldiğini gösterdiğini ve yenilemenin hangi sırayla, hangi malzemelerle uygulandığını anlatıyoruz. Amaç, işin doğru yapıldığını yerinde ayırt edebilmenizi sağlamak.",
+      "en": "Renewing pool grout and tiles is a job that comes up at least once in the life of most villa pools: small in appearance, demanding in technique. Empty joints or a single lifted tile look at first like a cosmetic flaw, yet this layer works at the boundary between the water and the concrete shell, and when it fails the problem does not stay on the surface. In this article we explain what grout actually does, what wears it down, which signs mean the time for renewal has come, and in what order and with which materials the work is carried out. The aim is to help you tell, on site, whether the job is being done properly."
+    },
+    "sections": [
+      {
+        "heading": {
+          "tr": "Havuz derzi sadece bir dolgu mudur?",
+          "en": "Is pool grout just a filler?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Derz, karoların arasını kapatan dekoratif bir macun değildir. Havuzda üç iş birden yapar: su geçişini yavaşlatarak yapıştırıcı katmanını ve altındaki su yalıtımını korur, karolar arasındaki küçük hareketleri karşılayarak gerilmenin tek bir noktada toplanmasını engeller ve kaplamanın kenarlarını mekanik olarak destekler. Bu yüzden derz aralıkları rastgele bırakılmaz; kaplamanın cinsine ve karo ölçüsüne göre belirlenir. Derz boşaldığı anda su, tasarlanmamış bir yoldan yapıştırıcıya ve şaplara ulaşmaya başlar.",
+            "en": "Grout is not a decorative paste that simply closes the gap between tiles. In a pool it does three jobs at once: it slows the passage of water and so protects the adhesive bed and the waterproofing beneath it, it absorbs the small movements between tiles so that stress does not gather at a single point, and it mechanically supports the edges of the finish. That is why joint widths are not left to chance; they follow the type of finish and the size of the tile. The moment a joint empties, water starts reaching the adhesive and the screed by a route no one designed for it."
+          },
+          {
+            "tr": "Havuzun yükü süreklidir. Su kaplamaya gece gündüz basınç uygular, sıcaklık farkı beton kabuk ile seramiği farklı oranlarda genleştirir, suyun kimyası ise derzin bağlayıcısını sürekli sınar. Bir banyo derziyle havuz derzinin aynı ürün olmaması bundandır: havuzda su altında kalıcı, yüksek dayanımlı çimento esaslı ya da epoksi esaslı derzler kullanılır ve bu seçim yenilemenin en belirleyici kararlarından biridir.",
+            "en": "The load on a pool is constant. Water presses on the finish day and night, temperature swings expand the concrete shell and the ceramic at different rates, and the chemistry of the water continuously tests the binder in the grout. This is why a bathroom grout and a pool grout are not the same product: pools call for high-performance cement-based or epoxy-based grouts that stay stable under permanent immersion, and that choice is one of the decisive calls in any renewal."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Derz ve kaplama neden zamanla bozulur?",
+          "en": "Why do grout and tiles deteriorate over time?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Bozulmanın tek bir sebebi yoktur; çoğu havuzda birkaç etken aynı anda çalışır. En yaygını su kimyasındaki dengesizliktir. Uzun süre düşük pH'ta tutulan su agresif hale gelir ve çimento esaslı derzin bağlayıcısını yavaş yavaş çözer; yüksek pH ve yüksek kalsiyum sertliği ise ters yönde, su hattında kireç birikmesine yol açar. Bu dengenin nasıl kurulduğunu ayrıntısıyla [pH ve klor dozajı yazısında](post:havuz-ph-klor-dozaj) anlattık; burada bilinmesi gereken şey, suyun sadece görünümü değil kaplamanın ömrünü de belirlediğidir.",
+            "en": "There is rarely a single cause; in most pools several act at once. The most common is imbalanced water chemistry. Water held at a low pH for long periods turns aggressive and slowly dissolves the binder in cement-based grout, while high pH combined with high calcium hardness pushes the other way and builds scale along the waterline. We cover how that balance is set in detail in our [pH and chlorine dosing article](post:havuz-ph-klor-dozaj); what matters here is that the water governs not only how the pool looks but how long the finish lasts."
+          }
+        ],
+        "bullets": [
+          {
+            "tr": "Kimyasal dengesizlik: uzun süre düşük pH'ta kalan agresif su derzi aşındırır, yüzeyi pürüzlendirir",
+            "en": "Chemical imbalance: aggressive water left at a low pH erodes grout and roughens the surface"
+          },
+          {
+            "tr": "Kireçlenme: yüksek pH ve sert suda su hattında biriken kalsiyum, derz kenarlarını kabuklandırır ve temizlik sırasında zorlar",
+            "en": "Scaling: calcium building up at the waterline in hard, high-pH water crusts the joint edges and makes cleaning harsh"
+          },
+          {
+            "tr": "Donma-çözülme: kışın derz gözeneklerine giren suyun donması, karo kenarlarını içeriden çatlatır",
+            "en": "Freeze-thaw: water that has soaked into the joints freezing in winter cracks the tile edges from within"
+          },
+          {
+            "tr": "Zemin hareketi: kayalık ve eğimli arazilerde oturma, kabukta kılcal çatlak ve kaplamada kabarma üretir",
+            "en": "Ground movement: settlement on rocky, sloping plots produces hairline cracks in the shell and lifting in the finish"
+          },
+          {
+            "tr": "Yaşlanma ve mekanik yük: yıllar içinde fırçalama, robot geçişi, merdiven ve oturma bölgesindeki yoğun kullanım derzi tüketir",
+            "en": "Ageing and mechanical load: years of brushing, robot passes and heavy use around steps and benches wear the grout away"
+          },
+          {
+            "tr": "Deniz havası: [Çeşme](area:cesme) ve Karaburun kıyılarında tuzlu rüzgâr, su hattı üstündeki derz ve metal aksamı hızlandırılmış biçimde yıpratır",
+            "en": "Sea air: on the [Çeşme](area:cesme) and Karaburun coast, salt-laden wind accelerates wear on grout above the waterline and on metal fittings"
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Hangi belirtiler yenileme zamanının geldiğini gösterir?",
+          "en": "Which signs show that renewal is due?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Kaplamadaki yaşlanma sessiz ilerler; sorun çoğu zaman gözle değil elle fark edilir. Boş havuzda yüzeyde gezdirilen bir el, derzin karo yüzeyinden ne kadar geride kaldığını ve kenarların keskinleşip keskinleşmediğini söyler. Aşağıdaki belirtilerden birkaçı bir arada görülüyorsa yenileme ertelenecek bir iş değildir. Su seviyesinde de düşüş varsa önce kaynağın teşhisi gerekir; yöntemlerini [su kaçağı tamiri yazısında](post:havuz-su-kacagi-tamiri) ele alıyoruz.",
+            "en": "Ageing in a pool finish is quiet; the problem is usually felt rather than seen. A hand run over the surface of an empty pool tells you how far the joint has receded below the tile face and whether the edges have turned sharp. If several of the signs below appear together, renewal is not a job to postpone. If the water level is dropping too, the source needs diagnosing first, and we cover those methods in our [leak repair article](post:havuz-su-kacagi-tamiri)."
+          }
+        ],
+        "bullets": [
+          {
+            "tr": "Derz boşalması: derz seviyesinin karo yüzeyinin belirgin biçimde altına düşmesi, parmakla ufalanması",
+            "en": "Empty joints: the grout line sitting noticeably below the tile face, or crumbling under a fingertip"
+          },
+          {
+            "tr": "Kabarmış ya da çıkmış karo: bölgesel şişme, vurulduğunda boş ses veren alanlar, yerinden oynayan tek tük karolar",
+            "en": "Lifted or missing tiles: localised bulges, areas that sound hollow when tapped, individual tiles that have come loose"
+          },
+          {
+            "tr": "Leke kuşağı: su hattı boyunca ilerleyen, temizlikle geçmeyen renk farkı veya kireç bandı",
+            "en": "A stain band: a line of discolouration or scale running along the waterline that cleaning does not remove"
+          },
+          {
+            "tr": "Pürüzlenme: yüzeyin çıplak ayağa kaba gelmesi, derz kenarlarının keskinleşmesi",
+            "en": "Roughness: the surface feeling coarse underfoot and the joint edges turning sharp"
+          },
+          {
+            "tr": "Suyun kolay bulanması ve kimyasal tüketiminin artması: gözenekli hale gelen yüzeyin kiri ve yosunu tutması",
+            "en": "Water clouding easily and chemical use rising: a surface gone porous holding on to dirt and algae"
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Kısmi onarım mı, tam yenileme mi doğru karar?",
+          "en": "Partial repair or full renewal: which is right?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Kararın ölçüsü hasarın yüzdesi değil, dağılımıdır. Tek bir bölgede toplanmış, sınırları belli bir bozulma, örneğin merdiven kenarında ya da tek bir nozul çevresinde kalan boşalma, kısmi onarımla çözülür. Buna karşılık bozulma havuzun farklı duvarlarında birbirinden bağımsız noktalarda görünüyorsa, sorun derzin kendisinden değil altındaki katmandan ya da yıllardır süren su kimyasından kaynaklanıyor demektir; böyle bir havuzda nokta onarımı birkaç sezon sonra aynı yerden değil, komşu bölgeden tekrarlar.",
+            "en": "The measure is not the percentage of damage but its distribution. Deterioration confined to one area with clear boundaries, say around a step or a single return nozzle, is solved with a partial repair. If, on the other hand, the damage shows up at independent points on different walls, the cause lies not in the grout itself but in the layer beneath it or in years of water chemistry; in such a pool a spot repair simply reappears a few seasons later, not in the same place but next to it."
+          },
+          {
+            "tr": "İki pratik ayırt edici daha vardır. Birincisi renk: yıllar önce döşenmiş bir kaplamanın tonunu kısmi onarımda birebir tutturmak neredeyse imkânsızdır, bu yüzden geniş ve görünür yüzeylerde yama estetik olarak tatmin etmez. İkincisi kapsam: altındaki izolasyona dokunulacaksa iş artık tek kalemlik bir onarım değil, planlanması gereken bir renovasyondur. Kapsam ve süreci [havuz renovasyonu rehberinde](post:havuz-renovasyonu-rehberi) ayrıca anlattık.",
+            "en": "Two further practical tests help. The first is colour: matching the shade of a finish laid years ago is all but impossible in a partial repair, so on large, visible surfaces a patch does not satisfy. The second is scope: once the waterproofing beneath has to be touched, the job is no longer a single repair item but a renovation that needs planning. We set out scope and process in our [pool renovation guide](post:havuz-renovasyonu-rehberi)."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Derz ve kaplama yenileme hangi sırayla uygulanır?",
+          "en": "In what order is grout and tile renewal carried out?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Yenilemenin kalitesini son gün sürülen derz değil, ondan önceki hazırlık belirler; her adım bir sonrakinin tutunacağı yüzeyi ürettiği için sıra atlanmaz. Kuruma ve kür süreleri sıcaklığa, neme ve ürünün kendisine göre değiştiğinden burada gün ya da milimetre vermiyoruz: üreticinin teknik föyündeki süre ve kalınlık esastır. Uygulama sırası şu şekildedir:",
+            "en": "The quality of a renewal is decided not by the grout applied on the final day but by the preparation before it; each step produces the surface the next will grip, so none is skipped. Because drying and curing times vary with temperature, humidity and the product itself, we give no figures in days or millimetres here: the times and thicknesses in the manufacturer's technical data sheet govern. The sequence runs as follows:"
+          },
+          {
+            "tr": "Boşaltma kararı zemin suyunu da ilgilendirir: yüksek taban suyu olan arazilerde boş kabuk dışarıdan basınca maruz kalabildiği için boşaltma mevsimi ve süresi planlanır. Kuru, rüzgârsız ve aşırı sıcak olmayan bir çalışma penceresi seçmek, hem yapıştırıcının hem derzin düzgün priz almasını sağlar; yaz ortasında güneş altında çalışmak ürünlerin yüzeyden erken kurumasına ve dayanımın düşmesine yol açar.",
+            "en": "The decision to drain also concerns groundwater: on plots with a high water table an empty shell can come under pressure from outside, so the season and duration of the drain-down are planned. Choosing a dry working window that is neither windy nor excessively hot lets both the adhesive and the grout set properly; working under midsummer sun causes products to skin over early and lose strength."
+          }
+        ],
+        "bullets": [
+          {
+            "tr": "1. Boşaltma ve kurutma: havuz kontrollü biçimde boşaltılır, yüzeyin ve derz aralarının tamamen kuruması beklenir",
+            "en": "1. Draining and drying: the pool is emptied in a controlled way and the surface and joints are left until fully dry"
+          },
+          {
+            "tr": "2. Eski derzin raspası: bozulmuş derz, karo kenarına zarar vermeden derz açma aletiyle sökülür; yerinden oynamış karolar işaretlenip alınır",
+            "en": "2. Removing the old grout: failed grout is raked out without damaging the tile edges, and loose tiles are marked and lifted"
+          },
+          {
+            "tr": "3. Yüzey hazırlığı: toz, kireç, yosun ve eski yapıştırıcı kalıntısı temizlenir, gerekirse aşındırıcı temizlik yapılır ve yüzey yeniden kurutulur",
+            "en": "3. Surface preparation: dust, scale, algae and old adhesive residue are cleaned off, an abrasive clean is carried out if needed, and the surface is dried again"
+          },
+          {
+            "tr": "4. İzolasyon kontrolü: karo kalkan bölgelerde altındaki su yalıtımı açığa çıkar; kabarma, ayrışma ya da kabukta çatlak varsa kaplamaya geçilmeden önce bu katman onarılır",
+            "en": "4. Checking the waterproofing: where tiles have lifted, the membrane beneath is exposed; if it is blistered, delaminated or the shell is cracked, that layer is repaired before any tiling begins"
+          },
+          {
+            "tr": "5. Yapıştırıcı ve derz seçimi: sürekli su altında kalmaya uygun, havuz için sınıflandırılmış yapıştırıcı ve derz kullanılır; cam mozaikte beyaz renkli ürünler tercih edilir",
+            "en": "5. Choosing adhesive and grout: products classified for pools and permanent immersion are used; with glass mosaic, white-bodied products are preferred"
+          },
+          {
+            "tr": "6. Uygulama: karolar döşenir, ürün talimatındaki bekleme sonrası derz çekilir, fazlası yüzeyden alınır ve kenar birleşimlerinde elastik dolgu bırakılır",
+            "en": "6. Application: tiles are laid, the grout is worked in after the wait stated in the product instructions, the excess is cleaned off and elastic sealant is left at perimeter junctions"
+          },
+          {
+            "tr": "7. Kür ve doldurma: ürün talimatındaki kür süresi tamamlanmadan su verilmez; doldurma yavaş ve kesintisiz yapılır, ardından ilk denge ayarı yapılıp değerler birkaç gün takip edilir",
+            "en": "7. Curing and filling: no water is added before the curing time in the product instructions has elapsed; filling is slow and uninterrupted, after which the first balance is set and the readings are followed for several days"
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Seramik, cam mozaik ve traverten arasında nasıl seçim yapılır?",
+          "en": "How do you choose between ceramic, glass mosaic and travertine?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Havuz seramiği geniş yüzeylerde ekonomik ve hızlıdır; derz sayısı az olduğu için bakım yükü de düşüktür. Cam mozaik ışığı kırarak suya derinlik katar ve eğrisel yüzeylere uyum sağlar, ancak birim alanda çok daha fazla derz demektir; işçilik ve ürün seçimi burada daha da kritiktir. Traverten ise çoğunlukla havuz içinde değil kenar ve teras bölgesinde kullanılır: ıslakken tutan, güneşte fazla ısınmayan doğal bir yüzeydir ama gözenekli olduğu için koruyucuyla desteklenmesi gerekir. Malzeme tasarımla birlikte düşünülmesi gereken bir konu olduğundan bu kararı çoğu zaman [havuz inşaatı ekibiyle](page:construction) birlikte alıyoruz.",
+            "en": "Pool ceramic is economical and quick over large surfaces, and with fewer joints it carries a lighter maintenance burden. Glass mosaic refracts light, gives the water depth and follows curved surfaces well, but it means far more joint length per square metre; workmanship and product choice matter even more here. Travertine is generally used not inside the pool but around the coping and terrace: a natural surface that grips when wet and does not overheat in the sun, though its porosity means it needs a sealer. Because the material has to be considered together with the design, we usually take this decision alongside our [pool construction team](page:construction)."
+          },
+          {
+            "tr": "Derz rengi çoğu kişinin sandığından çok daha belirleyicidir. Karoya yakın ton seçildiğinde yüzey tek parça bir renk alanı gibi okunur ve su rengi öne çıkar; kontrast bir ton seçildiğinde ise desen ve karo ölçüsü vurgulanır, ama her kusur, her seviye farkı da aynı ölçüde görünür hale gelir. Su hattında kireç izi ve leke en çok koyu derzlerde belli olduğundan, sert suyla çalışan havuzlarda karoya yakın ve orta tonlu derzler daha bağışlayıcıdır.",
+            "en": "Grout colour matters far more than most people assume. A tone close to the tile makes the surface read as a single field of colour and lets the water's own colour lead; a contrasting tone emphasises the pattern and the tile module, but it makes every flaw and every difference in level just as visible. Since scale marks and staining at the waterline show up most on dark grout, mid-tone colours close to the tile are more forgiving in pools running on hard water."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Yenilenen kaplamanın ömrü nasıl uzatılır?",
+          "en": "How do you extend the life of a renewed finish?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Yeni derzin ilk haftaları, ömrünün geri kalanını belirler. Havuz dolduktan sonra pH, toplam alkalinite ve kalsiyum sertliği birlikte ayarlanır; pH 7,2–7,6, toplam alkalinite 80–120 ppm ve kalsiyum sertliği 200–400 ppm aralığında tutulan bir su, ne derzi çözecek kadar agresif ne de yüzeyi kabuklandıracak kadar doygundur. Bu üç değerin birbirini dengelediği aralık korunduğunda kaplama yıllarca ilk günkü dokusunu korur; dengeden çıkıldığında ise en pahalı malzeme bile beklenen ömrü vermez.",
+            "en": "The first weeks of new grout determine the rest of its life. Once the pool is full, pH, total alkalinity and calcium hardness are set together; water held at pH 7.2–7.6, total alkalinity 80–120 ppm and calcium hardness 200–400 ppm is neither aggressive enough to dissolve grout nor saturated enough to scale the surface. While those three values keep each other in balance, the finish holds its original texture for years; once the balance is lost, even the most expensive material will not last as expected."
+          },
+          {
+            "tr": "Günlük alışkanlıklar da katkı sağlar. Su hattının düzenli temizlenmesi yağ ve kireç bandının kalıcı lekeye dönüşmesini önler; bu iş için kullanılan [havuz temizlik asidi](product:temizlik-asidi-selenoid) gibi ürünler seyreltilerek, etiketteki dozaja uyularak uygulanır ve asla başka bir kimyasalla karıştırılmaz. Sert telli fırça ve aşındırıcı aletler yeni derzi kısa sürede tüketir; fırça ve robot seçimi kaplamaya göre yapılmalıdır. Düzenli ölçüm yapan bir [havuz bakım programı](page:maintenance) ise kimyasal sapmaları derze zarar vermeden yakalar.",
+            "en": "Daily habits contribute too. Cleaning the waterline regularly stops the band of oil and scale from turning into a permanent stain; products used for this, such as [pool cleaning acid](product:temizlik-asidi-selenoid), are diluted, applied at the dose on the label and never mixed with another chemical. Stiff wire brushes and abrasive tools wear new grout away quickly, so brush and robot should suit the finish. A [pool maintenance programme](page:maintenance) with regular testing catches chemical drift before it can harm the joints."
+          }
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "q": {
+          "tr": "Derz yenilemesi havuz boşaltılmadan yapılabilir mi?",
+          "en": "Can grout be renewed without emptying the pool?"
+        },
+        "a": {
+          "tr": "Hayır. Hem eski derzin sökülmesi hem yeni derzin priz alması için yüzeyin kuru olması gerekir; su altında uygulanan dolgular kalıcı olmaz. Yalnızca su hattının üstünde kalan çok sınırlı bölgelerde, seviye düşürülerek çalışılabilir. Havuz içindeki gerçek bir yenileme ise kontrollü boşaltma, kurutma ve ürün talimatındaki kür süresinin tamamlanmasını gerektirir.",
+          "en": "No. The surface must be dry both to rake out the old grout and to let the new grout set; fillers applied under water do not last. Only in very limited areas above the waterline can work be done by lowering the level. A genuine renewal inside the pool requires a controlled drain-down, drying, and completion of the curing time stated in the product instructions."
+        }
+      },
+      {
+        "q": {
+          "tr": "Derz yenilemesi su kaçağını durdurur mu?",
+          "en": "Will renewing the grout stop a leak?"
+        },
+        "a": {
+          "tr": "Bazen durdurur, ama garanti edilemez. Kaçak gerçekten derz aralarındaki boşalmadan kaynaklanıyorsa yenileme sorunu çözer. Buna karşılık kaçağın kaynağı beton kabuktaki çatlak, skimmer boğazı, nozul contası ya da gömülü tesisat ise, derz yenilemek yalnızca görüntüyü düzeltir. Bu yüzden yenilemeden önce kaçağın kaynağı ayrı bir teşhisle netleştirilmelidir.",
+          "en": "Sometimes it will, but it cannot be guaranteed. If the leak genuinely comes from empty joints, renewal solves it. If the source is a crack in the concrete shell, the skimmer throat, a nozzle seal or buried pipework, new grout only improves the appearance. That is why the source of a leak should be pinned down by a separate diagnosis before any renewal."
+        }
+      },
+      {
+        "q": {
+          "tr": "Yenilemeden sonra havuz ne zaman kullanılabilir?",
+          "en": "When can the pool be used after a renewal?"
+        },
+        "a": {
+          "tr": "Kesin bir gün vermek doğru olmaz; süre kullanılan yapıştırıcı ve derzin tipine, hava sıcaklığına ve neme göre değişir. Esas olan, üreticinin teknik föyünde belirttiği kür süresinin tamamlanmasıdır. Kür bitmeden su verilen bir uygulamada derz dayanımını kazanamaz. Doldurmadan sonra da su dengesi kurulup değerler birkaç gün kararlı seyretmeden yoğun kullanım önerilmez.",
+          "en": "It would be wrong to name a fixed number of days; it depends on the type of adhesive and grout, on air temperature and on humidity. What governs is completing the curing time given in the manufacturer's technical data sheet. Where water is added before curing finishes, the grout never reaches full strength. After filling, heavy use is also best delayed until the water is balanced and the readings have held steady for a few days."
+        }
+      },
+      {
+        "q": {
+          "tr": "Açık renk derz mi, koyu renk derz mi daha iyi?",
+          "en": "Is light or dark grout the better choice?"
+        },
+        "a": {
+          "tr": "Teknik bir üstünlük değil, görünüm ve bakım tercihidir. Karoya yakın tonlar yüzeyi tek parça gösterir ve kusurları bağışlar; kontrast tonlar deseni vurgular ama her seviye farkını ortaya çıkarır. Sert suyla çalışan havuzlarda koyu derzlerde kireç izi daha belirgin görünür. Cam mozaikte ise beyaz gövdeli ürünler mozaiğin ışık geçirgenliğini bozmadığı için tercih edilir.",
+          "en": "It is a question of look and upkeep rather than technical merit. Tones close to the tile make the surface read as one piece and forgive flaws; contrasting tones emphasise the pattern but reveal every difference in level. In pools running on hard water, scale marks show more clearly on dark grout. With glass mosaic, white-bodied products are preferred because they do not spoil the translucency of the mosaic."
+        }
+      }
+    ]
+  },
+  "havuz-test-kiti-karsilastirma": {
+    "title": {
+      "tr": "Havuz Test Kiti Karşılaştırması: Şerit, Damla, Dijital",
+      "en": "Pool Test Kits Compared: Strips, Drops, Digital"
+    },
+    "seoTitle": {
+      "tr": "Havuz Test Kiti Karşılaştırma: Hangisi?",
+      "en": "Pool Test Kits Compared: Which One?"
+    },
+    "excerpt": {
+      "tr": "Havuz suyu testinde şerit, damla kiti ve dijital fotometre: hangisi ne işe yarar, numune nasıl alınır, sonuç hangi sırayla eyleme çevrilir.",
+      "en": "Strips, drop kits and digital photometers for pool water testing: what each is for, how to take a sample and how to act on the result."
+    },
+    "intro": {
+      "tr": "Havuz suyu testi, bakımın tahminden çıkıp ölçüme dayandığı andır. Elinizdeki havuz test kiti ister basit bir şerit ister dijital fotometre olsun, sonucun doğruluğu büyük ölçüde numuneyi nasıl aldığınıza ve rengi hangi koşullarda okuduğunuza bağlıdır. Bu yazıda havuz suyu testinin üç yöntemini, yani şeridi, damla kitini ve fotometreyi işleriyle ve sınırlarıyla karşılaştırıyoruz; doğru numune almayı, en sık yapılan okuma hatalarını ve hangi parametrenin ne sıklıkla ölçüleceğini anlatıyoruz. Amaç, renk skalasındaki ya da ekrandaki değeri güvenle okumanız ve o değeri doğru sırayla eyleme çevirmeniz.",
+      "en": "Testing pool water is the moment maintenance stops being guesswork and starts resting on measurement. Whether your kit is a simple strip or a digital photometer, the accuracy of the result depends largely on how you take the sample and how you read the colour. In this article we compare the three methods of pool water testing, namely the strip, the drop kit and the photometer, with what each one is for and where it stops; we also cover taking a sample correctly, the most common reading mistakes and how often each parameter should be measured. The aim is for you to read the value on the colour chart or the screen with confidence, and to act on it in the right order."
+    },
+    "sections": [
+      {
+        "heading": {
+          "tr": "Havuz suyu numunesi nereden ve nasıl alınmalı?",
+          "en": "Where and how should a pool water sample be taken?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Test sonucu, numune ne kadar temsil ediciyse o kadar doğrudur. Suyu yüzeyden almak en sık yapılan hatadır; yüzeyin ilk santimetreleri güneşten, yağ ve güneş kremi kalıntılarından ve havayla temastan etkilenir, havuzun genelini temsil etmez. Doğru numune dirsek derinliğinden, yani kolunuzu suya daldırıp bileğinizi rahatça aşağı çevirebileceğiniz derinlikten alınır. Alırken skimmer ağzından ve dönüş ağzından olabildiğince uzak durun: skimmerin önünde henüz filtreye gitmemiş yüzey suyu, dönüş ağzının önünde ise yeni dozlanmış ve havuza tam karışmamış su bulunur. İkisi de gerçek değeri gizler.",
+            "en": "A test result is only as accurate as the sample is representative. Taking water from the surface is the most common mistake; the top few centimetres are affected by sun, oil and sunscreen residue and contact with the air, and they do not represent the pool as a whole. A correct sample is taken at elbow depth, that is, deep enough for you to sink your arm in and turn your wrist comfortably downwards. As you do it, stay as far as you can from the skimmer mouth and the return outlet: in front of the skimmer sits surface water that has not yet reached the filter, and in front of the return sits freshly dosed water that has not fully mixed into the pool. Both hide the true value."
+          },
+          {
+            "tr": "Kabın kendisi de sonucu etkiler. Başka bir iş için kullanılmış, deterjan ya da kimyasal kalıntısı taşıyan bir kapla numune almayın; tüpü veya kabı her ölçümden önce havuz suyuyla çalkalayın ve içine parmağınızı sokmayın. Numuneyi aldıktan sonra bekletmeyin, çünkü klor ölçülene kadar geçen sürede, özellikle güneş altında düşer. Ölçümü havuz başında, gölgede ve pompa bir süredir çalışıyorken yapmak, elinizdeki değerin gerçekten havuzun değeri olmasını sağlar.",
+            "en": "The container itself also affects the result. Do not take a sample in a vessel used for something else that may carry detergent or chemical residue; rinse the vial or container with pool water before every test and do not put your finger inside it. Do not let the sample stand once taken, because chlorine falls in the time before it is read, especially in sunlight. Testing at the poolside, in the shade, with the pump having run for a while, is what makes the value in your hand genuinely the pool's value."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Test şeritleri günlük takipte ne kadar iş görür?",
+          "en": "How far do test strips go in daily monitoring?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Şerit, suya daldırıp çıkardıktan sonra saniyeler içinde renk veren en pratik yöntemdir ve günlük hızlı bakış için tasarlanmıştır. [Insta test şeritleri](product:test-insta) gibi ürünler klor ve pH'ı tek hamlede gösterir; havuzu her gün kullanan bir evde sabah suya girmeden önce bir şerit daldırmak, bakımın en düşük maliyetli alışkanlığıdır. Şeridin işi tam sayıyı vermek değil, bugün bir şeyin ters gidip gitmediğini hızla söylemektir.",
+            "en": "The strip is the most practical method, giving a colour within seconds of being dipped and withdrawn, and it is designed for a quick daily look. Products such as [Insta test strips](product:test-insta) show chlorine and pH in a single move; in a house where the pool is used every day, dipping a strip before the first swim is the cheapest habit in pool care. A strip's job is not to give you an exact number but to tell you quickly whether something is off today."
+          },
+          {
+            "tr": "Sınırı ise hassasiyettir. Şeritler nemden ciddi biçimde etkilenir: kutu ıslak elle açılır ya da kapağı açık bırakılırsa içerideki bütün şeritler bozulur, bu yüzden kutu havuz kenarında değil kuru bir yerde saklanır ve kapağı hemen kapatılır. Son kullanma tarihi geçmiş şeritler renk verir ama yanlış renk verir; tarihi geçmiş bir kutu kullanılmaz. Renk skalasındaki basamaklar da geniştir; şerit size değerin aralığını söyler, ince ayar gerektiren durumlarda daha hassas bir yönteme geçmek gerekir.",
+            "en": "Its limit is precision. Strips are seriously affected by moisture: if the tub is opened with wet hands or left with its cap off, every strip inside is spoiled, which is why the tub is kept in a dry place rather than at the poolside and closed again immediately. Expired strips still produce a colour, but the wrong one; a tub past its date should not be used. The steps on the colour chart are also wide, so a strip tells you the range a value sits in, and situations that call for fine adjustment call for a more precise method."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Damla yöntemiyle çalışan test kiti neyi daha iyi ölçer?",
+          "en": "What does a drop-based test kit measure better?"
+        },
+        "paragraphs": [
+          {
+            "tr": "[Damla yöntemiyle çalışan test kiti](product:test-damla), numune tüpüne alınan suya OTO ve fenol kırmızısı reaktifleri damlatarak klor ve pH'ı okumanızı sağlar. Renk, şeritteki küçük kareye değil su sütununun tamamına yayıldığı için gözle ayırt etmek belirgin biçimde kolaylaşır ve ara tonları görmek mümkün olur; şeritte tek bir basamak olarak görünen fark, tüpte iki ayrı ton olarak okunabilir. Haftalık kontrol için pratikte en dengeli yöntem budur: şeritten hassas, fotometreden basit ve kullanımı öğrenmesi birkaç ölçüm alan bir yöntemdir.",
+            "en": "A [drop-based test kit](product:test-damla) lets you read chlorine and pH by adding OTO and phenol red reagents to water drawn into a sample vial. Because the colour spreads through the whole column of water rather than a small square on a strip, it is noticeably easier to judge by eye and intermediate shades become visible; a difference that appears as a single step on a strip can be read as two distinct tones in the vial. In practice this is the most balanced method for weekly checks: more precise than a strip, simpler than a photometer, and a technique you learn within a few tests."
+          },
+          {
+            "tr": "Sınırı kapsamdır. Klasik damla kiti yalnızca klor ve pH ölçer; toplam alkalinite, kalsiyum sertliği ve siyanürik asit gibi arka plandaki değerler bu kitin dışında kalır. Oysa suyun sorun çıkarma eğilimi çoğu zaman tam da bu arka plan değerlerinde saklıdır. Bu yüzden damla kiti günlük ve haftalık takipte yeterliyken, sezon başında ve su inatla dengede durmadığında daha geniş kapsamlı bir [test kiti setine](product:test-set) ihtiyaç duyulur.",
+            "en": "Its limit is scope. A classic drop kit measures only chlorine and pH; background values such as total alkalinity, calcium hardness and cyanuric acid fall outside it. Yet water's tendency to cause trouble is often hidden in precisely those background values. So while a drop kit is enough for daily and weekly monitoring, the start of the season, and water that stubbornly refuses to stay in balance, call for a broader [complete water testing kit](product:test-set)."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Dijital fotometre hangi havuzlarda anlam kazanır?",
+          "en": "Which pools does a digital photometer make sense for?"
+        },
+        "paragraphs": [
+          {
+            "tr": "[ColorQ dijital test kiti](product:test-colorq) gibi fotometreler renk yorumunu gözden alıp cihaza verir: reaktifle işlem görmüş numune optik hazneye konur, cihaz ışık geçirgenliğini ölçer ve sonucu ekranda sayı olarak gösterir. Böylece iki kişinin aynı rengi farklı okuması sorunu ortadan kalkar ve aynı havuz farklı günlerde aynı ölçütle değerlendirilir. Klor ve pH'ın yanında alkalinite, sertlik ve stabilizatör gibi değerler de aynı oturumda kayda geçtiği için suyun tablosu tek seferde çıkar; ölçümler tarihiyle not edildiğinde eğilim de görünür hâle gelir.",
+            "en": "Photometers such as the [ColorQ digital test kit](product:test-colorq) take the interpretation of colour out of the eye and give it to the instrument: a reagent-treated sample goes into the optical chamber, the device measures light transmission and shows the result on screen as a number. That removes the problem of two people reading the same colour differently, and means the same pool is judged by the same yardstick on different days. Because values such as alkalinity, hardness and stabiliser are recorded in the same session as chlorine and pH, the whole picture emerges at once; log the readings with their dates and the trend becomes visible too."
+          },
+          {
+            "tr": "Bu düzeyde ölçüm her havuz için gerekli değildir. Tek ailenin kullandığı, dengesi oturmuş bir villa havuzunda şerit ve damla kiti fazlasıyla yeterlidir. Fotometre; yoğun kullanılan büyük havuzlarda, site ve apart havuzlarında, kiralanan villalarda ya da nedeni bir türlü bulunamayan sürekli denge sorunlarında anlam kazanır. Cihazın kendisi de bakım ister: tüpler çizilmemiş ve parmak izsiz olmalı, reaktiflerin tarihi ve pil durumu düzenli kontrol edilmeli, cihaz nemli makine dairesinde değil kuru ve serin bir yerde saklanmalıdır.",
+            "en": "Measurement at this level is not necessary for every pool. In a single-family villa pool whose balance has settled, strips and a drop kit are more than enough. A photometer earns its place in large, heavily used pools, in shared residential and apartment pools, in rental villas, or where a persistent balance problem refuses to reveal its cause. The instrument itself also needs care: the vials must be unscratched and free of fingerprints, reagent dates and battery condition should be checked regularly, and the unit should be stored somewhere dry and cool rather than in a damp plant room."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Hangi parametre ne sıklıkla ölçülmeli?",
+          "en": "How often should each parameter be measured?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Her değeri her gün ölçmek gerekmez; parametrelerin değişme hızı birbirinden farklıdır. Klor ve pH güneş, sıcaklık ve kullanım yüküyle gün içinde bile hareket eder; toplam alkalinite, kalsiyum sertliği ve stabilizatör gibi arka plan değerleri ise haftalar içinde yavaşça kayar. Bu yüzden ölçüm takvimi tek bir sıklığa değil iki farklı ritme dayanır: hızlı değerler için sık ve kısa kontroller, yavaş değerler için seyrek ama kapsamlı ölçümler. Sezon boyunca sürdürebileceğiniz bir düzen şöyle kurulur:",
+            "en": "You do not need to measure every value every day; parameters change at different speeds. Chlorine and pH move within a single day under sun, temperature and bathing load, while background values such as total alkalinity, calcium hardness and stabiliser drift slowly over weeks. A testing calendar therefore rests not on one frequency but on two rhythms: frequent short checks for the fast-moving values, and infrequent but comprehensive tests for the slow ones. A routine you can keep up through the season looks like this:"
+          }
+        ],
+        "bullets": [
+          {
+            "tr": "Serbest klor ve pH: yoğun kullanılan havuzlarda her gün, sakin dönemlerde haftada birkaç kez. Referans aralık pH 7,2–7,6 ve serbest klor 1–3 ppm'dir.",
+            "en": "Free chlorine and pH: daily in heavily used pools, a few times a week in quieter periods. The reference ranges are pH 7.2–7.6 and free chlorine 1–3 ppm."
+          },
+          {
+            "tr": "Toplam alkalinite: haftada bir ya da iki haftada bir; hedef aralık 80–120 ppm. pH sürekli oynuyorsa ilk bakılacak değer budur.",
+            "en": "Total alkalinity: weekly or fortnightly; the target range is 80–120 ppm. If pH keeps moving, this is the first value to check."
+          },
+          {
+            "tr": "Siyanürik asit (stabilizatör): sezon başında, ardından ayda bir; 30–50 ppm aralığı klorun güneş altında dayanmasını sağlar.",
+            "en": "Cyanuric acid (stabiliser): at the start of the season and then monthly; the 30–50 ppm range is what lets chlorine survive in sunlight."
+          },
+          {
+            "tr": "Kalsiyum sertliği: sezon başında ve ayda bir; 200–400 ppm aralığı kaplamayı ve donanımı korur.",
+            "en": "Calcium hardness: at the start of the season and monthly; the 200–400 ppm range protects the finish and the equipment."
+          },
+          {
+            "tr": "Şok uygulamasından, uzun süren yağmurdan, kalabalık kullanımdan ve büyük su takviyesinden sonra klor ve pH yeniden ölçülür.",
+            "en": "After shock dosing, prolonged rain, crowded use or a large top-up, chlorine and pH are measured again."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Test sonucunu yanıltan okuma hataları hangileri?",
+          "en": "Which reading mistakes distort a test result?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Yöntem ne olursa olsun, hatalı sonuçların çoğu kitin değil okumanın hatasıdır. Havuz sahipleri çoğu zaman kitin güvenilir olmadığını düşünür; oysa aynı kit, koşullar düzeltildiğinde tutarlı sonuç verir. Yanlış okuma sinsidir, çünkü ekranda ya da renk skalasında makul görünen bir değer üretir ve siz o değere dayanarak kimyasal eklersiniz. Sonuç, düzelmeyen bir su ve gereksiz kimyasal tüketimidir. Pratikte en sık karşılaştığımız beş hata şunlardır:",
+            "en": "Whatever the method, most wrong results are errors of reading rather than of the kit. Pool owners often conclude the kit is unreliable, when the same kit gives consistent results once the conditions are put right. A misreading is insidious, because it produces a value that looks plausible on the screen or the colour chart, and you then add chemicals on the strength of it. The outcome is water that does not improve and chemicals spent for nothing. These are the five mistakes we meet most often:"
+          }
+        ],
+        "bullets": [
+          {
+            "tr": "Rengi yanlış ışıkta yorumlamak: doğrudan güneş altında, renkli bir şemsiyenin gölgesinde ya da akşam yapay ışıkta okunan renk gerçek tonunu vermez. Okuma, gün ışığında ama gölgede ve beyaz bir zemine karşı yapılır.",
+            "en": "Judging colour in the wrong light: read in direct sun, under a coloured parasol or in artificial light at dusk, a colour does not show its true shade. Read in daylight but in shade, against a white background."
+          },
+          {
+            "tr": "Geç okumak: şeritlerin ve reaktiflerin belirtilmiş bir bekleme süresi vardır ve süre geçtikçe renk kaymaya devam eder. Ürün talimatındaki süreye uyun.",
+            "en": "Reading late: strips and reagents have a stated waiting time, and the colour keeps shifting once it passes. Follow the time given in the product instructions."
+          },
+          {
+            "tr": "Kirli ya da çizik tüp: önceki reaktifin kalıntısı, kireç lekesi ve parmak izi sonucu doğrudan bozar. Tüp her ölçümden önce numune suyuyla çalkalanır.",
+            "en": "A dirty or scratched vial: residue from the previous reagent, scale marks and fingerprints distort the result directly. Rinse the vial with sample water before every test."
+          },
+          {
+            "tr": "Eski reaktif: açılalı çok olmuş, sıcak görmüş ya da tarihi geçmiş reaktifler sessizce yanlış okur. Reaktifler serin, karanlık ve çocukların erişemeyeceği bir yerde saklanır.",
+            "en": "Old reagent: bottles long since opened, exposed to heat or past their date read wrong without announcing it. Store reagents somewhere cool and dark, out of reach of children."
+          },
+          {
+            "tr": "Tek ölçüme dayanarak büyük karar vermek: beklenmedik bir sonuç çıktığında numuneyi yenileyip ölçümü tekrarlamak, en ucuz kontroldür.",
+            "en": "Making a big decision on a single reading: when a result surprises you, taking a fresh sample and repeating the test is the cheapest check there is."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Ölçüm sonucu hangi sırayla eyleme çevrilir?",
+          "en": "In what order should a result be acted on?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Elinizde birkaç değer varken hepsine aynı anda müdahale etmek, suyu düzeltmek yerine daha karmaşık hâle getirir. Sıra bellidir: önce toplam alkalinite, sonra pH, en sonda klor. Alkalinite pH'ın tamponudur; aralığın dışındayken yaptığınız pH ayarı birkaç gün içinde yerinden oynar ve aynı işi tekrar tekrar yaparsınız. Alkalinite 80–120 ppm aralığına oturduktan sonra pH'ı 7,2–7,6 aralığına getirmek hem daha kolay hem de daha kalıcı olur.",
+            "en": "With several values in front of you, intervening in all of them at once makes the water more complicated rather than better. The order is settled: total alkalinity first, then pH, chlorine last. Alkalinity is pH's buffer; while it sits outside its range, any pH adjustment you make slips within a few days and you end up repeating the same work. Once alkalinity has settled into 80–120 ppm, bringing pH into 7.2–7.6 is both easier and more durable."
+          },
+          {
+            "tr": "Klor en sona bırakılır, çünkü klorun dezenfeksiyon gücü doğrudan pH'a bağlıdır: pH yüksekken 1–3 ppm serbest klor bile beklediğiniz işi görmez. Önce zemini düzeltip sonra klor eklemek hem kimyasal tüketimini hem de tekrar ölçüm sayısını azaltır. Hangi üründen ne kadar ekleneceği ve hesabın nasıl yapılacağı ayrı bir konudur; [pH ve klor dozajının hesaplanmasını](post:havuz-ph-klor-dozaj) o yazıda adım adım anlatıyoruz. Hangi ürün ailesinin hangi işi gördüğünü görmek isterseniz [havuz kimyasalları rehberi](post:havuz-kimyasallari-rehberi) başvurulacak yerdir.",
+            "en": "Chlorine is left to last because its disinfecting power depends directly on pH: with pH high, even 1–3 ppm of free chlorine will not do the job you expect. Fixing the ground first and adding chlorine afterwards reduces both chemical consumption and the number of repeat tests. How much of which product to add, and how the calculation is made, is a separate subject; we set out [how pH and chlorine dosing is calculated](post:havuz-ph-klor-dozaj) step by step in that article. If you want to see which product family does which job, the [pool chemicals guide](post:havuz-kimyasallari-rehberi) is the place to look."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Çeşme yarımadasında ölçüm sıklığı neden değişir?",
+          "en": "Why does testing frequency change on the Çeşme peninsula?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Yarımadanın iklimi test ritmini doğrudan etkiler. Uzun ve yoğun yaz sezonunda su sıcaklığı yükseldikçe klor daha hızlı tükenir; yazın ortasında haftada bir yapılan ölçüm, sezon başındaki aynı ölçümle kıyaslanamaz. İmbat ve lodos rüzgârı havuza sürekli toz, tuz ve organik madde taşır; bu yük hem klor tüketimini artırır hem de pH'ı oynatır. Denizden gelen tuzlu hava, özellikle [Alaçatı'daki açık konumlu havuzlarda](area:alacati) su kimyasının daha çabuk kaymasına neden olur.",
+            "en": "The peninsula's climate bears directly on your testing rhythm. Through the long, intense summer, as water temperature rises chlorine is consumed faster; a weekly test in high summer is not comparable to the same test at the start of the season. The imbat and lodos winds carry a constant load of dust, salt and organic matter into the pool, which both increases chlorine consumption and unsettles pH. Salt-laden sea air makes water chemistry drift faster still, particularly in [exposed pools in Alaçatı](area:alacati)."
+          },
+          {
+            "tr": "Pratik sonuç şudur: sezonun kalbinde ölçüm sıklığını artırın, rüzgârlı günlerin ardından mutlaka bir şerit daldırın, kalabalık bir hafta sonundan sonra klor ve pH'ı yeniden okuyun. Ölçümleri tarihiyle birlikte not etmek suyun mevsim içindeki eğilimini görünür kılar ve sorunları ortaya çıkmadan yakalamanızı sağlar. Bu düzeni kendiniz sürdürmek istemiyorsanız, [havuz bakım hizmetimiz](page:maintenance) kapsamında su değerleri düzenli olarak ölçülüp kaydedilir. Değerler normal göründüğü hâlde su bulanıklaşıyor ya da kokuyorsa, neden [bulanıklık ve koku](post:havuz-suyu-bulanikligi-kokusu) yazısında ele aldığımız başka başlıklarda olabilir.",
+            "en": "The practical conclusion: raise your testing frequency at the height of the season, always dip a strip after windy days, and read chlorine and pH again after a crowded weekend. Logging readings with their dates makes the water's trend across the season visible and lets you catch problems before they surface. If you would rather not keep this up yourself, water values are measured and logged regularly as part of our [pool maintenance service](page:maintenance). And if the values look normal yet the water is going cloudy or smelling, the cause may lie in the other headings we cover in the article on [cloudiness and odour](post:havuz-suyu-bulanikligi-kokusu)."
+          }
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "q": {
+          "tr": "Havuz suyu ne sıklıkla test edilmeli?",
+          "en": "How often should pool water be tested?"
+        },
+        "a": {
+          "tr": "Yoğun kullanılan bir havuzda serbest klor ve pH her gün, sakin dönemlerde haftada birkaç kez ölçülür. Toplam alkalinite haftada bir ya da iki haftada bir; siyanürik asit ve kalsiyum sertliği ise sezon başında ve ardından ayda bir kontrol edilir. Şok uygulaması, uzun süren yağmur, kalabalık kullanım ve büyük su takviyesinden sonra klor ve pH mutlaka yeniden ölçülmelidir.",
+          "en": "In a heavily used pool, free chlorine and pH are measured daily, and a few times a week in quieter periods. Total alkalinity is checked weekly or fortnightly, while cyanuric acid and calcium hardness are checked at the start of the season and then monthly. After shock dosing, prolonged rain, crowded use or a large top-up, chlorine and pH should always be measured again."
+        }
+      },
+      {
+        "q": {
+          "tr": "Test şeridi mi damla kiti mi daha doğru sonuç verir?",
+          "en": "Which is more accurate, a test strip or a drop kit?"
+        },
+        "a": {
+          "tr": "Damla kiti daha hassastır, çünkü renk su sütununun tamamına yayılır ve ara tonlar ayırt edilebilir. Şerit ise hızlıdır ve günlük hızlı bakış için tasarlanmıştır; size değerin tam sayısını değil aralığını verir. İkisi birbirinin alternatifi değil tamamlayıcısıdır: günlük kontrolü şeritle yapıp haftalık ölçümü damla kitiyle doğrulamak çoğu villa havuzu için yeterli bir düzendir.",
+          "en": "A drop kit is more precise, because the colour spreads through the whole column of water and intermediate shades can be told apart. A strip is fast and designed for a quick daily look; it gives you the range a value sits in rather than an exact figure. The two are complements, not alternatives: doing the daily check with a strip and confirming the weekly reading with a drop kit is enough for most villa pools."
+        }
+      },
+      {
+        "q": {
+          "tr": "Havuz suyu numunesi nereden alınır?",
+          "en": "Where should a pool water sample be taken from?"
+        },
+        "a": {
+          "tr": "Numune yüzeyden değil dirsek derinliğinden alınır; yüzeyin ilk santimetreleri güneşten ve yağ kalıntılarından etkilendiği için havuzu temsil etmez. Skimmer ağzından ve dönüş ağzından uzak durun, çünkü biri filtreye gitmemiş yüzey suyunu, diğeri yeni dozlanmış suyu taşır. Kap temiz olmalı, her ölçüm öncesi havuz suyuyla çalkalanmalı ve numune bekletilmeden test edilmelidir.",
+          "en": "Take the sample at elbow depth rather than from the surface; the top few centimetres are affected by sun and oil residue and do not represent the pool. Stay away from the skimmer mouth and the return outlet, since one carries surface water that has not reached the filter and the other freshly dosed water. The container must be clean, rinsed with pool water before each test, and the sample should be tested without standing."
+        }
+      },
+      {
+        "q": {
+          "tr": "Dijital test cihazına gerçekten ihtiyaç var mı?",
+          "en": "Is a digital tester really necessary?"
+        },
+        "a": {
+          "tr": "Çoğu villa havuzu için şerit ve damla kiti yeterlidir. Dijital fotometre; yoğun kullanılan büyük havuzlarda, site ve apart havuzlarında, kiralanan villalarda ya da su bir türlü dengede durmuyorsa anlam kazanır. Avantajı renk yorumunu ortadan kaldırması ve alkalinite, sertlik, stabilizatör gibi değerleri aynı oturumda sayısal olarak kaydetmesidir. Karşılığında reaktif, pil ve tüp bakımı ister.",
+          "en": "For most villa pools, a strip and a drop kit are enough. A digital photometer earns its place in large, heavily used pools, in shared residential and apartment pools, in rental villas, or where water simply refuses to stay in balance. Its advantage is that it removes the interpretation of colour and records values such as alkalinity, hardness and stabiliser numerically in one session. In return it asks for reagent, battery and vial upkeep."
+        }
+      }
+    ]
+  },
+  "havuz-suyu-bulanikligi-kokusu": {
+    "title": {
+      "tr": "Havuz Suyu Bulanıklığı ve Klor Kokusu: Gerçek Nedenler",
+      "en": "Cloudy Pool Water and Chlorine Smell: The Real Causes"
+    },
+    "seoTitle": {
+      "tr": "Havuz Suyu Bulanıklığı ve Kokusu",
+      "en": "Cloudy Pool Water and Odour"
+    },
+    "excerpt": {
+      "tr": "Havuz suyu bulanıklığı ve keskin klor kokusunun gerçek nedenleri: filtrasyon, kireç, metal, kloramin ve adım adım teşhis sırası.",
+      "en": "The real causes of cloudy pool water and a sharp chlorine smell: filtration, scale, metals, chloramines and a step-by-step diagnosis."
+    },
+    "intro": {
+      "tr": "Havuz suyu bulanıklığı, su yeşil olmadığı halde dibin seçilmediği, rengin sütlü bir griye döndüğü durumdur ve villa sahiplerinin en çok kafasını karıştıran sorundur. Yanına keskin bir klor kokusu eklendiğinde ilk refleks genellikle yanlış olur: klor azaltılır, oysa çoğu vakada sorun klorun fazlalığı değil eksikliğidir. Bu yazıda bulanıklığın alg dışı kök nedenlerini, kokunun gerçekte neyin işareti olduğunu ve doğru teşhis sırasını anlatıyoruz. Amaç, kimyasal üstüne kimyasal eklemeden nedeni bulmanızı sağlamaktır.",
+      "en": "Cloudy pool water is the state where the bottom is no longer visible and the colour turns a milky grey even though the water is not green, and it is the problem that confuses villa owners most. When a sharp chlorine smell is added to it, the first reflex is usually wrong: chlorine gets reduced, whereas in most cases the problem is not too much chlorine but too little. In this article we explain the non-algal root causes of cloudiness, what the smell actually signals, and the correct order of diagnosis. The aim is to let you find the cause without stacking one chemical on top of another."
+    },
+    "sections": [
+      {
+        "heading": {
+          "tr": "Havuz suyu neden bulanıklaşır?",
+          "en": "Why does pool water turn cloudy?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Bulanıklık tek bir hastalık değil, bir belirtidir: suda gözle görülemeyecek kadar küçük ama ışığı dağıtacak kadar çok partikül asılı kalmıştır. Bu partiküller kireç kristali, oksitlenmiş metal, güneş kremi ve vücut yağı kalıntısı, ince toz ya da dezenfeksiyon sonrası ortaya çıkan ölü organik madde olabilir. Ortak nokta şudur: ya partikül suya girmeyi sürdürüyordur ya da filtre onu tutamıyordur. Su yeşile çalıyorsa tablo farklıdır; o durumda yosun çoğalması söz konusudur ve [havuz suyu yeşermesi yazımızdaki](post:havuz-suyu-yesermesi) sırayı izlemelisiniz. Rengi gri-beyaz, sütlü veya donuk olan su ise neredeyse hiçbir zaman alg değildir ve aşağıdaki başlıklardan birine oturur.",
+            "en": "Cloudiness is not a single illness but a symptom: particles too small to see yet numerous enough to scatter light are suspended in the water. These particles may be scale crystals, oxidised metals, sunscreen and body-oil residue, fine dust, or dead organic matter released after disinfection. The common denominator is this: either particles keep entering the water, or the filter cannot retain them. If the water is tinged green the picture is different; that means algae growth, and you should follow the sequence in [our article on green pool water](post:havuz-suyu-yesermesi). Water that is grey-white, milky or dull, however, is almost never algae and fits into one of the headings below."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Filtrasyon yetersizliği bulanıklığı nasıl yaratır?",
+          "en": "How does inadequate filtration create cloudiness?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Bulanıklık vakalarının büyük kısmı kimyasalla değil mekanikle ilgilidir. Filtre kumu zamanla yağ ve kireçle keçeleşir, içinde su için kısa yollar açılır; buna kanal açma denir. Su filtreden geçiyor görünür, manometre normal okur, ama ince partikül filtrelenmeden havuza geri döner. Aynı sonucu kısa devir süresi de verir: yaz ortasında günde yalnız birkaç saat çalışan bir pompa, havuzdaki suyun tamamını gerektiği kadar tur ettiremez. Skimmer ve ön filtre sepetinin yaprakla tıkanması debiyi düşürerek tabloyu ağırlaştırır. Bu nedenle bulanık suda ilk bakılacak yer kimyasal rafı değil makine dairesidir.",
+            "en": "Most cases of cloudiness are mechanical rather than chemical. Filter sand gradually mats together with oil and scale, and short paths open up inside it for the water; this is called channelling. The water appears to pass through the filter, the pressure gauge reads normally, yet fine particles return to the pool unfiltered. A short turnover time produces the same result: in midsummer, a pump running only a few hours a day cannot circulate the entire body of water as many times as it needs. Skimmer and pre-filter baskets clogged with leaves reduce flow and make the picture worse. For that reason, the first place to look in a cloudy pool is the plant room, not the chemical shelf."
+          }
+        ],
+        "bullets": [
+          {
+            "tr": "Skimmer ve pompa ön filtre sepetlerini boşaltın; yaprak ve saç debiyi görünmeden düşürür.",
+            "en": "Empty the skimmer and pump pre-filter baskets; leaves and hair reduce flow invisibly."
+          },
+          {
+            "tr": "Filtreyi ters yıkayın ve ardından durulayın; çıkan suyun berraklaşmasını bekleyin.",
+            "en": "Backwash the filter and then rinse; wait until the discharge water runs clear."
+          },
+          {
+            "tr": "Günlük filtrasyon süresini yaz sezonunda uzatın; bulanık suda kesintisiz çalıştırmak gerekebilir.",
+            "en": "Extend daily filtration time through the summer season; cloudy water may require continuous running."
+          },
+          {
+            "tr": "Kum yıllardır değişmediyse ters yıkamanın işe yaramadığını kabul edin; kum yenilenmelidir.",
+            "en": "If the sand has not been changed for years, accept that backwashing will not help; the sand needs replacing."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Kireç ve su dengesizliği bulanıklığa nasıl yol açar?",
+          "en": "How do scale and water imbalance lead to cloudiness?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Çeşme yarımadasının şebeke suyu sert olabilir ve kalsiyum sertliği zamanla yükselir. Kalsiyum sertliği 400 ppm'in üzerine çıkmış, pH da 7,6'nın üstüne kaçmış bir havuzda kalsiyum suda çözünmüş kalamaz; mikroskobik kristaller halinde çöker ve suyu sütlü beyaz gösterir. Bu tip bulanıklık genellikle sıcak günlerde, buharlaşmayla su seviyesi düştükçe belirginleşir. Ters yönde, toplam alkalinite 80 ppm'in altına indiğinde su tamponunu kaybeder; pH gün içinde zıplar ve her dalgalanmada yeni çökelme veya korozyon başlar. Hedef aralıklar pH 7,2–7,6, toplam alkalinite 80–120 ppm, kalsiyum sertliği 200–400 ppm'dir. Ölçüm ve düzeltme mantığının tamamını [pH ve klor dozajı yazımızda](post:havuz-ph-klor-dozaj) bulabilirsiniz.",
+            "en": "Mains water on the Çeşme peninsula can be hard, and calcium hardness rises over time. In a pool where calcium hardness has climbed above 400 ppm and pH has drifted above 7.6, calcium can no longer stay dissolved; it precipitates as microscopic crystals and makes the water look milky white. This type of cloudiness usually becomes obvious on hot days, as evaporation lowers the water level. In the opposite direction, when total alkalinity falls below 80 ppm the water loses its buffer; pH swings through the day, and each swing starts fresh precipitation or corrosion. The target ranges are pH 7.2–7.6, total alkalinity 80–120 ppm and calcium hardness 200–400 ppm. You will find the full logic of measurement and correction in [our article on pH and chlorine dosing](post:havuz-ph-klor-dozaj)."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Sudaki metaller bulanıklık yapar mı?",
+          "en": "Can metals in the water cause cloudiness?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Kuyu suyu veya eski metal boru hattıyla beslenen havuzlarda demir, bakır ve manganez suya çözünmüş halde girer; renksizdir, göze çarpmaz. Klor eklendiği anda bu metaller oksitlenir ve gözle görülür partiküle dönüşür. Sonuç bulanık ve renkli bir sudur: demirde pas-kahve, bakırda mavi-yeşil tonlar, manganezde grimsi bir gölge. Havuzu taze suyla tamamladıktan ya da şok klorlamadan hemen sonra ortaya çıkan renk değişimi güçlü bir metal işaretidir. Çözüm klorlamayı kesmek değil, metali bağlamaktır; [metal bağlayıcı bir ürünle](product:anti-iyon-quardex) metalleri tutup ardından filtreyle uzaklaştırmak gerekir. Metal çökeldiği halde ihmal edilirse fayans ve derzlerde kalıcı leke bırakır.",
+            "en": "In pools fed by well water or old metal pipework, iron, copper and manganese enter the water in dissolved form; they are colourless and go unnoticed. The moment chlorine is added, these metals oxidise and turn into visible particles. The result is cloudy, tinted water: rust-brown for iron, blue-green for copper, a greyish cast for manganese. A colour change that appears right after topping the pool up with fresh water or after shock chlorination is a strong indication of metals. The solution is not to stop chlorinating but to bind the metal; [a metal sequestrant](product:anti-iyon-quardex) should hold the metals so the filter can then remove them. If precipitated metal is left unattended, it leaves permanent staining on tiles and grout."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Şok klorlamadan sonra su neden bulanıklaşır?",
+          "en": "Why does water go cloudy after shock chlorination?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Şok klorlamanın ardından suyun bir süre bulanıklaşması çoğu zaman kötü değil, beklenen bir sonuçtur: klor organik yükü parçalamış, ortaya asılı kalan ölü partiküller çıkmıştır. Bunlara güneş kremi, losyon, vücut yağı, imbatın taşıdığı ince toz ve polen de eklenir. Filtre bu partiküllerin bir kısmını tutamayacak kadar iridir ve partiküller havuzda dolaşmaya devam eder. Burada iki ayrı ürün ailesi işe yarar ve karıştırılmamalıdır. Berraklaştırıcı, ince partikülleri filtrenin tutabileceği boyutta topaklar; su filtrasyonla temizlenir. Çöktürücü ise partikülleri tabana indirir ve bu çökeltinin süpürgeyle atığa alınması gerekir.",
+            "en": "Water clouding for a while after shock chlorination is usually an expected result rather than a bad one: chlorine has broken down the organic load, and suspended dead particles have been released. Sunscreen, lotion, body oil, and the fine dust and pollen carried by the imbat wind add to them. Some of these particles are too small for the filter to catch, and they keep circulating through the pool. Two distinct product families help here, and they should not be confused. A clarifier clumps fine particles to a size the filter can retain; the water is then cleared by filtration. A flocculant, by contrast, drives the particles to the floor, and that sediment must be vacuumed to waste."
+          },
+          {
+            "tr": "Seçim, bulanıklığın derecesine ve acelenize bağlıdır. Hafif ve orta bulanıklıkta filtre sağlamsa [berraklaştırıcı ürün](product:berraklastirici-quardex) yeterlidir ve havuz kullanımdan çıkmaz. Dibin hiç seçilmediği ağır vakalarda ise [çöktürücü kullanımı](product:cokturucu-selenoid) daha hızlı sonuç verir; ancak havuzun birkaç saat dinlendirilmesi, sonra çökeltinin dikkatle süpürülmesi ve kaybedilen suyun tamamlanması gerekir. Çöktürücü uygulanmış bir havuzda filtreyi normal konumda çalıştırmak çökeltiyi yeniden havalandırır ve emeği boşa çıkarır. Hangi ürünü kullanırsanız kullanın etiketteki dozaja uyun ve kimyasalları asla birbirine karıştırmayın; kimyasal daima suya eklenir, su kimyasalın üzerine değil.",
+            "en": "The choice depends on how cloudy the water is and how quickly you need it clear. For light to moderate cloudiness with a sound filter, [a clarifier](product:berraklastirici-quardex) is enough and the pool stays in use. In severe cases where the floor is not visible at all, [using a flocculant](product:cokturucu-selenoid) gives faster results; however, the pool must be left to settle for several hours, the sediment then vacuumed carefully, and the lost water replaced. Running the filter in its normal position in a flocculated pool stirs the sediment back up and wastes the effort. Whichever product you use, follow the dose on the label and never mix chemicals with one another; chemicals are always added to water, never water onto the chemical."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Keskin klor kokusu gerçekten klor fazlalığı mıdır?",
+          "en": "Is a sharp chlorine smell really too much chlorine?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Hayır, tam tersidir. İyi dengelenmiş bir havuz neredeyse kokusuzdur. Havuz kenarında duyduğunuz o keskin, gözü yakan koku serbest klorun değil kloraminin, yani bağlı klorun kokusudur. Kloramin, klorun ter, idrar, kozmetik ve organik atıkla birleşmesiyle oluşan, dezenfeksiyon gücünü yitirmiş bir bileşiktir. Yani koku klorun çok olduğunu değil, çalışacak serbest klorun kalmadığını söyler. Bu yüzden koku duyulduğunda klor beslemesini kısmak sorunu büyütür; doğru refleks dengeyi düzeltmek ve gerekiyorsa kloraminleri parçalayacak bir şok uygulamasıdır. Aynı koku, gözde kızarıklık ve mayolarda solmayla birlikte geliyorsa tablo daha da nettir.",
+            "en": "No, it is the opposite. A well-balanced pool is almost odourless. That sharp, eye-stinging smell at the poolside is not free chlorine but chloramine, that is, combined chlorine. Chloramine is a compound formed when chlorine combines with sweat, urine, cosmetics and organic waste, and it has lost its disinfecting power. In other words, the smell tells you not that there is too much chlorine but that there is no free chlorine left to work. Cutting back the chlorine feed when you notice the smell therefore makes the problem worse; the correct reflex is to restore balance and, if needed, apply a shock treatment that breaks the chloramines down. If the same smell comes with red eyes and faded swimwear, the picture is clearer still."
+          },
+          {
+            "tr": "Bunu tahminle değil ölçümle doğrularsınız. Serbest klor suda iş görmeye hazır klordur; toplam klor ise serbest ve bağlı klorun toplamıdır. İkisi arasındaki fark size bağlı klor miktarını verir ve bu fark belirginse kloramin sorununuz var demektir. Basit tek renkli test şeritleri çoğu zaman yalnız toplam kloru gösterir, dolayısıyla bu ayrımı yapamaz; [hangi test kitinin ne ölçtüğünü karşılaştıran yazımız](post:havuz-test-kiti-karsilastirma) seçim için yol gösterir. Kronik kloramin sorunu yaşayan, yoğun kullanılan villa havuzlarında [bağlı klor gidericisi bir ürün](product:bagli-klor-poolbox) devreye alınabilir; ama kalıcı çözüm duş alışkanlığı, düzenli ölçüm ve yeterli filtrasyondur.",
+            "en": "You confirm this by measurement, not guesswork. Free chlorine is the chlorine ready to do its job in the water; total chlorine is the sum of free and combined chlorine. The difference between the two gives you the amount of combined chlorine, and if that gap is significant you have a chloramine problem. Simple single-colour test strips often show only total chlorine and therefore cannot make this distinction; [our comparison of what each test kit actually measures](post:havuz-test-kiti-karsilastirma) will guide your choice. In heavily used villa pools with a chronic chloramine problem, [a combined-chlorine remover](product:bagli-klor-poolbox) can be brought in; but the lasting solution is a showering habit, regular measurement and sufficient filtration."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Bulanık suda hangi sırayla teşhis yapılmalı?",
+          "en": "In what order should a cloudy pool be diagnosed?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Bulanıklıkta en pahalı hata, nedeni bulmadan sırayla kimyasal denemektir; her deneme suyun dengesini daha da bozar. Aşağıdaki sıra mekanikten kimyasala doğru ilerler ve çoğu vakayı ilk üç adımda çözer. Her adımdan sonra havuzu en az bir tam filtrasyon devri boyunca çalıştırıp sonucu görmeden bir sonrakine geçmeyin.",
+            "en": "The most expensive mistake with cloudy water is trying chemicals one after another before finding the cause; each attempt upsets the water balance further. The sequence below moves from mechanical to chemical and resolves most cases within the first three steps. After each step, run the pool for at least one full turnover and see the result before moving to the next."
+          }
+        ],
+        "bullets": [
+          {
+            "tr": "Sepetleri ve filtreyi kontrol edin, ters yıkayın, filtrasyon süresini uzatın.",
+            "en": "Check the baskets and the filter, backwash, and extend the filtration time."
+          },
+          {
+            "tr": "pH ve toplam alkaliniteyi ölçün, önce alkaliniteyi sonra pH'ı hedef aralığa çekin.",
+            "en": "Measure pH and total alkalinity, correcting alkalinity first and then pH into the target range."
+          },
+          {
+            "tr": "Serbest ve toplam kloru ayrı ayrı ölçün; aradaki fark büyükse kloramin sorununu ele alın.",
+            "en": "Measure free and total chlorine separately; if the gap is large, address the chloramine problem."
+          },
+          {
+            "tr": "Renk tonuna bakın: pas, mavi-yeşil veya gri gölge varsa metal şüphesiyle ilerleyin.",
+            "en": "Look at the colour cast: rust, blue-green or grey shades point to a metal problem."
+          },
+          {
+            "tr": "Kalsiyum sertliğini ölçtürün; yüksekse kısmi su değişimi tek gerçekçi çözümdür.",
+            "en": "Have calcium hardness measured; if it is high, partial water replacement is the only realistic solution."
+          },
+          {
+            "tr": "Denge ve filtrasyon tamamsa geriye kalan ince partikül için berraklaştırıcı ya da çöktürücüye geçin.",
+            "en": "If balance and filtration are sound, move on to a clarifier or flocculant for the remaining fine particles."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Ne zaman uzman çağırmalısınız?",
+          "en": "When should you call a professional?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Doğru sırayı uyguladığınız halde su bir haftadır berraklaşmıyorsa, denge değerleri tutmuyor ve her ölçümde farklı çıkıyorsa ya da ters yıkama artık hiçbir iyileşme sağlamıyorsa sorun su kimyasında değil ekipmandadır. Kum yaşlanması, yetersiz pompa debisi, hatalı vana konumu ve gizli sirkülasyon kaybı bu tabloyu üretir. Tekrarlayan leke, kalıcı kireç kabuğu ve sürekli kloramin kokusu da yerinde inceleme ister. Çeşme, Alaçatı ve Urla'daki villa havuzlarında sezon boyu düzenli ölçüm ve servis, bu sorunların büyümeden çözülmesini sağlar; [havuz bakım hizmetimiz](page:maintenance) kapsamında su dengesi, filtrasyon ve ekipman tek bir rutinde takip edilir. [Çeşme'deki havuz bakımı](area:cesme) için keşif ve ölçümle başlanır.",
+            "en": "If the water has not cleared for a week despite following the correct order, if the balance values will not hold and read differently at every test, or if backwashing no longer brings any improvement, the problem lies in the equipment rather than the water chemistry. Ageing sand, insufficient pump flow, a wrong valve position and hidden circulation losses all produce this picture. Recurring stains, a persistent scale crust and a constant chloramine smell also call for an on-site inspection. In villa pools across Çeşme, Alaçatı and Urla, regular measurement and service through the season keeps these problems from growing; under [our pool maintenance service](page:maintenance), water balance, filtration and equipment are tracked in a single routine. [Pool maintenance in Çeşme](area:cesme) starts with a site visit and a full set of measurements."
+          }
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "q": {
+          "tr": "Havuz suyu bulanıksa havuza girilir mi?",
+          "en": "Can you swim in a pool with cloudy water?"
+        },
+        "a": {
+          "tr": "Hafif bulanıklıkta serbest klor 1–3 ppm aralığındaysa ve pH 7,2–7,6 arasındaysa yüzmek genellikle sakıncalı görülmez. Ancak havuzun dibi seçilemiyorsa girilmemelidir; bu bir güvenlik sorunudur, çünkü suyun altındaki bir kişi görülemez. Ayrıca belirgin bulanıklık dezenfeksiyonun yetersiz olduğunun işareti olabilir. Önce serbest klor ve pH ölçülmeli, değerler tutmuyorsa havuz berraklaşana kadar kullanım durdurulmalıdır.",
+          "en": "With light cloudiness, swimming is generally not considered a problem if free chlorine is between 1 and 3 ppm and pH is between 7.2 and 7.6. However, if the bottom of the pool is not visible, no one should enter; this is a safety issue, because a person underwater cannot be seen. Marked cloudiness may also indicate inadequate disinfection. Measure free chlorine and pH first, and if the values are off, keep the pool out of use until it clears."
+        }
+      },
+      {
+        "q": {
+          "tr": "Bulanık havuz suyu ne kadar sürede berraklaşır?",
+          "en": "How long does it take for cloudy pool water to clear?"
+        },
+        "a": {
+          "tr": "Neden doğru bulunduysa hafif bulanıklık genellikle bir ila iki tam filtrasyon devrinde, yani havuzun büyüklüğüne göre bir gün içinde açılır. Berraklaştırıcı kullanılan orta düzey vakalarda iki güne kadar uzayabilir. Çöktürücü uygulanan ağır vakalarda birkaç saatlik dinlenme, ardından dikkatli süpürme gerekir ve işlem bir günde tamamlanır. Filtre yorgunsa hiçbir kimyasal süreyi kısaltmaz.",
+          "en": "If the cause has been correctly identified, light cloudiness usually clears within one or two full turnovers, that is within a day depending on pool size. Moderate cases treated with a clarifier can take up to two days. Severe cases treated with a flocculant need a few hours of settling followed by careful vacuuming, and the job is completed within a day. If the filter is exhausted, no chemical will shorten the process."
+        }
+      },
+      {
+        "q": {
+          "tr": "Klor kokusunu azaltmak için klor dozunu düşürmeli miyim?",
+          "en": "Should I reduce the chlorine dose to cut the chlorine smell?"
+        },
+        "a": {
+          "tr": "Hayır. Keskin koku serbest klordan değil, dezenfeksiyon gücünü yitirmiş bağlı klordan, yani kloraminden gelir. Dozu düşürmek serbest klor açığını büyütür ve koku artar. Doğru yaklaşım serbest ve toplam kloru ayrı ölçmek, aradaki farkı görmek, pH'ı 7,2–7,6 aralığına çekmek ve gerekiyorsa kloraminleri parçalayacak bir şok uygulaması yapmaktır. Filtrasyon süresini uzatmak da kalıcı fayda sağlar.",
+          "en": "No. The sharp smell comes not from free chlorine but from combined chlorine, the chloramines that have lost their disinfecting power. Lowering the dose widens the free-chlorine deficit and the smell intensifies. The right approach is to measure free and total chlorine separately, look at the gap, bring pH into the 7.2–7.6 range, and if needed apply a shock treatment that breaks the chloramines down. Extending filtration time also brings lasting benefit."
+        }
+      },
+      {
+        "q": {
+          "tr": "Berraklaştırıcı ile çöktürücü arasındaki fark nedir?",
+          "en": "What is the difference between a clarifier and a flocculant?"
+        },
+        "a": {
+          "tr": "Berraklaştırıcı, askıdaki ince partikülleri filtrenin tutabileceği büyüklükte topaklar; su normal filtrasyonla temizlenir ve havuz kullanımda kalır. Çöktürücü ise partikülleri tabana indirir; çökelti filtreden geçirilmeden süpürgeyle doğrudan atığa alınmalıdır. Çöktürücü daha hızlıdır ama havuzu birkaç saat dinlendirmeyi, su kaybını tamamlamayı ve dikkatli süpürmeyi gerektirir. İkisi aynı anda kullanılmaz.",
+          "en": "A clarifier clumps fine suspended particles to a size the filter can retain; the water is cleared by normal filtration and the pool stays in use. A flocculant instead drives the particles to the floor; that sediment must be vacuumed directly to waste rather than through the filter. A flocculant is faster but requires several hours of settling, topping the water back up, and careful vacuuming. The two are never used at the same time."
+        }
+      }
+    ]
+  },
+  "havuz-pompasi-arizalari": {
+    "title": {
+      "tr": "Havuz Pompası Arızaları: Belirtiler, Olası Nedenler ve Ne Zaman Uzman Gerekir",
+      "en": "Pool Pump Faults: Symptoms, Likely Causes and When to Call a Professional"
+    },
+    "seoTitle": {
+      "tr": "Havuz Pompası Arızaları Rehberi",
+      "en": "Pool Pump Fault Guide"
+    },
+    "excerpt": {
+      "tr": "Havuz pompası ve filtrasyon arızalarını belirtiden teşhise okuyun: çalışmama, su basmama, zayıf akış, gürültü, sızıntı ve durup kalkma nedenleri.",
+      "en": "Read pool pump and filtration faults from symptom to diagnosis: no start, no prime, weak flow, noise, leaks and short cycling explained."
+    },
+    "intro": {
+      "tr": "Havuz pompası arızaları çoğu zaman aniden ortaya çıkmaz; pompa günler öncesinden ses, akış ya da basınç üzerinden sinyal verir. Bu sinyalleri doğru okumak, küçük bir tıkanıklıkla motor yenilemesi arasındaki farkı belirler. Bu yazıda havuz pompası ve filtrasyon sisteminde en sık karşılaşılan arızaları belirtiye göre sıraladık: pompanın hiç çalışmaması, çalışıp su basmaması, akışın zayıflaması, gürültü ve titreşim, sızıntı ve sürekli durup kalkma. Manometrenin ne anlattığına ve ters yıkama zamanının nasıl anlaşıldığına da ayrı bir başlık ayırdık. Her bölümde ev sahibinin güvenle yapabileceği kontrollerle yetkili kişi gerektiren işleri net biçimde ayırdık.",
+      "en": "Pool pump faults rarely appear out of nowhere; the pump signals trouble for days through sound, flow or pressure. Reading those signals correctly is what separates a minor blockage from a motor replacement. In this article we have organised the most common pool pump and filtration faults by symptom: the pump not starting at all, running without priming, weakening flow, noise and vibration, leaks and constant short cycling. We have also given a separate heading to what the pressure gauge tells you and how to know when to backwash. In every section we clearly separate the checks a homeowner can safely make from the work that requires a qualified professional."
+    },
+    "sections": [
+      {
+        "heading": {
+          "tr": "Havuz pompası hiç çalışmıyorsa ilk olarak neye bakılır?",
+          "en": "If the pool pump will not start at all, what should be checked first?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Pompa hiç tepki vermiyorsa sorun genellikle üç başlıkta toplanır: elektrik beslemesi, motorun termik koruması ve sıkışmış rotor. Elektrik tarafında sigortanın atması, kaçak akım rölesinin düşmesi ya da zaman saatinin yanlış programlanması sık görülür. Motor ısınarak kendini korumaya aldıysa soğuyana kadar çalışmaz; bu çoğunlukla sıcak ve havalandırması yetersiz bir makine dairesine işaret eder. Uzun süre durmuş bir pompada ise mil ve rotor oturabilir, motor uğuldar ama dönmez. En önemli kural şudur: panoya, kabloya ya da motora dokunulacak her işten önce enerji kesilmeli ve müdahale yetkili kişi tarafından yapılmalıdır.",
+            "en": "If the pump gives no response at all, the cause usually falls into three groups: the electrical supply, the motor's thermal protection, and a seized rotor. On the electrical side, a blown fuse, a tripped residual-current device or a wrongly programmed timer are common. If the motor has overheated into self-protection, it will not run until it cools; this usually points to a hot, poorly ventilated plant room. In a pump left idle a long time, the shaft and rotor can seize, so the motor hums without turning. The overriding rule: before any work touching the panel, cabling or motor, the power must be isolated and the work carried out by a qualified person."
+          },
+          {
+            "tr": "Ev sahibinin güvenle bakabileceği tek şey, sigortanın ve zaman saatinin konumudur. Sigorta atmaya devam ediyorsa ya da kaçak akım rölesi tekrar tekrar düşüyorsa bu bir kullanım hatası değil, sistemin size bir yalıtım veya motor sorunu bildirmesidir; tekrar tekrar kaldırmak yerine servis çağırmak doğrudur. Çeşme yarımadasında tuzlu ve nemli hava pano içi bağlantılarda zamanla oksitlenmeye yol açabilir; bu nedenle elektrik bağlantılarının periyodik gözden geçirilmesi [düzenli havuz bakımı](page:maintenance) programının doğal bir parçasıdır.",
+            "en": "The only things a homeowner can safely look at are the fuse and the timer setting. If the fuse keeps blowing or the residual-current device trips repeatedly, that is not a usage error but the system reporting an insulation or motor problem; calling a service technician is the right move rather than resetting it again and again. On the Çeşme peninsula, salty, humid air can gradually oxidise connections inside the panel, which is why periodic inspection of electrical connections is a natural part of a [regular pool maintenance](page:maintenance) programme."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Pompa çalışıyor ama su basmıyorsa sorun nerede?",
+          "en": "The pump runs but will not prime — where is the problem?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Motorun dönmesine rağmen su dolaşmıyorsa neredeyse her zaman emiş hattına hava karışmıştır. En sık görülen dört neden şunlardır: su seviyesinin skimmer ağzının altına düşmesi, ön filtre sepetinin yaprak ve saçla tıkanması, kapak contasının kurumuş ya da yerinden çıkmış olması ve emiş hattındaki bir rakorun gevşemesi. Seviye skimmer ağzını örtmediğinde skimmer sürekli hava yutar; pompa haznesinde su yerine hava birikir ve çark boşa döner. Conta kurumuşsa hazne içinde suyun düşük kaldığını ve kapağın altında kabarcıklar oluştuğunu görürsünüz.",
+            "en": "If the motor turns but no water circulates, air has almost always entered the suction line. The four most common causes are: the water level dropping below the skimmer mouth, the strainer basket clogged with leaves and hair, a dried or displaced lid gasket, and a loosened union on the suction line. When the level no longer covers the skimmer mouth, the skimmer continuously draws air; the pump housing fills with air instead of water and the impeller spins dry. If the gasket has dried out, you will see the water in the housing staying low, with bubbles forming under the lid."
+          },
+          {
+            "tr": "Bu belirtilerin hepsinde tek bir şart geçerlidir: pompa kuru çalıştırılmamalıdır. Su basmayan bir pompayı ısrarla açık tutmak, salmastrayı ve motoru kısa sürede kalıcı biçimde yıpratır. Seviyeyi ve sepeti kontrol etmek ev sahibinin güvenle yapabileceği işlerdendir; conta değişimi ve hat üzerinde iş yapmak ise servisin alanına girer. Su seviyesi sürekli düşüyorsa buharlaşmanın ötesinde bir durum olabilir; bunun teşhisi [havuz su kaçağı tespiti](post:havuz-su-kacagi-tamiri) yazımızda anlatılıyor.",
+            "en": "One condition applies to all of these symptoms: the pump must never run dry. Insisting on keeping a pump running when it will not prime quickly causes permanent damage to the mechanical seal and the motor. Checking the level and the basket is safely within a homeowner's reach; replacing gaskets and working on the pipework belong to the service technician. If the water level keeps dropping beyond normal evaporation, something else may be going on; diagnosing that is covered in our article on [pool leak detection](post:havuz-su-kacagi-tamiri)."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Akış zayıfladığında manometre size ne anlatır?",
+          "en": "When flow weakens, what is the pressure gauge telling you?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Zayıf akışın kaynağını bulmanın en pratik yolu, filtre üzerindeki manometreyi okumaktır. Burada mutlak bir rakam değil, kendi havuzunuzun referans değeri önemlidir: filtre yeni temizlenmişken ibrenin nerede durduğunu bir kez not edin. Basınç bu temiz filtre değerinin belirgin biçimde üzerine çıktıysa filtre yatağı kirlenmiştir ve ters yıkama zamanı gelmiştir. Tersine, temiz değerin altına düştüyse sorun emiş tarafındadır: sepetler tıkalıdır, bir vana kapalı kalmıştır veya seviye düşmüştür.",
+            "en": "The most practical way to find the source of weak flow is to read the pressure gauge on the filter. What matters is not an absolute figure but your own pool's reference value: note once where the needle sits when the filter has just been cleaned. If the pressure has risen noticeably above that clean-filter value, the filter bed has become dirty and it is time to backwash. If instead it has fallen below the clean value, the problem is on the suction side: the baskets are blocked, a valve has been left closed, or the level has dropped."
+          },
+          {
+            "tr": "Akış düşüşünün sıkça atlanan bir nedeni de vana konumudur. Çok yollu vana ters yıkama ya da atık konumunda bırakıldıysa veya dip emiş ile skimmer arasındaki denge vanası tamamen kapatıldıysa, sistemde hiçbir arıza olmadan akış zayıflar. Geri dönüş nozullarının kireç ya da kirle daralması da dolaşımı bozar. Filtre yatağı yıllar içinde topaklaşır ve ters yıkama artık basıncı düşürmezse, kum yenileme ya da [kum filtresi](product:kum-filtresi-600) değişimi gündeme gelir.",
+            "en": "A frequently overlooked cause of reduced flow is valve position. If the multiport valve has been left in backwash or waste, or the balancing valve between the main drain and the skimmer has been fully closed, flow weakens without any fault in the system at all. Return nozzles narrowed by scale or debris disrupt circulation too. If the filter bed channels and compacts over the years so that backwashing no longer brings the pressure down, replacing the media or the [sand filter](product:kum-filtresi-600) itself comes onto the agenda."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Pompadan gelen gürültü ve titreşim neyin habercisi?",
+          "en": "What do noise and vibration from the pump indicate?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Sesin karakteri, arızanın yerini şaşırtıcı ölçüde iyi tarif eder. Pompanın içinden çakıl taşı dönüyormuş gibi bir çıtırtı geliyorsa bu genellikle kavitasyondur: pompa yeterince su bulamadığı için emiş tarafında kabarcıklar oluşur ve çark üzerinde patlar. Nedeni neredeyse her zaman bir emiş kısıtıdır; tıkalı sepet, düşük su seviyesi ya da kısmen kapalı bir emiş vanası. Kavitasyon çarkı ve salmastrayı hızla aşındırdığı için sesi duyduğunuzda emiş tarafını kontrol etmek gerekir.",
+            "en": "The character of the sound describes the location of the fault surprisingly well. A rattling noise, as if gravel were tumbling inside the pump, is usually cavitation: because the pump cannot find enough water, bubbles form on the suction side and collapse against the impeller. The cause is almost always a suction restriction — a blocked basket, a low water level or a partly closed suction valve. Because cavitation quickly erodes the impeller and the seal, the suction side needs checking as soon as you hear it."
+          },
+          {
+            "tr": "Buna karşılık sürekli, metalik ve giderek yükselen bir uğultu duyuyorsanız motor yataklarının aşınmasından şüphelenilir; bu ses genellikle motorun normalden çok daha fazla ısınmasıyla birlikte gelir ve yatak değişimi ya da motor yenileme gerektiren bir servis işidir. Üçüncü ihtimal daha masumdur: pompanın kaidesine gevşek bağlanması veya titreşim takozlarının yorulması, sesin tüm makine dairesine yayılmasına yol açar. Gevşek montajın erken fark edilmesi, titreşimin boru bağlantılarını ve rakorları yormasını önler.",
+            "en": "By contrast, a continuous, metallic hum that grows louder over time points to worn motor bearings; this sound usually comes with the motor running far hotter than normal and calls for bearing replacement or a motor overhaul, which is service work. The third possibility is more benign: a pump loosely fixed to its base, or tired anti-vibration mounts, lets the noise carry through the whole plant room. Spotting loose mounting early prevents vibration from fatiguing pipe connections and unions."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Pompanın çevresinde su görüyorsanız sızıntı nereden gelir?",
+          "en": "If you see water around the pump, where is the leak coming from?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Pompanın altında biriken su, kaynağına göre farklı aciliyetler taşır. Motorla pompa gövdesinin birleştiği noktadan, yani milin çıktığı yerden damlıyorsa mekanik salmastra yorulmuştur. Bu, pompalarda en sık yenilenen parçalardan biridir ve zamanında değiştirilmezse su motorun içine sızarak çok daha pahalı bir arızaya dönüşür. Sızıntı kapak çevresinden geliyorsa çoğunlukla kurumuş, çatlamış ya da tam oturmamış bir kapak contası söz konusudur. Giriş-çıkış rakorlarından gelen damlamalarda ise contanın yorulduğu ya da rakorun gevşediği anlaşılır.",
+            "en": "Water pooling under the pump carries different levels of urgency depending on its source. If it drips from where the motor meets the pump body — where the shaft emerges — the mechanical seal has worn out. This is one of the most frequently renewed parts on a pump, and if it is not replaced in time, water seeps into the motor and turns into a far more expensive fault. If the leak comes from around the lid, the usual culprit is a dried, cracked or improperly seated lid gasket. Drips from the inlet and outlet unions indicate either a tired gasket or a loosened union."
+          },
+          {
+            "tr": "Sızıntının yerini tespit etmek ev sahibinin yapabileceği bir gözlemdir; parça değişimi ise değildir. Salmastra değişimi pompanın sökülmesini ve elektrikli ekipman üzerinde çalışmayı gerektirir; enerji kesilerek ve yetkili kişi tarafından yapılmalıdır. Motorun üzerine su damlıyorsa pompayı çalıştırmadan servisi aramak en güvenli yoldur. Şunu da not edin: makine dairesindeki küçük bir damlama havuzun su seviyesini hissedilir biçimde düşürmez; seviye belirgin düşüyorsa nedeni başka yerdedir.",
+            "en": "Locating a leak is something a homeowner can observe; replacing parts is not. Renewing a mechanical seal requires dismantling the pump and working on electrical equipment; it must be done with the power isolated and by a qualified person. If water is dripping onto the motor, the safest course is to leave the pump off and call a technician. Note too that a small drip in the plant room will not noticeably lower the pool's water level; if the level is dropping markedly, the cause lies elsewhere."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Pompa sürekli durup kalkıyorsa ne oluyor?",
+          "en": "If the pump keeps stopping and starting, what is happening?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Pompanın bir süre çalışıp kendiliğinden durması ve sonra tekrar devreye girmesi klasik bir aşırı ısınma tablosudur. Motorun içindeki termik koruma, sıcaklık güvenli sınırı aştığında devreyi keser ve motor soğuyunca yeniden açar. Bu döngü bir arıza değil, bir uyarıdır. En sık nedenler makine dairesinin havalandırmasının yetersiz olması, pompanın üzerinin örtülmesi, motor fan kapağının tıkanması, emiş kısıtı nedeniyle pompanın zorlanması ve elektrik besleme sorunlarıdır. Kapalı ve güneş gören bir makine dairesinde bu tablo yazın belirgin biçimde artar.",
+            "en": "A pump that runs for a while, stops by itself and comes back on later is a classic picture of overheating. The thermal protector inside the motor cuts the circuit when temperature exceeds a safe limit and restores it once the motor cools. This cycle is not a fault but a warning. The most common causes are poor ventilation in the plant room, the pump being covered over, a clogged motor fan cover, the pump straining because of a suction restriction, and problems with the electrical supply. In a closed plant room exposed to sun, this becomes markedly more frequent in summer."
+          },
+          {
+            "tr": "Aşağıdaki kontroller, servisi aramadan önce tabloyu netleştirmenize yardımcı olur ve hiçbiri elektrikli aksama dokunmayı gerektirmez:",
+            "en": "The checks below help you clarify the picture before calling a technician, and none of them require touching electrical components:"
+          }
+        ],
+        "bullets": [
+          {
+            "tr": "Makine dairesinin havalandırma menfezleri açık mı, pompanın üzeri örtülü mü?",
+            "en": "Are the plant room's ventilation grilles open, and is anything covering the pump?"
+          },
+          {
+            "tr": "Motorun arkasındaki fan kapağı toz, yaprak veya böcek yuvasıyla tıkanmış mı?",
+            "en": "Is the fan cover at the back of the motor blocked by dust, leaves or nests?"
+          },
+          {
+            "tr": "Skimmer ve pompa ön filtre sepetleri temiz mi, su seviyesi skimmer ağzını örtüyor mu?",
+            "en": "Are the skimmer and pump strainer baskets clean, and does the water level cover the skimmer mouth?"
+          },
+          {
+            "tr": "Manometre, temiz filtre değerinin çok üzerinde mi duruyor?",
+            "en": "Is the pressure gauge sitting well above the clean-filter value?"
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Hangi kontroller size ait, hangi işler uzman ister?",
+          "en": "Which checks are yours to make, and which jobs need a professional?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Bu ayrımı baştan netleştirmek hem güvenlik hem maliyet açısından belirleyicidir. Ev sahibi olarak güvenle yapabileceğiniz işler gözlem ve temizlik düzeyindedir: su seviyesini kontrol etmek, sepetleri boşaltmak, manometreyi okumak, vana konumlarını doğrulamak ve sesi, sızıntıyı, ısınmayı not etmek. Buna karşılık pano ve kablo işleri, motor ve yatak müdahaleleri, salmastra ve conta değişimi, tesisat üzerinde sökme-takma, kum yatağı yenileme ve pompa değişimi yetkili kişinin işidir. Pompa değişimi gündeme geldiğinde seçim yalnızca marka meselesi değildir; havuz hacmi, tesisat çapı ve filtre kapasitesi birlikte değerlendirilir. Yanlış seçilmiş bir [havuz pompası](product:pompa-1hp), ya suyu yeterince çeviremediği için berraklık sorunlarına ya da gereksiz enerji tüketimine yol açar.",
+            "en": "Drawing this line clearly from the outset matters for both safety and cost. As a homeowner, what you can safely do stays at the level of observation and cleaning: checking the water level, emptying the baskets, reading the pressure gauge, confirming valve positions, and noting sounds, leaks and heat. Panel and cabling work, motor and bearing interventions, seal and gasket replacement, dismantling pipework, renewing filter media and changing the pump itself, on the other hand, are the qualified person's job. When pump replacement comes onto the agenda, the choice is not simply a matter of brand; pool volume, pipework diameter and filter capacity are weighed together. A wrongly specified [pool pump](product:pompa-1hp) leads either to clarity problems because the water is not turned over enough, or to needless energy consumption."
+          }
+        ]
+      },
+      {
+        "heading": {
+          "tr": "Pompanın ömrünü uzatan alışkanlıklar nelerdir?",
+          "en": "Which habits extend a pump's working life?"
+        },
+        "paragraphs": [
+          {
+            "tr": "Pompa arızalarının önemli bir kısmı, basit ve düzenli alışkanlıklarla hiç yaşanmayacak arızalardır. Sepetin düzenli boşaltılması, su seviyesinin skimmer ağzını örtecek şekilde korunması ve pompanın hiçbir koşulda kuru çalıştırılmaması, tek başına sorunların çoğunu önler. Bu kontrollerin diğer rutin işlerle nasıl birleştiğini [haftalık havuz bakım rutini](post:havuz-bakimi-nasil-yapilir) yazımızda bulabilirsiniz. Çeşme, Alaçatı ve Ilıca'da imbat rüzgârının taşıdığı toz ve yaprak yükü sepetleri beklenenden hızlı doldurduğu için [Çeşme'deki villa havuzlarında](area:cesme) sepet kontrolünün sıklığı yaz boyunca artırılmalıdır. Tuzlu deniz havası ise makine dairesindeki metal aksamı ve elektrik bağlantılarını yorar.",
+            "en": "A significant share of pump faults would never occur given simple, regular habits. Emptying the basket routinely, keeping the water level covering the skimmer mouth, and never running the pump dry prevent most problems on their own. You can see how these checks combine with other routine tasks in our article on the [weekly pool maintenance routine](post:havuz-bakimi-nasil-yapilir). In Çeşme, Alaçatı and Ilıca, the dust and leaf load carried by the imbat wind fills baskets faster than expected, so for [villa pools in Çeşme](area:cesme) basket checks should be made more frequently through the summer. Salty sea air, meanwhile, wears on metal fittings and electrical connections in the plant room."
+          }
+        ],
+        "bullets": [
+          {
+            "tr": "Sepetleri düzenli boşaltın; dolu sepet hem akışı düşürür hem de pompayı zorlar.",
+            "en": "Empty the baskets regularly; a full basket both reduces flow and strains the pump."
+          },
+          {
+            "tr": "Su seviyesini skimmer ağzını örtecek aralıkta tutun, özellikle sıcak ve rüzgârlı günlerde kontrol edin.",
+            "en": "Keep the water level within the range that covers the skimmer mouth, checking especially on hot, windy days."
+          },
+          {
+            "tr": "Pompayı asla kuru çalıştırmayın; su basmıyorsa durdurun ve nedenini bulun.",
+            "en": "Never run the pump dry; if it will not prime, stop it and find out why."
+          },
+          {
+            "tr": "Temiz filtre basıncını bir kez not edin ve manometreyi bu referansa göre okuyun.",
+            "en": "Note the clean-filter pressure once and read the gauge against that reference."
+          },
+          {
+            "tr": "Makine dairesini havalandırın, pompanın üzerini örtmeyin, fan kapağını temiz tutun.",
+            "en": "Ventilate the plant room, do not cover the pump, and keep the fan cover clean."
+          },
+          {
+            "tr": "Kış boyunca havuz kullanılmayacaksa pompa, filtre ve hatların suyunu tahliye edin; donma riski en sinsi pompa arızası nedenidir. Kapatma adımlarının tamamı [havuzu kışa hazırlama](post:havuzu-kisa-hazirlama) yazısında.",
+            "en": "If the pool will not be used through winter, drain the pump, filter and lines; freezing is the most insidious cause of pump failure. The full shutdown sequence is in our article on [winterising the pool](post:havuzu-kisa-hazirlama)."
+          }
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "q": {
+          "tr": "Pompa çalışıyor ama su basmıyor, ne yapmalıyım?",
+          "en": "The pump runs but will not prime — what should I do?"
+        },
+        "a": {
+          "tr": "Pompayı durdurun ve üç şeyi kontrol edin: su seviyesi skimmer ağzını örtüyor mu, sepetler tıkalı mı, pompa kapağı ve contası düzgün oturmuş mu. Bunlar düzgünse emiş hattında hava kaçağı vardır ve servis gerekir. Pompayı su basmadan çalışır hâlde bırakmayın; kuru çalışma salmastrayı ve motoru kalıcı olarak yıpratır.",
+          "en": "Stop the pump and check three things: does the water level cover the skimmer mouth, are the baskets blocked, and are the pump lid and its gasket seated properly. If all three are fine, there is an air leak on the suction line and a technician is needed. Do not leave the pump running while it fails to prime; dry running permanently damages the mechanical seal and the motor."
+        }
+      },
+      {
+        "q": {
+          "tr": "Filtrenin manometresi yükseldiğinde ne anlama gelir?",
+          "en": "What does it mean when the filter's pressure gauge rises?"
+        },
+        "a": {
+          "tr": "Basıncın, filtre yeni temizlenmişken not ettiğiniz referans değerin belirgin biçimde üzerine çıkması, filtre yatağının kirlendiğini ve ters yıkama zamanının geldiğini gösterir. Tersine bu değerin altına düşmüşse sorun emiş tarafındadır: sepet tıkalı, vana kapalı ya da seviye düşük olabilir. Bu yüzden kendi havuzunuzun temiz filtre değerini bir kez not etmek çok işe yarar.",
+          "en": "When the pressure rises noticeably above the reference value you noted with a freshly cleaned filter, it shows that the filter bed has become dirty and it is time to backwash. If it has instead fallen below that value, the problem is on the suction side: a blocked basket, a closed valve or a low water level. This is why noting your own pool's clean-filter value once is so useful."
+        }
+      },
+      {
+        "q": {
+          "tr": "Havuz pompası ne zaman servis ister, hangi işleri kendim yapabilirim?",
+          "en": "When does a pool pump need a technician, and what can I do myself?"
+        },
+        "a": {
+          "tr": "Kendiniz güvenle yapabileceğiniz işler gözlem ve temizliktir: su seviyesi kontrolü, sepet boşaltma, manometre okuma ve vana konumu doğrulama. Elektrik panosu ve kablo işleri, motor ve yatak müdahaleleri, salmastra ile conta değişimi, tesisat sökme-takma ve pompa değişimi yetkili kişi ister. Her elektrikli müdahaleden önce pompanın enerjisinin kesilmiş olması şarttır.",
+          "en": "What you can safely do yourself is observation and cleaning: checking the water level, emptying baskets, reading the pressure gauge and confirming valve positions. Panel and cabling work, motor and bearing interventions, seal and gasket replacement, dismantling pipework and changing the pump all require a qualified person. Before any electrical work, the pump must be isolated from power."
+        }
+      },
+      {
+        "q": {
+          "tr": "Pompa çalışırken çakıl sesi geliyor, bu normal mi?",
+          "en": "The pump makes a gravel-like noise while running — is that normal?"
+        },
+        "a": {
+          "tr": "Hayır. Pompanın içinden çakıl dönüyormuş gibi gelen çıtırtı genellikle kavitasyondur ve pompanın yeterince su bulamadığını gösterir. Nedeni çoğunlukla tıkalı bir sepet, düşük su seviyesi ya da kısmen kapalı bir emiş vanasıdır. Bu ses göz ardı edilirse çark ve salmastra hızla aşınır; önce emiş tarafını kontrol edin, düzelmiyorsa servis çağırın.",
+          "en": "No. A rattling sound, as if gravel were tumbling inside the pump, is usually cavitation and shows that the pump cannot find enough water. The cause is most often a blocked basket, a low water level or a partly closed suction valve. Ignored, this noise quickly erodes the impeller and the seal; check the suction side first, and call a technician if it does not resolve."
         }
       }
     ]
