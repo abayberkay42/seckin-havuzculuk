@@ -6,6 +6,10 @@ import { serviceSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { Faq } from '@/components/site/Faq';
 import { ServiceAreaLinks } from '@/components/site/ServiceAreaLinks';
+import { ServiceDetail } from '@/components/site/ServiceDetail';
+import { serviceDetail } from '@/content/services';
+import { RelatedProjects } from '@/components/projects/RelatedProjects';
+import { projects, localize as localizeProjectField } from '@/content/projects';
 import { PageHero } from '@/components/site/PageHero';
 import { CtaBand } from '@/components/site/CtaBand';
 import { Seam } from '@/components/ui/Seam';
@@ -51,6 +55,17 @@ export default async function ConstructionPage({ params }: { params: Promise<{ l
   ];
   const capabilities = t.raw('capabilities') as Item[];
   const steps = t.raw('steps') as Item[];
+  const proof = projects
+    .filter((p) => p.type === 'completed')
+    .slice(0, 3)
+    .map((p) => ({
+      slug: p.slug,
+      cover: p.cover,
+      name: localizeProjectField(p.name, locale),
+      place: localizeProjectField(p.place, locale),
+      year: p.year,
+      type: p.type,
+    }));
 
   return (
     <main>
@@ -114,6 +129,15 @@ export default async function ConstructionPage({ params }: { params: Promise<{ l
       </section>
 
       <Seam from="navy" to="canvas" />
+
+      <ServiceDetail sections={serviceDetail('construction', locale)} />
+
+      <Seam from="canvas" to="surface" />
+
+      {/* Proof: pools actually built from scratch, linked to their case studies */}
+      <RelatedProjects items={proof} />
+
+      <Seam from="surface" to="canvas" />
 
       <ServiceAreaLinks locale={locale} />
 

@@ -337,6 +337,22 @@
       {
         "q": "Eğimli veya manzaralı arazilere havuz yapılabilir mi?",
         "a": "Evet. Eğimli araziler, sonsuzluk kenarı ve kademeli teras havuzları için çoğu zaman en güçlü sonuçları verir. Zemin etüdü, istinat ve mühendislik çözümleriyle eğimi bir dezavantaj değil, tasarımın avantajına çeviriyoruz."
+      },
+      {
+        "q": "Havuz inşaatına yılın hangi döneminde başlamak en doğru?",
+        "a": "Yarımadada sezon uzun olduğu için kazı ve kaba imalat için en uygun dönem sonbahar sonu, kış ve erken bahardır. Böylece gürültülü aşamalar ev boşken geçer, kaplama ve devreye alma sezon açılmadan tamamlanır. Yaz ortasında başlayan projelerde havuz genellikle ertesi sezona hazırlanır; bu yüzden karar ve tasarım görüşmelerini mümkün olduğunca erken yapmanızı öneriyoruz."
+      },
+      {
+        "q": "Peyzajı ve bahçesi bitmiş bir eve sonradan havuz yapılabilir mi?",
+        "a": "Evet, projelerin önemli bir kısmı böyle. Belirleyici olan şantiye erişimi: bahçe kapısı ve geçiş genişliği iş makinesi ile beton pompasına yetiyor mu, yetmiyorsa kazı hangi yöntemle yapılacak. Keşifte sökülüp yeniden kurulacak alanları, taşınacak sulama ve elektrik hatlarını, korunacak ağaçları önceden işaretliyoruz; teslimde bozulan peyzaj alanlarının eski haline getirilmesi de işin parçası oluyor."
+      },
+      {
+        "q": "İnşaat bittikten sonra havuzun bakımı nasıl devralınır?",
+        "a": "Teslim, devreye alma ile başlar: su dengesi kurulur, filtrasyon ve otomasyon ayarları yapılır, ekipmanın kullanımı yerinde anlatılır. Ardından havuzu ya kendi bakım ekibimize sözleşmeyle devrediyoruz ya da sizin görevlendireceğiniz kişiye sistemi ve kimyasal hedeflerini aktarıyoruz. Referans değerler aynı: pH 7,2–7,6, serbest klor 1–3 ppm, toplam alkalinite 80–120 ppm."
+      },
+      {
+        "q": "Deniz kenarındaki villada tuzlu su (tuz klor) sistemi kurulabilir mi?",
+        "a": "Kurulabilir; tuz klor üreteci, tuzu elektrolizle klora dönüştürerek suyu yumuşak bir hisle dezenfekte eder. Ancak tuzlu su metal aksesuar, aydınlatma gövdesi ve bazı doğal taş kaplamalar için daha yorucudur; bu nedenle kaplama, bağlantı elemanı ve ekipman seçimi tasarım aşamasında buna göre yapılmalı. Karar, havuzun formuna ve kullanım alışkanlığınıza göre keşifte birlikte veriliyor."
       }
     ],
     "seoTitle": "Havuz İnşaatı Çeşme, Alaçatı & İzmir",
@@ -469,6 +485,22 @@
       {
         "q": "Havuz suyunun tamamı ne sıklıkla değiştirilmeli?",
         "a": "Doğru bakılan bir havuzda suyun tamamen değiştirilmesi nadiren gerekir; genellikle birkaç yılda bir ya da değerler kimyasalla düzeltilemeyecek kadar bozulduğunda yapılır. Düzenli bakım, su tüketimini ve maliyeti belirgin biçimde azaltır."
+      },
+      {
+        "q": "Uzun süre kullanılmayacak havuzda ne yapmak gerekir?",
+        "a": "Havuzu boşaltmak yerine çalışır durumda bırakmak doğrudur. Ayrılmadan önce değerler dengelenir, filtrasyon süresi konuma göre ayarlanır ve örtü kullanılır. Sıcak dönemde suyun haftalarca kendi başına kalması yosunlanmayı neredeyse kesinleştirir; bu yüzden siz yokken de periyodik ziyaretle ölçüm alıp dozajı sürdürüyoruz. Dönüşünüzde havuz kullanıma hazır olur."
+      },
+      {
+        "q": "Bakım anlaşması neleri kapsamaz?",
+        "a": "Anlaşma düzenli bakım işçiliğini, ölçüm ve raporlamayı, temizlik ile rutin kontrolleri kapsar. Kapsam dışında kalan başlıklar genellikle şunlardır: arızalanan ekipmanın yenilenmesi ve yedek parça bedeli, kaplama veya tesisat onarımı, havuzun tamamen boşaltılıp yeniden doldurulması ve renovasyon işleri. Bu kalemler çıktığında ayrı olarak fiyatlandırılır; onayınız olmadan işlem yapılmaz."
+      },
+      {
+        "q": "Havuzunun bakımını kendisi yapan ev sahibi neye dikkat etmeli?",
+        "a": "En sık yapılan hata sırayı atlamaktır: kimyasal eklemeden önce ölçüm almak, pH'ı klordan önce düzeltmek ve iki kimyasalı asla birbirine karıştırmamak esastır. Dozlama sirkülasyon çalışırken ve seyreltilerek yapılmalı. Filtre basıncını not almak, ters yıkamayı basınca göre yapmak ve kimyasalları serin, kuru, kilitli bir yerde tutmak da ihmal edilmemeli."
+      },
+      {
+        "q": "Bakım ziyaretinde ekipman arızası çıkarsa ne oluyor?",
+        "a": "Arıza yerinde teşhis edilir ve raporda nedeniyle birlikte belirtilir. Küçük müdahaleler aynı ziyarette tamamlanır; parça veya daha kapsamlı bir çalışma gerekiyorsa seçenekleri, süresini ve bedelini önceden paylaşırız. Bu arada havuzun güvenli kalması için geçici bir çalışma düzeni kurulur. Onay sizde kalır; sürpriz fatura ya da habersiz parça değişimi olmaz."
       }
     ],
     "seoTitle": "Havuz Bakımı Çeşme, Alaçatı & İzmir",

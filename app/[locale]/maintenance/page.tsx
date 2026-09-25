@@ -6,6 +6,10 @@ import { serviceSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { Faq } from '@/components/site/Faq';
 import { ServiceAreaLinks } from '@/components/site/ServiceAreaLinks';
+import { ServiceDetail } from '@/components/site/ServiceDetail';
+import { serviceDetail } from '@/content/services';
+import { RelatedProjects } from '@/components/projects/RelatedProjects';
+import { projects, localize as localizeProjectField } from '@/content/projects';
 import { PageHero } from '@/components/site/PageHero';
 import { CtaBand } from '@/components/site/CtaBand';
 import { Seam } from '@/components/ui/Seam';
@@ -50,6 +54,17 @@ export default async function MaintenancePage({ params }: { params: Promise<{ lo
     ]),
     faqSchema(faq),
   ];
+  const proof = projects
+    .filter((p) => p.type === 'before-after')
+    .slice(0, 3)
+    .map((p) => ({
+      slug: p.slug,
+      cover: p.cover,
+      name: localizeProjectField(p.name, locale),
+      place: localizeProjectField(p.place, locale),
+      year: p.year,
+      type: p.type,
+    }));
   const included = t.raw('included') as Item[];
   const waterValues = t.raw('waterValues') as WaterValue[];
   const plans = t.raw('plans') as Plan[];
@@ -154,6 +169,15 @@ export default async function MaintenancePage({ params }: { params: Promise<{ lo
           ))}
         </div>
       </section>
+
+      <Seam from="surface" to="canvas" />
+
+      <ServiceDetail sections={serviceDetail('maintenance', locale)} />
+
+      <Seam from="canvas" to="surface" />
+
+      {/* Proof: pools brought back by renovation — what sustained care looks like */}
+      <RelatedProjects items={proof} />
 
       <Seam from="surface" to="canvas" />
 
