@@ -216,12 +216,23 @@ export function Hero({
       className="relative h-[200svh] w-full bg-deep"
     >
       <div className="sticky top-0 h-[100svh] w-full overflow-hidden">
-        {/* poster — instant paint before the film medium is ready */}
-        <div
-          className="absolute inset-0 bg-deep bg-cover bg-center"
-          style={{ backgroundImage: 'url(/videos/hero-poster.jpg)' }}
-          aria-hidden="true"
-        />
+        {/* Poster — the first thing painted, and the page's LCP element.
+            It used to be a CSS background, which the preload scanner cannot
+            see: the browser only discovered it after parsing CSS, so a 303 KB
+            JPEG started at ~2s and finished at ~7s. Through next/image with
+            priority it is preloaded at high fetch priority and served as
+            AVIF/WebP, so it paints while the rest of the page is still
+            arriving. */}
+        <div className="absolute inset-0 bg-deep" aria-hidden="true">
+          <Image
+            src="/videos/hero-poster.jpg"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+        </div>
 
         {/* THE FILM — a scrubbed WebP frame sequence drawn to canvas (phase 1),
             on every screen. The frame set is chosen by viewport in the effect. */}
