@@ -1,7 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { Eyebrow } from '@/components/ui/Eyebrow';
 import { SplitReveal } from '@/components/ui/SplitReveal';
-import { Reveal } from '@/components/ui/Reveal';
 import { TextLink } from '@/components/ui/TextLink';
 import { GBP_URL } from '@/lib/contact';
 import { testimonials } from '@/content/testimonials';
@@ -33,8 +32,11 @@ export async function Testimonials() {
         </SplitReveal>
 
         <ul className="grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
-          {testimonials.map((r, i) => (
-            <Reveal as="li" key={r.name} delay={i * 0.06} className="flex">
+          {/* No per-card reveal wrapper: five more client-side animation
+              observers on the busiest page is main-thread work for a purely
+              decorative fade. The heading above still animates. */}
+          {testimonials.map((r) => (
+            <li key={r.name} className="flex">
               <figure className="flex flex-col rounded-[1.5rem] bg-canvas p-7 ring-1 ring-ink/8">
                 <blockquote className="flex-1 text-body leading-relaxed text-ink/75">
                   “{r.quote}”
@@ -48,7 +50,7 @@ export async function Testimonials() {
                   )}
                 </figcaption>
               </figure>
-            </Reveal>
+            </li>
           ))}
         </ul>
 
