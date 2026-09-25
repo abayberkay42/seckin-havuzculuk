@@ -603,7 +603,7 @@
     "mapBlocked": "The map is provided by Google. Loading it shares your IP address with Google.",
     "mapLoad": "Load map",
     "noticeTitle": "Cookie notice",
-    "noticeBody": "No analytics or advertising cookies; only your language choice is stored. Google Maps loads only if you allow it.",
+    "noticeBody": "No analytics or advertising cookies. Maps load only if you allow them.",
     "noticeLink": "Details",
     "noticeAccept": "Allow maps",
     "noticeDeny": "Necessary only"

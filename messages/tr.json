@@ -603,7 +603,7 @@
     "mapBlocked": "Harita Google tarafından sağlanır. Yüklendiğinde IP adresiniz Google ile paylaşılır.",
     "mapLoad": "Haritayı yükle",
     "noticeTitle": "Çerez bildirimi",
-    "noticeBody": "Analiz ve reklam çerezi yok; yalnızca dil tercihiniz saklanır. Google Haritalar izin verirseniz yüklenir.",
+    "noticeBody": "Analiz ve reklam çerezi yok. Haritalar yalnızca izin verirseniz yüklenir.",
     "noticeLink": "Ayrıntılar",
     "noticeAccept": "Haritalara izin ver",
     "noticeDeny": "Yalnızca zorunlu"
